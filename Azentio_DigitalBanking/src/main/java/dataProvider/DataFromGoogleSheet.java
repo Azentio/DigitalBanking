@@ -36,7 +36,7 @@ public class DataFromGoogleSheet {
 	
 	String ApplicationName = "AzentioLearning";
 	JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
-	String CREDENTIALS_FILE_PATH = "C:\\Users\\inindc00605\\eclipse-workspace\\DigitalBanking\\src\\main\\java\\resources\\azentiolearning-71200dde582a.json";
+	String CREDENTIALS_FILE_PATH = "C:\\Users\\inindc00605\\git\\KamalapriyaDB\\Azentio_DigitalBanking\\src\\test\\resources\\azentiolearning-71200dde582a.json";
 
 	GoogleAPIMethods googleAPIMethods = new GoogleAPIMethods();
 
