@@ -50,6 +50,7 @@ public class PathTest {
                 break;
 
             } catch (Exception e) {
+            	e.printStackTrace();
 
                 if (i == 2000) {
 

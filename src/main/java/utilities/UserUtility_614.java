@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import dataProvider.DataReader;
+import freemarker.template.utility.NullArgumentException;
 
 public class UserUtility_614 {
 	
@@ -38,10 +39,28 @@ public class UserUtility_614 {
 	
 	public void waitHelper_Js(WebDriver driver, String xpath) {
 
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(Integer.valueOf(DataReader.configFileMap.get("timeout"))))
-				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
-
-		wait.until(ExpectedConditions.visibilityOf((WebElement)js.executeScript("return document.querySelector('"+xpath+"')")));
+		for (int i = 0; i < 100; i++) {
+			
+			try {
+				WebElement webElement = (WebElement)js.executeScript("return " +xpath+"");
+				
+				if (!webElement.equals(null)) {
+					break;
+				}
+				else {
+					throw new NullArgumentException();
+				}
+				
+			}
+			catch (Exception e){
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
+		
 	}
 	
 	public void waitHelper(WebDriver driver, String xpath, int waitTime) {
@@ -68,13 +87,39 @@ public class UserUtility_614 {
 			
 			if (JS) {
 				waitHelper_Js(driver, xpath);
-				webElement = (WebElement)js.executeScript("return document.querySelector('"+xpath+"')");
+				webElement = (WebElement)js.executeScript("return " +xpath+"");
+				clickOnElement(driver, webElement);
 			}
-			
+			else {
+				waitHelper(driver, xpath);
+				webElement = driver.findElement(By.xpath(xpath));
+				moveToElement(driver, webElement);
+				clickOnElement(driver, webElement);
+			}
+
+	}
+	
+	public void enterData(WebDriver driver, String xpath, String value, boolean JS) {
+        
+		WebElement webElement;
+		
+		if (JS) {
+			waitHelper_Js(driver, xpath);
+			webElement = (WebElement)js.executeScript("return " +xpath+"");
+//			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value);
+		}
+		else {
 			waitHelper(driver, xpath);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value);
+		}
+
 	}
 	
 	
@@ -83,16 +128,22 @@ public class UserUtility_614 {
 		WebElement webElement;
 		
 		if (JS) {
-			webElement = (WebElement)js.executeScript("return document.querySelector('"+xpath+"')");
 			waitHelper_Js(driver, xpath);
+			webElement = (WebElement)js.executeScript("return " +xpath+"");
+//			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value, Keys.TAB);
 		}
-		
-		waitHelper(driver, xpath);
-		webElement = driver.findElement(By.xpath(xpath));
-		moveToElement(driver, webElement);
-		clickOnElement(driver, webElement);
-		webElement.clear();
-		webElement.sendKeys(value, Keys.TAB);
+		else {
+			waitHelper(driver, xpath);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value, Keys.TAB);
+		}
+
 	}
 
 	public void enterDataAndEnter(WebDriver driver, String xpath, String value, boolean JS) {
@@ -100,16 +151,22 @@ public class UserUtility_614 {
 		WebElement webElement;
 
 		if (JS) {
-			webElement = (WebElement)js.executeScript("return document.querySelector('"+xpath+"')");
 			waitHelper_Js(driver, xpath);
+			webElement = (WebElement)js.executeScript("return " +xpath+"");
+			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value, Keys.ENTER);
 		}
-
-		waitHelper(driver, xpath);
-		webElement = driver.findElement(By.xpath(xpath));
-		moveToElement(driver, webElement);
-		clickOnElement(driver, webElement);
-		webElement.clear();
-		webElement.sendKeys(value, Keys.ENTER);
+		else {
+			waitHelper(driver, xpath);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value, Keys.ENTER);
+		}
+		
 	}
 	
 //	public String getText(Selenium_Actions seleniumActions, WebDriver driver, WebElement webElement) {

@@ -1,1 +1,0 @@
-file:src/test/java/features/DigitalBanking_614.feature:2
