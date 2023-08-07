@@ -3,7 +3,6 @@ package stepdefinitions;
 import org.openqa.selenium.WebDriver;
 
 import dataProvider.DataReader;
-import dataProvider.demo;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;
