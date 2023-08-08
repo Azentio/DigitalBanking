@@ -37,5 +37,12 @@ public class Digital_Banking_Steps_614 {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_L").get("loginBtn1") , false);
 		
 	}
+	
+	@And("^user click on the ok button after successful login popup$")
+	public void UserClickOnTheOkButtonAfterSuccessfulLoginPopup() {
+		
+	}
+	
+	
 
 }
