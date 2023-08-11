@@ -21,6 +21,8 @@ public class DataFromGoogleSheet {
 
 	HashMap<String, String> configFileMap;
 	HashMap<String, String> testData;
+	HashMap<String, String> testAndDataSet;
+	HashMap<String, String> excelTestAndDataSet;
 	HashMap<String, String> userCredentailsData;
 	HashMap<String, HashMap<String, String>> LocatorsMap;
 	HashMap<String, HashMap<String, String>> userCredentialsMap;
@@ -96,7 +98,8 @@ public class DataFromGoogleSheet {
 //		Load the map for test data
 
 		this.testData = googleAPIMethods.returnMap(service, spreadsheetIdForTestData, testDataRange);
-
+		System.out.println(testData);
+		HashMap<String, String> testAndDataSet = new HashMap<String, String>();
 		HashMap<String, HashMap<String, String>> insideTestDataMap = new HashMap<String, HashMap<String, String>>();
 		HashMap<String,HashMap<String, HashMap<String, String>>> testDataMap2 = new HashMap<String,HashMap<String, HashMap<String, String>>>();
 		List<List<Object>> testDataList = null;
@@ -104,7 +107,7 @@ public class DataFromGoogleSheet {
 
 			testDataList = googleAPIMethods.returnList(service, spreadsheetIdForTestData, iterable_element.getValue());
 
-//			System.out.println(testDataList);
+			System.out.println(testDataList);
 
 			
 
@@ -119,6 +122,8 @@ public class DataFromGoogleSheet {
 					String dataValue = (String) testDataList.get(i).get(j);
 
 					internalTestDataMap.put(headerValue, dataValue);
+					
+					testAndDataSet.put((String) testDataList.get(i).get(0), (String) testDataList.get(i).get(1));
 
 				}
 
@@ -128,6 +133,10 @@ public class DataFromGoogleSheet {
 			testDataMap2.put(iterable_element.getKey(), insideTestDataMap);
 
 		}
+		this.testAndDataSet = testAndDataSet;
+		
+		System.out.println("testAndDataSet:" + testAndDataSet);
+		
 		this.testDataMap = testDataMap2;
 
 //		Load the map for test data

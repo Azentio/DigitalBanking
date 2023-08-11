@@ -51,11 +51,44 @@ public class UserUtility_614 {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 	}
+	
+	public void waitHelperClick(WebDriver driver, String xpath) {
+
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(Integer.valueOf(DataReader.configFileMap.get("timeout"))))
+				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+	}
 
 	public void waitHelper_Js(WebDriver driver, String xpath) {
 		
 		int waitTime = Integer.valueOf(DataReader.configFileMap.get("timeout"));
 
+		for (int i = 0; i < waitTime + 10 ; i++) {
+
+			try {
+				WebElement webElement = (WebElement) js.executeScript("return " + xpath + "");
+
+				if (!webElement.equals(null)) {
+					break;
+				} else {
+					throw new NullArgumentException();
+				}
+
+			} catch (Exception e) {
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+			}
+		}
+
+	}
+	
+	public void waitHelper_Js(WebDriver driver, String xpath, int waitTime) {
+		
 		for (int i = 0; i < waitTime + 10 ; i++) {
 
 			try {
@@ -85,6 +118,14 @@ public class UserUtility_614 {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 	}
+	
+	public void waitHelperClick(WebDriver driver, String xpath, int waitTime) {
+
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(waitTime))
+				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+	}
 
 	public void moveToElement(WebDriver driver, WebElement webElement) {
 
@@ -98,8 +139,24 @@ public class UserUtility_614 {
 
 	public void doubleClickOnElement(WebDriver driver, WebElement webElement) {
 
-		webElement.click();
-		webElement.click();
+		action.doubleClick(webElement).perform();
+	}
+	
+	public void doubleClickOnElement(WebDriver driver, String xpath, boolean JS) {
+
+		WebElement webElement;
+
+		if (JS) {
+			waitHelper_Js(driver, xpath);
+			webElement = (WebElement) js.executeScript("return " + xpath + "");
+			doubleClickOnElement(driver, webElement);
+		} else {
+			waitHelperClick(driver, xpath);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			doubleClickOnElement(driver, webElement);
+		}
+
 	}
 
 	public void clickOnElement(WebDriver driver, String xpath, boolean JS) {
@@ -111,7 +168,24 @@ public class UserUtility_614 {
 			webElement = (WebElement) js.executeScript("return " + xpath + "");
 			clickOnElement(driver, webElement);
 		} else {
-			waitHelper(driver, xpath);
+			waitHelperClick(driver, xpath);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+		}
+
+	}
+	
+	public void clickOnElementNoWait(WebDriver driver, String xpath, int waitTime, boolean JS) {
+
+		WebElement webElement;
+
+		if (JS) {
+			waitHelper_Js(driver, xpath, waitTime);
+			webElement = (WebElement) js.executeScript("return " + xpath + "");
+			clickOnElement(driver, webElement);
+		} else {
+			waitHelperClick(driver, xpath, waitTime);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
@@ -131,7 +205,7 @@ public class UserUtility_614 {
 			webElement.clear();
 			webElement.sendKeys(value);
 		} else {
-			waitHelper(driver, xpath);
+			waitHelperClick(driver, xpath);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
@@ -153,7 +227,7 @@ public class UserUtility_614 {
 			webElement.clear();
 			webElement.sendKeys(value, Keys.TAB);
 		} else {
-			waitHelper(driver, xpath);
+			waitHelperClick(driver, xpath);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
@@ -172,14 +246,16 @@ public class UserUtility_614 {
 			webElement = (WebElement) js.executeScript("return " + xpath + "");
 			clickOnElement(driver, webElement);
 			webElement.clear();
-			webElement.sendKeys(value, Keys.ENTER);
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.ENTER);
 		} else {
-			waitHelper(driver, xpath);
+			waitHelperClick(driver, xpath);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
 			webElement.clear();
-			webElement.sendKeys(value, Keys.ENTER);
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.ENTER);
 		}
 
 	}
@@ -469,6 +545,25 @@ public class UserUtility_614 {
 				.pollingEvery(Duration.ofMillis(2))
 				.ignoring(Exception.class);
 		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+	}
+	
+	public void checkAndDeleteRecord( WebDriver driver, int offset, String Xpathlocator, String deleteButton, String okButton) {
+		try {
+			for (int i = offset; i < getNumberOfElements( driver, Xpathlocator)+1; i++) {
+				driver.findElement(By.xpath(Xpathlocator + "["+offset+"]")).click();
+				WebElement deleteButtonWebElement = driver.findElement(By.xpath(deleteButton));
+				WebElement okButtonWebElement = driver.findElement(By.xpath(okButton));
+				clickOnElement(driver, deleteButtonWebElement);
+				clickOnElement( driver, okButtonWebElement);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public String textReplacer(String xpath, String textChange, String newValue) {
+		String newXpath = xpath.replace(textChange, newValue);
+		return newXpath;
 	}
 	
 

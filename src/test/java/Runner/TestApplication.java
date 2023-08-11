@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/DigitalBanking_614.feature"},
+@CucumberOptions(features = {"src/test/java/features/DBTransactions_614.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",

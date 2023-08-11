@@ -18,7 +18,7 @@ public class BaseClass {
 	public static WebDriver driver;
 
 	public WebDriver initializeDriver() throws IOException {
-		DataReader dr = new DataReader();
+		DataReader dr = new DataReader(false);
 		String browserName = DataReader.configFileMap.get("browser");
 //		String browserName = "chrome";
 		if (browserName.equalsIgnoreCase("chrome")) {
