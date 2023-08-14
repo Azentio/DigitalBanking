@@ -20,7 +20,6 @@ public class DataReader {
 		DataReader.userCredentialsMap = config.userCredentialsMap;
 		DataReader.testDataMap = config.testDataMap;
 
-		DataReader.OmniScreen_L = config.LocatorsMap.get("OmniScreen_L");
 		
 		if (excelRun) {
 			executionTestData = config.excelTestAndDataSet;

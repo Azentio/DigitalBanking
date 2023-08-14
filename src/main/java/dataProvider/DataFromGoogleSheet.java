@@ -33,7 +33,7 @@ public class DataFromGoogleSheet {
 	String spreadsheetIdForTestData = "1DtbuoWTCJkWXS2rK5RtqO2GvNPfymvskiY3Y6fvrlhA";
 	String ConfigFileRange = "ConfigFile!A2:B50";
 	String locatorsRange = "ConfigFile!F2:G50";
-	String testDataRange = "TestDataRangeFile!A2:L";
+	String testDataRange = "TestDataRangeFile!A2:B50";
 	String userCredentialsRange = "ConfigFile!K2:L5";
 	
 	String ApplicationName = "AzentioLearning";

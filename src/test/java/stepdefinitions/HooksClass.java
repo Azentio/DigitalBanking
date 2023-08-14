@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
 
+import dataProvider.DataReader;
 import helper.ScreenshotHelper;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -37,7 +38,7 @@ public class HooksClass extends BaseClass {
 //				Assume.assumeTrue(false);
 //			}
 //		}
-
+		
 		driver = initializeDriver();
 		System.out.println("Driver Initiated");
 		String name = scenario.getName();

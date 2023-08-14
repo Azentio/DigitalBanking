@@ -16,9 +16,11 @@ public class AdminScreen_Steps_614 {
 	
 	UserUtility_614 us = new UserUtility_614(driver);
 	
-	public void testData() {
-		HashMap<String,String> executionTestData = DataReader.executionTestData;
-	}
+	String executionTestData;
+	HashMap<String, String> testData;
+		
+		
+
 	
 	
 	@Given("^user navigates to the OmniScreen Admin Url and login with the valid credentials_RIDA$")
@@ -27,15 +29,15 @@ public class AdminScreen_Steps_614 {
 		driver.get(DataReader.configFileMap.get("omni_adminScreen"));
 		
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("userNameField_LogginScreen"), 
-				DataReader.userCredentialsMap.get("RitaAdmin").get("userName"), false);
+				DataReader.userCredentialsMap.get("VimalAdmin").get("userName"), false);
 		
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("passwordField_LogginScreen"), 
-				DataReader.userCredentialsMap.get("RitaAdmin").get("Password"), false);
+				DataReader.userCredentialsMap.get("VimalAdmin").get("Password"), false);
 		
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("logginBtn_LogginScreen"),false);
 		
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("companyCode_AdminLoggin"), 
-				DataReader.userCredentialsMap.get("RitaAdmin").get("CompanyCode"), false);
+				DataReader.userCredentialsMap.get("VimalAdmin").get("CompanyCode"), false);
 		
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("continueBtnCompanyCode_AdminLoggin"), false);
 		
@@ -54,6 +56,14 @@ public class AdminScreen_Steps_614 {
 		
 
 	}
+	
+	@And("^user loads the test datasetup for the test case id AT_003$")
+	public void UserLoadsTheTestDatasetupForTheTestCaseIdAt_003() {
+		executionTestData = DataReader.executionTestData.get("AT_003");
+		testData =	DataReader.testDataMap.get("Admin_AppMatrix").get(executionTestData);
+	}
+	
+	
 	@And("^user click on the parameters features in the OmniScreen admin page$")
 	public void UserClickOnTheParametersFeaturesInTheOmniscreenAdminPage() {
 		
@@ -86,7 +96,7 @@ public class AdminScreen_Steps_614 {
 		us.enterDataAndEnter(
 				driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("approvalMatrixCodeField_Customer_ApprovalMatrix_UserManagement"), 
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("ApprovalMatrixCode"),
+				testData.get("ApprovalMatrixCode"),
 				false);
 	}
 	@And("^user selects the inputed code from the search result and double click on it$")
@@ -94,7 +104,7 @@ public class AdminScreen_Steps_614 {
 		String xpath = us.textReplacer(
 				DataReader.locatorsMap.get("Omni_Admin").get("selectTheApprovalMatrixCode_approvalMatrixCodeField_Customer_ApprovalMatrix"),
 				"TESTDATAVARIABLE",
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("ApprovalMatrixCode"));
+				testData.get("ApprovalMatrixCode"));
 		
 		us.doubleClickOnElement(driver, xpath, false);		
 	}
@@ -130,28 +140,28 @@ public class AdminScreen_Steps_614 {
 		
 		us.selectFromDropdown(driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("limitfield_SelectDropDown_Customer_ApprovalMatrix_UserManagement"), 
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("LimitType1"));
+				testData.get("LimitType1"));
 	}
 	
 	@And("^user enter the minimum amount in customer approval matrix for first row$")
 	public void UserEnterTheMinimumAmountInCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("minimumfield_Customer_ApprovalMatrix_UserManagement"), 
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("MinimumAmount1"), false);
+				testData.get("MinimumAmount1"), false);
 	}
 	@And("^user enter the maximum amount in customer approval matrix for first row$")
 	public void UserEnterTheMaximumAmountInCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("maximumfield_Customer_ApprovalMatrix_UserManagement"), 
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("MaximumAmount1"), false);
+				testData.get("MaximumAmount1"), false);
 	}
 	@And("^user enter the group id in customer approval matrix for first row$")
 	public void UserEnterTheGroupIdInCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("groupCode_Customer_ApprovalMatrix_UserManagement"), 
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("GroupCode1"), false);
+				testData.get("GroupCode1"), false);
 	}
 	@And("^user enter the number of user in the customer approval matrix for first row$")
 	public void UserEnterTheNumberOfUserInTheCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("noOfUsers_Customer_ApprovalMatrix_UserManagement"), 
-				DataReader.testDataMap.get("Admin_AppMatrix").get("AT_001_D1").get("noOfUsers1"), false);
+				testData.get("noOfUsers1"), false);
 	}
 	
 	@And("^user click on the save button in the customer approval matrix$")

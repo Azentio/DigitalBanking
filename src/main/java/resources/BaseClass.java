@@ -20,6 +20,7 @@ public class BaseClass {
 	public WebDriver initializeDriver() throws IOException {
 		DataReader dr = new DataReader(false);
 		String browserName = DataReader.configFileMap.get("browser");
+		System.out.println(DataReader.testDataMap);
 //		String browserName = "chrome";
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.out.println("Chrome method is called....");
