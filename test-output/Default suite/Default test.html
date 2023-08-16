@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 14 16:56:22 IST 2023</td>
+<td>Started on:</td><td>Wed Aug 16 18:41:08 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>583 seconds (583782 ms)</td>
+<tr><td>Total time:</td><td>693 seconds (693096 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,61 +75,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit own account transfer - one time with corporate user and two approvals are required", "Optional[Checking the functionalities of Account Transfer]"</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
-  (Session info: chrome=115.0.5790.102)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit Transfer to Other Bank - one time with corporate user_614 and two approvals are required", "Optional[Checking the functionalities of Account Transfer]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),&apos;Own Account Transfer&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [62d00587273587e33992a787c462e055, executeScript {script=arguments[0].click();, args=[null]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62269}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62269/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 62d00587273587e33992a787c462e055
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:463)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:163)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:195)
-	at stepdefinitions.AdminScreen_Steps_614.UserClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal(AdminScreen_Steps_614.java:253)
-	at ✽.user click on the ok button for the successful login page for omni_corporate_web_portal(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:78)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1903889793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1903889793'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
-  (Session info: chrome=115.0.5790.102)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:558)
+	at stepdefinitions.AdminScreen_Steps_614.user_614WaitsForTheConfirmationOnTheSubmissionReport(AdminScreen_Steps_614.java:385)
+	at ✽.user_614 waits for the confirmation on the submission report(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:179)
+</pre></div><a href='#' onClick='toggleBox("stack-trace583021646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace583021646'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),&apos;Own Account Transfer&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [62d00587273587e33992a787c462e055, executeScript {script=arguments[0].click();, args=[null]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62269}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62269/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 62d00587273587e33992a787c462e055
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:463)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:163)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:195)
-	at stepdefinitions.AdminScreen_Steps_614.UserClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal(AdminScreen_Steps_614.java:253)
-	at ✽.user click on the ok button for the successful login page for omni_corporate_web_portal(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:78)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:558)
+	at stepdefinitions.AdminScreen_Steps_614.user_614WaitsForTheConfirmationOnTheSubmissionReport(AdminScreen_Steps_614.java:385)
+	at ✽.user_614 waits for the confirmation on the submission report(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:179)
 </pre></div></td>
-<td>529</td>
-<td>Runner.TestApplication@4b29d1d2</td></tr>
+<td>652</td>
+<td>Runner.TestApplication@1349883</td></tr>
 </table><p>
 </body>
 </html>
