@@ -64,6 +64,8 @@ public class UserUtility_614 {
 	public void waitHelper_Js(WebDriver driver, String xpath) {
 		
 		int waitTime = Integer.valueOf(DataReader.configFileMap.get("timeout"));
+		
+
 
 		for (int i = 0; i < waitTime + 10 ; i++) {
 
@@ -71,6 +73,17 @@ public class UserUtility_614 {
 				WebElement webElement = (WebElement) js.executeScript("return " + xpath + "");
 
 				if (!webElement.equals(null)) {
+					
+					try {
+						Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+								.withTimeout(Duration.ofSeconds(Integer.valueOf(DataReader.configFileMap.get("timeout"))))
+								.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
+
+						wait.until(ExpectedConditions.elementToBeClickable(webElement));
+					} catch (Exception e) {
+						break;
+					}
+					
 					break;
 				} else {
 					throw new NullArgumentException();
@@ -93,8 +106,21 @@ public class UserUtility_614 {
 
 			try {
 				WebElement webElement = (WebElement) js.executeScript("return " + xpath + "");
+				
+				
 
 				if (!webElement.equals(null)) {
+					
+					try {
+						Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+								.withTimeout(Duration.ofSeconds(Integer.valueOf(DataReader.configFileMap.get("timeout"))))
+								.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
+
+						wait.until(ExpectedConditions.elementToBeClickable(webElement));
+					} catch (Exception e) {
+						break;
+					}
+					
 					break;
 				} else {
 					throw new NullArgumentException();
@@ -134,7 +160,7 @@ public class UserUtility_614 {
 
 	public void clickOnElement(WebDriver driver, WebElement webElement) {
 
-		webElement.click();
+		js.executeScript("arguments[0].click();", webElement);
 	}
 
 	public void doubleClickOnElement(WebDriver driver, WebElement webElement) {
