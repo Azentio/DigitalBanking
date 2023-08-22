@@ -216,18 +216,18 @@ public class AdminScreen_Steps_614 {
 	@And("^user_614 enters the maker username1 in the login page for omni_corporate_web_portal$")
 	public void user_614EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
+				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
 				testData.get("UserName1"),
-				true);
+				false);
 	}
 	
 
 	@And("^user_614 enters the maker password1 in the login page for omni_corporate_web_portal$")
 	public void user_614EntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterDataAndEnter(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"),
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
 				testData.get("Password1"),
-				true);
+				false);
 	}
 	
 	@And("^user_614 click on the loggin button in the login page for omni_corporate_web_portal$")
@@ -235,9 +235,9 @@ public class AdminScreen_Steps_614 {
 		Thread.sleep(5000);
 		try {
 			us.clickOnElementNoWait(driver, 
-					DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn"), 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn1"), 
 					20,
-					true);
+					false);
 		} catch (Exception e) {
 		}
 	}
@@ -246,10 +246,18 @@ public class AdminScreen_Steps_614 {
 	public void user_614ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
 		try {
 			us.clickOnElementNoWait(driver, 
-					DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen"), 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
 					20,
-					true);
+					false);
 		} catch (Exception e) {
+			
+			try {
+				us.clickOnElementNoWait(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
+						20,
+						false);
+			} catch (Exception e1) {
+			}
 		}
 	}
 	
@@ -284,15 +292,15 @@ public class AdminScreen_Steps_614 {
 	@And("^user_614 click on the From accounts from the transfers within own accounts$")
 	public void user_614ClickOnTheFromAccountsFromTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), 
-				true);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer1"), 
+				false);
 	}
 	
 	@And("^user_614 click on the To accounts from the transfers within own accounts$")
 	public void user_614ClickOnTheToAccountsFromTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer"), 
-				true);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer1"), 
+				false);
 	}
 	
 	@And("^user_614 selects the from account from the dropdown in transfers within own accounts$")
@@ -317,7 +325,7 @@ public class AdminScreen_Steps_614 {
 	
 	@And("^user_614 enters the transaction amount in the transfers screen$")
 	public void user_614EntersTheTransactionAmountInTheTransfersScreen() {
-		us.enterData(driver, 
+		us.enterDataAndTab(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"), 
 				testData.get("TransferAmount"), 
 				false);
@@ -325,59 +333,61 @@ public class AdminScreen_Steps_614 {
 	}
 	
 	@And("^user_614 enters the purpose of transaction in the transfers screen$")
-	public void user_614EntersThePurposeOfTransactionInTheTransfersScreen() {
-		us.enterData(driver, 
+	public void user_614EntersThePurposeOfTransactionInTheTransfersScreen() throws InterruptedException {
+		us.enterDataAndTab(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), 
 				testData.get("PurposeOfTrnx"), 
 				false);
-
+		
+		Thread.sleep(3000);
 	}
 	
 	@And("^user_614 click on next btn in the transfers screen$")
 	public void user_614ClickOnNextBtnInTheTransfersScreen() throws InterruptedException {
+		
 		Thread.sleep(5000);
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer"), 
-				true);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"), 
+				false);
 	}
 	
 	@And("^user_614 click on submit btn in the transfers screen$")
 	public void user_614ClickOnSubmitBtnInTheTransfersScreen() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer"), 
-				true);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer1"), 
+				false);
 	}
 	
 	@And("^user_614 enters the checker username1 in the login page for omni_corporate_web_portal$")
 	public void user_614EntersTheCheckerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
+				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
 				testData.get("UserName2"),
-				true);
+				false);
 	}
 	
 	@And("^user_614 enters the checker password1 in the login page for omni_corporate_web_portal$")
 	public void user_614EntersTheCheckerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterDataAndEnter(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"),
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
 				testData.get("Password2"),
-				true);
+				false);
 	}
 	
 	@And("^user_614 enters the checker username2 in the login page for omni_corporate_web_portal$")
 	public void user_614EntersTheCheckerusername2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
+				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
 				testData.get("UserName3"),
-				true);
+				false);
 	}
 	
 	@And("^user_614 enters the checker password2 in the login page for omni_corporate_web_portal$")
 	public void user_614EntersTheCheckerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterDataAndEnter(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"),
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
 				testData.get("Password3"),
-				true);
+				false);
 	}
 	
 	@And("^user_614 waits for the confirmation on the submission report$")
@@ -404,16 +414,16 @@ public class AdminScreen_Steps_614 {
 	@And("^user_614 clicks on logout btn to logout from omni web portal$")
 	public void user_614ClicksOnLogoutBtnToLogoutFromOmniWebPortal() throws InterruptedException {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb"), 
-				true);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb1"), 
+				false);
 		Thread.sleep(30000);
 	}
 	
 	@And("^user_614 click on the TODO icon in homescreen on omni web portal$")
 	public void user_614ClickOnTheTodoIconInHomescreenOnOmniWebPortal() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen"), 
-				true);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
+				false);
 	}
 	
 	@And("^user_614 click on the 1st pending item in the list$")
@@ -576,23 +586,53 @@ public class AdminScreen_Steps_614 {
 	}
 	
 	@And("^user_614 click on the periodicity dropdown in scheduled transfer$")
-	public void User_614ClickOnThePeriodicityDropdownInScheduledTransfer() {
-		us.clickOnElement(driver, 
+	public void User_614ClickOnThePeriodicityDropdownInScheduledTransfer() throws InterruptedException {
+		Thread.sleep(3000);
+		us.clickOnElementNoWait(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), 
+				30,
 				false);
 	}
 	@And("^user_614 click on the single future date from the dropdown in scheduled transfer$")
 	public void User_614ClickOnTheSingleFutureDateFromTheDropdownInScheduledTransfer() {
-		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"), 
-				false);
+		
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"), 
+					30,
+					false);
+		} catch (Exception e) {
+			us.clickOnElement(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), 
+					false);
+			
+			us.clickOnElement(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), 
+					false);
+			
+			us.clickOnElement(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"), 
+					false);
+			
+		}
 	}
 	
 	@And("^user_614  click on the I agree to terms and conditions checkbox$")
 	public void User_614ClickOnTheIAgreeToTermsAndConditionsCheckbox() {
-		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 
-				false);
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 
+					30,
+					false);
+			
+			Thread.sleep(5000);
+			us.clickOnElement(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"), 
+					false);
+			
+		} catch (Exception e) {
+			
+		}
 	}
 	
 	@And("^user_614 waits for the confirmation on the submission report for scheduled own account transfer$")
@@ -610,6 +650,12 @@ public class AdminScreen_Steps_614 {
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	
+	@And("^user_614 click on the scheduled transfers within own bank transfer under scheduled transfer_Amana payment screen$")
+	public void User_614ClickOnTheScheduledTransfersWithinOwnBankTransferUnderScheduledTransfer_AmanaPaymentScreen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnBankTransfer_ScheduledTransfer"), 
+				false);
+	}
 	
 
 }

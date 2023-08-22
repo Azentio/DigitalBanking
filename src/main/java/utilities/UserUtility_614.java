@@ -251,14 +251,17 @@ public class UserUtility_614 {
 //			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
 			webElement.clear();
-			webElement.sendKeys(value, Keys.TAB);
-		} else {
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.TAB);
+		} 
+		else {
 			waitHelperClick(driver, xpath);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
 			clickOnElement(driver, webElement);
 			webElement.clear();
-			webElement.sendKeys(value, Keys.TAB);
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.TAB);
 		}
 
 	}
