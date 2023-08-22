@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "azentiolearning",
+  "private_key_id": "71200dde582a6b0db4554e9368020ad0c51cd2ec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCcK0tnCLnCYwBz\n2KVXvBTB8sZfH0KDSOnxtKWO2pq2CL8RMN7yNqGNgElcAvgrPhe9ZOJYwwEGjEM0\n9I8WbDiXGeu9Lfa/POGQjErsSKKAbidRNIXN73ri+jU44p5XkI/AHLto+u0igeF5\ng0ZvMHVVVLb39+/Jly8WqjccVS3ceVqsDjs8nS05ftGMYkp17hPqQlWyJLqz7edc\nrqqH9BsHaCEW4zxlgZyEDHZ5gmuASx1TgzHblfAAxfcmT9tzvInl0M9SfYiFnvz0\noDXaWNW08MbbY0IgOEkY54xIXiTPDVC5wHDAdSM3fES+eVkqXjJw3al9Knp7vrZX\nFdrKgmbJAgMBAAECggEAAKzqw0gH6/xwjRpjJ7CdcIklEhZWZoSMl3zUqPwkJmn+\nBTw5AKLwxVtdpdyw7QNJyBTNP6fzQ49x1HiDfGviKEbRTKo2hUqlU/IuukbQ+3LO\nhSTvzbgtvRjViANp6X7Lcl/QGzLXpE+GauzrjhxPa5uwJr0p/+Jr+UJUoUZIinSI\nWOvonx+YlLS6WwDexZhJ5Nsr6v0YMyOzKwNSscrjxy1bwtWhG++gfaH0OBu25ihE\nGmop78hTmZYkngcWo9nn0kf9SejyJLYauJzCX5PlbW68vw/heW4gTDWPEHBX0PSO\ndcOKj0tA/t9MRt+4vjZooMISXsu8i9pp3/rlsVZUkQKBgQDXvI+AHS3gKYrePwHc\nSqF7++f/vDrGd5krizxa2lp4Vs+VYvNRVOTNV3r8uRFLUv53PWvqItWiFBy7lBuK\n0SABq5pjZiqsEptKV54eGSMiEDLgPrxkQZVf/3HWUEWVAGDG/FdVfdzOeFayshmT\nE6uQmiNdKfZX7Xcg6HmVUENpGQKBgQC5ULoJBsdI4EJ3oLZkpH1pBpC6SgtZqgoF\n3u0jSF+VTuWX6LgDPWfHYD9GJEw9wedM7VJhn00SvCln+Kyn/gzHRyPhwn4WhYfX\nciouoXg6Shd85qtGM5cm9krA2K7abCjVKb9dQyPA+IgQtS+J8HqOa91xImAxOdXi\nXpj0UpmxMQKBgHZQnUqfthcn8VbtqzGLZIDAqH2iV4Gc+c3dsJ4K/m7c/T9qYxMJ\nwemzvml3fbqXq6Ltdo+TxyH6cb+V/HznL+x6llNJJsHz+mKNJtRO6Ou3go9lGKDL\nLwbU6zOkFmUfLfQzVBo4yq4ZZULfVhNJSGAniJmBd+7E9v5/QJ7Yw/+RAoGAV1iP\ndzW0tMrPSWd80M8fNWOcz9Gaq/aTptS+XUT9mHiJiyJrqUtGIRlieYMeVHWSuhWa\nIN1fDJeXxKPXbY83Iq6LYRu1JpRlxMzQyQ3eh0ro6zwmOn6SnhC0h1UahWU5kc+N\nnT3KGmiKaaWc9J1ehsacp3iWcl1aTMpdubs9KeECfwXhtdj+VCBu4nRWt+RsTcTm\npRbDRTFkiGKSZVJFwwS1YX9ndm1Cs0KMuqFtxPLameH/EsCtxY7StJlAY5mZ3DAj\nKkd2vcEYS+Hi72+QU5klXVzxXOCQ9GN1yupg/d1dvSDgKcPmUI98If02c+xApmWP\nKPfRBNkrIaGcNH17maY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "user614@azentiolearning.iam.gserviceaccount.com",
+  "client_id": "114655570953479691478",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user614%40azentiolearning.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
