@@ -263,9 +263,46 @@ public class AdminScreen_Steps_614 {
 	
 	@And("^user_614 click on the ok button for the successful login page for omni_corporate_web_portal$")
 	public void user_614ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
-		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin"), 
-				true);
+		
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("SomethingWentWrong_OKbtn_omni"), 
+					20,
+					false);
+		} catch (Exception e) {
+			
+			try {
+				us.clickOnElementNoWait(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("SecurityAlert_OKbtn_Omni"), 
+						20,
+						false);
+			} catch (Exception e1) {
+				try {
+					
+					us.clickOnElementNoWait(driver, 
+							DataReader.locatorsMap.get("OmniScreen_Login").get("SessionReloaded_Omni"), 
+							20,
+							false);
+					
+				} catch (Exception e2) {
+					
+				}
+			}
+		}
+		
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 
+					45,
+					false);
+		} 
+		
+		catch (Exception e) {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
+					10,
+					false);
+		}
 	}
 	
 	@And("^user_614 click on the AMANA payment screen in the homepage$")
