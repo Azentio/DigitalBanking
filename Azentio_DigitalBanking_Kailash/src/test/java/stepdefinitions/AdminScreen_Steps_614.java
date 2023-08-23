@@ -70,6 +70,18 @@ public class AdminScreen_Steps_614 {
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
+	@And("user loads the test datasetup for the test case id AT_022")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_at_022() {
+		executionTestData = DataReader.executionTestData.get("AT_022_01");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	@And("user loads the test datasetup for the test case id AT_042")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_at_042() {
+		executionTestData = DataReader.executionTestData.get("AT_042_01");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
 	
 	
 	@And("^user click on the parameters features in the OmniScreen admin page$")
@@ -521,11 +533,8 @@ public class AdminScreen_Steps_614 {
 
 	@And("user_072 click next button under scheduled other bank transfer")
 	public void user_072_click_next_button_under_scheduled_other_bank_transfer() {
-		
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), true);
-			
-	    
-	}
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
+			}
 
 	@And("user_072 select periodicity under scheduled other bank transfer")
 	public void user_072_select_periodicity_under_scheduled_other_bank_transfer() {
@@ -550,7 +559,53 @@ public class AdminScreen_Steps_614 {
 	public void user_072_click_ok_button_for_request_submitted_successfully_or_request_time() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnRequestTimeOut"), true);
 	}
+	@Given("user click on the international transfers under the Transfers")
+	public void user_click_on_the_international_transfers_under_the_transfers() {
+		 us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Transfers_AMANAPaymnets"), false);
 
+	}
+
+	@And("user select from account under international transfers")
+	public void user_select_from_account_under_international_transfers() {	
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_InternationalTransfer"), false);
+		 String xpath ="//ion-label[contains(text(),' Scheduled Other Bank Transfer ')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
+			   		+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"' )]";
+			   us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+			   us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+	}
+
+		
+
+	@And("user select beneficiary under international transfer")
+	public void user_select_beneficiary_under_international_transfer() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Benefi_internationalTransfer"), false);
+	String xpath ="//ion-label[contains(text(),' Scheduled Other Bank Transfer ')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
+	   		+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"' )]";
+	   us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+	   us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+	
+	}
+
+	@And("user enter transfer amount under international transfer")
+	public void user_enter_transfer_amount_under_international_transfer() {
+		 us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_ScheduledOtherBankTransfer"), testData.get("TransferAmount"), true);
+	}
+
+	@And("user enter purpose of transfer under international transfer")
+	public void user_enter_purpose_of_transfer_under_international_transfer() throws InterruptedException {
+		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
+		  Thread.sleep(15000);
+	}
+
+	@And("user click next button under international transfer")
+	public void user_click_next_button_under_international_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
+	}
+
+	@And("user click submit button under international transfer")
+	public void user_click_submit_button_under_international_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
+	}
 
 	
 	
