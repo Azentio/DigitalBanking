@@ -204,7 +204,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 @AT_017
 Scenario: Submit Transfer to Own Bank - scheduled with corporate user and one approval is required
  
-
+change
 
 
 
