@@ -61,8 +61,22 @@ public class AdminScreen_Steps_0482 {
 	
 	@And("user_482 loads the test datasetup for the test case id AT_020")
 	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_020_01() {
-		executionTestData = DataReader.executionTestData.get("AT_020");
-		System.out.println(executionTestData);
+		executionTestData = DataReader.executionTestData.get("AT_021_01");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	@And("user_482 loads the test datasetup for the test case id AT_019_01")
+	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_019_01() {
+		executionTestData = DataReader.executionTestData.get("AT_021_01");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	@And("user_482 loads the test datasetup for the test case id AT_020_02")
+	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_020_02() {
+		executionTestData = DataReader.executionTestData.get("AT_021_02");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	@Given("user_482 loads the test datasetup for the test case id AT_036")
+	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_036() {
+		executionTestData = DataReader.executionTestData.get("AT_036");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	
@@ -233,7 +247,7 @@ public class AdminScreen_Steps_0482 {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
 				testData.get("UserName1"),
-				true);
+				true); 
 	}
 	
 
@@ -248,6 +262,34 @@ public class AdminScreen_Steps_0482 {
 		
 		
 		
+	}
+	@Given("user_482 enters the maker checker username1 in the login page for omni_corporate_web_portal")
+	public void user_enters_the_maker_checker_username1_in_the_login_page_for_omni_corporate_web_portal() {
+		for (int i = 0; i <2000; i++) {
+			try {
+				if (us.getTextFromExecuteJavaScript(DataReader.locatorsMap.get("OmniScreen_Login").get("LanguageValidationInLogin")).contains("English")) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		us.enterData(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
+				testData.get("UserName1"),
+				true);
+	}
+
+	@Given("user_482 enters the maker checker password1 in the login page for omni_corporate_web_portal")
+	public void user_enters_the_maker_checker_password1_in_the_login_page_for_omni_corporate_web_portal() {
+		try {
+			us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"), testData.get("Password1"), true);
+			
+		} catch (Exception e) {
+			Assert.fail("password not entered");
+		}
 	}
 	
 	@And("^user_482 click on the loggin button in the login page for omni_corporate_web_portal$")
@@ -471,6 +513,13 @@ public class AdminScreen_Steps_0482 {
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOtherBankTransfer"), 
 				false);
 	}
+	@Given("user_{int} click scheduled own Account transfer under the AMANA payment screen")
+	public void user_click_scheduled_own_account_transfer_under_the_amana_payment_screen(Integer int1) {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnAccountTransfer"), 
+				false);
+	}
+
 
 	@And("user_482 select from account under scheduled other bank transfer")
 	public void user_482_select_from_account_under_scheduled_other_bank_transfer() throws Exception {	
@@ -488,17 +537,59 @@ public class AdminScreen_Steps_0482 {
 			}
 		}
 	}
-	 
-	   
 	    
+	}
+	@And("user_482 select from account under scheduled own bank transfer")
+	public void user_482_select_from_account_under_scheduled_own_bank_transfer() throws Exception {	
+	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
+	   String xpath ="//ion-label[contains(text(),'Scheduled_own_account_transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
+				+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+	   for (int i = 0; i <2000; i++) {
+		try {
+			  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+			  us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+			   break;
+		} catch (Exception e) {
+			if (i==1999) {
+				Assert.fail(e.getMessage());
+			}
+		}
+	}
 	}
 	@And("user_482 select beneficiary under scheduled other bank transfer")
 	public void user_482_select_beneficiary_under_scheduled_other_bank_transfer() {
-	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Benefi_ScheduledOtherBankTransfer"), true);
+	   
 	   String xpath ="//ion-label[contains(text(),' Scheduled Other Bank Transfer ')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
-	   		+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"' )]";
-	   us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
-	   us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+	   		+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+	   for (int i = 0; i <2000; i++) {
+			try {
+				  us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Benefi_ScheduledOtherBankTransfer"), true);
+				  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+				  us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+				   break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage()+"Check beneficiary account number");
+				}
+			}
+		}
+	}
+	@Given("user_482 select To account under scheduled own bank transfer")
+	public void user_select_to_account_under_scheduled_own_bank_transfer() {
+		String xpath ="//ion-label[contains(text(),'Scheduled_own_account_transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
+				+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+		   for (int i = 0; i <2000; i++) {
+				try {
+					  us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToTransferScheduledOwnTransfer"), true);
+					  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+					  us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+					   break;
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage()+"Check beneficiary account number");
+					}
+				}
+			}
 	}
 
 	@And("user_482 enter transfer amount under scheduled other bank transfer")
@@ -510,29 +601,77 @@ public class AdminScreen_Steps_0482 {
 	@And("user_482 enter purpose of transfer under scheduled other bank transfer")
 	public void user_482_enter_purpose_of_transfer_under_scheduled_other_bank_transfer() throws InterruptedException {
 	   us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
-	   Thread.sleep(15000);
-	    
+	   
 	}
 
 	@And("user_482 click next button under scheduled other bank transfer")
 	public void user_482_click_next_button_under_scheduled_other_bank_transfer() {
+		for (int i = 0; i <2000; i++) {
+			try {
+				driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"))).click();
+				if (driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("PerodicityValidation"))).isDisplayed()) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 		
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), true);
-			
-	    
+	}
+	@Given("user_482 click next button1 under scheduled other bank transfer")
+	public void user_click_next_button1_under_scheduled_other_bank_transfer() {
+		for (int i = 0; i <2000; i++) {
+			try {
+				driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"))).click();
+				break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 	}
 
 	@And("user_482 select periodicity under scheduled other bank transfer")
 	public void user_482_select_periodicity_under_scheduled_other_bank_transfer() {
-	   us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
+	   
 	   String xpath ="//ion-label[contains(text(),'"+testData.get("SelectPeriodicity")+"')]";
+	   for (int i = 0; i < 200; i++) {
+			try {
+				if (i==0||i==20||i==40||i==60||i==80||i==100
+						||i==120||i==140||i==140||i==160||i==180||i==199) {
+					us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
+				}
+				
+				if (driver.findElement(By.xpath(xpath)).isDisplayed()) {
+					break;
+				}
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	   
 	   us.clickOnElement(driver, xpath, false);
 	    
 	}
 
 	@And("user_482 enter number of payments under scheduled other bank transfer")
 	public void user_482_enter_number_of_payments_under_scheduled_other_bank_transfer() {
-	   us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_ScheduledOtherBankTransfer"),testData.get("NoOfPayments"), true);
+		for (int i = 0; i < 200; i++) {
+			try {
+				us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_ScheduledOtherBankTransfer"),testData.get("NoOfPayments"), false);
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	   
 	    
 	}
 
@@ -546,7 +685,15 @@ public class AdminScreen_Steps_0482 {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnRequestTimeOut"), true);
 	}
 
-
+	@Given("user_482 click i agree on terms and conditions")
+	public void user_482_click_i_agree_on_terms_and_conditions() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTC"), true);
+	}
+	@Given("user_482 click log out button")
+	public void user_click_log_out_button(Integer int1) {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("LogOutButton"), false);
+	}
+	
 	
 	
 
