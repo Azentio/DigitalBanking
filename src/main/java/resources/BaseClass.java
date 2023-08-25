@@ -27,7 +27,7 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			options.setBinary("C:\\Users\\ININDC00614\\Downloads\\chrome-win64\\chrome-win64\\chrome.exe");
+			options.setBinary("C:\\Users\\ININDC00614\\eclipse-workspace_Azentio\\chrome-win64\\chrome-win64\\chrome.exe");
 			driver = new ChromeDriver(options);
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
