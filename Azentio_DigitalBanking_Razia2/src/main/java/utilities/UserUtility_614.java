@@ -60,6 +60,15 @@ public class UserUtility_614 {
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 	}
+	public WebElement getWebElementUsingJavaScript (String xpath) {
+		try {
+			WebElement webElement = (WebElement) js.executeScript("return " + xpath + "");
+			return webElement;
+		} catch (Exception e) {
+		}
+		return null;		
+
+	}
 
 	public void waitHelper_Js(WebDriver driver, String xpath) {
 		
