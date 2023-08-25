@@ -265,6 +265,31 @@ public class UserUtility_614 {
 		}
 
 	}
+	
+	public void enterDataAndTabNoWait(WebDriver driver, String xpath, String value, int waitTime, boolean JS) {
+
+		WebElement webElement;
+
+		if (JS) {
+			waitHelper_Js(driver, xpath, waitTime);
+			webElement = (WebElement) js.executeScript("return " + xpath + "");
+//			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.TAB);
+		} 
+		else {
+			waitHelperClick(driver, xpath, waitTime);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.TAB);
+		}
+
+	}
 
 	public void enterDataAndEnter(WebDriver driver, String xpath, String value, boolean JS) {
 
@@ -593,6 +618,33 @@ public class UserUtility_614 {
 	public String textReplacer(String xpath, String textChange, String newValue) {
 		String newXpath = xpath.replace(textChange, newValue);
 		return newXpath;
+	}
+
+	public void enterDataAndEnterOmni(WebDriver driver, String xpath, String value, boolean JS) {
+		WebElement webElement;
+
+		if (JS) {
+			waitHelper_Js(driver, xpath);
+			webElement = (WebElement) js.executeScript("return " + xpath + "");
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value);
+			webElement.sendKeys(Keys.ENTER);
+		} else {
+			waitHelperClick(driver, xpath);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			clickOnElement(driver, webElement);
+			webElement.clear();
+			webElement.sendKeys(value);
+			try {
+				Thread.sleep(3000);
+			} catch (Exception e) {
+				
+			}
+			webElement.sendKeys(Keys.ENTER);
+		}
+		
 	}
 	
 

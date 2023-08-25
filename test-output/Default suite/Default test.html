@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 22 15:56:57 IST 2023</td>
+<td>Started on:</td><td>Thu Aug 24 19:01:06 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>328 seconds (328420 ms)</td>
+<tr><td>Total time:</td><td>292 seconds (292171 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit Transfer to Own Bank - scheduled with corporate user and two approvals are required", "Optional[Checking the functionalities of Account Transfer]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[contains(text(),&apos;Scheduled Own Account Transfer&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit Transfer to Own Bank - one time with corporate user and two approvals are required", "Optional[Checking the functionalities of Account Transfer]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),&apos;Internal Transfer&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
-	at stepdefinitions.AdminScreen_Steps_614.User_614WaitsForTheConfirmationOnTheSubmissionReportForScheduledOwnAccountTransfer(AdminScreen_Steps_614.java:677)
-	at ✽.user_614 waits for the confirmation on the submission report for scheduled own account transfer(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:337)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1796226487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1796226487'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[contains(text(),&apos;Scheduled Own Account Transfer&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:561)
+	at stepdefinitions.AdminScreen_Steps_614.User_614WaitsForTheConfirmationOnTheSubmissionReportForOwnBankTransfer(AdminScreen_Steps_614.java:736)
+	at ✽.user_614 waits for the confirmation on the submission report for own bank transfer(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:109)
+</pre></div><a href='#' onClick='toggleBox("stack-trace616080275", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace616080275'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),&apos;Internal Transfer&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
-	at stepdefinitions.AdminScreen_Steps_614.User_614WaitsForTheConfirmationOnTheSubmissionReportForScheduledOwnAccountTransfer(AdminScreen_Steps_614.java:677)
-	at ✽.user_614 waits for the confirmation on the submission report for scheduled own account transfer(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:337)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:561)
+	at stepdefinitions.AdminScreen_Steps_614.User_614WaitsForTheConfirmationOnTheSubmissionReportForOwnBankTransfer(AdminScreen_Steps_614.java:736)
+	at ✽.user_614 waits for the confirmation on the submission report for own bank transfer(file:///C:/Users/ININDC00614/eclipse-workspace_Azentio/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:109)
 </pre></div></td>
-<td>325</td>
-<td>Runner.TestApplication@4b29d1d2</td></tr>
+<td>288</td>
+<td>Runner.TestApplication@1349883</td></tr>
 </table><p>
 </body>
 </html>
