@@ -241,8 +241,6 @@ And user_612 waits for the confirmation on the submission report for scheduled o
 And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
-
-
 #Checker Approval1
 @AT_017_02
 Scenario: Submit Transfer to Own Bank - scheduled with corporate user and one approval is required
@@ -281,8 +279,35 @@ And user_612 click submit button under international transfer
 
 @AT_024_01
 Scenario: Submit International Transfer - scheduled with corporate user and two approvals are required
+And user_612 loads the test datasetup for the test case id AT_024
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the checker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the TODO icon in homescreen on omni web portal
+And user_612 click on the 1st pending item in the list
+And user_612 click on the approve btn for the pending transfer request from the maker
+And user_612 waits for the confirmation on the submission report for international bank transfer
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
 
-
+@AT_024_02
+Scenario: Submit International Transfer - scheduled with corporate user and two approvals are required
+And user_612 loads the test datasetup for the test case id AT_024
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 enters the checker username2 in the login page for omni_corporate_web_portal
+And user_612 enters the checker password2 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the TODO icon in homescreen on omni web portal
+And user_612 click on the 1st pending item in the list
+And user_612 click on the approve btn for the pending transfer request from the maker
+And user_612 waits for the confirmation on the submission report
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
 
  
 
