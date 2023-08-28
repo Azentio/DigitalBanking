@@ -50,7 +50,7 @@ And user_612 click on the force logout btn in the login page for omni_corporate_
 And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_612 click on the AMANA payment screen in the homepage
 And user_612 click on the transfers under the AMANA payment screen
-And user_612 click on the transfers within own accounts under transfer_Amana payment screen
+And user_612 click on the transfers within own banks under transfer_Amana payment screen
 And user_612 click on the From accounts from the transfers within own accounts
 And user_612 selects the from account from the dropdown in transfers within own accounts
 And user_612 click on the To accounts from the transfers within own accounts
@@ -58,8 +58,9 @@ And user_612 selects the To account from the dropdown in transfers within own ac
 And user_612 enters the transaction amount in the transfers screen
 And user_612 enters the purpose of transaction in the transfers screen
 And user_612 click on next btn in the transfers screen
+And user_612  click on the I agree to terms and conditions checkbox
 And user_612 click on submit btn in the transfers screen
-And user_612 waits for the confirmation on the submission report
+And user_612 waits for the confirmation on the submission report for own bank transfer
 And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
@@ -69,6 +70,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 Scenario: Submit Transfer to Own Bank - one time with corporate user and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_005
+Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
 And user_612 enters the checker password1 in the login page for omni_corporate_web_portal
 And user_612 click on the loggin button in the login page for omni_corporate_web_portal
@@ -103,7 +105,7 @@ And user_612 selects the To account from the dropdown in transfers to other bank
 And user_612 enters the transaction amount in the transfers screen
 And user_612 enters the purpose of transaction in the transfers screen
 And user_612 click on next btn in the transfers screen
-
+And user_612  click on the I agree to terms and conditions checkbox
 And user_612 click on submit btn in the transfers screen
 And user_612 waits for the confirmation on the submission report for other bank transfer
 And user_612 gets the reference number from the submission report
@@ -124,6 +126,7 @@ And user_612 click on the 1st pending item in the list
 And user_612 click on the approve btn for the pending transfer request from the maker
 And user_612 waits for the confirmation on the submission report for other bank transfer
 And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
 
 
 @At_011_01
@@ -145,6 +148,7 @@ And user_612 selects the To account from the dropdown in transfers for internati
 And user_612 enters the transaction amount in the transfers screen
 And user_612 enters the purpose of transaction in the transfers screen
 And user_612 click on next btn in the transfers screen
+And user_612  click on the I agree to terms and conditions checkbox
 And user_612 click on submit btn in the transfers screen
 And user_612 waits for the confirmation on the submission report for international bank transfer
 And user_612 gets the reference number from the submission report
@@ -166,6 +170,7 @@ And user_612 click on the approve btn for the pending transfer request from the 
 And user_612 waits for the confirmation on the submission report for international bank transfer
 And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
+
 
 @AT_014_01
 Scenario: Submit own account transfer - scheduled with corporate user and one approval is required
@@ -190,7 +195,7 @@ And user_612 click on the periodicity dropdown in scheduled transfer
 And user_612 click on the single future date from the dropdown in scheduled transfer
 And user_612 click on next btn in the transfers screen
 And user_612  click on the I agree to terms and conditions checkbox
-And user_612 click on next btn in the transfers screen
+#And user_612 click on next btn in the transfers screen
 And user_612 click on submit btn in the transfers screen
 And user_612 waits for the confirmation on the submission report for scheduled own account transfer
 And user_612 gets the reference number from the submission report
@@ -236,6 +241,7 @@ And user_612 click on the periodicity dropdown in scheduled transfer
 And user_612 click on the single future date from the dropdown in scheduled transfer
 And user_612 click on next btn in the transfers screen
 And user_612  click on the I agree to terms and conditions checkbox
+#And user_612 click on next btn in the transfers screen
 And user_612 click on submit btn in the transfers screen
 And user_612 waits for the confirmation on the submission report for scheduled own account transfer
 And user_612 gets the reference number from the submission report
@@ -258,8 +264,9 @@ And user_612 waits for the confirmation on the submission report for scheduled o
 And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
+
 @AT_024
-Scenario:Submit International Transfer - scheduled with corporate user and two approvals are required
+Scenario: Submit International Transfer - scheduled with corporate user and two approvals are required
 And user_612 loads the test datasetup for the test case id AT_024
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -310,6 +317,104 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
  
+@AT_034
+Scenario: Submit own account transfer - one time with corporate user and one approval is required
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 loads the test datasetup for the test case id AT_034
+And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the AMANA payment screen in the homepage
+And user_612 click on the transfers under the AMANA payment screen
+And user_612 click on the transfers within own accounts under transfer_Amana payment screen
+And user_612 click on the From accounts from the transfers within own accounts
+And user_612 selects the from account from the dropdown in transfers within own accounts
+And user_612 click on the To accounts from the transfers within own accounts
+And user_612 selects the To account from the dropdown in transfers within own accounts
+And user_612 enters the transaction amount in the transfers screen
+And user_612 enters the purpose of transaction in the transfers screen
+And user_612 click on next btn in the transfers screen
+And user_612 click on submit btn in the transfers screen
+And user_612 waits for the confirmation on the submission report
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
+
+#Checker Approval1
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 loads the test datasetup for the test case id AT_034
+And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the checker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the TODO icon in homescreen on omni web portal
+And user_612 click on the 1st pending item in the list
+And user_612 click on the approve btn for the pending transfer request from the maker
+And user_612 waits for the confirmation on the submission report
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
+
+
+@AT_039
+Scenario: Submit own bank transfer to predefined beneficiary - one time with corporate user have maker checker access
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 loads the test datasetup for the test case id AT_039
+And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the AMANA payment screen in the homepage
+And user_612 click on the transfers under the AMANA payment screen
+And user_612 click on the transfers within own banks under transfer_Amana payment screen
+And user_612 click on the From accounts from the transfers within own accounts
+And user_612 selects the from account from the dropdown in transfers within own accounts
+And user_612 click on the To accounts from the transfers within own accounts
+And user_612 selects the To account from the dropdown in transfers within own accounts
+And user_612 enters the transaction amount in the transfers screen
+And user_612 enters the purpose of transaction in the transfers screen
+And user_612 click on next btn in the transfers screen
+And user_612  click on the I agree to terms and conditions checkbox
+And user_612 click on submit btn in the transfers screen
+And user_612 waits for the confirmation on the submission report for own bank transfer
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
+
+@AT_044
+
+Scenario: Submit own bank transfer to predefined beneficiary  - scheduled with corporate user and 2 approval is required
+
+
+
+
+@AT_047
+Scenario: Submit own bank transfer to non predefined beneficiary - one time with corporate user have maker checker access
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -558,6 +558,17 @@ public class  AccountTransferSteps_612 {
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	
+	@And("^user_612 loads the test datasetup for the test case id AT_034$")
+	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_034() {
+		executionTestData = DataReader.executionTestData.get("AT_034");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	
+	@And("^user_612 loads the test datasetup for the test case id AT_039$")
+	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_039() {
+		executionTestData = DataReader.executionTestData.get("AT_039");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
 	@And("^user_612 click on the international bank transfer under transfer_Amana payment screen$")
 	public void user_612ClickOnTheInternationalBankTransferUnderTransfer_AmanaPaymentScreen() throws InterruptedException {
 		us.clickOnElement(driver, 
@@ -692,6 +703,11 @@ public class  AccountTransferSteps_612 {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ReportConfirmationInScheduledOwnAccountTransfer"), 
 				false);
+	}
+	@And("^user_612 waits for the confirmation on the submission report for own bank transfer$")
+	public void User_612WaitsForTheConfirmationOnTheSubmissionReportForOwnBankTransfer() {
+		us.elementIsVisible(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ReportConfirmationInOwnBankTransfer"));
 	}
 	
 //	AT_017
