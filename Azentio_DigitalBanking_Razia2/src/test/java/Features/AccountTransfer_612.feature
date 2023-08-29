@@ -1,7 +1,7 @@
 Feature: Checking the functionalities of Account Transfer
 
 @AT_002
-Scenario: Submit own account transfer - one time with corporate user and one approval is required
+Scenario: Submit own account transfer - one time with corporate user_612 and one approval is required
 And user_612 loads the test datasetup for the test case id AT_002
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -40,7 +40,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 @AT_005_01
-Scenario: Submit Transfer to Own Bank - one time with corporate user and one approval is required
+Scenario: Submit Transfer to Own Bank - one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_005
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -67,7 +67,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
 @AT_005_02
-Scenario: Submit Transfer to Own Bank - one time with corporate user and one approval is required
+Scenario: Submit Transfer to Own Bank - one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_005
 Given user_612 navigates to the omni_corporate_web_portal
@@ -87,7 +87,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 @AT_008_01
-Scenario: Submit Transfer to Other Bank - one time with corporate user and one approval is required
+Scenario: Submit Transfer to Other Bank - one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_008
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -113,7 +113,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
 @AT_008_02
-Scenario: Submit Transfer to Other Bank - one time with corporate user and one approval is required
+Scenario: Submit Transfer to Other Bank - one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_008
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
@@ -130,7 +130,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 @At_011_01
-Scenario: Submit International Transfer one time with corporate user and one approval is required
+Scenario: Submit International Transfer one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_011
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -156,7 +156,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
 @At_011_02
-Scenario: Submit International Transfer one time with corporate user and one approval is required
+Scenario: Submit International Transfer one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_011
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
@@ -173,7 +173,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 @AT_014_01
-Scenario: Submit own account transfer - scheduled with corporate user and one approval is required
+Scenario: Submit own account transfer - scheduled with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_014
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -203,7 +203,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
 @AT_014_02
-Scenario: Submit own account transfer - scheduled with corporate user and one approval is required
+Scenario: Submit own account transfer - scheduled with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_014
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
@@ -219,7 +219,7 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 @AT_017_01
-Scenario: Submit Transfer to Own Bank - scheduled with corporate user and one approval is required
+Scenario: Submit Transfer to Own Bank - scheduled with corporate user_612 and one approval is required
  Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_017
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -248,8 +248,7 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
-@AT_017_02
-Scenario: Submit Transfer to Own Bank - scheduled with corporate user and one approval is required
+Scenario: Submit Transfer to Own Bank - scheduled with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_017
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
@@ -266,7 +265,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 @AT_024
-Scenario: Submit International Transfer - scheduled with corporate user and two approvals are required
+Scenario: Submit International Transfer - scheduled with corporate user_612 and two approvals are required
 And user_612 loads the test datasetup for the test case id AT_024
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -285,7 +284,7 @@ And user_612 click next button under international transfer
 And user_612 click submit button under international transfer
 
 @AT_024_01
-Scenario: Submit International Transfer - scheduled with corporate user and two approvals are required
+Scenario: Submit International Transfer - scheduled with corporate user_612 and two approvals are required
 And user_612 loads the test datasetup for the test case id AT_024
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
@@ -301,7 +300,7 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 @AT_024_02
-Scenario: Submit International Transfer - scheduled with corporate user and two approvals are required
+Scenario: Submit International Transfer - scheduled with corporate user_612 and two approvals are required
 And user_612 loads the test datasetup for the test case id AT_024
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the checker username2 in the login page for omni_corporate_web_portal
@@ -318,7 +317,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
  
 @AT_034
-Scenario: Submit own account transfer - one time with corporate user and one approval is required
+Scenario: Submit own account transfer - one time with corporate user_612 and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_034
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -358,7 +357,7 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 @AT_039
-Scenario: Submit own bank transfer to predefined beneficiary - one time with corporate user have maker checker access
+Scenario: Submit own bank transfer to predefined beneficiary - one time with corporate user_612 have maker checker access
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_039
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -383,10 +382,58 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 @AT_044
-
 Scenario: Submit own bank transfer to predefined beneficiary  - scheduled with corporate user and 2 approval is required
 
+And user_612 loads the test datasetup for the test case id AT_044
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the AMANA payment screen in the homepage
+And user_612 click scheduled transfer under AMANA payment screen
+And user_612 click Scheduled own bank transfer Under scheduled transfer
+And user_612 select from account under Scheduled own bank transfer
+And user_612 select beneficiary under Scheduled own bank transfer
+And user_612 enter transfer amount under Scheduled own bank transfer
+And user_612 enter purpose of transfer under Scheduled own bank transfer
+And user_612 click next button under Scheduled own bank transfer
+And user_612 click submit button under Scheduled own bank transfer
 
+
+
+@AT_044_01
+Scenario: Scenario: Submit own bank transfer to predefined beneficiary  - scheduled with corporate user and 2 approval is required
+And user_612 loads the test datasetup for the test case id AT_024
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the checker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the TODO icon in homescreen on omni web portal
+And user_612 click on the 1st pending item in the list
+And user_612 click on the approve btn for the pending transfer request from the maker
+And user_612 waits for the confirmation on the submission report for international bank transfer
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
+
+@AT_044_02
+Scenario: Submit International Transfer - scheduled with corporate user_612 and two approvals are required
+And user_612 loads the test datasetup for the test case id AT_024
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 enters the checker username2 in the login page for omni_corporate_web_portal
+And user_612 enters the checker password2 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the TODO icon in homescreen on omni web portal
+And user_612 click on the 1st pending item in the list
+And user_612 click on the approve btn for the pending transfer request from the maker
+And user_612 waits for the confirmation on the submission report
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
 
 
 @AT_047

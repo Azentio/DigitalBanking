@@ -569,6 +569,11 @@ public class  AccountTransferSteps_612 {
 		executionTestData = DataReader.executionTestData.get("AT_039");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
+	@And("^user_612 loads the test datasetup for the test case id AT_044$")
+	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_044() {
+		executionTestData = DataReader.executionTestData.get("AT_044");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
 	@And("^user_612 click on the international bank transfer under transfer_Amana payment screen$")
 	public void user_612ClickOnTheInternationalBankTransferUnderTransfer_AmanaPaymentScreen() throws InterruptedException {
 		us.clickOnElement(driver, 
@@ -778,7 +783,56 @@ public class  AccountTransferSteps_612 {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
 	}
   	
-  	
+////At44
+
+	@And("user_612 click scheduled transfer under AMANA payment screen")
+	public void user_072_click_scheduled_transfer_under_amana_payment_screen() {
+	    us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledTransfers_Transfers_AMANA"), false);
+	}
+	@And("user_612 click Scheduled own bank transfer Under scheduled transfer")
+	public void user_click_scheduled_own_bank_transfer_under_scheduled_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnBankTransfer_ScheduledTransfer"), false);
+		
+	}
+
+	@And("user_612 select from account under Scheduled own bank transfer")
+	public void user_select_from_account_under_scheduled_own_bank_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
+		String xpath ="//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
+		 //us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+		 us.clickOnElement(driver, driver.findElement(By.xpath(xpath)));
+		
+		
+	}
+
+	@And("user_612 select beneficiary under Scheduled own bank transfer")
+	public void user_select_beneficiary_under_scheduled_own_bank_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer"), true);
+		String xpath ="//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+		 us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+		 us.clickOnElement(driver, driver.findElement(By.xpath(xpath)));
+	}
+
+	@And("user_612 enter transfer amount under Scheduled own bank transfer")
+	public void user_enter_transfer_amount_under_scheduled_own_bank_transfer() {
+		 us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_ScheduledOtherBankTransfer"), testData.get("TransferAmount"), true);
+	}
+
+	@And("user_612 enter purpose of transfer under Scheduled own bank transfer")
+	public void user_enter_purpose_of_transfer_under_scheduled_own_bank_transfer() throws InterruptedException   {
+		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
+		  Thread.sleep(15000);
+	}
+
+	@And("user_612 click next button under Scheduled own bank transfer")
+	public void user_click_next_button_under_scheduled_own_bank_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
+	}
+
+	@And("user_612 click submit button under Scheduled own bank transfer")
+	public void user_click_submit_button_under_scheduled_own_bank_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
+	}
 	
 	
 
