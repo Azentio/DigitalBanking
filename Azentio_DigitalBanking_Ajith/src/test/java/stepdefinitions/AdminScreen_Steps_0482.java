@@ -513,8 +513,8 @@ public class AdminScreen_Steps_0482 {
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOtherBankTransfer"), 
 				false);
 	}
-	@Given("user_{int} click scheduled own Account transfer under the AMANA payment screen")
-	public void user_click_scheduled_own_account_transfer_under_the_amana_payment_screen(Integer int1) {
+	@Given("user_482 click scheduled own Account transfer under the AMANA payment screen")
+	public void user_482_click_scheduled_own_account_transfer_under_the_amana_payment_screen() throws InterruptedException {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnAccountTransfer"), 
 				false);
@@ -543,7 +543,8 @@ public class AdminScreen_Steps_0482 {
 	public void user_482_select_from_account_under_scheduled_own_bank_transfer() throws Exception {	
 	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
 	   String xpath ="//ion-label[contains(text(),'Scheduled_own_account_transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
-				+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+				+ "//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
+	   System.out.println(xpath);
 	   for (int i = 0; i <2000; i++) {
 		try {
 			  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
@@ -561,6 +562,7 @@ public class AdminScreen_Steps_0482 {
 	   
 	   String xpath ="//ion-label[contains(text(),' Scheduled Other Bank Transfer ')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
 	   		+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+	   
 	   for (int i = 0; i <2000; i++) {
 			try {
 				  us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Benefi_ScheduledOtherBankTransfer"), true);
@@ -576,11 +578,12 @@ public class AdminScreen_Steps_0482 {
 	}
 	@Given("user_482 select To account under scheduled own bank transfer")
 	public void user_select_to_account_under_scheduled_own_bank_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToTransferScheduledOwnTransfer"), false);
 		String xpath ="//ion-label[contains(text(),'Scheduled_own_account_transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
 				+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
-		   for (int i = 0; i <2000; i++) {
+		   System.out.println(xpath);
+		for (int i = 0; i <2000; i++) {
 				try {
-					  us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToTransferScheduledOwnTransfer"), true);
 					  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
 					  us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
 					   break;
@@ -593,7 +596,8 @@ public class AdminScreen_Steps_0482 {
 	}
 
 	@And("user_482 enter transfer amount under scheduled other bank transfer")
-	public void user_482_enter_transfer_amount_under_scheduled_other_bank_transfer() {
+	public void user_482_enter_transfer_amount_under_scheduled_other_bank_transfer() throws InterruptedException {
+	   Thread.sleep(5000);
 	   us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_ScheduledOtherBankTransfer"), testData.get("TransferAmount"), true);
 	    
 	}
