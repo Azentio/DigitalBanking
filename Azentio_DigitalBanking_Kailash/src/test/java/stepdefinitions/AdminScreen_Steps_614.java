@@ -713,6 +713,12 @@ public void user_loads_the_test_datasetup_for_the_test_case_id_at_045() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb1"), false);
 		Thread.sleep(30000);
 	}
+	@Given("user_5679 loads the test datasetup for the test case id AT_037")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_at_037() {
+		executionTestData = DataReader.executionTestData.get("AT_037_01");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	    }
 
 
 	

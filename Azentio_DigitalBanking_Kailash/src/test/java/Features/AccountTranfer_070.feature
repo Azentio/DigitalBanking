@@ -107,3 +107,18 @@ And user_5679 click on submit btn in the transfers screen
 And user_5679 waits for the confirmation on the submission report
 And user_5679 gets the reference number from the submission report
 And user_5679 clicks on logout btn to logout from omni web portal
+
+@AT_037
+Scenario: Submit own account transfer - scheduled with corporate user and one approval is required
+And user_5679 loads the test datasetup for the test case id AT_037
+Given user_5679 navigates to the omni_corporate_web_portal
+And user_5679 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_5679 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the AMANA payment screen in the homepage
+And user_5679 click scheduled transfer under AMANA payment screen
+
+
+
