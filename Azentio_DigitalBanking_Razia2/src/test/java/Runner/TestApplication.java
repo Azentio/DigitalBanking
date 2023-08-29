@@ -19,7 +19,7 @@ import utilities.ExtentTestManager;
 
 )
 
-// P@th123$%@z  @AT_005_01  @AT_014_01 or @AT_014_02 or @AT_017_01 or @AT_017_02
+// P@th123$%@z  
 
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*
