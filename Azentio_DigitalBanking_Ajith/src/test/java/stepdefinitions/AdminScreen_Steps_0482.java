@@ -79,6 +79,12 @@ public class AdminScreen_Steps_0482 {
 		executionTestData = DataReader.executionTestData.get("AT_036");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
+	@Given("user_482 loads the test datasetup for the test case id AT_070")
+	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_070() {
+		executionTestData = DataReader.executionTestData.get("AT_070");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+
 	
 	
 	@And("^user_482 click on the parameters features in the OmniScreen admin page$")
@@ -698,7 +704,122 @@ public class AdminScreen_Steps_0482 {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("LogOutButton"), false);
 	}
 	
+	@Given("user_482 click the transfers under AMANA Payment")
+	public void user_482_click_the_transfers_under_amana_payment() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Transfers_AMANAPayments"), false);
+	}
+
+	@Given("user_482 click the International Transfer under AMANA Payment")
+	public void user_482_click_the_international_transfer_under_amana_payment() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Transfers_AMANAPaymnets"), false);
+	}
 	
+	//AT_070
+	
+	@Given("user_482 select from account under international bank transfer")
+	public void user_482_select_from_account_under_international_bank_transfer() throws InterruptedException {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
+		   String xpath ="//ion-label[contains(text(),'International Transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
+					+ "//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
+		   for (int i = 0; i <2000; i++) {
+			try {
+				  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+				  us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+				   break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+	}
+
+	@Given("user_482 click To other Benefeciary details under international bank transfer")
+	public void user_482_click_to_other_benefeciary_details_under_international_bank_transfer() throws InterruptedException {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("To_otherBeneficiary"), true);
+	}
+
+	@Given("user_482 enter BIC swift code under international bank transfer")
+	public void user_482_enter_bic_swift_code_under_international_bank_transfer() {
+		for (int i = 0; i <200; i++) {
+			try {
+				us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("BicSwiftCode"), testData.get("BicSwiftCode"), true);
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		
+	}
+
+	@Given("user_482 enter iban Account no under international bank transfer")
+	public void user_482_enter_iban_account_no_under_international_bank_transfer() throws InterruptedException {
+		for (int i = 0; i <200; i++) {
+			try {
+				us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("IbanAccountNum"), testData.get("IbanAccountNo"), true);
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+		
+	}
+
+	@Given("user_482 select beneficiary currency under international bank transfer")
+	public void user_482_select_beneficiary_currency_under_international_bank_transfer() { 
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BeneficiaryCurrency"), false);
+		String xpath ="//ion-label[text()=' "+testData.get("BeneficiaryCurrency")+" ']";
+		for (int i = 0; i <2000; i++) {
+			try {
+				us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+				driver.findElement(By.xpath(xpath)).click();
+				break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+
+
+	}
+
+	@Given("user_482 enter amount under International transfer")
+	public void user_482_enter_amount_under_international_transfer() {
+		us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_InternationalTransfer"), testData.get("TransferAmount"), true);
+	}
+
+	@Given("user_482 enter purpose under internatioanl transfer")
+	public void user_482_enter_purpose_under_internatioanl_transfer() {
+		us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Purpose"), testData.get("PurposeOfTrnx"), true);
+	}
+
+	@Given("user_482 click next button under internatioanl transfer")
+	public void user_482_click_next_button_under_internatioanl_transfer() {
+		for (int i = 0; i <2000; i++) {
+			try {
+				driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"))).click();
+				break;
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	}
+
+	@Given("user_482 click submit button under internatioanl transfer")
+	public void user_482_click_submit_button_under_internatioanl_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
+	}
+
 	
 
 	

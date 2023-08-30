@@ -80,7 +80,7 @@ And user_482 click submit button under scheduled other bank transfer
 And user_482 click log out button
 @AT_070
 Scenario: Submit international transfer to non predefined beneficiary - one time with corporate user have maker checker access
-And user_482 loads the test datasetup for the test case id AT_036
+And user_482 loads the test datasetup for the test case id AT_070
 Given user_482 navigates to the omni_corporate_web_portal
 And user_482 enters the maker checker username1 in the login page for omni_corporate_web_portal
 And user_482 enters the maker checker password1 in the login page for omni_corporate_web_portal
@@ -88,4 +88,20 @@ And user_482 click on the loggin button in the login page for omni_corporate_web
 And user_482 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_482 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_482 click on the AMANA payment screen in the homepage
+And user_482 click the transfers under AMANA Payment
+And user_482 click the International Transfer under AMANA Payment
+And user_482 select from account under international bank transfer
+And user_482 click To other Benefeciary details under international bank transfer
+And user_482 enter BIC swift code under international bank transfer
+And user_482 enter iban Account no under international bank transfer
+And user_482 select beneficiary currency under international bank transfer
+And user_482 enter amount under International transfer 
+And user_482 enter purpose under internatioanl transfer 
+And user_482 click next button under internatioanl transfer 
+And user_482 click submit button under internatioanl transfer
+And user_482 click log out button
+
+
+
+
 
