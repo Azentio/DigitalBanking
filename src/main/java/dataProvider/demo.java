@@ -1,13 +1,14 @@
 package dataProvider;
 
+import java.sql.Connection;
+
 public class demo {
 	
 	public static void main(String[] args) {
-		DataReader dr = new DataReader(false);
 		
-		System.out.println(dr.testDataMap);
+		DataBase db = new DataBase();
 		
-		
+		Connection coreDB = db.CoreDB;
 		
 	}
 

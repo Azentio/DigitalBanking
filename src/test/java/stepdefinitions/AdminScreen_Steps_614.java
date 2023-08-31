@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
 
+import dataProvider.DataBase;
 import dataProvider.DataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -15,6 +16,8 @@ public class AdminScreen_Steps_614 {
 	WebDriver driver = BaseClass.driver;
 
 	UserUtility_614 us = new UserUtility_614(driver);
+	
+	DataBase db = new DataBase();
 
 	String executionTestData;
 	HashMap<String, String> testData;

@@ -16,8 +16,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<!--
@@ -42,7 +42,6 @@
 				org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.3.0</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -172,13 +171,13 @@
 				1.1.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
-<dependency>
-    <groupId>com.google.api-client</groupId>
-    <artifactId>google-api-client</artifactId>
-    <version>1.35.2</version>
-</dependency>
-
+		<!--
+		https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client</artifactId>
+			<version>1.35.2</version>
+		</dependency>
 
 
 		<!--
@@ -198,6 +197,13 @@
 			<artifactId>google-api-services-sheets</artifactId>
 			<version>
 				v4-rev614-1.18.0-rc</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc10</artifactId>
+			<version>19.20.0.0</version>
 		</dependency>
 
 	</dependencies>
@@ -240,9 +246,10 @@
 					<version>
 						3.0.0-M5</version>
 					<configuration>
+						<!--
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles> -->
 					</configuration>
 				</plugin>
 				<plugin>
