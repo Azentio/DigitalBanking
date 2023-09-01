@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-30T16:43:45 IST" name="Default suite" finished-at="2023-08-30T16:46:28 IST" duration-ms="162169">
+  <suite started-at="2023-09-01T12:59:33 IST" name="Default suite" finished-at="2023-09-01T13:02:00 IST" duration-ms="146770">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@6fa51cd4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@402c4085]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-30T16:43:45 IST" name="Default test" finished-at="2023-08-30T16:46:28 IST" duration-ms="162169">
+    <test started-at="2023-09-01T12:59:33 IST" name="Default test" finished-at="2023-09-01T13:02:00 IST" duration-ms="146770">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@6fa51cd4]" started-at="2023-08-30T16:43:45 IST" name="setUpClass" finished-at="2023-08-30T16:43:47 IST" duration-ms="1073" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@402c4085]" started-at="2023-09-01T12:59:33 IST" name="setUpClass" finished-at="2023-09-01T12:59:35 IST" duration-ms="2055" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@6fa51cd4]" started-at="2023-08-30T16:43:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-30T16:46:13 IST" duration-ms="145993" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@402c4085]" started-at="2023-09-01T12:59:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-01T13:01:38 IST" duration-ms="122580" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,38 +27,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=116.0.5845.112)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [41a1f18a2024b7a9d5afd8e1a1e5b64d, clearElement {id=AFF6B4E4A76382CEBBF2EF3D00B6D33F_element_148}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.112, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61898/devtoo..., se:cdpVersion: 116.0.5845.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [org.openqa.selenium.remote.RemoteWebElement@69e7188c -> unknown locator]
-Session ID: 41a1f18a2024b7a9d5afd8e1a1e5b64d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=116.0.5845.112)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [41a1f18a2024b7a9d5afd8e1a1e5b64d, clearElement {id=AFF6B4E4A76382CEBBF2EF3D00B6D33F_element_148}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.112, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61898/devtoo..., se:cdpVersion: 116.0.5845.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [org.openqa.selenium.remote.RemoteWebElement@69e7188c -> unknown locator]
-Session ID: 41a1f18a2024b7a9d5afd8e1a1e5b64d
-at org.testng.Assert.fail(Assert.java:99)
-at stepdefinitions.AdminScreen_Steps_0482.user_482_enter_iban_account_no_under_international_bank_transfer(AdminScreen_Steps_0482.java:767)
-at ✽.user_482 enter iban Account no under international bank transfer(file:///C:/Users/ININDC00482/git/DigitalBank/Azentio_DigitalBanking_Ajith/src/test/java/features/AccountTranfer_482.feature:96)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@6fa51cd4]" started-at="2023-08-30T16:46:13 IST" name="tearDownClass" finished-at="2023-08-30T16:46:28 IST" duration-ms="15049" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@402c4085]" started-at="2023-09-01T13:01:38 IST" name="tearDownClass" finished-at="2023-09-01T13:02:00 IST" duration-ms="22061" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

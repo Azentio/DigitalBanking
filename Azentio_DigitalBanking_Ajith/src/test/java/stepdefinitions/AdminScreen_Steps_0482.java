@@ -700,8 +700,8 @@ public class AdminScreen_Steps_0482 {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTC"), true);
 	}
 	@Given("user_482 click log out button")
-	public void user_click_log_out_button(Integer int1) {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("LogOutButton"), false);
+	public void user_click_log_out_button() throws Exception {
+		us.clickWebElementUsingText(driver,"Logout");
 	}
 	
 	@Given("user_482 click the transfers under AMANA Payment")
@@ -721,6 +721,7 @@ public class AdminScreen_Steps_0482 {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
 		   String xpath ="//ion-label[contains(text(),'International Transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
 					+ "//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
+		   System.out.println(xpath);
 		   for (int i = 0; i <2000; i++) {
 			try {
 				  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
@@ -732,6 +733,7 @@ public class AdminScreen_Steps_0482 {
 				}
 			}
 		}
+		   Thread.sleep(6000);
 		
 	}
 
@@ -758,12 +760,12 @@ public class AdminScreen_Steps_0482 {
 
 	@Given("user_482 enter iban Account no under international bank transfer")
 	public void user_482_enter_iban_account_no_under_international_bank_transfer() throws InterruptedException {
-		for (int i = 0; i <200; i++) {
+		for (int i = 0; i <2000; i++) {
 			try {
 				us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("IbanAccountNum"), testData.get("IbanAccountNo"), true);
 				break;
 			} catch (Exception e) {
-				if (i==199) {
+				if (i==1999) {
 					Assert.fail(e.getMessage());
 				}
 			}
@@ -773,9 +775,39 @@ public class AdminScreen_Steps_0482 {
 	}
 
 	@Given("user_482 select beneficiary currency under international bank transfer")
-	public void user_482_select_beneficiary_currency_under_international_bank_transfer() { 
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BeneficiaryCurrency"), false);
+	public void user_482_select_beneficiary_currency_under_international_bank_transfer() throws Exception { 
+		String jsPath ="document.querySelectorAll('ion-label').length";
+		int length=0;
+		for (int i = 0; i <2000; i++) {
+			try {
+				 String label = us.executeJavaScriptReturnObject(jsPath).toString();
+				 System.out.println(label);
+				length = Integer.parseInt(label);
+				if (length!=0) {
+					System.err.println(length);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for (int i = 0; i <length ; i++) {
+			String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
+			String label = us.executeJavaScriptReturnObject(jsPath1).toString();
+			System.out.println(label);
+			if (label.trim().contentEquals("Beneficiary_currency *")) {
+				String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
+				System.out.println(jsPath2);
+				us.clickOnElement(driver, jsPath2, true);
+				break;
+			}
+			
+		}
+//		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BeneficiaryCurrency"), true);
 		String xpath ="//ion-label[text()=' "+testData.get("BeneficiaryCurrency")+" ']";
+		System.out.println(xpath);
 		for (int i = 0; i <2000; i++) {
 			try {
 				us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));

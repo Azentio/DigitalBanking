@@ -28,6 +28,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.Assert;
 
 import dataProvider.DataReader;
 import freemarker.template.utility.NullArgumentException;
@@ -184,7 +185,7 @@ public class UserUtility_614 {
 		}
 
 	}
-
+	// ajith
 	public void executeJavaScript(String xpath) throws Exception {
 		try {
 			js.executeScript("return "+xpath);
@@ -194,6 +195,52 @@ public class UserUtility_614 {
 		
 
 	}
+	// ajith
+	public Object executeJavaScriptReturnObject(String xpath) throws Exception {
+		try {
+			Object executeScript = js.executeScript("return "+xpath);
+			return executeScript;
+		} catch (Exception e) {
+			throw new Exception("javascript executor failed");
+		}
+		
+		
+
+	}
+   //ajith
+	public void clickWebElementUsingText(WebDriver driver,String text) throws Exception {
+		String jsPath ="document.querySelectorAll('ion-label').length";
+		int length=0;
+		for (int i = 0; i <2000; i++) {
+			try {
+				 String label = executeJavaScriptReturnObject(jsPath).toString();
+				 System.out.println(label);
+				length = Integer.parseInt(label);
+				if (length!=0) {
+					System.err.println(length);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for (int i = 0; i <length ; i++) {
+			String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
+			String label = executeJavaScriptReturnObject(jsPath1).toString();
+			//System.out.println(label);
+			if (label.trim().contentEquals(text)) {
+				String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
+				System.out.println(jsPath2);
+				clickOnElement(driver, jsPath2, true);
+				break;
+			}
+			
+		}
+
+	}
+	
 	public String getTextFromExecuteJavaScript(String xpath) throws Exception {
 		try {
 			
