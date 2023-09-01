@@ -754,5 +754,24 @@ public class AdminScreen_Steps_614 {
 			
 		}
 	}
+	@And("^user_614 loads the test datasetup for the test case id AT_062$")
+	public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_062() {
+
+	}
+
+	@And("^user_614 loads the test datasetup for the test case id AT_063$")
+	public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_063() {
+
+	}
+
+	@And("^user_614 loads the test datasetup for the test case id AT_064$")
+	public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_064() {
+
+	}
+
+	@And("^user_614 loads the test datasetup for the test case id AT_065$")
+	public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_065() {
+
+	}
 	
 }
