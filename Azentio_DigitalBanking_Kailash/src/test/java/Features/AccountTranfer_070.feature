@@ -28,7 +28,11 @@ And user_5679 loads the test datasetup for the test case id AT_020
 Given user_5679 navigates to the omni_corporate_web_portal
 And user_5679 enters the checker username1 in the login page for omni_corporate_web_portal
 And user_5679 enters the checker password1 in the login page for omni_corporate_web_portal
-#And use
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+
+
 
 @AT_022
 Scenario: Submit International Transfer - scheduled with corporate user have maker checker access
@@ -40,8 +44,8 @@ And user_5679 click on the loggin button in the login page for omni_corporate_we
 And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_5679 click on the AMANA payment screen in the homepage
-And user_5679 click on the transfers under the AMANA payment screen
-And user_5679 click on the international transfers under the Transfers
+And user_5679 click scheduled transfer under AMANA payment screen
+And user_5679 click international scheduled transfer under scheduled transfer
 And user_5679 select from account under international transfers
 And user_5679 select beneficiary under international transfer
 And user_5679 enter transfer amount under international transfer
@@ -119,6 +123,48 @@ And user_5679 click on the force logout btn in the login page for omni_corporate
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_5679 click on the AMANA payment screen in the homepage
 And user_5679 click scheduled transfer under AMANA payment screen
+And user_5679 click scheduled own Account transfer under the AMANA payment screen
+And user_5679 select from account under scheduled own account transfer
+And user_5679 select To account under scheduled own account transfer
+And user_5679 enter transfer amount under scheduled own account transfer
+And user_5679 enter purpose of transfer under scheduled own account transfer
+And user_5679 click next button under scheduled own account transfer
+And user_5679 select periodicity under scheduled own account transfer
+And user_5679 enter number of payments under scheduled own account transfer
+And user_5679 click next button1 under scheduled own account transfer
+And user_5679 click i agree on terms and conditions
+And user_5679 click next button1 under scheduled own account transfer
+And user_5679 click submit button under scheduled other bank transfer
+And user_5679 click ok button for request submitted successfully or request time
+And user_5679 click log out button
+And user_5679 waits for the confirmation on the submission report
+And user_5679 gets the reference number from the submission report
+And user_5679 clicks on logout btn to logout from omni web portal
+
+@AT_072
+Scenario: Submit international transfer to non predefined beneficiary - scheduled with corporate user have maker checker access
+And user_5679 loads the test datasetup for the test case id AT_072
+Given user_5679 navigates to the omni_corporate_web_portal
+And user_5679 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_5679 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the AMANA payment screen in the homepage
+And user_5679 click scheduled transfer under AMANA payment screen
+And user_5679 click international scheduled transfer under scheduled transfer
+And user_5679 select from account under scheduled international bank transfer
+And user_5679 click on to other button for select non pre defined beneficiary
+And user_5679 enter BIC swift code under scheduled international bank transfer
+And user_5679 enter iban Account no under scheduled international bank transfer
+And user_5679 select beneficiary currency under scheduled international bank transfer
+And user_5679 enter amount under scheduled International transfer 
+And user_5679 enter purpose under scheduled internatioanl transfer 
+And user_5679 click next button under scheduled internatioanl transfer 
+And user_5679 click submit button under scheduled internatioanl transfer
+And user_5679 click log out button
+
+
 
 
 
