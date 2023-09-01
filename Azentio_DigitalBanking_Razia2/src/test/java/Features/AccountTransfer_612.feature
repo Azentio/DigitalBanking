@@ -383,7 +383,6 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 @AT_044
 Scenario: Submit own bank transfer to predefined beneficiary  - scheduled with corporate user and 2 approval is required
-
 And user_612 loads the test datasetup for the test case id AT_044
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -394,17 +393,24 @@ And user_612 click on the ok button for the successful login page for omni_corpo
 And user_612 click on the AMANA payment screen in the homepage
 And user_612 click scheduled transfer under AMANA payment screen
 And user_612 click Scheduled own bank transfer Under scheduled transfer
+And user_612 click on the From accounts from the transfers within own accounts
 And user_612 select from account under Scheduled own bank transfer
+And user_612 click on beneficiary under Scheduled own bank transfer
 And user_612 select beneficiary under Scheduled own bank transfer
 And user_612 enter transfer amount under Scheduled own bank transfer
 And user_612 enter purpose of transfer under Scheduled own bank transfer
 And user_612 click next button under Scheduled own bank transfer
-And user_612 click submit button under Scheduled own bank transfer
-
-
+And user_612 select periodicity under scheduled own bank transfer
+And user_612 enter number of payments under scheduled own bank transfer
+And user_612 click next button under Scheduled own bank transfer
+And user_612 click submit button under scheduled own bank transfer
+And user_612 click ok button for request submitted successfully or request time
+And user_612 waits for the confirmation on the submission report for own bank transfer
+And user_612 gets the reference number from the submission report
+And user_612 clicks on logout btn to logout from omni web portal
 
 @AT_044_01
-Scenario: Scenario: Submit own bank transfer to predefined beneficiary  - scheduled with corporate user and 2 approval is required
+Scenario: Scenario: Submit own bank transfer to predefined beneficiary - scheduled with corporate user and 2 approval is required
 And user_612 loads the test datasetup for the test case id AT_044
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 enters the checker username1 in the login page for omni_corporate_web_portal
@@ -446,7 +452,8 @@ Scenario: Submit own bank transfer to non predefined beneficiary - one time with
 
 
 
-
+@AT_058 
+Scenario: Submit other bank transfer to non predefined beneficiary - one time with corporate user have maker checker access  
 
 
 

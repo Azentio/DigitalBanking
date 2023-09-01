@@ -19,7 +19,7 @@ import utilities.ExtentTestManager;
 
 )
 
-// P@th123$%@z  
+// P@th123$%@z 
 
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*

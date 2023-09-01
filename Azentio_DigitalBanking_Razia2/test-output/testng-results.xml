@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-29T18:12:35 IST" name="Default suite" finished-at="2023-08-29T18:17:00 IST" duration-ms="265590">
+  <suite started-at="2023-09-01T14:32:08 IST" name="Default suite" finished-at="2023-09-01T14:36:57 IST" duration-ms="289254">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5efa40fe]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-29T18:12:35 IST" name="Default test" finished-at="2023-08-29T18:17:00 IST" duration-ms="265590">
+    <test started-at="2023-09-01T14:32:08 IST" name="Default test" finished-at="2023-09-01T14:36:57 IST" duration-ms="289254">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-08-29T18:12:35 IST" name="setUpClass" finished-at="2023-08-29T18:12:38 IST" duration-ms="3538" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-09-01T14:32:08 IST" name="setUpClass" finished-at="2023-09-01T14:32:10 IST" duration-ms="2125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-08-29T18:12:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-29T18:16:41 IST" duration-ms="242417" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-09-01T14:32:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-01T14:36:26 IST" duration-ms="256076" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -30,23 +30,23 @@
           <exception class="org.openqa.selenium.JavascriptException">
             <message>
               <![CDATA[javascript error: Cannot read properties of null (reading 'click')
-  (Session info: chrome=116.0.5845.111)
+  (Session info: chrome=116.0.5845.141)
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [873c36aed2e21c9333416d87bb11cfcf, executeScript {script=arguments[0].click();, args=[null]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55837/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 873c36aed2e21c9333416d87bb11cfcf]]>
+Command: [998b89b6f567d0ea286f41f01d256225, executeScript {script=arguments[0].click();, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.141, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54341}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54341/devtoo..., se:cdpVersion: 116.0.5845.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 998b89b6f567d0ea286f41f01d256225]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'click')
-  (Session info: chrome=116.0.5845.111)
+  (Session info: chrome=116.0.5845.141)
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [873c36aed2e21c9333416d87bb11cfcf, executeScript {script=arguments[0].click();, args=[null]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55837/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 873c36aed2e21c9333416d87bb11cfcf
+Command: [998b89b6f567d0ea286f41f01d256225, executeScript {script=arguments[0].click();, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.141, chrome: {chromedriverVersion: 115.0.5790.102 (90efd4b0ad6..., userDataDir: C:\Users\ININDC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54341}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54341/devtoo..., se:cdpVersion: 116.0.5845.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 998b89b6f567d0ea286f41f01d256225
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -62,15 +62,15 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:463)
 at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:163)
 at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:195)
-at stepdefinitions.AccountTransferSteps_612.user_select_beneficiary_under_scheduled_own_bank_transfer(AccountTransferSteps_612.java:810)
-at ✽.user_612 select beneficiary under Scheduled own bank transfer(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/AccountTransfer_612.feature:398)
+at stepdefinitions.AccountTransferSteps_612.user_612_click_ok_button_for_request_submitted_successfully_or_request_time(AccountTransferSteps_612.java:899)
+at ✽.user_612 click ok button for request submitted successfully or request time(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/AccountTransfer_612.feature:410)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.JavascriptException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-08-29T18:16:41 IST" name="tearDownClass" finished-at="2023-08-29T18:17:00 IST" duration-ms="19462" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-09-01T14:36:27 IST" name="tearDownClass" finished-at="2023-09-01T14:36:57 IST" duration-ms="30924" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

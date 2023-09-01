@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import dataProvider.DataReader;
 import io.cucumber.java.en.And;
@@ -797,20 +798,34 @@ public class  AccountTransferSteps_612 {
 
 	@And("user_612 select from account under Scheduled own bank transfer")
 	public void user_select_from_account_under_scheduled_own_bank_transfer() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
-		String xpath ="//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
-		 //us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
-		 us.clickOnElement(driver, driver.findElement(By.xpath(xpath)));
+//		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), false);
+//		String xpath ="//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
+//		 //us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+//		 us.clickOnElement(driver, driver.findElement(By.xpath(xpath)));
+//		
+		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("sched_ownAccountTransfer_from"), 
+				"TESTDATAVARIABLE", 
+				testData.get("FromAccount1"));
+		us.clickOnElement(driver, xpath, false);
 		
-		
+	}
+	
+	@Given("user_612 click on beneficiary under Scheduled own bank transfer")
+	public void user_click_on_beneficiary_under_scheduled_own_bank_transfer( ) {
+					us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Sch_ownAccounTransfer_Beneficiary"), false);
+	    
 	}
 
 	@And("user_612 select beneficiary under Scheduled own bank transfer")
 	public void user_select_beneficiary_under_scheduled_own_bank_transfer() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer"), true);
-		String xpath ="//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
-		 us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
-		 us.clickOnElement(driver, driver.findElement(By.xpath(xpath)));
+//		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer"), true);
+//		String xpath ="//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
+//		 us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+//		 us.clickOnElement(driver, driver.findElement(By.xpath(xpath)));
+		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("Sch_ownAccounTransfer_Beneficiary_toAcc"), 
+				"TESTDATAVARIABLE", 
+				testData.get("FromAccount1"));
+		us.clickOnElement(driver, xpath, false);
 	}
 
 	@And("user_612 enter transfer amount under Scheduled own bank transfer")
@@ -821,11 +836,12 @@ public class  AccountTransferSteps_612 {
 	@And("user_612 enter purpose of transfer under Scheduled own bank transfer")
 	public void user_enter_purpose_of_transfer_under_scheduled_own_bank_transfer() throws InterruptedException   {
 		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
-		  Thread.sleep(15000);
+		  Thread.sleep(3000);
 	}
 
 	@And("user_612 click next button under Scheduled own bank transfer")
-	public void user_click_next_button_under_scheduled_own_bank_transfer() {
+	public void user_click_next_button_under_scheduled_own_bank_transfer() throws InterruptedException {
+		  Thread.sleep(5000);
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
 	}
 
@@ -833,8 +849,88 @@ public class  AccountTransferSteps_612 {
 	public void user_click_submit_button_under_scheduled_own_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
 	}
-	
-	
+	@Given("user_612 select periodicity under scheduled own bank transfer")
+	public void user_select_periodicity_under_scheduled_own_bank_transfer( ) {
+		 
+		   String xpath ="//ion-label[contains(text(),'"+testData.get("SelectPeriodicity")+"')]";
+		   for (int i = 0; i < 200; i++) {
+				try {
+					if (i==0||i==20||i==40||i==60||i==80||i==100
+							||i==120||i==140||i==140||i==160||i==180||i==199) {
+						us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
+					}
+					
+					if (driver.findElement(By.xpath(xpath)).isDisplayed()) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		   
+		   us.clickOnElement(driver, xpath, false);
+		    
+	   
+	}
 
+	@Given("user_612 enter number of payments under scheduled own bank transfer")
+	public void user_enter_number_of_payments_under_scheduled_own_bank_transfer( ) {
+		for (int i = 0; i < 200; i++) {
+			try {
+				us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_ScheduledOtherBankTransfer"),testData.get("NoOfPayments"), false);
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+	    
+	   
+	}
+	@And("user_612 click submit button under scheduled own bank transfer")
+	public void user_612_click_submit_button_under_scheduled_own_bank_transfer() {
+	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
+	}
+
+	@And("user_612 click ok button for request submitted successfully or request time")
+	public void user_612_click_ok_button_for_request_submitted_successfully_or_request_time() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnRequestTimeOut"), true);
+	}
+//	@Given("user_612 click ok button for request submitted successfully or request time")
+//	public void user_click_ok_button_for_request_submitted_successfully_or_request_time( ) {
+//	    
+//	   
+//	}
+	
+	@And("^user_614 click on the periodicity dropdown in scheduled transfer$")
+	public void User_614ClickOnThePeriodicityDropdownInScheduledTransfer() throws InterruptedException {
+		Thread.sleep(3000);
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), 30, false);
+	}
+
+	@And("^user_614 click on the single future date from the dropdown in scheduled transfer$")
+	public void User_614ClickOnTheSingleFutureDateFromTheDropdownInScheduledTransfer() {
+
+		try {
+			us.clickOnElementNoWait(driver,
+					DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"), 30,
+					false);
+		} catch (Exception e) {
+			us.clickOnElement(driver,
+					DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
+
+			us.clickOnElement(driver,
+					DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
+
+			us.clickOnElement(driver,
+					DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"),
+					false);
+
+		}
+	}
 
 }
