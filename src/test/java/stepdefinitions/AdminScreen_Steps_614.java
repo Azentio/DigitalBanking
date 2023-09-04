@@ -25,7 +25,8 @@ public class AdminScreen_Steps_614 {
     DataBase db = new DataBase();
 
     String executionTestData;
-    HashMap<String, String> testData;
+
+    HashMap<String, String> testData = DataReader.testData;
 
     @Given("^user_614 navigates to the OmniScreen Admin Url and login with the valid credentials_RIDA$")
     public void user_614NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials_Rida() {
@@ -62,7 +63,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_003$")
     public void user_614LoadsTheTestDatasetupForTheTestCaseIdAt_003() {
         executionTestData = DataReader.executionTestData.get("AT_003");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 click on the parameters features in the OmniScreen admin page$")
@@ -210,8 +211,11 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 enters the maker username1 in the login page for omni_corporate_web_portal$")
     public void user_614EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
-        us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-                testData.get("UserName1"), false);
+        System.out.println(testData);
+        us.enterData(driver,
+                DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
+                testData.get("UserName1"),
+                false);
     }
 
     @And("^user_614 enters the maker password1 in the login page for omni_corporate_web_portal$")
@@ -517,7 +521,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_009$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_009() {
         executionTestData = DataReader.executionTestData.get("AT_009");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
 //	AT_012
@@ -525,7 +529,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_012$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_012() {
         executionTestData = DataReader.executionTestData.get("AT_012");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 click on the international bank transfer under transfer_Amana payment screen$")
@@ -592,7 +596,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_015$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_015() {
         executionTestData = DataReader.executionTestData.get("AT_015");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 click on the scheduled transfers under the AMANA payment screen$")
@@ -662,7 +666,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_018$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_018() {
         executionTestData = DataReader.executionTestData.get("AT_018");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 click on the scheduled transfers within own bank transfer under scheduled transfer_Amana payment screen$")
@@ -675,20 +679,20 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_006$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_006() {
         executionTestData = DataReader.executionTestData.get("AT_006");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_035$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_035() {
         executionTestData = DataReader.executionTestData.get("AT_035");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_040$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_040() {
         executionTestData = DataReader.executionTestData.get("AT_040");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 waits for the confirmation on the submission report for own bank transfer$")
@@ -700,13 +704,13 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_048$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_048() {
         executionTestData = DataReader.executionTestData.get("AT_048");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_051$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_051() {
         executionTestData = DataReader.executionTestData.get("AT_051");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 click on the To other beneficiary in the transfers within own accounts$")
@@ -757,25 +761,25 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 loads the test datasetup for the test case id AT_062$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_062() {
         executionTestData = DataReader.executionTestData.get("AT_062");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_063$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_063() {
         executionTestData = DataReader.executionTestData.get("AT_063");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_064$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_064() {
         executionTestData = DataReader.executionTestData.get("AT_064");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_065$")
     public void User_614LoadsTheTestDatasetupForTheTestCaseIdAt_065() {
         executionTestData = DataReader.executionTestData.get("AT_065");
-        testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+       DataReader.testData = DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
 
     @And("^user_614 validates the reference id from the confirmation report as per DB oc_data_save$")

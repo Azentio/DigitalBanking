@@ -100,16 +100,16 @@ public class DataFromGoogleSheet {
 		this.testData = googleAPIMethods.returnMap(service, spreadsheetIdForTestData, testDataRange);
 		System.out.println(testData);
 		HashMap<String, String> testAndDataSet = new HashMap<String, String>();
-		HashMap<String, HashMap<String, String>> insideTestDataMap = new HashMap<String, HashMap<String, String>>();
+
 		HashMap<String,HashMap<String, HashMap<String, String>>> testDataMap2 = new HashMap<String,HashMap<String, HashMap<String, String>>>();
 		List<List<Object>> testDataList = null;
 		for (Entry<String, String> iterable_element : testData.entrySet()) {
-
+			HashMap<String, HashMap<String, String>> insideTestDataMap = new HashMap<String, HashMap<String, String>>();
 			testDataList = googleAPIMethods.returnList(service, spreadsheetIdForTestData, iterable_element.getValue());
 
 			System.out.println(testDataList);
 
-			
+
 
 			for (int i = 1; i < testDataList.size(); i++) {
 
@@ -122,15 +122,17 @@ public class DataFromGoogleSheet {
 					String dataValue = (String) testDataList.get(i).get(j);
 
 					internalTestDataMap.put(headerValue, dataValue);
-					
+
 					testAndDataSet.put((String) testDataList.get(i).get(0), (String) testDataList.get(i).get(1));
 
 				}
 
 				insideTestDataMap.put(titleHeader, internalTestDataMap);
 			}
-			
+
 			testDataMap2.put(iterable_element.getKey(), insideTestDataMap);
+			System.out.println(testDataMap2);
+			insideTestDataMap.clear();
 
 		}
 		this.testAndDataSet = testAndDataSet;
