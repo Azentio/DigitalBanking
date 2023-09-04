@@ -348,7 +348,7 @@ public class UserUtility_614 {
 			currentValue = webElement.getText();
 		}
 
-		if (currentValue.equals(value)) {
+		if (currentValue.equalsIgnoreCase(value)) {
 			return true;
 		}
 
@@ -527,9 +527,8 @@ public class UserUtility_614 {
 	
 	/***
 	 * 
-	 * @param seleniumActions
 	 * @param driver
-	 * @param webElement
+	 * @param xpath
 	 * 
 	 * @author Double clicks on the element
 	 */

@@ -566,6 +566,10 @@ Feature: Checking the functionalities of Account Transfer
     And user_614  click on the I agree to terms and conditions checkbox
     And user_614 click on submit btn in the transfers screen
     And user_614 waits for the confirmation on the submission report for international bank transfer
+    And user_614 validates the reference id from the confirmation report as per DB oc_data_save
+    And user_614 validates the from account and To account from the confirmation report
+    And user_614 validates the exchange amount and currency is showing or not
+    And user_614 validates the purpose of the transaction is showing or not
     And user_614 gets the reference number from the submission report
     And user_614 clicks on logout btn to logout from omni web portal
 

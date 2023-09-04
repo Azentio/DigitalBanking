@@ -1,8 +1,8 @@
 package dataProvider;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataBase {
 	
@@ -56,6 +56,43 @@ public class DataBase {
 		
 		return con;
 		
+	}
+
+	public ResultSet retriveAllDataFromTable(Connection con, String tableName, String OrderBy) throws SQLException {
+
+		ResultSet rs = null;
+		String queryString = "select * from "+tableName+" order by "+OrderBy+" DESC";
+		Statement statement = con.createStatement();
+		rs = statement.executeQuery(queryString);
+
+		return rs;
+    }
+
+	public ResultSet retriveRsFromQuery(Connection con, String Query) throws SQLException {
+
+		ResultSet rs = null;
+		Statement statement = con.createStatement();
+		rs = statement.executeQuery(Query);
+
+		return rs;
+	}
+
+	public List<Object> retriveListFromResultSet(ResultSet rs, int ColumnNo, int limit) throws SQLException {
+
+		List<Object> list = new ArrayList<Object>();
+
+		int countLimit = 0;
+
+		while (rs.next()){
+			list.add(rs.getObject(ColumnNo));
+			countLimit++;
+
+			if (countLimit==limit){
+				break;
+			}
+		}
+
+		return list;
 	}
 
 }
