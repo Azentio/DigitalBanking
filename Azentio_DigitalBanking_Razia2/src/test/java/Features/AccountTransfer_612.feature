@@ -444,7 +444,30 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 @AT_047
 Scenario: Submit own bank transfer to non predefined beneficiary - one time with corporate user have maker checker access
-
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 loads the test datasetup for the test case id AT_047
+And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the AMANA payment screen in the homepage
+And user_612 click on the transfers under the AMANA payment screen
+And user_612 click on the transfers within own banks under transfer_Amana payment screen
+And user_612 click on the From accounts from the transfers within own accounts
+And user_612 Click the To other button to non predefined beneficiary under own bank transfer
+And user_612 Select the bank to non predefined beneficiary under own bank transfer
+And user_612 Click and enter the iban_Account number of non predefined beneficiary under own bank transfer
+And user_612 click the save beneficiary button of non predefined beneficiary under own bank transfer
+And user_612 Enter the ghanda test of non predefined beneficiary under own bank transfer
+And user_612 enters the transaction amount in the transfers screen
+And user_612 enters the purpose of transaction in the transfers screen
+And user_612 click on next btn in the transfers screen
+And user_612 click and check the I Aggree on terms and condition checkbox of non predefined beneficiary under own bank transfer
+And user_612 click on nextButton of non predefined beneficiary under own bank transfer
+And user_612 click the submit button of non predefined beneficiary under own bank transfer
+And user_612 waits for the confirmation on the submission report
+And user_612 clicks on logout btn to logout from omni web portal
 
 
 
@@ -454,7 +477,16 @@ Scenario: Submit own bank transfer to non predefined beneficiary - one time with
 
 @AT_058 
 Scenario: Submit other bank transfer to non predefined beneficiary - one time with corporate user have maker checker access  
-
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 loads the test datasetup for the test case id AT_058
+And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click on the AMANA payment screen in the homepage
+And user_612 click on the transfers under the AMANA payment screen
+And user_612 click on the transfers to other bank accounts under transfer_Amana payment screen
 
 
 

@@ -552,6 +552,11 @@ public class  AccountTransferSteps_612 {
 		executionTestData = DataReader.executionTestData.get("AT_008");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
+	@And("^user_612 loads the test datasetup for the test case id AT_058$")
+	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_058() {
+		executionTestData = DataReader.executionTestData.get("AT_058");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
 	
 	@And("^user_612 loads the test datasetup for the test case id AT_011$")
 	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_011() {
@@ -573,6 +578,11 @@ public class  AccountTransferSteps_612 {
 	@And("^user_612 loads the test datasetup for the test case id AT_044$")
 	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_044() {
 		executionTestData = DataReader.executionTestData.get("AT_044");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	@And("^user_612 loads the test datasetup for the test case id AT_047$")
+	public void user_612LoadsTheTestDatasetupForTheTestCaseIdAt_047() {
+		executionTestData = DataReader.executionTestData.get("AT_047");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	@And("^user_612 click on the international bank transfer under transfer_Amana payment screen$")
@@ -931,6 +941,155 @@ public class  AccountTransferSteps_612 {
 					false);
 
 		}
+	}
+
+	
+	@And("user_612 Click the To other button to non predefined beneficiary under own bank transfer")
+	public void user_612click_the_to_other_button_to_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				us.clickOnElement(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("ToOtherBeneficiaryAccountClick"), 
+						true);
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}
+	}
+
+	@And("user_612 Select the bank to non predefined beneficiary under own bank transfer")
+	public void user_612select_the_bank_to_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToOtherBeneficiaryAccountClick"), testData.get("Bank"), true);
+
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}
+	}
+
+	@And("user_612 Click and enter the iban_Account number of non predefined beneficiary under own bank transfer")
+	public void user_612click_and_enter_the_iban_account_number_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("enterBeneficiaryAccountNumber"), testData.get("ToAccount1"), true);
+
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}
+	}
+
+	@And("user_612 click the save beneficiary button of non predefined beneficiary under own bank transfer")
+	public void user_612click_the_save_beneficiary_button_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				us.clickOnElement(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("ownBank_ToOthers_SaveBeneficiary"), 
+						true);
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}
+	}
+
+	@And("user_612 Enter the ghanda test of non predefined beneficiary under own bank transfer")
+	public void user_612enter_the_ghanda_test_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ownBank_ToOthers_GhandaTest"), testData.get("GhandaTest"), true);
+
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}
+	}
+
+	@And("user_612 click and check the I Aggree on terms and condition checkbox of non predefined beneficiary under own bank transfer")
+	public void user_612click_and_check_the_i_aggree_on_terms_and_condition_checkbox_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				us.clickOnElement(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 
+						true);
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		} 
+	}
+	@Given("user_612 click on nextButton of non predefined beneficiary under own bank transfer")
+	public void user_612click_on_next_button_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				us.clickOnElement(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("ownBank_ToOthers_Second_NextButton"), 
+						true);
+				break;
+			} 
+			catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}  
+	}
+	
+
+	@And("user_612 click the submit button of non predefined beneficiary under own bank transfer")
+	public void user_612click_the_submit_button_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				
+				us.clickOnElement(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer1"), 
+						true);
+				break;
+			} catch (Exception e) {
+				if (i==200)
+				{
+	                   Assert.fail(e.getMessage());
+
+			}
+			}
+		}  
 	}
 
 }
