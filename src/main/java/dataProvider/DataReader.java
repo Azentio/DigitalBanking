@@ -9,10 +9,8 @@ public class DataReader {
 	public static HashMap<String, HashMap<String, String>> userCredentialsMap;
 	public static HashMap<String, HashMap<String, HashMap<String, String>>> testDataMap;
 	public static HashMap<String, String> executionTestData;
-	
-	
-	public static HashMap<String, String> OmniScreen_L;
-	
+
+
 	public DataReader(boolean excelRun) {
 		DataFromGoogleSheet config = new DataFromGoogleSheet();
 		DataReader.configFileMap = config.configFileMap;
