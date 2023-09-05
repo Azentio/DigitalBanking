@@ -132,7 +132,6 @@ public class DataFromGoogleSheet {
 
 			testDataMap2.put(iterable_element.getKey(), insideTestDataMap);
 			System.out.println(testDataMap2);
-			insideTestDataMap.clear();
 
 		}
 		this.testAndDataSet = testAndDataSet;

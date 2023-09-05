@@ -99,7 +99,7 @@ public class AdminScreen_Steps_614 {
         us.enterDataAndEnter(driver,
                 DataReader.locatorsMap.get("Omni_Admin")
                         .get("approvalMatrixCodeField_Customer_ApprovalMatrix_user_614Management"),
-                testData.get("ApprovalMatrixCode"), false);
+               DataReader.testData.get("ApprovalMatrixCode"), false);
     }
 
     @And("^user_614 selects the inputed code from the search result and double click on it$")
@@ -107,7 +107,7 @@ public class AdminScreen_Steps_614 {
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("Omni_Admin")
                         .get("selectTheApprovalMatrixCode_approvalMatrixCodeField_Customer_ApprovalMatrix"),
-                "TESTDATAVARIABLE", testData.get("ApprovalMatrixCode"));
+                "TESTDATAVARIABLE",DataReader.testData.get("ApprovalMatrixCode"));
 
         us.doubleClickOnElement(driver, xpath, false);
     }
@@ -143,21 +143,21 @@ public class AdminScreen_Steps_614 {
         us.selectFromDropdown(driver,
                 DataReader.locatorsMap.get("Omni_Admin")
                         .get("limitfield_SelectDropDown_Customer_ApprovalMatrix_user_614Management"),
-                testData.get("LimitType1"));
+               DataReader.testData.get("LimitType1"));
     }
 
     @And("^user_614 enter the minimum amount in customer approval matrix for first row$")
     public void user_614EnterTheMinimumAmountInCustomerApprovalMatrixForFirstRow() {
         us.enterData(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("minimumfield_Customer_ApprovalMatrix_user_614Management"),
-                testData.get("MinimumAmount1"), false);
+               DataReader.testData.get("MinimumAmount1"), false);
     }
 
     @And("^user_614 enter the maximum amount in customer approval matrix for first row$")
     public void user_614EnterTheMaximumAmountInCustomerApprovalMatrixForFirstRow() {
         us.enterData(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("maximumfield_Customer_ApprovalMatrix_user_614Management"),
-                testData.get("MaximumAmount1"), false);
+               DataReader.testData.get("MaximumAmount1"), false);
     }
 
     @And("^user_614 enter the group id in customer approval matrix for first row$")
@@ -165,7 +165,7 @@ public class AdminScreen_Steps_614 {
         Thread.sleep(5000);
         us.enterData(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("groupCode_Customer_ApprovalMatrix_user_614Management"),
-                testData.get("GroupCode1"), false);
+               DataReader.testData.get("GroupCode1"), false);
     }
 
     @And("^user_614 enter the number of user_614 in the customer approval matrix for first row$")
@@ -173,7 +173,7 @@ public class AdminScreen_Steps_614 {
         us.enterData(driver,
                 DataReader.locatorsMap.get("Omni_Admin")
                         .get("noOfuser_614s_Customer_ApprovalMatrix_user_614Management"),
-                testData.get("noOfuser_614s1"), false);
+               DataReader.testData.get("noOfuser_614s1"), false);
     }
 
     @And("^user_614 click on the save button in the customer approval matrix$")
@@ -214,14 +214,14 @@ public class AdminScreen_Steps_614 {
         System.out.println(testData);
         us.enterData(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-                testData.get("UserName1"),
+               DataReader.testData.get("UserName1"),
                 false);
     }
 
     @And("^user_614 enters the maker password1 in the login page for omni_corporate_web_portal$")
     public void user_614EntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
         us.enterDataAndEnterOmni(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
-                testData.get("Password1"), false);
+               DataReader.testData.get("Password1"), false);
     }
 
     @And("^user_614 click on the loggin button in the login page for omni_corporate_web_portal$")
@@ -253,50 +253,7 @@ public class AdminScreen_Steps_614 {
 
         try {
             us.clickOnElementNoWait(driver,
-                    DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 45, false);
-        } catch (Exception e) {
-            try {
-                us.clickOnElementNoWait(driver,
-                        DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"), 10, false);
-            } catch (Exception X) {
-                try {
-                    us.clickOnElementNoWait(driver,
-                            DataReader.locatorsMap.get("OmniScreen_Login").get("SomethingWentWrong_OKbtn_omni"), 20,
-                            false);
-                } catch (Exception e11) {
-
-                    try {
-                        us.clickOnElementNoWait(driver,
-                                DataReader.locatorsMap.get("OmniScreen_Login").get("SecurityAlert_OKbtn_Omni"), 20,
-                                false);
-                    } catch (Exception e111) {
-                        try {
-
-                            us.clickOnElementNoWait(driver,
-                                    DataReader.locatorsMap.get("OmniScreen_Login").get("SessionReloaded_Omni"), 20,
-                                    false);
-
-                        } catch (Exception e2) {
-                            try {
-                                us.clickOnElementNoWait(driver,
-                                        DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"),
-                                        45, false);
-                            } catch (Exception e1111) {
-                                us.clickOnElementNoWait(driver,
-                                        DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
-                                        10, false);
-
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        try {
-            us.clickOnElementNoWait(driver,
-                    DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"), 5,
+                    DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"), 45,
                     false);
         } catch (Exception e) {
             try {
@@ -304,7 +261,48 @@ public class AdminScreen_Steps_614 {
                         DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen1"), 5,
                         false);
             } catch (Exception e2) {
+                try {
+                    us.clickOnElementNoWait(driver,
+                            DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 45, false);
+                } catch (Exception h) {
+                    try {
+                        us.clickOnElementNoWait(driver,
+                                DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"), 10, false);
+                    } catch (Exception X) {
+                        try {
+                            us.clickOnElementNoWait(driver,
+                                    DataReader.locatorsMap.get("OmniScreen_Login").get("SomethingWentWrong_OKbtn_omni"), 20,
+                                    false);
+                        } catch (Exception e11) {
 
+                            try {
+                                us.clickOnElementNoWait(driver,
+                                        DataReader.locatorsMap.get("OmniScreen_Login").get("SecurityAlert_OKbtn_Omni"), 20,
+                                        false);
+                            } catch (Exception e111) {
+                                try {
+
+                                    us.clickOnElementNoWait(driver,
+                                            DataReader.locatorsMap.get("OmniScreen_Login").get("SessionReloaded_Omni"), 20,
+                                            false);
+
+                                } catch (Exception e22) {
+                                    try {
+                                        us.clickOnElementNoWait(driver,
+                                                DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"),
+                                                45, false);
+                                    } catch (Exception e1111) {
+                                        us.clickOnElementNoWait(driver,
+                                                DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
+                                                10, false);
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
             }
         }
 
@@ -351,7 +349,7 @@ public class AdminScreen_Steps_614 {
 
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"),
-                "TESTDATAVARIABLE", testData.get("FromAccount1"));
+                "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
         us.clickOnElement(driver, xpath, false);
 
     }
@@ -361,7 +359,7 @@ public class AdminScreen_Steps_614 {
 
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"),
-                "TESTDATAVARIABLE", testData.get("ToAccount1"));
+                "TESTDATAVARIABLE",DataReader.testData.get("ToAccount1"));
         us.clickOnElement(driver, xpath, false);
 
     }
@@ -370,7 +368,7 @@ public class AdminScreen_Steps_614 {
     public void user_614EntersTheTransactionAmountInTheTransfersScreen() {
         us.enterDataAndTab(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"),
-                testData.get("TransferAmount"), false);
+               DataReader.testData.get("TransferAmount"), false);
 
     }
 
@@ -378,7 +376,7 @@ public class AdminScreen_Steps_614 {
     public void user_614EntersThePurposeOfTransactionInTheTransfersScreen() throws InterruptedException {
         us.enterDataAndTab(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"),
-                testData.get("PurposeOfTrnx"), false);
+               DataReader.testData.get("PurposeOfTrnx"), false);
 
         Thread.sleep(3000);
     }
@@ -400,25 +398,25 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 enters the checker username1 in the login page for omni_corporate_web_portal$")
     public void user_614EntersTheCheckerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
         us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-                testData.get("UserName2"), false);
+               DataReader.testData.get("UserName2"), false);
     }
 
     @And("^user_614 enters the checker password1 in the login page for omni_corporate_web_portal$")
     public void user_614EntersTheCheckerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
         us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
-                testData.get("Password2"), false);
+               DataReader.testData.get("Password2"), false);
     }
 
     @And("^user_614 enters the checker username2 in the login page for omni_corporate_web_portal$")
     public void user_614EntersTheCheckerusername2InTheLoginPageForOmni_Corporate_Web_Portal() {
         us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-                testData.get("UserName3"), false);
+               DataReader.testData.get("UserName3"), false);
     }
 
     @And("^user_614 enters the checker password2 in the login page for omni_corporate_web_portal$")
     public void user_614EntersTheCheckerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() {
         us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
-                testData.get("Password3"), false);
+               DataReader.testData.get("Password3"), false);
     }
 
     @And("^user_614 waits for the confirmation on the submission report$")
@@ -488,7 +486,7 @@ public class AdminScreen_Steps_614 {
             String xpath = us.textReplacer(
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
-                    "TESTDATAVARIABLE", testData.get("FromAccount1"));
+                    "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
             us.clickOnElementNoWait(driver, xpath, 30, false);
         } catch (Exception e) {
 
@@ -498,7 +496,7 @@ public class AdminScreen_Steps_614 {
             String xpath = us.textReplacer(
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
-                    "TESTDATAVARIABLE", testData.get("FromAccount1"));
+                    "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
             us.clickOnElement(driver, xpath, false);
         }
     }
@@ -514,7 +512,7 @@ public class AdminScreen_Steps_614 {
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("OmniScreen_Login")
                         .get("SelectBeneficiaryAccountInTransfersToOtherBankAccount"),
-                "TESTDATAVARIABLE", testData.get("ToAccount1"));
+                "TESTDATAVARIABLE",DataReader.testData.get("ToAccount1"));
         us.clickOnElement(driver, xpath, false);
     }
 
@@ -555,7 +553,7 @@ public class AdminScreen_Steps_614 {
             String xpath = us.textReplacer(
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
-                    "TESTDATAVARIABLE", testData.get("FromAccount1"));
+                    "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
             us.clickOnElementNoWait(driver, xpath, 30, false);
         } catch (Exception e) {
 
@@ -565,7 +563,7 @@ public class AdminScreen_Steps_614 {
             String xpath = us.textReplacer(
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
-                    "TESTDATAVARIABLE", testData.get("FromAccount1"));
+                    "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
             us.clickOnElement(driver, xpath, false);
         }
     }
@@ -581,7 +579,7 @@ public class AdminScreen_Steps_614 {
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("OmniScreen_Login")
                         .get("SelectBeneficiaryAccountInTransfersToOtherBankAccount"),
-                "TESTDATAVARIABLE", testData.get("ToAccount1"));
+                "TESTDATAVARIABLE",DataReader.testData.get("ToAccount1"));
         us.clickOnElement(driver, xpath, false);
     }
 
@@ -725,7 +723,7 @@ public class AdminScreen_Steps_614 {
 
         try {
             us.enterDataAndTabNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("enterBeneficiaryAccountNumber"),
-                    testData.get("ToAccount1"),
+                   DataReader.testData.get("ToAccount1"),
                     30,
                     false);
 
@@ -735,7 +733,7 @@ public class AdminScreen_Steps_614 {
                     DataReader.locatorsMap.get("OmniScreen_Login").get("ToOtherBeneficiaryAccountClick"),
                     false);
             us.enterDataAndTab(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("enterBeneficiaryAccountNumber"),
-                    testData.get("ToAccount1"), false);
+                   DataReader.testData.get("ToAccount1"), false);
         }
     }
 
@@ -817,12 +815,12 @@ public class AdminScreen_Steps_614 {
     public void User_614ValidatesTheFromAccountAndToAccountFromTheConfirmationReport() {
         us.getTextAndValidationByAnotherText(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("TransferredFromAccFromConfirationReport_Omni"),
-                testData.get("FromAccount1"),
+               DataReader.testData.get("FromAccount1"),
                 false);
 
         us.getTextAndValidationByAnotherText(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("TransferredTOAccFromConfirationReport_Omni"),
-                testData.get("ToAccount1"),
+               DataReader.testData.get("ToAccount1"),
                 false);
     }
 
@@ -839,7 +837,7 @@ public class AdminScreen_Steps_614 {
     public void User_614ValidatesThePurposeOfTheTransactionIsShowingOrNot() {
         us.getTextAndValidationByAnotherText(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeFromConfirationReport_Omni"),
-                testData.get("PurposeOfTrnx"),
+               DataReader.testData.get("PurposeOfTrnx"),
                 false);
     }
 

@@ -59,6 +59,72 @@ public class Cards_Steps_614 {
         DataReader.testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
     }
 
+    @Given("^user_614 navigates to the omni_retail_web_portal$")
+    public void User_614NavigatesToTheOmni_Retail_Web_Portal() {
+        driver.get(DataReader.configFileMap.get("omni_web_portal"));
+    }
+
+    @And("^user_614 click on the cards screen from the omni homescreen$")
+    public void User_614ClickOnTheCardsScreenFromTheOmniHomescreen() {
+            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"),  false);
+    }
+    @And("^user_614 click on the my cards section from the cards screen$")
+    public void User_614ClickOnTheMyCardsSectionFromTheCardsScreen() {
+        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"),  false);
+    }
+    @And("^user_614 click on the credit cards on the header of my cards section$")
+    public void User_614ClickOnTheCreditCardsOnTheHeaderOfMyCardsSection() {
+        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"),  false);
+    }
+    @And("^user_614 selects the first card type where the allow to reissue flag is checked and the card is active$")
+    public void User_614SelectsTheFirstCardTypeWhereTheAllowToReissueFlagIsCheckedAndTheCardIsActive() {
+        System.out.println(DataReader.testData);
+        String xpath = us.textReplacer(
+                DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCardByCardType_CreditCards_MyCards_Cards_OmniHomeScreen"),
+                "TESTDATAVARIABLE",
+                DataReader.testData.get("CardTypeName"));
+
+        try {
+            us.clickOnElementNoWait(driver, xpath, 30, false);
+
+        }
+        catch (Exception e) {
+            try {
+                us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"),  10, false);
+            }
+            catch (Exception e1){
+
+            }
+            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"),  false);
+            us.clickOnElementNoWait(driver, xpath, 40, false);
+        }
+    }
+    @And("^user_614 click on the block icon from the dropdown list$")
+    public void User_614ClickOnTheBlockIconFromTheDropdownList() {
+        try {
+            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"),  false);
+        } catch (Exception e) {
+            try {
+                us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"),  10, false);
+            }
+            catch (Exception e1){
+
+            }
+            us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"),  10, false);
+        }
+    }
+    @And("^user_614 validates that the reissue toggle btn is not available$")
+    public void User_614ValidatesThatTheReissueToggleBtnIsNotAvailable() {
+
+        try {
+            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockCard_CardInfoText"),false);
+            us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToggleBtn_ReisseuCard_MyCards"),5, false);
+            Assert.fail();
+        } catch (Exception e) {
+
+        }
+    }
+
 
 
 
