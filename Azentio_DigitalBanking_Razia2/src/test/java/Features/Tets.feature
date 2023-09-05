@@ -2,13 +2,8 @@ Feature: Checking the functionalities of Account Transfer
 
 
 @AT_003
-Scenario: Submit own account transfer - one time with corporate user and two approvals are required
-
-And user_612 select periodicity under scheduled own bank transfer
-And user_612 enter number of payments under scheduled own bank transfer
-And user_612 click next button under scheduled own bank transfer
-And user_612 click submit button under scheduled own bank transfer
-And user_612 click ok button for request submitted successfully or request time
+Scenario: 
+And User_612 click on the Authentication Matrix under parameters
 
 #Given user_614 navigates to the omni_corporate_web_portal
 #And user_614 loads the test datasetup for the test case id AT_003

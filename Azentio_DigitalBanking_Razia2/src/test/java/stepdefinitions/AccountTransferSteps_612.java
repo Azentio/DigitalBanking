@@ -1075,6 +1075,8 @@ public class  AccountTransferSteps_612 {
 
 	@And("user_612 click the submit button of non predefined beneficiary under own bank transfer")
 	public void user_612click_the_submit_button_of_non_predefined_beneficiary_under_own_bank_transfer() {
+		
+		
 		for (int i = 0; i < 200; i++) {
 			try {
 				
