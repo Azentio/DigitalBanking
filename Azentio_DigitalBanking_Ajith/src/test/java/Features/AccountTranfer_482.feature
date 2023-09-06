@@ -78,6 +78,117 @@ And user_482 click next button1 under scheduled other bank transfer
 And user_482 click submit button under scheduled other bank transfer
 #And user_482 click ok button for request submitted successfully or request time
 And user_482 click log out button
+@AT_066
+Scenario: Submit international transfer to predefined beneficiary-scheduled with corporate user have maker checker access
+And user_482 loads the test datasetup for the test case id AT_066
+Given user_482 navigates to the omni_corporate_web_portal
+And user_482 enters the maker checker username1 in the login page for omni_corporate_web_portal
+And user_482 enters the maker checker password1 in the login page for omni_corporate_web_portal
+And user_482 click on the loggin button in the login page for omni_corporate_web_portal
+And user_482 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_482 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_482 click on the AMANA payment screen in the homepage
+And user_482 click scheduled transfer under AMANA payment screen
+And user_482 click scheduled international transfer
+And user_482 select from account under scheduled international bank transfer
+And user_482 select To account under scheduled international bank transfer
+And user_482 enter transfer amount under scheduled international bank transfer
+And user_482 enter purpose of transfer under scheduled international bank transfer
+And user_482 click next button under scheduled international bank transfer
+And user_482 select periodicity under scheduled international bank transfer
+And user_482 enter number of payments under scheduled international bank transfer
+And user_482 click next button under scheduled international bank transfer
+And user_482 click submit button under scheduled international bank transfer
+@AT_067_01
+Scenario: Submit international transfer to predefined beneficiary-scheduled with corporate user and one approval is required
+And user_482 loads the test datasetup for the test case id AT_067_01
+Given user_482 navigates to the omni_corporate_web_portal
+And user_482 enters the maker checker username1 in the login page for omni_corporate_web_portal
+And user_482 enters the maker checker password1 in the login page for omni_corporate_web_portal
+And user_482 click on the loggin button in the login page for omni_corporate_web_portal
+And user_482 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_482 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_482 click on the AMANA payment screen in the homepage
+And user_482 click scheduled transfer under AMANA payment screen
+And user_482 click scheduled international transfer
+And user_482 select from account under scheduled international bank transfer 
+And user_482 select To account under scheduled international bank transfer
+#And user_482 enter transfer amount under scheduled international bank transfer
+#And user_482 enter purpose of transfer under scheduled international bank transfer
+#And user_482 click next button under scheduled international bank transfer
+#And user_482 select periodicity under scheduled international bank transfer
+#And user_482 enter number of payments under scheduled international bank transfer
+#And user_482 click next button1 under scheduled international bank transfer
+#And user_482 click i agree on terms and conditions
+#And user_482 click next button1 under scheduled international bank transfer
+#And user_482 click submit button under scheduled international bank transfer
+@AT_067_02
+Scenario: Submit international transfer to predefined beneficiary-scheduled with First approval
+nd user_482 loads the test datasetup for the test case id AT_020_02
+Given user_482 navigates to the omni_corporate_web_portal
+And user enters the checker username1 in the login page for omni_corporate_web_portal
+And user enters the checker password1 in the login page for omni_corporate_web_portal
+And user click to do icon in approval leve 1 
+@AT_068
+Scenario: Submit international transfer to predefined beneficiary-scheduled with corporate user and 2 approval is required
+And user_482 loads the test datasetup for the test case id AT_070
+Given user_482 navigates to the omni_corporate_web_portal
+And user_482 enters the maker checker username1 in the login page for omni_corporate_web_portal
+And user_482 enters the maker checker password1 in the login page for omni_corporate_web_portal
+And user_482 click on the loggin button in the login page for omni_corporate_web_portal
+And user_482 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_482 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_482 click on the AMANA payment screen in the homepage
+And user_482 click scheduled transfer under AMANA payment screen
+And user_482 click scheduled international transfer
+And user_482 select from account under scheduled international bank transfer 
+And user_482 select To account under scheduled international bank transfer
+And user_482 enter transfer amount under scheduled international bank transfer
+And user_482 enter purpose of transfer under scheduled international bank transfer
+And user_482 click next button under scheduled international bank transfer
+And user_482 select periodicity under scheduled international bank transfer
+And user_482 enter number of payments under scheduled international bank transfer
+And user_482 click next button1 under scheduled international bank transfer
+And user_482 click i agree on terms and conditions
+And user_482 click next button1 under scheduled international bank transfer
+And user_482 click submit button under scheduled international bank transfer
+@AT_068_02
+Scenario: Submit international transfer to predefined beneficiary-scheduled with First approval
+nd user_482 loads the test datasetup for the test case id AT_020_02
+Given user_482 navigates to the omni_corporate_web_portal
+And user enters the checker username1 in the login page for omni_corporate_web_portal
+And user enters the checker password1 in the login page for omni_corporate_web_portal
+And user click to do icon in approval leve 1 
+@AT_068_03
+Scenario: Submit international transfer to predefined beneficiary-scheduled with second approval
+nd user_482 loads the test datasetup for the test case id AT_020_02
+Given user_482 navigates to the omni_corporate_web_portal
+And user enters the checker username1 in the login page for omni_corporate_web_portal
+And user enters the checker password1 in the login page for omni_corporate_web_portal
+And user click to do icon in approval leve 2 
+
+@AT_069
+Scenario: Submit international transfer to non predefined beneficiary - one time with corporate user have maker checker access
+And user_482 loads the test datasetup for the test case id AT_070
+Given user_482 navigates to the omni_corporate_web_portal
+And user_482 enters the maker checker username1 in the login page for omni_corporate_web_portal
+And user_482 enters the maker checker password1 in the login page for omni_corporate_web_portal
+And user_482 click on the loggin button in the login page for omni_corporate_web_portal
+And user_482 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_482 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_482 click on the AMANA payment screen in the homepage
+And user_482 click the transfers under AMANA Payment
+And user_482 click the International Transfer under AMANA Payment
+And user_482 select from account under international bank transfer
+And user_482 click To other Benefeciary details under international bank transfer
+And user_482 enter BIC swift code under international bank transfer
+And user_482 enter iban Account no under international bank transfer
+And user_482 select beneficiary currency under international bank transfer
+And user_482 enter amount under International transfer 
+And user_482 enter purpose under internatioanl transfer 
+And user_482 click next button under internatioanl transfer 
+And user_482 click submit button under internatioanl transfer
+And user_482 click log out button
 @AT_070
 Scenario: Submit international transfer to non predefined beneficiary - one time with corporate user have maker checker access
 And user_482 loads the test datasetup for the test case id AT_070

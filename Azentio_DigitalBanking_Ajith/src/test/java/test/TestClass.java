@@ -14,7 +14,8 @@ public class TestClass {
 	HashMap<String, String> testData;
 	
 	public static void main(String[] args) {
-//		DataReader.testDataMap.get("AccountTransferOmni").get("")
+		String example ="Scheduled International Transfer";
+		System.out.println(example.trim());
 	}
 
 }

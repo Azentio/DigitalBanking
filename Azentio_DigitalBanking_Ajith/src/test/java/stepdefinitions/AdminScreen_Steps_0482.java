@@ -1,9 +1,12 @@
 package stepdefinitions;
 
+import java.time.Duration;
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import dataProvider.DataReader;
@@ -77,6 +80,11 @@ public class AdminScreen_Steps_0482 {
 	@Given("user_482 loads the test datasetup for the test case id AT_036")
 	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_036() {
 		executionTestData = DataReader.executionTestData.get("AT_036");
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	}
+	@Given("user_482 loads the test datasetup for the test case id AT_066")
+	public void user_482_loads_the_test_datasetup_for_the_test_case_id_at_066() {
+		executionTestData = DataReader.executionTestData.get("AT_066");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	@Given("user_482 loads the test datasetup for the test case id AT_070")
@@ -668,6 +676,29 @@ public class AdminScreen_Steps_0482 {
 	   us.clickOnElement(driver, xpath, false);
 	    
 	}
+	@Given("user_482 select periodicity under scheduled international bank transfer")
+	public void user_482_select_periodicity_under_scheduled_international_bank_transfer() {
+		String xpath ="//ion-label[contains(text(),'"+testData.get("SelectPeriodicity")+"')]";
+		   for (int i = 0; i < 200; i++) {
+				try {
+					if (i==0||i==20||i==40||i==60||i==80||i==100
+							||i==120||i==140||i==140||i==160||i==180||i==199) {
+						us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
+					}
+					
+					if (driver.findElement(By.xpath(xpath)).isDisplayed()) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i==199) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		   
+		   us.clickOnElement(driver, xpath, false);
+	}
+
 
 	@And("user_482 enter number of payments under scheduled other bank transfer")
 	public void user_482_enter_number_of_payments_under_scheduled_other_bank_transfer() {
@@ -683,6 +714,19 @@ public class AdminScreen_Steps_0482 {
 		}
 	   
 	    
+	}
+	@Given("user_482 enter number of payments under scheduled international bank transfer")
+	public void user_482_enter_number_of_payments_under_scheduled_international_bank_transfer() {
+		for (int i = 0; i < 200; i++) {
+			try {
+				us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_ScheduledOtherBankTransfer"),testData.get("NoOfPayments"), false);
+				break;
+			} catch (Exception e) {
+				if (i==199) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
 	}
 
 	@And("user_482 click submit button under scheduled other bank transfer")
@@ -851,16 +895,151 @@ public class AdminScreen_Steps_0482 {
 	public void user_482_click_submit_button_under_internatioanl_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
 	}
+	
+	@Given("user_482 click scheduled international transfer")
+	public void user_482_click_scheduled_international_transfer() throws Exception {
+	    us.clickWebElementUsingText(driver, "Scheduled International Transfer");
+	    
+	}
+	@Given("user_482 select from account under scheduled international bank transfer")
+	public void user_482_select_from_account_under_scheduled_international_bank_transfer() throws Exception {
+		for (int i = 0; i < 10; i++) {
+			try {
+				us.clickWebElementUsingText(driver, "From Account *");
+			} catch (AssertionError a) {
+				
+			}
+		}
+	    
+	    for (int i = 0; i <2000; i++) {
+			try {
+				String jspath="document.querySelector('div[id=\"ps-loader-controller\"]').querySelector('ion-img')";
+			    WebElement loading = us.executeJavaScriptReturnWebElement(jspath);
+				if (!loading.isDisplayed()) {
+					break;
+				}
+			} catch (Exception e) {
+			}
+		}
+	    String xpath ="//ion-label[contains(text(),'Scheduled International Transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
+				+ "//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
+	   System.out.println(xpath);
+	   for (int i = 0; i <2000; i++) {
+		try {
+			  us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
+			  us.doubleClickOnElement(driver, driver.findElement(By.xpath(xpath)));
+			   break;
+		} catch (Exception e) {
+			if (i==1999) {
+				Assert.fail(e.getMessage());
+			}
+		}
+	}                  
+	    
+	    
+	}
+	@Given("user_482 select To account under scheduled international bank transfer")
+	public void user_482_select_to_account_under_scheduled_international_bank_transfer() throws Exception {
+		for (int i = 0; i < 10; i++) {
+			try {
+				us.clickWebElementUsingText(driver, "To Account / Beneficiary *");
+				break;
+			} catch (Exception e) {
+				if (i==9) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		
+		
+	    for (int i = 0; i <2000; i++) {
+			try {
+				String jspath="document.querySelector('div[id=\"ps-loader-controller\"]').querySelector('ion-img')";
+			    WebElement loading = us.executeJavaScriptReturnWebElement(jspath);
+				if (!loading.isDisplayed()) {
+					break;
+				}
+			} catch (Exception e) {
+				
+			}
+		}
+	    for (int i = 0; i <10; i++) {
+			try {
+				us.doubleClickWebElementUsingText(driver, "1242342342342");
+				break;
+			} catch (Exception e) {
+				if (i==9) {
+					Assert.fail(e.getMessage());
+				}
+			}
+			
+		}
+	    
+	}
+	@Given("user_482 enter transfer amount under scheduled international bank transfer")
+	public void user_482_enter_transfer_amount_under_scheduled_international_bank_transfer() throws Exception {
+		for (int i = 0; i <10; i++) {
+			try {
+				us.clickWebElementAndSendValuesUsingText(driver, "Amount *", "100");
+				break;
+			} catch (Exception e) {
+				if (i==9) {
+					Assert.fail(e.getMessage());
+				}
+			}
+			
+		}
+		
+		
+		
+	}
+	@Given("user_482 enter purpose of transfer under scheduled international bank transfer")
+	public void user_482_enter_purpose_of_transfer_under_scheduled_international_bank_transfer() throws Exception {
+		for (int i = 0; i <10; i++) {
+			try {
+				us.clickWebElementAndSendValuesUsingText(driver, "Purpose *", "MakerChecker");
+				break;
+			} catch (Exception e) {
+				if (i==9) {
+					Assert.fail(e.getMessage());
+				}
+			}
+			
+		}
+		
+	}
 
-	
-
-	
-	
-	
-	
-	
-	
-	
+	@Given("user_482 click next button under scheduled international bank transfer")
+	public void user_482_click_next_button_under_scheduled_international_bank_transfer() throws Exception {
+		Thread.sleep(3000);
+		for (int i = 0; i <10; i++) {
+			try {
+				us.clickWebElementUsingText(driver, "Next");
+				break;
+			} catch (Exception e) {
+				if (i==9) {
+					Assert.fail(e.getMessage());
+				}
+			}
+			
+		}
+		
+	}
+	@Given("user_482 click submit button under scheduled international bank transfer")
+	public void user_482_click_submit_button_under_scheduled_international_bank_transfer() throws Exception {
+		for (int i = 0; i <10; i++) {
+			try {
+				us.clickWebElementUsingText(driver, "Submit");
+				break;
+			} catch (Exception e) {
+				if (i==9) {
+					Assert.fail(e.getMessage());
+				}
+			}
+			
+		}
+		
+	}
 	
 	
 	

@@ -5,4 +5,4 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Title of your scenario
-And user_482 loads the test datasetup for the test case id AT_070
+And user_482 loads the test datasetup for the test case id AT_066

@@ -214,7 +214,77 @@ public class UserUtility_614 {
 		for (int i = 0; i <2000; i++) {
 			try {
 				 String label = executeJavaScriptReturnObject(jsPath).toString();
-				 System.out.println(label);
+			//	 System.out.println(label);
+				length = Integer.parseInt(label);
+				if (length!=0) {
+			//		System.err.println(length);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for (int i = 0; i <length ; i++) {
+			String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
+			String label = executeJavaScriptReturnObject(jsPath1).toString();
+			//System.out.println(label);
+			if (label.trim().equalsIgnoreCase(text)) {
+				String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
+				//System.out.println(jsPath2);
+				clickOnElement(driver, jsPath2, true);
+				break;
+			}
+			if (i==length-1) {
+				Assert.fail("Element not clicked mismatch with text");
+			}
+		}
+		
+
+	}
+	public void doubleClickWebElementUsingText(WebDriver driver,String text) throws Exception {
+		String jsPath ="document.querySelectorAll('ion-label').length";
+		int length=0;
+		for (int i = 0; i <2000; i++) {
+			try {
+				 String label = executeJavaScriptReturnObject(jsPath).toString();
+			//	 System.out.println(label);
+				length = Integer.parseInt(label);
+				if (length!=0) {
+			//		System.err.println(length);
+					break;
+				}
+			} catch (Exception e) {
+				if (i==1999) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		for (int i = 0; i <length ; i++) {
+			String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
+			String label = executeJavaScriptReturnObject(jsPath1).toString();
+			//System.out.println(label);
+			if (label.trim().equalsIgnoreCase(text)) {
+				String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
+				//System.out.println(jsPath2);
+				doubleClickOnElement(driver, jsPath2, true);
+				break;
+			}
+			if (i==length-1) {
+				Assert.fail("Element not clicked mismatch with text");
+			}
+		}
+		
+
+	}
+	public void clickWebElementAndSendValuesUsingText(WebDriver driver,String text,String value) throws Exception {
+		String jsPath ="document.querySelectorAll('ion-label').length";
+		int length=0;
+		for (int i = 0; i <2000; i++) {
+			try {
+				 String label = executeJavaScriptReturnObject(jsPath).toString();
+			//	 System.out.println(label);
 				length = Integer.parseInt(label);
 				if (length!=0) {
 					System.err.println(length);
@@ -229,17 +299,23 @@ public class UserUtility_614 {
 		for (int i = 0; i <length ; i++) {
 			String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
 			String label = executeJavaScriptReturnObject(jsPath1).toString();
-			//System.out.println(label);
-			if (label.trim().contentEquals(text)) {
+			System.out.println(label);
+			if (label.trim().equalsIgnoreCase(text)) {
 				String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
 				System.out.println(jsPath2);
 				clickOnElement(driver, jsPath2, true);
+				String jsPath3="document.querySelectorAll('ion-label')["+i+"].parentElement.parentElement.nextElementSibling.querySelector('input')";
+				enterData(driver, jsPath3, value, true);
 				break;
 			}
-			
+			if (i==length-1) {
+				Assert.fail("Element not clicked mismatch with text");
+			}
 		}
+		
 
 	}
+	//.parentElement.parentElement.nextElementSibling.querySelector('input')
 	
 	public String getTextFromExecuteJavaScript(String xpath) throws Exception {
 		try {
@@ -254,27 +330,44 @@ public class UserUtility_614 {
 
 	public WebElement executeJavaScriptReturnWebElement(String xpath) throws Exception {
 		try {
+			
 			WebElement element = (WebElement) js.executeScript("return " + xpath + "");
 			return element;
+			
 		} catch (Exception e) {
 			throw new Exception("WebElement not returned");
 		}
 		
 
 	}
-
+// ajith changed
 	public void clickOnElement(WebDriver driver, String xpath, boolean JS) {
 
 		WebElement webElement;
 
 		if (JS) {
-			waitHelper_Js(driver, xpath);
-			webElement = (WebElement) js.executeScript("return " + xpath + "");
-			clickOnElement(driver, webElement);
+			for (int i = 0; i <200; i++) {
+				try {
+					webElement = (WebElement) js.executeScript("return " + xpath + "");
+					scrollDownTillElement(driver, webElement);
+					clickOnElement(driver, webElement);
+					if (webElement!=null) {
+						break;
+					}
+				} catch (Exception e) {
+					if (i==199) {
+					//	Assert.fail(e.getMessage());
+					}
+				}
+			}
+			
+			//waitHelper_Js(driver, xpath);
+			
 		} else {
 			waitHelperClick(driver, xpath);
 			webElement = driver.findElement(By.xpath(xpath));
 			moveToElement(driver, webElement);
+			scrollDownTillElement(driver, webElement);
 			clickOnElement(driver, webElement);
 		}
 
