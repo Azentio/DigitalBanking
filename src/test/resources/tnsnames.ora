@@ -1,0 +1,8 @@
+ORA19S1 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = lbslx-ora19-s1.path.local)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ora19s1)
+    )
+  )
