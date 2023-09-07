@@ -1248,24 +1248,24 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
+	@And("user_5679 loads the test datasetup for the test case id CRD_021")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_021() {
+		executionTestData = DataReader.executionTestData.get("CRD_021");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	    }
 	@Given("user_5679 click on the Cards screen in the homepage")
 	public void user_5679_click_on_the_cards_screen_in_the_homepage() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"), false);
-	    
-	}
-
+	    }
 	@Given("user_5679 click on the My Cards under Cards in the homepage")
 	public void user_5679_click_on_the_my_cards_under_cards_in_the_homepage() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"), false);
-	    
-	}
-
+	    }
 	@Given("user_5679 click on the Show More button in Debit cards page")
 	public void user_5679_click_on_the_show_more_button_in_debit_cards_page() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCard_CreditCards_MyCards_Cards_OmniHomeScreen"), false);
-	    
-	}
-
+	    }
 	@Given("user_5679 click on the block for block the selected Debit Card")
 	public void user_5679_click_on_the_block_to_block_the_selected_debit_card() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"), false);
@@ -1305,14 +1305,104 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin"), 
 				true);
 	 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@And("user_5679 loads the test datasetup for the test case id CRD_022")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_022() {
+		executionTestData = DataReader.executionTestData.get("CRD_022");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	    }
+	@And("user_5679 loads the test datasetup for the test case id CRD_023")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_023() {
+		executionTestData = DataReader.executionTestData.get("CRD_023");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	    }
+	@And("user_5679 loads the test datasetup for the test case id TDO_017")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_tdo_017() {
+		executionTestData = DataReader.executionTestData.get("TDO_017");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+	    }
+	@Given("user_5679 click on the From accounts from the transfers for international bank transfer")
+	public void user_5679_click_on_the_from_accounts_from_the_transfers_for_international_bank_transfer() {
+		us.clickOnElementNoWait(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransfersToOtherBankAccount"), 
+				30,
+				true);
+	    
+	}
 
-}
+	@Given("user_5679 selects the from account from the dropdown in transfers for international bank transfer")
+	public void user_5679_selects_the_from_account_from_the_dropdown_in_transfers_for_international_bank_transfer() {
+		try {
+			String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInTransfersToOtherBankAccount"), 
+					"TESTDATAVARIABLE", 
+					testData.get("FromAccount1"));
+			us.clickOnElementNoWait(driver, xpath,30, false);
+		} catch (Exception e) {
+			
+			us.doubleClickOnElement(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransfersToOtherBankAccount"), 
+					true);
+			
+			String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInTransfersToOtherBankAccount"), 
+					"TESTDATAVARIABLE", 
+					testData.get("FromAccount1"));
+			us.clickOnElement(driver, xpath, false);
+		}
+	}
+	    
+
+	@Given("user_5679 click on the To accounts from the transfers for international bank transfer")
+	public void user_5679_click_on_the_to_accounts_from_the_transfers_for_international_bank_transfer() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_InternationalBankTransfer"), 
+				true);
+	    
+	}
+
+	@Given("user_5679 selects the To account from the dropdown in transfers for international bank transfer")
+	public void user_5679_selects_the_to_account_from_the_dropdown_in_transfers_for_international_bank_transfer() {
+		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectBeneficiaryAccountInTransfersToOtherBankAccount"), 
+				"TESTDATAVARIABLE", 
+				testData.get("ToAccount1"));
+		us.clickOnElement(driver, xpath, false);
+	}
+	@And("user_5679 loads the test datasetup for the test case id ALR_002")
+	public void user_loads_the_test_datasetup_for_the_test_case_id_alr_002() {
+		executionTestData = DataReader.executionTestData.get("ALR_002");
+		System.out.println(executionTestData);
+		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	    
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
