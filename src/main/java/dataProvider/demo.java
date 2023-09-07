@@ -1,11 +1,10 @@
 package dataProvider;
 
 import java.sql.SQLException;
-import java.util.List;
 
-import org.testng.Assert;
-
-import dataProvider.DataBase.DataBaseName;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class demo {
     String transactionNumber;
@@ -122,22 +121,35 @@ public class demo {
 //        }
         
 //        
-        String num = "647952";
-        String sb = "\"transactionNumber\": "+num;
-        System.out.println(sb);
+//        String num = "647952";
+//        String sb = "\"transactionNumber\": "+num;
+//        System.out.println(sb);
+//        
+//        
+//        List<Object> retriveListFromQuery = db.retriveListFromQuery(db.connection(DataBaseName.CoreDB), query, 5, 5);
+//        
+//        for (Object object : retriveListFromQuery) {
+//        	System.out.println(object);
+//        	if (object.toString().contains(sb)) {
+//        		System.out.println(object);
+//			}
+//			
+//		}
+//        
+//        System.out.println("Execution completed!");
         
         
-        List<Object> retriveListFromQuery = db.retriveListFromQuery(db.connection(DataBaseName.CoreDB), query, 5, 5);
-        
-        for (Object object : retriveListFromQuery) {
-        	System.out.println(object);
-        	if (object.toString().contains(sb)) {
-        		System.out.println(object);
-			}
-			
-		}
-        
-        System.out.println("Execution completed!");
+        ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		options.setBinary("C:\\Users\\ININDC00614\\eclipse-workspace_Azentio\\chrome-win64\\chrome-win64\\chrome.exe");
+		options.addArguments("--user-data-dir=C:\\Users\\ININDC00614\\AppData\\Local\\Google\\Chrome for Testing\\User Data");
+		options.addArguments("--profile-directory=Profile 1");
+		WebDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
+
+		driver.get("https://www.bigbasket.com/");
+		
+		
     }
 
 }

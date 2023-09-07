@@ -34,7 +34,7 @@ public class AdminScreen_Steps_614 {
         driver.get(DataReader.configFileMap.get("omni_adminScreen"));
 
         us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("user_614NameField_LogginScreen"),
-                DataReader.userCredentialsMap.get("VimalAdmin").get("user_614Name"), false);
+                DataReader.userCredentialsMap.get("VimalAdmin").get("userName"), false);
 
         us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("passwordField_LogginScreen"),
                 DataReader.userCredentialsMap.get("VimalAdmin").get("Password"), false);

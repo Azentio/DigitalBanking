@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-07T11:40:26 IST" name="Default suite" finished-at="2023-09-07T11:43:50 IST" duration-ms="203417">
+  <suite started-at="2023-09-07T19:03:42 IST" name="Default suite" finished-at="2023-09-07T19:06:27 IST" duration-ms="165969">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@3ba987b8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@2d901eb0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-09-07T11:40:26 IST" name="Default test" finished-at="2023-09-07T11:43:50 IST" duration-ms="203417">
+    <test started-at="2023-09-07T19:03:42 IST" name="Default test" finished-at="2023-09-07T19:06:27 IST" duration-ms="165969">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@3ba987b8]" started-at="2023-09-07T11:40:26 IST" name="setUpClass" finished-at="2023-09-07T11:40:29 IST" duration-ms="2774" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@2d901eb0]" started-at="2023-09-07T19:03:42 IST" name="setUpClass" finished-at="2023-09-07T19:03:44 IST" duration-ms="2326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@3ba987b8]" started-at="2023-09-07T11:40:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-07T11:43:49 IST" duration-ms="199521" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@2d901eb0]" started-at="2023-09-07T19:03:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-07T19:06:26 IST" duration-ms="162471" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -27,21 +27,31 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "String.equals(Object)" because "referenceNoFromOmniDataBaseNew" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[text()='12345'] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "referenceNoFromOmniDataBaseNew" is null
-at stepdefinitions.AdminScreen_Steps_614.User_614ValidatesTheReferenceIdFromTheConfirmationReportAsPerDbOc_Data_Save(AdminScreen_Steps_614.java:808)
-at ✽.user_614 validates the reference id from the confirmation report as per DB oc_data_save(file:///C:/Users/ININDC00614/git/DigitalBanking/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:498)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[text()='12345'] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
+at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:602)
+at stepdefinitions.CsmCore_Steps_614.User_614ValidatesTheRecordIsRetrievedFromTheEnteredTransactionNumber(CsmCore_Steps_614.java:126)
+at ✽.user_614 validates the record is retrieved from the entered transaction number(file:///C:/Users/ININDC00614/git/DigitalBanking/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:512)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@3ba987b8]" started-at="2023-09-07T11:43:49 IST" name="tearDownClass" finished-at="2023-09-07T11:43:50 IST" duration-ms="1001" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@2d901eb0]" started-at="2023-09-07T19:06:26 IST" name="tearDownClass" finished-at="2023-09-07T19:06:27 IST" duration-ms="1068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

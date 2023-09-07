@@ -185,6 +185,23 @@ public class UserUtility_614 {
 
 	}
 
+	public void clickOnElementNormal(WebDriver driver, String xpath, boolean JS) {
+
+		WebElement webElement;
+
+		if (JS) {
+			waitHelper_Js(driver, xpath);
+			webElement = (WebElement) js.executeScript("return " + xpath + "");
+			webElement.click();
+		} else {
+			waitHelperClick(driver, xpath);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			webElement.click();
+		}
+
+	}
+	
 	public void clickOnElement(WebDriver driver, String xpath, boolean JS) {
 
 		WebElement webElement;

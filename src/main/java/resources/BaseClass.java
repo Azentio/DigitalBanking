@@ -27,6 +27,8 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
+			options.addArguments("--ignore-ssl-errors=yes");
+			options.addArguments("--ignore-certificate-errors");
 			options.setBinary("C:\\Users\\ININDC00614\\eclipse-workspace_Azentio\\chrome-win64\\chrome-win64\\chrome.exe");
 			driver = new ChromeDriver(options);
 

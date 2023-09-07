@@ -4,7 +4,7 @@ Feature: Checking the functionalities of Account Transfer
   @AT_003
   Scenario: Submit own account transfer - one time with corporate user and two approvals are required
 
-#Given user_614 navigates to the OmniScreen Admin Url and login with the valid credentials_RIDA
+Given user_614 navigates to the OmniScreen Admin Url and login with the valid credentials_RIDA
 #And user_614 loads the test datasetup for the test case id AT_003
 #And user_614 click on the parameters features in the OmniScreen admin page
 #And user_614 click on the user_614 management label in the admin screen
@@ -496,7 +496,22 @@ Feature: Checking the functionalities of Account Transfer
     And user_614 waits for the confirmation on the submission report for own bank transfer
     And user_614 gets the reference number from the submission report
     And user_614 validates the reference id from the confirmation report as per DB oc_data_save
+    And user_614 validates the from account and To account from the confirmation report
+    And user_614 validates the exchange amount and currency is showing or not
+    And user_614 validates the purpose of the transaction is showing or not
     And user_614 clicks on logout btn to logout from omni web portal
+    And user_614 gets the core reference number from the confirmation
+    
+    # Validation with CSM Core portal
+    And user_614 navigates to the CSM core portal
+    And user_614 login to the CSM core portal with valid credentials of Model.B
+    And user_614 click on the transaction screen from the CSM core portal homescreen
+    And user_614 click on the maintenance under the transaction screen on CSM
+    And user_614 click on the search icon on the maintenance under the transaction screen
+    And user_614 enters the transaction number taken from the Omni confirmation report
+    And user_614 validates the record is retrieved from the entered transaction number
+    And user_614 validates the status is approved for the transaction number
+    And user_614 click on the loggout button to logout from the CSM core portal
 
   @AT_051
   Scenario: Submit other bank transfer to predefined beneficiary - one time with corporate user have maker checker access
@@ -522,8 +537,23 @@ Feature: Checking the functionalities of Account Transfer
     And user_614 click on submit btn in the transfers screen
     And user_614 click on ok button for request submitted successfully popup
     And user_614 waits for the confirmation on the submission report for other bank transfer
-    And user_614 gets the reference number from the submission report
+    And user_614 validates the reference id from the confirmation report as per DB oc_data_save
+    And user_614 validates the from account and To account from the confirmation report
+    And user_614 validates the exchange amount and currency is showing or not
+    And user_614 validates the purpose of the transaction is showing or not
     And user_614 clicks on logout btn to logout from omni web portal
+    And user_614 gets the core reference number from the confirmation
+    
+    # Validation with CSM Core portal
+    And user_614 navigates to the CSM core portal
+    And user_614 login to the CSM core portal with valid credentials of Model.B
+    And user_614 click on the transaction screen from the CSM core portal homescreen
+    And user_614 click on the maintenance under the transaction screen on CSM
+    And user_614 click on the search icon on the maintenance under the transaction screen
+    And user_614 enters the transaction number taken from the Omni confirmation report
+    And user_614 validates the record is retrieved from the entered transaction number
+    And user_614 validates the status is approved for the transaction number
+    And user_614 click on the loggout button to logout from the CSM core portal
 
 
   @AT_062
@@ -571,7 +601,6 @@ Feature: Checking the functionalities of Account Transfer
     And user_614 validates the from account and To account from the confirmation report
     And user_614 validates the exchange amount and currency is showing or not
     And user_614 validates the purpose of the transaction is showing or not
-    And user_614 gets the reference number from the submission report
     And user_614 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
