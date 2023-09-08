@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ININDC00614\AppData\Local\Temp\testng-eclipse-1403578486\testng-customsuite.xml</span>
+                    <span>C:\Users\ININDC00614\AppData\Local\Temp\testng-eclipse-1030798905\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker c...)">runScenario("Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker c...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;Debit Cards&quot; segment on Presales Theme&quot;, &quot;Optional[Checking the functionalities of Cards]&quot;)">runScenario(""Debit Cards" segment on Presales Theme", "Optional[Checking the functionalities of Cards]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,20 +127,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker c...)">
-                  </a> <!-- runScenario("Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker c...) -->
+                  <a name="runScenario(&quot;&quot;Debit Cards&quot; segment on Presales Theme&quot;, &quot;Optional[Checking the functionalities of Cards]&quot;)">
+                  </a> <!-- runScenario(""Debit Cards" segment on Presales Theme", "Optional[Checking the functionalities of Cards]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker checker access", "Optional[Checking the functionalities of Account Transfer]")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[text()=&apos;12345&apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+                  <span class="parameters">(""Debit Cards" segment on Presales Theme", "Optional[Checking the functionalities of Cards]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;menu_content_complex&apos;]//ps-action-menu-item//ion-label[text()=&apos; Cards &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
-	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:602)
-	at stepdefinitions.CsmCore_Steps_614.User_614ValidatesTheRecordIsRetrievedFromTheEnteredTransactionNumber(CsmCore_Steps_614.java:126)
-	at ✽.user_614 validates the record is retrieved from the entered transaction number(file:///C:/Users/ININDC00614/git/DigitalBanking/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:512)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
+	at utilities.UserUtility_614.clickOnElementJs(UserUtility_614.java:214)
+	at stepdefinitions.Cards_Steps_614.User_614ClickOnTheCardsScreenFromTheOmniHomescreen(Cards_Steps_614.java:68)
+	at ✽.user_614 click on the cards screen from the omni homescreen(file:///C:/Users/ININDC00614/git/DigitalBanking/src/test/java/features/DBCards_614.feature:65)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -152,7 +152,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ININDC00614\AppData\Local\Temp\testng-eclipse-1403578486\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ININDC00614\AppData\Local\Temp\testng-eclipse-1030798905\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -213,12 +213,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 162471);
+data.setCell(0, 3, 338667);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -252,12 +252,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker c...)</span>
-                <span class="method-start">2359 ms</span>
+                <span class="method-name">runScenario(""Debit Cards" segment on Presales Theme", "Optional[Checking the functionalities of Cards]")</span>
+                <span class="method-start">1965 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">164866 ms</span>
+                <span class="method-start">340654 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

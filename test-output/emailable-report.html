@@ -9,20 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">165,969</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">341,949</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1694093624416</td><td rowspan="1">162471</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1694178935879</td><td rowspan="1">338667</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Submit own bank transfer to non predefined beneficiary - scheduled with corporate user have maker checker access&quot;</td><td>&quot;Optional[Checking the functionalities of Account Transfer]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[text()=&apos;12345&apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;Debit Cards&quot; segment on Presales Theme&quot;</td><td>&quot;Optional[Checking the functionalities of Cards]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;menu_content_complex&apos;]//ps-action-menu-item//ion-label[text()=&apos; Cards &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:52)
-	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:602)
-	at stepdefinitions.CsmCore_Steps_614.User_614ValidatesTheRecordIsRetrievedFromTheEnteredTransactionNumber(CsmCore_Steps_614.java:126)
-	at ✽.user_614 validates the record is retrieved from the entered transaction number(file:///C:/Users/ININDC00614/git/DigitalBanking/Azentio_DigitalBanking_Vimal/src/test/java/features/DBTransactions_614.feature:512)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
+	at utilities.UserUtility_614.clickOnElementJs(UserUtility_614.java:214)
+	at stepdefinitions.Cards_Steps_614.User_614ClickOnTheCardsScreenFromTheOmniHomescreen(Cards_Steps_614.java:68)
+	at ✽.user_614 click on the cards screen from the omni homescreen(file:///C:/Users/ININDC00614/git/DigitalBanking/src/test/java/features/DBCards_614.feature:65)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

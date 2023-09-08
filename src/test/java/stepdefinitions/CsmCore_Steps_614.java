@@ -43,7 +43,7 @@ public class CsmCore_Steps_614 {
         
 //        Click on the loggin btn
         
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("LogginBtn_LogginScreenCsmCore"), false);
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("LogginBtn_LogginScreenCsmCore"), false);
         
 //        Setting up the company and branch code
         
@@ -53,14 +53,14 @@ public class CsmCore_Steps_614 {
         us.enterDataAndTab(driver, DataReader.locatorsMap.get("Omni_Admin").get("BranchCode_LogginScreenCsmCore"),
                 DataReader.userCredentialsMap.get("ModelB").get("BranchCode"), false);
 
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("ContinueBtn_LogginScreenCsmCore"),
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("ContinueBtn_LogginScreenCsmCore"),
                 false);
         
 //        Force Logout
         
         try {
 
-            us.clickOnElementNoWait(driver,
+            us.clickOnElementNoWaitJs(driver,
                     DataReader.locatorsMap.get("Omni_Admin").get("ForceLogoutBtn_LogginScreenCsmCore"), 10, false);
         } catch (Exception e) {
 
@@ -68,24 +68,24 @@ public class CsmCore_Steps_614 {
         
 //        Welcome message popup
         
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("ContinueBtnWelcome_LogginScreenCsmCore"),
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("ContinueBtnWelcome_LogginScreenCsmCore"),
                 false);
         
 //        Setting up the current date
         
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("CurrentRunDate_HomeScreenCSMCore"),
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("CurrentRunDate_HomeScreenCSMCore"),
                 false);
         
         us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("EnterRunningDate_HomeScreenCSMCore"),
                 us.currentDate(), false);
         
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("useBtn_EnterRunningDate_HomeScreenCSMCore"),
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("useBtn_EnterRunningDate_HomeScreenCSMCore"),
                 false);
         
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("OkBtnSuccessInformationPopUpCSMCore"),
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("OkBtnSuccessInformationPopUpCSMCore"),
                 false);
         
-        us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("CloseBtn_EnterRunningDate_HomeScreenCSMCore"),
+        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("CloseBtn_EnterRunningDate_HomeScreenCSMCore"),
                 false);
         
         
@@ -94,19 +94,19 @@ public class CsmCore_Steps_614 {
     
     @And("^user_614 click on the transaction screen from the CSM core portal homescreen$")
     public void User_614ClickOnTheTransactionScreenFromTheCsmCorePortalHomescreen() {
-    	us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("transactionsScreen_CSMCore"),
+    	us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("transactionsScreen_CSMCore"),
                 false);
     }
     
     @And("^user_614 click on the maintenance under the transaction screen on CSM$")
     public void User_614ClickOnTheMaintenanceUnderTheTransactionScreenOnCsm() {
-    	us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("MaintenanceScreen_Transactions_CSMCore"),
+    	us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("MaintenanceScreen_Transactions_CSMCore"),
                 false);
     }
     
     @And("^user_614 click on the search icon on the maintenance under the transaction screen$")
     public void User_614ClickOnTheSearchIconOnTheMaintenanceUnderTheTransactionScreen() {
-    	us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("SearchIcon_MaintenanceScreen_Transactions_CSMCore"),
+    	us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("SearchIcon_MaintenanceScreen_Transactions_CSMCore"),
                 false);
     }
     
@@ -138,7 +138,7 @@ public class CsmCore_Steps_614 {
     
     @And("^user_614 click on the loggout button to logout from the CSM core portal$")
     public void User_614ClickOnTheLoggoutButtonToLogoutFromTheCsmCorePortal() {
-    	us.clickOnElementNormal(driver, DataReader.locatorsMap.get("Omni_Admin").get("LogoutBtn_CSMCore"),
+    	us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("LogoutBtn_CSMCore"),
                 false);
     }
     

@@ -185,7 +185,7 @@ public class UserUtility_614 {
 
 	}
 
-	public void clickOnElementNormal(WebDriver driver, String xpath, boolean JS) {
+	public void clickOnElement(WebDriver driver, String xpath, boolean JS) {
 
 		WebElement webElement;
 
@@ -202,7 +202,7 @@ public class UserUtility_614 {
 
 	}
 	
-	public void clickOnElement(WebDriver driver, String xpath, boolean JS) {
+	public void clickOnElementJs(WebDriver driver, String xpath, boolean JS) {
 
 		WebElement webElement;
 
@@ -220,6 +220,23 @@ public class UserUtility_614 {
 	}
 	
 	public void clickOnElementNoWait(WebDriver driver, String xpath, int waitTime, boolean JS) {
+
+		WebElement webElement;
+
+		if (JS) {
+			waitHelper_Js(driver, xpath, waitTime);
+			webElement = (WebElement) js.executeScript("return " + xpath + "");
+			webElement.click();
+		} else {
+			waitHelperClick(driver, xpath, waitTime);
+			webElement = driver.findElement(By.xpath(xpath));
+			moveToElement(driver, webElement);
+			webElement.click();
+		}
+
+	}
+	
+	public void clickOnElementNoWaitJs(WebDriver driver, String xpath, int waitTime, boolean JS) {
 
 		WebElement webElement;
 
@@ -441,7 +458,7 @@ public class UserUtility_614 {
 	}
 
 	public void scrollUp(WebDriver driver, WebElement webElement) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
 	}
 
 	public void scrollDownByPixel(WebDriver driver, String pixel1, String pixel2) {
@@ -675,4 +692,26 @@ public class UserUtility_614 {
 	}
 	
 
+	 public static String StringSplitterforJsonResponse(String str, String firstSplitter) {
+
+	        String[] split = str.split(firstSplitter);
+	        String returnValue = "";
+
+	        if (split.length > 1) {
+
+	            String[] split1 = split[1].split(",");
+
+	            if (split1.length > 1) {
+	                returnValue = split1[0];
+	            } else {
+	                returnValue = split[1];
+	            }
+
+	        }
+	        
+	        returnValue = returnValue.replace("}", "").trim();
+	        returnValue = returnValue.replace("\"", "").trim();
+
+	        return returnValue;
+	    }
 }

@@ -39,23 +39,23 @@ public class AdminScreen_Steps_614 {
         us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("passwordField_LogginScreen"),
                 DataReader.userCredentialsMap.get("VimalAdmin").get("Password"), false);
 
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("logginBtn_LogginScreen"), false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin").get("logginBtn_LogginScreen"), false);
 
         us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("companyCode_AdminLoggin"),
                 DataReader.userCredentialsMap.get("VimalAdmin").get("CompanyCode"), false);
 
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("continueBtnCompanyCode_AdminLoggin"),
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin").get("continueBtnCompanyCode_AdminLoggin"),
                 false);
 
         try {
 
-            us.clickOnElementNoWait(driver,
+            us.clickOnElementNoWaitJs(driver,
                     DataReader.locatorsMap.get("Omni_Admin").get("yesBtnForceLogout_AdminLoggin"), 5, false);
         } catch (Exception e) {
 
         }
 
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("continueBtnLastLoggin_AdminLoggin"),
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin").get("continueBtnLastLoggin_AdminLoggin"),
                 false);
 
     }
@@ -69,27 +69,27 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 click on the parameters features in the OmniScreen admin page$")
     public void user_614ClickOnTheParametersFeaturesInTheOmniscreenAdminPage() {
 
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("ParametersLabel_AdminScreen"), false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin").get("ParametersLabel_AdminScreen"), false);
 
     }
 
     @And("^user_614 click on the user_614 management label in the admin screen$")
     public void user_614ClickOnTheuser_614ManagementLabelInTheAdminScreen() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("user_614Management_ParametersLabel_AdminScreen"), false);
     }
 
     @And("^user_614 click on the cutomer approval matrix feature under the parameters$")
     public void user_614ClickOnTheCutomerApprovalMatrixFeatureUnderTheParameters() {
 
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin")
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin")
                 .get("Customer_ApprovalMatrix_user_614Management_ParametersLabel"), false);
 
     }
 
     @And("^user_614 click on the search icon in the customer approval matrix$")
     public void user_614ClickOnTheSearchIconInTheCustomerApprovalMatrix() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("searchIcon_Customer_ApprovalMatrix_user_614Management"),
                 false);
     }
@@ -115,7 +115,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 selects the already defined limit types and delete if anything is already defined$")
     public void user_614SelectsTheAlreadyDefinedLimitTypesAndDeleteIfAnythingIsAlreadyDefined() {
 
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("limitfield_Customer_ApprovalMatrix_user_614Management"),
                 false);
 
@@ -129,14 +129,14 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 click on the add button and add the first limit type in the customer approval matrix$")
     public void user_614ClickOnTheAddButtonAndAddTheFirstLimitTypeInTheCustomerApprovalMatrix() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin")
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin")
                 .get("addBtn_Customer_ApprovalMatrix_user_614Management_ParametersLabel"), false);
     }
 
     @And("^user_614 click on the limit type and select the range option in customer approval matrix$")
     public void user_614ClickOnTheLimitTypeAndSelectTheRangeOptionInCustomerApprovalMatrix() {
 
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("limitfield_Customer_ApprovalMatrix_user_614Management"),
                 false);
 
@@ -178,27 +178,27 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 click on the save button in the customer approval matrix$")
     public void user_614ClickOnTheSaveButtonInTheCustomerApprovalMatrix() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("saveBtn_Customer_ApprovalMatrix_user_614Management"),
                 false);
     }
 
     @And("^user_614 click on the ok button for the warning popup in the customer approval matrix$")
     public void user_614ClickOnTheOkButtonForTheWarningPopupInTheCustomerApprovalMatrix() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("warningOkBtn_Customer_ApprovalMatrix_user_614Management"),
                 false);
     }
 
     @And("^user_614 click on the ok button for the Success popup in the customer approval matrix$")
     public void user_614ClickOnTheOkButtonForTheSuccessPopupInTheCustomerApprovalMatrix() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin")
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("Omni_Admin")
                 .get("successPopupOkBtn_Customer_ApprovalMatrix_user_614Management"), false);
     }
 
     @And("^user_614 clicks on the approve button in the customer approval matrix$")
     public void user_614ClicksOnTheApproveButtonInTheCustomerApprovalMatrix() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("Omni_Admin").get("approveBtn_Customer_ApprovalMatrix_user_614Management"),
                 false);
     }
@@ -227,7 +227,7 @@ public class AdminScreen_Steps_614 {
     public void user_614ClickOnTheLogginButtonInTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
         Thread.sleep(5000);
         try {
-            us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn1"), 20, false);
+            us.clickOnElementNoWaitJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn1"), 20, false);
         } catch (Exception e) {
         }
     }
@@ -235,12 +235,12 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 click on the force logout btn in the login page for omni_corporate_web_portal$")
     public void user_614ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
         try {
-            us.clickOnElementNoWait(driver,
+            us.clickOnElementNoWaitJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 20, false);
         } catch (Exception e) {
 
             try {
-                us.clickOnElementNoWait(driver,
+                us.clickOnElementNoWaitJs(driver,
                         DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 20, false);
             } catch (Exception e1) {
             }
@@ -251,47 +251,47 @@ public class AdminScreen_Steps_614 {
     public void user_614ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
 
         try {
-            us.clickOnElementNoWait(driver,
+            us.clickOnElementNoWaitJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"), 45,
                     false);
         } catch (Exception e) {
             try {
-                us.clickOnElementNoWait(driver,
+                us.clickOnElementNoWaitJs(driver,
                         DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen1"), 5,
                         false);
             } catch (Exception e2) {
                 try {
-                    us.clickOnElementNoWait(driver,
+                    us.clickOnElementNoWaitJs(driver,
                             DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 45, false);
                 } catch (Exception h) {
                     try {
-                        us.clickOnElementNoWait(driver,
+                        us.clickOnElementNoWaitJs(driver,
                                 DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"), 10, false);
                     } catch (Exception X) {
                         try {
-                            us.clickOnElementNoWait(driver,
+                            us.clickOnElementNoWaitJs(driver,
                                     DataReader.locatorsMap.get("OmniScreen_Login").get("SomethingWentWrong_OKbtn_omni"), 20,
                                     false);
                         } catch (Exception e11) {
 
                             try {
-                                us.clickOnElementNoWait(driver,
+                                us.clickOnElementNoWaitJs(driver,
                                         DataReader.locatorsMap.get("OmniScreen_Login").get("SecurityAlert_OKbtn_Omni"), 20,
                                         false);
                             } catch (Exception e111) {
                                 try {
 
-                                    us.clickOnElementNoWait(driver,
+                                    us.clickOnElementNoWaitJs(driver,
                                             DataReader.locatorsMap.get("OmniScreen_Login").get("SessionReloaded_Omni"), 20,
                                             false);
 
                                 } catch (Exception e22) {
                                     try {
-                                        us.clickOnElementNoWait(driver,
+                                        us.clickOnElementNoWaitJs(driver,
                                                 DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"),
                                                 45, false);
                                     } catch (Exception e1111) {
-                                        us.clickOnElementNoWait(driver,
+                                        us.clickOnElementNoWaitJs(driver,
                                                 DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
                                                 10, false);
 
@@ -309,37 +309,37 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 click on the AMANA payment screen in the homepage$")
     public void user_614ClickOnTheAmanaPaymentScreenInTheHomepage() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("AMANAPayments_HomeScreen"),
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("AMANAPayments_HomeScreen"),
                 false);
     }
 
     @And("^user_614 click on the transfers under the AMANA payment screen$")
     public void user_614ClickOnTheTransfersUnderTheAmanaPaymentScreen() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Transfers_AMANAPayments"), false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Transfers_AMANAPayments"), false);
     }
 
     @And("^user_614 click on the transfers within own banks under transfer_Amana payment screen$")
     public void User_614ClickOnTheTransfersWithinOwnBanksUnderTransfer_AmanaPaymentScreen() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("OwnbankTransfers_Transfers_AMANAPaymnets"), false);
     }
 
     @And("^user_614 click on the transfers within own accounts under transfer_Amana payment screen$")
     public void user_614ClickOnTheTransfersWithinOwnAccountsUnderTransfer_AmanaPaymentScreen() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("TransferWithinOwnAccounts_Transfers_AMANAPaymnets"),
                 false);
     }
 
     @And("^user_614 click on the From accounts from the transfers within own accounts$")
     public void user_614ClickOnTheFromAccountsFromTheTransfersWithinOwnAccounts() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer1"), false);
     }
 
     @And("^user_614 click on the To accounts from the transfers within own accounts$")
     public void user_614ClickOnTheToAccountsFromTheTransfersWithinOwnAccounts() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer1"), false);
     }
 
@@ -349,7 +349,7 @@ public class AdminScreen_Steps_614 {
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"),
                 "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
-        us.clickOnElement(driver, xpath, false);
+        us.clickOnElementJs(driver, xpath, false);
 
     }
 
@@ -359,7 +359,7 @@ public class AdminScreen_Steps_614 {
         String xpath = us.textReplacer(
                 DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"),
                 "TESTDATAVARIABLE",DataReader.testData.get("ToAccount1"));
-        us.clickOnElement(driver, xpath, false);
+        us.clickOnElementJs(driver, xpath, false);
 
     }
 
@@ -384,13 +384,13 @@ public class AdminScreen_Steps_614 {
     public void user_614ClickOnNextBtnInTheTransfersScreen() throws InterruptedException {
 
         Thread.sleep(5000);
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"), false);
     }
 
     @And("^user_614 click on submit btn in the transfers screen$")
     public void user_614ClickOnSubmitBtnInTheTransfersScreen() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer1"), false);
     }
 
@@ -439,13 +439,13 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 clicks on logout btn to logout from omni web portal$")
     public void user_614ClicksOnLogoutBtnToLogoutFromOmniWebPortal() throws InterruptedException {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb1"), false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb1"), false);
         Thread.sleep(30000);
     }
 
     @And("^user_614 click on the TODO icon in homescreen on omni web portal$")
     public void user_614ClickOnTheTodoIconInHomescreenOnOmniWebPortal() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), false);
     }
 
     @And("^user_614 click on the 1st pending item in the list$")
@@ -453,20 +453,20 @@ public class AdminScreen_Steps_614 {
 
         Thread.sleep(30000);
 
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FirstItemFrmPendingTransferList"),
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FirstItemFrmPendingTransferList"),
                 true);
     }
 
     @And("^user_614 click on the approve btn for the pending transfer request from the maker$")
     public void user_614ClickOnTheApproveBtnForThePendingTransferRequestFromTheMaker() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ApproveBtnForPendingTransfer"),
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ApproveBtnForPendingTransfer"),
                 true);
     }
 
     @And("^user_614 click on the transfers to other bank accounts under transfer_Amana payment screen$")
     public void User_614ClickOnTheTransfersToOtherBankAccountsUnderTransfer_AmanaPaymentScreen()
             throws InterruptedException {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login")
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login")
                 .get("TransfersToOtherBankAccount_Transfers_AMANAPaymnets"), false);
 
         Thread.sleep(10000);
@@ -475,7 +475,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 click on the From accounts from the transfers to other bank accounts$")
     public void User_614ClickOnTheFromAccountsFromTheTransfersToOtherBankAccounts() throws InterruptedException {
         Thread.sleep(5000);
-        us.clickOnElementNoWait(driver,
+        us.clickOnElementNoWaitJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransfersToOtherBankAccount"), 30, true);
     }
 
@@ -486,7 +486,7 @@ public class AdminScreen_Steps_614 {
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
                     "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
-            us.clickOnElementNoWait(driver, xpath, 30, false);
+            us.clickOnElementNoWaitJs(driver, xpath, 30, false);
         } catch (Exception e) {
 
             us.doubleClickOnElement(driver,
@@ -496,13 +496,13 @@ public class AdminScreen_Steps_614 {
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
                     "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
-            us.clickOnElement(driver, xpath, false);
+            us.clickOnElementJs(driver, xpath, false);
         }
     }
 
     @And("^user_614 click on the To accounts from the transfers to other bank accounts$")
     public void User_614ClickOnTheToAccountsFromTheTransfersToOtherBankAccounts() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransfersToOtherBankAccount"), true);
     }
 
@@ -512,7 +512,7 @@ public class AdminScreen_Steps_614 {
                 DataReader.locatorsMap.get("OmniScreen_Login")
                         .get("SelectBeneficiaryAccountInTransfersToOtherBankAccount"),
                 "TESTDATAVARIABLE",DataReader.testData.get("ToAccount1"));
-        us.clickOnElement(driver, xpath, false);
+        us.clickOnElementJs(driver, xpath, false);
     }
 
     @And("^user_614 loads the test datasetup for the test case id AT_009$")
@@ -532,7 +532,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 click on the international bank transfer under transfer_Amana payment screen$")
     public void User_614ClickOnTheInternationalBankTransferUnderTransfer_AmanaPaymentScreen()
             throws InterruptedException {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Transfers_AMANAPaymnets"),
                 false);
 
@@ -542,7 +542,7 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 click on the From accounts from the transfers for international bank transfer$")
     public void User_614ClickOnTheFromAccountsFromTheTransfersForInternationalBankTransfer()
             throws InterruptedException {
-        us.clickOnElementNoWait(driver,
+        us.clickOnElementNoWaitJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransfersToOtherBankAccount"), 30, true);
     }
 
@@ -553,7 +553,7 @@ public class AdminScreen_Steps_614 {
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
                     "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
-            us.clickOnElementNoWait(driver, xpath, 30, false);
+            us.clickOnElementNoWaitJs(driver, xpath, 30, false);
         } catch (Exception e) {
 
             us.doubleClickOnElement(driver,
@@ -563,13 +563,13 @@ public class AdminScreen_Steps_614 {
                     DataReader.locatorsMap.get("OmniScreen_Login")
                             .get("SelectFromAccountInTransfersToOtherBankAccount"),
                     "TESTDATAVARIABLE",DataReader.testData.get("FromAccount1"));
-            us.clickOnElement(driver, xpath, false);
+            us.clickOnElementJs(driver, xpath, false);
         }
     }
 
     @And("^user_614 click on the To accounts from the transfers for international bank transfer$")
     public void User_614ClickOnTheToAccountsFromTheTransfersForInternationalBankTransfer() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_InternationalBankTransfer"),
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_InternationalBankTransfer"),
                 true);
     }
 
@@ -579,7 +579,7 @@ public class AdminScreen_Steps_614 {
                 DataReader.locatorsMap.get("OmniScreen_Login")
                         .get("SelectBeneficiaryAccountInTransfersToOtherBankAccount"),
                 "TESTDATAVARIABLE",DataReader.testData.get("ToAccount1"));
-        us.clickOnElement(driver, xpath, false);
+        us.clickOnElementJs(driver, xpath, false);
     }
 
     @And("^user_614 waits for the confirmation on the submission report for international bank transfer$")
@@ -598,20 +598,20 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 click on the scheduled transfers under the AMANA payment screen$")
     public void User_614ClickOnTheScheduledTransfersUnderTheAmanaPaymentScreen() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledTransfers_Transfers_AMANA"), false);
     }
 
     @And("^user_614 click on the scheduled transfers within own accounts under scheduled transfer_Amana payment screen$")
     public void User_614ClickOnTheScheduledTransfersWithinOwnAccountsUnderScheduledTransfer_AmanaPaymentScreen() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login")
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login")
                 .get("OwnAccountTransfer_ScheduledTransfers_Transfers_AMANA"), false);
     }
 
     @And("^user_614 click on the periodicity dropdown in scheduled transfer$")
     public void User_614ClickOnThePeriodicityDropdownInScheduledTransfer() throws InterruptedException {
         Thread.sleep(3000);
-        us.clickOnElementNoWait(driver,
+        us.clickOnElementNoWaitJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), 30, false);
     }
 
@@ -619,17 +619,17 @@ public class AdminScreen_Steps_614 {
     public void User_614ClickOnTheSingleFutureDateFromTheDropdownInScheduledTransfer() {
 
         try {
-            us.clickOnElementNoWait(driver,
+            us.clickOnElementNoWaitJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"), 30,
                     false);
         } catch (Exception e) {
-            us.clickOnElement(driver,
+            us.clickOnElementJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
 
-            us.clickOnElement(driver,
+            us.clickOnElementJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
 
-            us.clickOnElement(driver,
+            us.clickOnElementJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"),
                     false);
 
@@ -639,11 +639,11 @@ public class AdminScreen_Steps_614 {
     @And("^user_614  click on the I agree to terms and conditions checkbox$")
     public void User_614ClickOnTheIAgreeToTermsAndConditionsCheckbox() {
         try {
-            us.clickOnElementNoWait(driver,
+            us.clickOnElementNoWaitJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 30, false);
 
             Thread.sleep(5000);
-            us.clickOnElement(driver,
+            us.clickOnElementJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"), false);
 
         } catch (Exception ignored) {
@@ -653,7 +653,7 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 waits for the confirmation on the submission report for scheduled own account transfer$")
     public void User_614WaitsForTheConfirmationOnTheSubmissionReportForScheduledOwnAccountTransfer() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ReportConfirmationInScheduledOwnAccountTransfer"),
                 false);
     }
@@ -668,7 +668,7 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 click on the scheduled transfers within own bank transfer under scheduled transfer_Amana payment screen$")
     public void User_614ClickOnTheScheduledTransfersWithinOwnBankTransferUnderScheduledTransfer_AmanaPaymentScreen() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnBankTransfer_ScheduledTransfer"),
                 false);
     }
@@ -712,7 +712,7 @@ public class AdminScreen_Steps_614 {
 
     @And("^user_614 click on the To other beneficiary in the transfers within own accounts$")
     public void User_614ClickOnTheToOtherBeneficiaryInTheTransfersWithinOwnAccounts() {
-        us.clickOnElement(driver,
+        us.clickOnElementJs(driver,
                 DataReader.locatorsMap.get("OmniScreen_Login").get("ToOtherBeneficiaryAccountClick"),
                 false);
     }
@@ -728,7 +728,7 @@ public class AdminScreen_Steps_614 {
 
         } catch (Exception e) {
 
-            us.clickOnElement(driver,
+            us.clickOnElementJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("ToOtherBeneficiaryAccountClick"),
                     false);
             us.enterDataAndTab(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("enterBeneficiaryAccountNumber"),
@@ -739,14 +739,14 @@ public class AdminScreen_Steps_614 {
     @And("^user_614 click on ok button for request submitted successfully popup$")
     public void User_614ClickOnOkButtonForRequestSubmittedSuccessfullyPopup() {
         try {
-            us.clickOnElement(driver,
+            us.clickOnElementJs(driver,
                     DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"),
                     false);
 
         } catch (Exception e) {
 
             try {
-                us.clickOnElement(driver,
+                us.clickOnElementJs(driver,
                         DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen1"),
                         false);
             } catch (Exception e1) {

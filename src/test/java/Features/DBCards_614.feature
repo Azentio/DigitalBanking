@@ -21,13 +21,22 @@ Feature: Checking the functionalities of Cards
   @CRD_036
   Scenario: "Debit Cards" segment on CDM Theme
     Given user_614 navigates to the omni_retail_web_portal
-    And user_614 loads the test datasetup for the test case id CRD_035
+    And user_614 loads the test datasetup for the test case id CRD_036
     And user_614 enters the maker username1 in the login page for omni_corporate_web_portal
     And user_614 enters the maker password1 in the login page for omni_corporate_web_portal
     And user_614 click on the loggin button in the login page for omni_corporate_web_portal
     And user_614 click on the force logout btn in the login page for omni_corporate_web_portal
     And user_614 click on the ok button for the successful login page for omni_corporate_web_portal
-
+    And user_614 click on the cards screen from the omni homescreen
+    And user_614 click on the my cards section from the cards screen
+		And user_614 click on the debit cards on the header of my cards section
+		And user_614 validates if the debit cards are listed or not
+		And user_614 selects the first card type where the card is active
+#		And user_614 checks if background design is reflected to the correct card type
+		And user_614 validates that the expiry date is mentioned or not
+#		And user_614 validates that the card number is masked or not as the CSM service
+		And user_614 clicks on logout btn to logout from omni web portal
+		
 
 
   @CRD_037
@@ -47,21 +56,37 @@ Feature: Checking the functionalities of Cards
   @CRD_038
   Scenario: "Debit Cards" segment on Presales Theme
     Given user_614 navigates to the omni_retail_web_portal
-    And user_614 loads the test datasetup for the test case id CRD_035
+    And user_614 loads the test datasetup for the test case id CRD_038
     And user_614 enters the maker username1 in the login page for omni_corporate_web_portal
     And user_614 enters the maker password1 in the login page for omni_corporate_web_portal
     And user_614 click on the loggin button in the login page for omni_corporate_web_portal
     And user_614 click on the force logout btn in the login page for omni_corporate_web_portal
     And user_614 click on the ok button for the successful login page for omni_corporate_web_portal
-
+    And user_614 click on the cards screen from the omni homescreen
+    And user_614 click on the my cards section from the cards screen
+		And user_614 click on the debit cards on the header of my cards section
+		And user_614 validates if the debit cards are listed or not
+		And user_614 selects the first card type where the card is active
+#		And user_614 checks if background design is reflected to the correct card type
+		And user_614 validates that the expiry date is mentioned or not
+#		And user_614 validates that the card number is masked or not as the CSM service
+		And user_614 clicks on logout btn to logout from omni web portal
 
   @CRD_039
   Scenario: "Credit Cards" segment on Presales Theme
     Given user_614 navigates to the omni_retail_web_portal
-    And user_614 loads the test datasetup for the test case id CRD_035
+    And user_614 loads the test datasetup for the test case id CRD_039
     And user_614 enters the maker username1 in the login page for omni_corporate_web_portal
     And user_614 enters the maker password1 in the login page for omni_corporate_web_portal
     And user_614 click on the loggin button in the login page for omni_corporate_web_portal
     And user_614 click on the force logout btn in the login page for omni_corporate_web_portal
     And user_614 click on the ok button for the successful login page for omni_corporate_web_portal
-
+    And user_614 click on the cards screen from the omni homescreen
+    And user_614 click on the my cards section from the cards screen
+		And user_614 click on the credit cards on the header of my cards section
+		And user_614 validates if the credit cards are listed or not
+		And user_614 selects the first card type where the card is active
+#		And user_614 checks if background design is reflected to the correct card type
+		And user_614 validates that the expiry date is mentioned or not
+#		And user_614 validates that the card number is masked or not as the CSM service
+		And user_614 clicks on logout btn to logout from omni web portal

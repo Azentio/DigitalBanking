@@ -65,16 +65,15 @@ public class Cards_Steps_614 {
 
     @And("^user_614 click on the cards screen from the omni homescreen$")
     public void User_614ClickOnTheCardsScreenFromTheOmniHomescreen() {
-            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"),  false);
+            us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"),  false);
     }
     @And("^user_614 click on the my cards section from the cards screen$")
     public void User_614ClickOnTheMyCardsSectionFromTheCardsScreen() {
-        us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"),  false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"),  false);
     }
     @And("^user_614 click on the credit cards on the header of my cards section$")
     public void User_614ClickOnTheCreditCardsOnTheHeaderOfMyCardsSection() throws InterruptedException {
-        Thread.sleep(15000);
-        us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"), 30, false);
+        us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"), false);
     }
     @And("^user_614 selects the first card type where the allow to reissue flag is checked and the card is active$")
     public void User_614SelectsTheFirstCardTypeWhereTheAllowToReissueFlagIsCheckedAndTheCardIsActive() {
@@ -84,35 +83,35 @@ public class Cards_Steps_614 {
                 DataReader.testData.get("CardTypeName"));
 
         try {
-            us.clickOnElementNoWait(driver, xpath, 30, false);
+            us.clickOnElementNoWaitJs(driver, xpath, 30, false);
 
         }
         catch (Exception e) {
-            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"),  false);
+            us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"),  false);
             System.out.println("Credit cards Clicked");
-            us.clickOnElementNoWait(driver, xpath, 40, false);
+            us.clickOnElementNoWaitJs(driver, xpath, 40, false);
         }
     }
     @And("^user_614 click on the block icon from the dropdown list$")
     public void User_614ClickOnTheBlockIconFromTheDropdownList() {
         try {
-            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"),  false);
+            us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"),  false);
         } catch (Exception e) {
             try {
-                us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"),  10, false);
+                us.clickOnElementNoWaitJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("OKBtnLogginScreen"),  10, false);
             }
             catch (Exception e1){
 
             }
-            us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"),  10, false);
+            us.clickOnElementNoWaitJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockIcon_ActiveCreditCard"),  10, false);
         }
     }
     @And("^user_614 validates that the reissue toggle btn is not available$")
     public void User_614ValidatesThatTheReissueToggleBtnIsNotAvailable() {
 
         try {
-            us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockCard_CardInfoText"),false);
-            us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToggleBtn_ReisseuCard_MyCards"),5, false);
+            us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("BlockCard_CardInfoText"),false);
+            us.clickOnElementNoWaitJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToggleBtn_ReisseuCard_MyCards"),5, false);
             Assert.fail();
         } catch (Exception e) {
 
@@ -131,8 +130,69 @@ public class Cards_Steps_614 {
         }
     }
 
+    @And("^user_614 click on the debit cards on the header of my cards section$")
+    public void User_614ClickOnTheDebitCardsOnTheHeaderOfMyCardsSection() {
+    	us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("DebitCards_MyCards_Cards_OmniHomeScreen"),false);
+    }
+    
+    @And("^user_614 validates if the debit cards are listed or not$")
+    public void User_614ValidatesIfTheDebitCardsAreListedOrNot() {
+    	String xpath = us.textReplacer(
+                DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCardByCardType_CreditCards_MyCards_Cards_OmniHomeScreen"),
+                "TESTDATAVARIABLE",
+                DataReader.testData.get("CardTypeName"));
 
+            us.elementIsVisible(driver, xpath);
+    }
+    
+    @And("^user_614 selects the first card type where the card is active$")
+    public void User_614SelectsTheFirstCardTypeWhereTheCardIsActive() {
+    	String xpath = us.textReplacer(
+                DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCardByCardType_CreditCards_MyCards_Cards_OmniHomeScreen"),
+                "TESTDATAVARIABLE",
+                DataReader.testData.get("CardTypeName"));
 
+    	try {
+            us.clickOnElementNoWaitJs(driver, xpath, 30, false);
+
+        }
+        catch (Exception e) {
+            us.clickOnElementJs(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("CreditCards_MyCards_Cards_OmniHomeScreen"),  false);
+            System.out.println("Credit cards Clicked");
+            us.clickOnElementNoWaitJs(driver, xpath, 40, false);
+        }
+    }
+    
+    @And("^user_614 validates that the expiry date is mentioned or not$")
+    public void User_614ValidatesThatTheExpiryDateIsMentionedOrNot() {
+    	
+    	String text = us.getText(driver,
+    			DataReader.locatorsMap.get("OmniScreen_Login").get("expiryDate_MyCards_Omni"), 
+    			false);
+    	
+    	boolean digit = false;
+    	for (int i = 0; i < text.length(); i++) {
+			char charAt = text.charAt(i);
+			digit = Character.isDigit(charAt);
+		}
+    	
+    	if (digit) {
+		}
+    	else {
+			Assert.fail("Contains no digit or no date is mentioned");
+		}
+    	
+    }
+
+    @And("^user_614 validates if the credit cards are listed or not$")
+    public void User_614ValidatesIfTheCreditCardsAreListedOrNot() {
+    	String xpath = us.textReplacer(
+                DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCardByCardType_CreditCards_MyCards_Cards_OmniHomeScreen"),
+                "TESTDATAVARIABLE",
+                DataReader.testData.get("CardTypeName"));
+
+            us.elementIsVisible(driver, xpath);
+    }
 
 
 
