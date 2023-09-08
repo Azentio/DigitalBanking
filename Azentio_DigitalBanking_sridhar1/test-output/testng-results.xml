@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-07T18:30:33 IST" name="Default suite" finished-at="2023-09-07T18:33:47 IST" duration-ms="194065">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-09-07T18:30:33 IST" name="Default test" finished-at="2023-09-07T18:33:47 IST" duration-ms="194065">
+      <class name="Runner.TestApplication">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-09-07T18:30:33 IST" name="setUpClass" finished-at="2023-09-07T18:30:34 IST" duration-ms="1206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-09-07T18:30:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-07T18:33:24 IST" duration-ms="170382" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if the system Validate Activity log for non beneficiary internal  Transfer "Corporate_IB _maker checker ""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Beneficiary Management details created]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()=' My Activity Log '] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[text()=' My Activity Log '] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:292)
+at stepdefinitions.AdminScreen_Steps_0482.user_click_on_the_my_active_log_report_in_profile(AdminScreen_Steps_0482.java:1379)
+at ✽.user_0072 click on the My Active log Report in profile(file:///C:/Users/ININDC00072/eclipse-workspace/.metadata/Azentio_DigitalBanking_sridhar1/src/test/java/features/Beneficiary_Management.feature:147)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@795509d9]" started-at="2023-09-07T18:33:24 IST" name="tearDownClass" finished-at="2023-09-07T18:33:47 IST" duration-ms="22408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.TestApplication -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
