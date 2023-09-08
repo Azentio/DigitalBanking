@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-05T18:08:42 IST" name="Default suite" finished-at="2023-09-05T18:10:06 IST" duration-ms="83916">
+  <suite started-at="2023-09-08T10:04:26 IST" name="Default suite" finished-at="2023-09-08T10:10:11 IST" duration-ms="344241">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1f9f6368]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-09-05T18:08:42 IST" name="Default test" finished-at="2023-09-05T18:10:06 IST" duration-ms="83916">
+    <test started-at="2023-09-08T10:04:26 IST" name="Default test" finished-at="2023-09-08T10:10:11 IST" duration-ms="344241">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-05T18:08:42 IST" name="setUpClass" finished-at="2023-09-05T18:08:45 IST" duration-ms="2825" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-08T10:04:27 IST" name="setUpClass" finished-at="2023-09-08T10:04:41 IST" duration-ms="14643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-05T18:08:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-05T18:09:47 IST" duration-ms="62525" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-08T10:04:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-08T10:08:19 IST" duration-ms="217606" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Activate Debit Card - identification"]]>
+                <![CDATA["Activate Credit Card - identification"]]>
               </value>
             </param>
             <param index="1">
@@ -27,10 +27,31 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='continueWelcBtn'] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='continueWelcBtn'] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
+at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
+at stepdefinitions.CardsSteps_612.User_612_NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials(CardsSteps_612.java:82)
+at ✽.User_612 navigates to the OmniScreen Admin Url and login with the valid credentials(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:50)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-05T18:09:47 IST" name="tearDownClass" finished-at="2023-09-05T18:10:06 IST" duration-ms="18408" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-08T10:08:19 IST" name="tearDownClass" finished-at="2023-09-08T10:10:10 IST" duration-ms="110806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

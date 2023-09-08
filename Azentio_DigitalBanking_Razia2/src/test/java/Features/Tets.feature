@@ -3,7 +3,10 @@ Feature: Checking the functionalities of Account Transfer
 
 @AT_003
 Scenario: 
-And User_612 click on the Authentication Matrix under parameters
+And User_612 Search the Block credit card field in screen under AlertMapping
+
+
+
 
 #Given user_614 navigates to the omni_corporate_web_portal
 #And user_614 loads the test datasetup for the test case id AT_003

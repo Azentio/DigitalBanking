@@ -287,8 +287,7 @@ public class  AccountTransferSteps_612 {
 									false);
 							
 						} catch (Exception e2) {
-							try {
-								us.clickOnElementNoWait(driver, 
+							try {								us.clickOnElementNoWait(driver, 
 										DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 
 										45,
 										false);
