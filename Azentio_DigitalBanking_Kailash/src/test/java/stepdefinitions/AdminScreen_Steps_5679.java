@@ -1369,12 +1369,119 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		us.clickOnElement(driver, xpath, false);
 	}
 	@And("user_5679 loads the test datasetup for the test case id ALR_002")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_alr_002() {
+	public void user_5679_loads_the_test_datasetup_for_the_test_case_id_alr_002() {
 		executionTestData = DataReader.executionTestData.get("ALR_002");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
+	@Given("user_5679 Click on the Transfer to other bank account in Trnasfer screen")
+	public void user_5679_click_on_the_transfer_to_other_bank_account_in_trnasfer_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Transfer_Other_Bank_Account_Report"), 
+				false);
+	}
+
+	@Given("user_5679 Select the From account in Transafer to other bank account")
+	public void user_5679_select_the_from_account_in_transafer_to_other_bank_account() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransfersToOtherBankAccount"), 
+				true);
+	}
+
+	@Given("user_5679 Account in from value in Bank")
+	public void user_5679_account_in_from_value_in_bank() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Account_From_Number"), 
+				true);
+	}
+
+	@Given("user_5679 Select the To Account in Transafer to other bank account")
+	public void user_5679_select_the_to_account_in_transafer_to_other_bank_account() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransfersToOtherBankAccount"), 
+				true);
+	}
+
+	@Given("user_5679 Account To value in Bank")
+	public void user_5679_account_to_value_in_bank() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Account_To_Number_value"), 
+				true);
+	}
+
+	@Given("user_5679 Enter the Amount in Transafer")
+	public void user_5679_enter_the_amount_in_transafer() throws InterruptedException {
+		Thread.sleep(3000);
+		us.enterDataAndEnter(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"), 
+				testData.get("EnterAmountInOwnAccountTransfer"),
+				false);
+	}
 	
+	@Given("user_5679 click on the Purpose in transfer account")
+	public void user_5679click_on_the_purpose_in_transfer_account() {
+		us.enterDataAndEnter(
+				driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), 
+				testData.get("Purpose_Account_Transafer"),
+				false);
+	}
+
+	@Given("user_5679 click on the Next button in transfer account")
+	public void user_5679_click_on_the_next_button_in_transfer_account() {
+		 for (int i = 0; i <2000; i++) {
+    			try {
+    				driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"))).click();
+    				break;
+    			} catch (Exception e) {
+    				if (i==1999) {
+    					Assert.fail(e.getMessage());
+    				}
+    			}
+    		}
+    	}
+	
+
+	@Given("user_5679 click on Agree box")
+	public void user_5679_click_on_agree_box() {
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Agree_on_teams_conditions"), 30, true);
+	}
+
+	@Given("user_5679 Click on Submit button in transfer account")
+	public void user_5679_click_on_submit_button_in_transfer_account() throws InterruptedException {
+		Thread.sleep(6000);
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer"), 30, true);
+	}
+
+	@Given("user_5679 click on the profile Info in ALR")
+	public void user_5679_click_on_the_profile_info_in_alr() throws InterruptedException {
+		Thread.sleep(3000);
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Profile_Info_ALR"), 30, false);
+	}
+
+	@Given("user_5679 Click on the Active Log in Transafer")
+	public void user_5679_click_on_the_active_log_in_transafer() {
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Active_Log_Report_box"), 30, false);
+	}
+
+	@Given("user_5679 click on the My Active log Report in profile")
+	public void user_5679_click_on_the_my_active_log_report_in_profile() throws InterruptedException {
+		Thread.sleep(6000);
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("MY_Active_log_Report"), 30, false);
+	}
+
+	@Given("user_5679 click on the Export button in ALR")
+	public void user_5679_click_on_the_export_button_in_alr() throws InterruptedException {
+		Thread.sleep(6000);
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ALR_Export_click"), 30, false);
+	}
+
 	
 	
 	
