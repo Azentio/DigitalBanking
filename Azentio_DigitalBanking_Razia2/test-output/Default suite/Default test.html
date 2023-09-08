@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 08 10:04:26 IST 2023</td>
+<td>Started on:</td><td>Fri Sep 08 12:57:28 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>344 seconds (344241 ms)</td>
+<tr><td>Total time:</td><td>356 seconds (356407 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Activate Credit Card - identification", "Optional[Checking the functionalities of Cards]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id=&apos;continueWelcBtn&apos;] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
-	at stepdefinitions.CardsSteps_612.User_612_NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials(CardsSteps_612.java:82)
-	at ✽.User_612 navigates to the OmniScreen Admin Url and login with the valid credentials(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:50)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1621419545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1621419545'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id=&apos;continueWelcBtn&apos;] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
-	at stepdefinitions.CardsSteps_612.User_612_NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials(CardsSteps_612.java:82)
-	at ✽.User_612 navigates to the OmniScreen Admin Url and login with the valid credentials(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:50)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Block Credit Card" identification", "Optional[Checking the functionalities of Cards]"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at stepdefinitions.CardsSteps_612.user_click_the_reports_mapping1_under_intergration_settings(CardsSteps_612.java:240)
+	at ✽.User_612 click the ReportsMapping1 under Intergration Settings(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:128)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2010176442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2010176442'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at stepdefinitions.CardsSteps_612.user_click_the_reports_mapping1_under_intergration_settings(CardsSteps_612.java:240)
+	at ✽.User_612 click the ReportsMapping1 under Intergration Settings(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:128)
 </pre></div></td>
-<td>217</td>
-<td>Runner.TestApplication@1f9f6368</td></tr>
+<td>214</td>
+<td>Runner.TestApplication@5efa40fe</td></tr>
 </table><p>
 </body>
 </html>

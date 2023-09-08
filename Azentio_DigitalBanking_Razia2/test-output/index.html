@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-302462201\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-2001580547\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Activate Credit Card - identification&quot;, &quot;Optional[Checking the functionalities of Cards]&quot;)">runScenario("Activate Credit Card - identification", "Optional[Checking the functionalities of Cards]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;Block Credit Card&quot; identification&quot;, &quot;Optional[Checking the functionalities of Cards]&quot;)">runScenario(""Block Credit Card" identification", "Optional[Checking the functionalities of Cards]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,20 +126,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Activate Credit Card - identification&quot;, &quot;Optional[Checking the functionalities of Cards]&quot;)">
-                  </a> <!-- runScenario("Activate Credit Card - identification", "Optional[Checking the functionalities of Cards]") -->
+                  <a name="runScenario(&quot;&quot;Block Credit Card&quot; identification&quot;, &quot;Optional[Checking the functionalities of Cards]&quot;)">
+                  </a> <!-- runScenario(""Block Credit Card" identification", "Optional[Checking the functionalities of Cards]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Activate Credit Card - identification","Optional[Checking the functionalities of Cards]")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id=&apos;continueWelcBtn&apos;] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
-	at stepdefinitions.CardsSteps_612.User_612_NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials(CardsSteps_612.java:82)
-	at ✽.User_612 navigates to the OmniScreen Admin Url and login with the valid credentials(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:50)
+                  <span class="parameters">(""Block Credit Card" identification","Optional[Checking the functionalities of Cards]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at stepdefinitions.CardsSteps_612.user_click_the_reports_mapping1_under_intergration_settings(CardsSteps_612.java:240)
+	at ✽.User_612 click the ReportsMapping1 under Intergration Settings(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:128)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -151,7 +151,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-302462201\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-2001580547\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -212,7 +212,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 217606);
+data.setCell(0, 3, 214422);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -251,12 +251,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Activate Credit Card - identification", "Optional[Checking the functionalities of Cards]")</span>
-                <span class="method-start">15044 ms</span>
+                <span class="method-name">runScenario(""Block Credit Card" identification", "Optional[Checking the functionalities of Cards]")</span>
+                <span class="method-start">12467 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">232814 ms</span>
+                <span class="method-start">227121 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

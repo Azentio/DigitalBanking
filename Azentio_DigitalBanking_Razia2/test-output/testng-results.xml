@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-08T10:04:26 IST" name="Default suite" finished-at="2023-09-08T10:10:11 IST" duration-ms="344241">
+  <suite started-at="2023-09-08T12:57:28 IST" name="Default suite" finished-at="2023-09-08T13:03:24 IST" duration-ms="356407">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1f9f6368]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5efa40fe]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-09-08T10:04:26 IST" name="Default test" finished-at="2023-09-08T10:10:11 IST" duration-ms="344241">
+    <test started-at="2023-09-08T12:57:28 IST" name="Default test" finished-at="2023-09-08T13:03:24 IST" duration-ms="356407">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-08T10:04:27 IST" name="setUpClass" finished-at="2023-09-08T10:04:41 IST" duration-ms="14643" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-09-08T12:57:28 IST" name="setUpClass" finished-at="2023-09-08T12:57:40 IST" duration-ms="12161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-08T10:04:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-08T10:08:19 IST" duration-ms="217606" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-09-08T12:57:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-08T13:01:15 IST" duration-ms="214422" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Activate Credit Card - identification"]]>
+                <![CDATA[""Block Credit Card" identification"]]>
               </value>
             </param>
             <param index="1">
@@ -27,31 +27,28 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='continueWelcBtn'] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: driver.version: unknown]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='continueWelcBtn'] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:61)
-at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:197)
-at stepdefinitions.CardsSteps_612.User_612_NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials(CardsSteps_612.java:82)
-at ✽.User_612 navigates to the OmniScreen Admin Url and login with the valid credentials(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:50)
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1067)
+at org.testng.Assert.assertEquals(Assert.java:1031)
+at org.testng.Assert.assertEquals(Assert.java:1077)
+at stepdefinitions.CardsSteps_612.user_click_the_reports_mapping1_under_intergration_settings(CardsSteps_612.java:240)
+at ✽.User_612 click the ReportsMapping1 under Intergration Settings(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/features/Cards_612.feature:128)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@1f9f6368]" started-at="2023-09-08T10:08:19 IST" name="tearDownClass" finished-at="2023-09-08T10:10:10 IST" duration-ms="110806" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5efa40fe]" started-at="2023-09-08T13:01:15 IST" name="tearDownClass" finished-at="2023-09-08T13:03:24 IST" duration-ms="128896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

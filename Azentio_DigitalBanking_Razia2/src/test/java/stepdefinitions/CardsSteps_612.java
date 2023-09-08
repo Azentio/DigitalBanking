@@ -198,6 +198,14 @@ public class CardsSteps_612 {
         	  Thread.sleep(5000);
 
                   }
+    @Given("User_612 click on the Authentication Matrix1 under parameters")
+    public void user_click_on_the_authentication_matrix1_under_parameters() throws InterruptedException {
+        	  us.clickOnElement(driver,DataReader.locatorsMap.get("Omni_Admin").get("parameters_Authentication Matrix"),true);
+        	  Thread.sleep(5000);
+        	  
+        	  
+
+                  }
     
     @Given("User_612 click on the Intergration Submenu under parameters")
     public void user_click_on_the_intergration_submenu_under_parameters() {
