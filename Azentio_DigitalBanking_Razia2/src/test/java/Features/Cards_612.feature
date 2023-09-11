@@ -43,6 +43,8 @@ And user_612 enters the Retail password in the login page for omni_web_portal
 And user_612 click on the loggin button in the login page for omni_web_portal
 And user_612 click on the force logout btn in the login page for omni_web_portal
 And user_612 click on the ok button for the successful login page for omni_web_portal
+And user_612 Click the Menu flag under omni_web_portal
+
 
 @CRD_026
 Scenario: Activate Credit Card - identification
@@ -77,6 +79,18 @@ And User_612 enter a value in operation in service code under NonFiancialService
 And User_612 click on the Authentication Matrix under parameters
 
 
+@CRD_026
+Scenario: Activate Credit Card - identification
+And User_612 loads the test datasetup for the test case id CRD_026
+Given user_612 navigates to the omni_web_portal
+And user_612 enters the Retail  username in the login page for omni_web_portal
+And user_612 enters the Retail password in the login page for omni_web_portal
+And user_612 click on the loggin button in the login page for omni_web_portal
+And user_612 click on the force logout btn in the login page for omni_web_portal
+And user_612 click on the ok button for the successful login page for omni_web_portal
+And user_612 Click the Menu flag under omni_web_portal
+
+
 @CRD_027
 Scenario: "Block Debit Card" identification
 And User_612 loads the test datasetup for the test case id CRD_027
@@ -106,8 +120,8 @@ And User_612 click the add button in NonFiancialServiceLimit under Maintenance
 And User_612 click the service code under NonFiancialServiceLimit
 And User_612 click the searchbutton in service code under NonFiancialServiceLimit
 And User_612 enter a value in operation in service code under NonFiancialServiceLimit
-And User_612 click on the Authentication Matrix2 under parameters
-#block debit 
+And User_612 click on the Authentication Matrix1 under parameters
+And User_612 check the block debit card field in Authentication Matrix Screen
 
 
 @CRD_028
@@ -124,6 +138,7 @@ And User_612 Click on Retail in Business Profile under Parameters
 And User_612 click on Cards section in Retail under parameters
 And User_612 click on the Intergration Submenu under parameters
 And User_612 click the Alertmapping underIntergration Settings
+#pending
 And User_612 Search the Block credit card field in screen under AlertMapping
 And User_612 click the ReportsMapping1 under Intergration Settings
 And User_612 click on LimitManagement under parameters
@@ -140,7 +155,8 @@ And User_612 click the service code under NonFiancialServiceLimit
 And User_612 click the searchbutton in service code under NonFiancialServiceLimit
 And User_612 enter a value in operation in service code under NonFiancialServiceLimit
 And User_612 click on the Authentication Matrix1 under parameters
-#Block Credit Card
+And User_612 check the block credit card field in Authentication Matrix Screen
+
 
 @CRD_024
 

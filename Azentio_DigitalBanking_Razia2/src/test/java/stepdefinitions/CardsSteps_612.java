@@ -202,10 +202,28 @@ public class CardsSteps_612 {
     public void user_click_on_the_authentication_matrix1_under_parameters() throws InterruptedException {
         	  us.clickOnElement(driver,DataReader.locatorsMap.get("Omni_Admin").get("parameters_Authentication Matrix"),true);
         	  Thread.sleep(5000);
-        	  
-        	  
+    }
+  
+    @Given("User_612 check the block credit card field in Authentication Matrix Screen")
+    public void user_check_the_block_credit_card_field_in_authentication_matrix_screen( ) {
+    	WebElement Block_credit = driver.findElement(By.xpath("//table[@id='authenticationMatrixServiceGrid_Id_OADM10140']//td[text()='Block Credit Card']"));
+    	//DataReader.locatorsMap.get("Omni_Admin").get("Parameters_IntergarationSetting_AlerteventMapping_field")
+        us.scrollDownTillElement(driver, Block_credit);
+        Assert.assertEquals(Block_credit.isDisplayed(),true);
+        System.out.print(Block_credit);
+    }
+    @Given("User_612 check the block debit card field in Authentication Matrix Screen")
+    public void user_check_the_block_debit_card_field_in_authentication_matrix_screen( ) {
+    	WebElement Block_debit = driver.findElement(By.xpath("//table[@id='authenticationMatrixServiceGrid_Id_OADM10140']//td[text()='BLOCK DEBIT CARD']"));
+    	        us.scrollDownTillElement(driver, Block_debit);
+        Assert.assertEquals(Block_debit.isDisplayed(),true);
+        System.out.print(Block_debit);
+    }
 
-                  }
+    
+    
+    
+    
     
     @Given("User_612 click on the Intergration Submenu under parameters")
     public void user_click_on_the_intergration_submenu_under_parameters() {
@@ -240,10 +258,17 @@ public class CardsSteps_612 {
         us.scrollDownTillElement(driver, Block_creditcard);
         Assert.assertEquals(Block_creditcard.isDisplayed(),true);
     }
-    
-    
-    
-     
+    @Given("User_612 Search the Block debit card field in screen under AlertMapping")
+    public void user_search_the_block_debit_card_field_in_screen_under_alert_mapping( ) {
+    	WebElement Block_creditcard = driver.findElement(By.xpath(""));
+    	//DataReader.locatorsMap.get("Omni_Admin").get("Parameters_IntergarationSetting_AlerteventMapping_field")
+        us.scrollDownTillElement(driver, Block_creditcard);
+        Assert.assertEquals(Block_creditcard.isDisplayed(),true);
+         
+    }
+
+    @Given("User_612 click the ReportsMapping2 under Intergration Settings")
+    public void user_click_the_reports_mapping2_under_intergration_settings( ) {} 
 
     @Given("User_612 click on LimitManagement under parameters")
     public void user_click_on_limit_management_under_parameters() {
