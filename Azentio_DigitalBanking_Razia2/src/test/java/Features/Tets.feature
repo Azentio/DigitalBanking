@@ -3,8 +3,7 @@ Feature: Checking the functionalities of Account Transfer
 
 @AT_003
 Scenario: gghghh
-And User_612 Search the Block debit card field in screen under AlertMapping
-And User_612 click the ReportsMapping2 under Intergration Settings
+And User_612 click the Authentication Matrix submenu 
 
 
 

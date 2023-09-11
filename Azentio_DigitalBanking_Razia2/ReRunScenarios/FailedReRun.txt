@@ -1,1 +1,1 @@
-file:src/test/java/features/Cards_612.feature:81
+file:src/test/java/features/Cards_612.feature:39
