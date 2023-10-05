@@ -8,14 +8,14 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/Cards.feature"},
+@CucumberOptions(features = {"src/test/java/features/ActivityLogReport.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               // ,dryRun = false //to check compilation errors                                      
-              , tags="@ALR_002"
+              , tags="@ALR_006"
 
 )
 

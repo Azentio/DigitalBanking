@@ -141,7 +141,6 @@ And user_5679 click on submit btn in the transfers screen
 And user_5679 waits for the confirmation on the submission report
 And user_5679 gets the reference number from the submission report
 And user_5679 clicks on logout btn to logout from omni web portal
-
 @AT_037
 Scenario: Submit own account transfer - scheduled with corporate user and one approval is required
 And user_5679 loads the test datasetup for the test case id AT_037
@@ -280,7 +279,7 @@ And user_5679 click on the loggin button in the login page for omni_corporate_we
 And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_5679 click on the AMANA payment screen in the homepage
-And user_5679 click on the transfers under the AMANA payment screen
+And user_5679 click on the tranfers under the AMANA payment screen
 And user_5679 click the International Transfer under AMANA Payment
 And user_5679 select from account under international bank transfer
 And user_5679 click To other Benefeciary details under international bank transfer
@@ -304,7 +303,7 @@ And user_5679 click on the loggin button in the login page for omni_corporate_we
 And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_5679 click on the AMANA payment screen in the homepage
-And user_5679 click on the transfers under the AMANA payment screen
+And user_5679 click on the tranfers under the AMANA payment screen
 And user_5679 click the International Transfer under AMANA Payment
 And user_5679 click on the From accounts from the transfers for international bank transfer
 And user_5679 selects the from account from the dropdown in transfers for international bank transfer
