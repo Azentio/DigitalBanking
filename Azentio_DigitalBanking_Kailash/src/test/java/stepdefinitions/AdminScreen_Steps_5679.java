@@ -222,7 +222,7 @@ public void user_5679click_and_check_the_i_aggree_on_terms_and_condition_checkbo
 		}
 		}
 	} 
-}
+} 
 @Given("user_5679 click on nextButton of non predefined beneficiary under own bank transfer")
 public void user_5679click_on_next_button_of_non_predefined_beneficiary_under_own_bank_transfer() {
 	for (int i = 0; i < 200; i++) {
@@ -1539,22 +1539,153 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				}
 			}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	    
+	@Given("user_5679 Click on the Transfer to other bank account Under Transfer")
+	public void user_click_on_the_transfer_to_other_bank_account_under_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Other_bank_Transfers"), true);
+	}
+	@Given("user_5679 click on the To accounts from the transfers Other bank accounts")
+	public void user_click_on_the_to_accounts_from_the_transfers_other_bank_accounts() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("To_Beneficiary"), true);
+	}
+	@Given("user_5679 Get The TO Account Value of Other Bank USD in text and verify")
+	public void user_get_the_to_account_value_of_other_bank_usd_in_text_and_verify() {
+		String OwnBankto_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Other_to_USD_VERIFY"),true);
+		   for (int i = 0; i <= 500; i++) {
+				try {
+					Assert.assertTrue(OwnBankto_USD.contains("MRU"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		   }	
+	@Given("user_5679 Get The Value of money mru in text and verify")
+	public void user_get_the_value_of_money_mru_in_text_and_verify() {
+		String OwnBank_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("inter_from_VERIFY"),true);
+		   for (int i = 0; i <= 500; i++) {
+				try {
+					Assert.assertTrue(OwnBank_USD.contains("MRU"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+		   }
+	@Given("user_5679 click on the to account in international transfer")
+	public void user_click_on_the_to_account_in_international_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("inter_beneficiary"), true);
+	}
+	@Given("user_5679 Get The TO Account Value of International USD in text and verify")
+	public void user_5679_get_the_to_account_value_of_international_usd_in_text_and_verify(Integer int1) {
+		String OwnBank_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("inter_beneficiary_Select"),true);
+		   for (int i = 0; i <= 500; i++) {
+				try {
+					Assert.assertTrue(OwnBank_USD.contains("USD"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	}
+	@Given("user_5679 Get The Value of Scheduled own Money MRU in text and verify")
+	public void user_get_the_value_of_scheduled_own_money_mru_in_text_and_verify() {
+		String OwnBank_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Scheduled_Own_MRU"),true);
+		   for (int i = 0; i <= 500; i++) {
+				try {
+					Assert.assertTrue(OwnBank_USD.contains("MRU"));
+					break;
+				} catch (Exception e) {
+					if (i == 500) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+	}
+	@Given("user_5679 click Scheduled other bank transfer Under scheduled transfer")
+	public void user_click_scheduled_other_bank_transfer_under_scheduled_transfer() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Scheduled_other_bank"), 
+				true);
+	}
+	@Given("user_5679 click from account international transfers")
+	public void user_click_from_account_international_transfers() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("International_from_account"), 
+				true);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
 	
 	
 	

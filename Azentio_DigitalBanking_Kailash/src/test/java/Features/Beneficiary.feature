@@ -16,4 +16,33 @@ And user_5679 Get The Value of USD in text and verify
 And user_5679 click on the To accounts from the transfers within own accounts
 And user_5679 Get The TO Account Value of USD in text and verify 
 And user_5679 Click on the Transfer to other bank account Under Transfer
+And user_5679 click on the From accounts from the transfers within own accounts
 And user_5679 Get The Value of USD in text and verify
+And user_5679 click on the To accounts from the transfers Other bank accounts
+And user_5679 Get The TO Account Value of Other Bank USD in text and verify
+And user_5679 click the International Transfer under AMANA Payment
+And user_5679 click on the From accounts from the transfers within own accounts
+And user_5679 Get The Value of money mru in text and verify
+And user_5679 click on the to account in international transfer
+And user_5679 Get The TO Account Value of International USD in text and verify
+And user_5679 click scheduled transfer under AMANA payment screen
+And user_5679 click Scheduled own bank transfer Under scheduled transfer
+And user_5679 click on the From accounts from the transfers within own accounts
+And user_5679 Get The Value of USD in text and verify
+And user_5679 click on the To accounts from the transfers Other bank accounts
+And user_5679 Get The Value of Scheduled own Money MRU in text and verify
+And user_5679 click Scheduled other bank transfer Under scheduled transfer
+And user_5679 click on the From accounts from the transfers within own accounts
+And user_5679 Get The Value of USD in text and verify
+And user_5679 click on the To accounts from the transfers Other bank accounts
+And user_5679 Get The TO Account Value of USD in text and verify
+And user_5679 click scheduled transfer under AMANA payment screen
+And user_5679 click international scheduled transfer under scheduled transfer
+And user_5679 click from account international transfers
+And user_5679 Get The Value of USD in text and verify
+And user_5679 click log out button
+
+
+
+
+

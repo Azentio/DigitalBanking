@@ -10,7 +10,7 @@ And user_5679 click on the force logout btn in the login page for omni_corporate
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_5679 click on the AMANA payment screen in the homepage
 And user_5679 click on the transfers under the AMANA payment screen
-And user_5679 Click on the Transfer to other bank account in Tran sfer screen
+And user_5679 Click on the Transfer to other bank account in Transfer screen
 And user_5679 click on the From accounts from the transfers within own accounts
 And user_5679 selects the from account from the dropdown in transfers within own accounts
 #And user_5679 Account in from value in Bank

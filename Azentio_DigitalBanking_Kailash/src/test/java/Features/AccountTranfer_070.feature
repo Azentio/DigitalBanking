@@ -279,7 +279,7 @@ And user_5679 click on the loggin button in the login page for omni_corporate_we
 And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_5679 click on the AMANA payment screen in the homepage
-And user_5679 click on the tranfers under the AMANA payment screen
+And user_5679 click on the transfers under the AMANA payment screen
 And user_5679 click the International Transfer under AMANA Payment
 And user_5679 select from account under international bank transfer
 And user_5679 click To other Benefeciary details under international bank transfer
