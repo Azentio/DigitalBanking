@@ -503,8 +503,21 @@ public void user_click_the_cards_menu_under_omni_web_portal(Integer int1) {
 	
 	
 }
+@And("user_612 loads the test datasetup for the test case id CRD_024")
+public void User_612_loads_the_test_datasetup_for_the_test_case_id_CRD_024() {
+    executionTestData = DataReader.executionTestData.get("CRD_024");
+    testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
 
+@Given("user_612 click on the My Cards under Cards in the homepage")
+public void user_5679_click_on_the_my_cards_under_cards_in_the_homepage() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"), false);
+    }
 
+@Given("user_612 click on the Show More button in Debit cards page")
+public void user_5679_click_on_the_show_more_button_in_debit_cards_page() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCard_CreditCards_MyCards_Cards_OmniHomeScreen"), false);
+    }
 
 
 

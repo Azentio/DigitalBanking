@@ -536,21 +536,19 @@ And user_612 waits for the confirmation on the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 
-
-
-
-
-
 @AT_059
 Scenario: Submit other bank transfer to non predefined beneficiary - one time with corporate user and two approvals required
+And user_612 loads the test datasetup for the test case id AT_059
 
 
 @AT_060
 
 Scenario: Submit other bank transfer to non predefined beneficiary - scheduled with corporate user have maker checker access
+And user_612 loads the test datasetup for the test case id AT_060
  
 @AT_061 
  Scenario: Submit other bank transfer to non predefined beneficiary - scheduled with corporate user and one approval is required
+ And user_612 loads the test datasetup for the test case id AT_061
  
 
 

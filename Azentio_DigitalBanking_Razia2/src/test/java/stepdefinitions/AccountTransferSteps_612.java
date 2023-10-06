@@ -207,6 +207,7 @@ public class  AccountTransferSteps_612 {
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
 				testData.get("UserName1"),
 				false);
+		
 	}
 	
 
@@ -1092,5 +1093,6 @@ public class  AccountTransferSteps_612 {
 			}
 		}  
 	}
+	
 
 }

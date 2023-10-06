@@ -3,8 +3,7 @@ Feature: Checking the functionalities of Account Transfer
 
 @AT_003
 Scenario: gghghh
-And User_612 click the Authentication Matrix submenu 
-
+And user_612 clicks on logout btn to logout from Admin portal
 
 
 #Given user_614 navigates to the omni_corporate_web_portal

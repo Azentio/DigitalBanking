@@ -58,7 +58,7 @@ public class HooksClass extends BaseClass {
 			System.out.println(e.getCause());
 		}
 	}
-
+	
 	@SuppressWarnings("unlikely-arg-type")
 	@After
 	public void TearDown(Scenario scenario) throws IOException {

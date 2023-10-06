@@ -33,6 +33,7 @@ And User_612 enter a value in operation in service code under NonFiancialService
 #should be availble
 And User_612 click on the Authentication Matrix under parameters
 And User_612 click the Authentication Matrix submenu
+And user_612 clicks on logout btn to logout from Admin portal
 
 
 @CRD_025_02
@@ -80,6 +81,7 @@ And User_612 enter a value in operation in service code under NonFiancialService
 #should be availblefield missing
 And User_612 click on the Authentication Matrix under parameters
 And User_612 click the Authentication Matrix submenu
+And user_612 clicks on logout btn to logout from Admin portal
 
 
 @CRD_026_02
@@ -127,6 +129,7 @@ And User_612 enter a value in operation in service code under NonFiancialService
 And User_612 click on the Authentication Matrix under parameters
 And User_612 click the Authentication Matrix submenu
 And User_612 check the block debit card field in Authentication Matrix Screen
+And user_612 clicks on logout btn to logout from Admin portal
 
 @CRD_027_02
 Scenario: Activate Credit Card - identification
@@ -173,6 +176,7 @@ And User_612 enter a value in operation in service code under NonFiancialService
 And User_612 click on the Authentication Matrix under parameters
 And User_612 click the Authentication Matrix submenu 
 And User_612 check the block credit card field in Authentication Matrix Screen
+And user_612 clicks on logout btn to logout from Admin portal
 
 @CRD_028_02
 Scenario: "Block Credit Card" identification
@@ -187,8 +191,18 @@ And user_612 Click the  Cards Menu under omni_web_portal
 And user_612 clicks on logout btn to logout from omni web portal
 
 @CRD_024
-
 Scenario: activate card -- maker - checker testing - disabled
+And user_612 loads the test datasetup for the test case id CRD_024
+Given user_612 navigates to the omni_corporate_web_portal
+And user_612 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_612 click on the loggin button in the login page for omni_corporate_web_portal
+And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 Click the  Cards Menu under omni_web_portal
+And user_612 click on the My Cards under Cards in the homepage
+And user_612 click on the Show More button in Debit cards page
+#NO ACTIVATE BUTTON EXECUTION BLOCKED BECAUSE OF BUG
 
 
 
