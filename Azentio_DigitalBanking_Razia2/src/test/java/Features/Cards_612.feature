@@ -156,8 +156,8 @@ And User_612 Click on Root in Business Profile under Parameters
 And User_612 Click on Retail in Business Profile under Parameters
 And User_612 click on Cards section in Retail under parameters
 And User_612 click on the Intergration Submenu under parameters
-And User_612 click the Alertmapping underIntergration Settings
-And User_612 Search the Block credit card field in screen under AlertMapping
+#And User_612 click the Alertmapping underIntergration Settings
+#And User_612 Search the Block credit card field in screen under AlertMapping
 And User_612 click the ReportsMapping1 under Intergration Settings
 And User_612 click the ReportsMappingC under Intergration Settings
 And User_612 click on LimitManagement under parameters

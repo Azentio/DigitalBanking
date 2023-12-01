@@ -3,7 +3,11 @@ Feature: Checking the functionalities of Account Transfer
 
 @AT_003
 Scenario: gghghh
-And user_612 clicks on logout btn to logout from Admin portal
+
+And user_612 validate screen2 is displaying or not 
+And user_612 Click pevious button in screen2 
+And user_612 verify the previous button is working and go to homepage
+
 
 
 #Given user_614 navigates to the omni_corporate_web_portal

@@ -203,10 +203,7 @@ public class  AccountTransferSteps_612 {
 	
 	@And("^user_612 enters the maker username1 in the login page for omni_corporate_web_portal$")
 	public void user_612EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
-		us.enterData(driver,
-				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-				testData.get("UserName1"),
-				false);
+		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),testData.get("UserName1"),false);
 		
 	}
 	

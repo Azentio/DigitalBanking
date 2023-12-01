@@ -8,18 +8,18 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/ActivityHistory_612.feature"},
+@CucumberOptions(features = {"src/test/java/Features/DebitCardRequest_612.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"},
               //dryRun = false ,//to check compilation errors                                      
-               tags="@AH_010"
+               tags="@AT_DCR_003"
 
 )
 
-// P@th123$%@z  or @AT_017_01 or  @AT_024  or @AT_034 or @AT_039  or @AT_044  @AT_047  or @CRD_027 @CRD_028 
+// P@th123$%@z  
 
 public class TestApplication extends AbstractTestNGCucumberTests {
 	/*
