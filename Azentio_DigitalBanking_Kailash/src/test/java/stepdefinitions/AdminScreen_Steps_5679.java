@@ -415,7 +415,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 enters the maker username1 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheMakerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User5679EntersTheMakerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		
 		for (int i = 0; i <2000; i++) {
 			try {
@@ -1251,10 +1251,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
-	@Given("user_5679 click on the Cards screen in the homepage")
-	public void user_5679_click_on_the_cards_screen_in_the_homepage() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"), false);
-	    }
+	
 	@Given("user_5679 click on the My Cards under Cards in the homepage")
 	public void user_5679_click_on_the_my_cards_under_cards_in_the_homepage() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"), false);

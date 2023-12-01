@@ -570,54 +570,54 @@ public class UserUtility_614 {
 		return enabled;
 	
 	}
-
-	// ajith
-	public Object executeJavaScriptReturnObject(String xpath) throws Exception {
-		try {
-			Object executeScript = js.executeScript("return "+xpath);
-			return executeScript;
-		} catch (Exception e) {
-			throw new Exception("javascript executor failed");
-		}
-		
-		
-
-	}
-   //ajith
-	public void clickWebElementUsingText(WebDriver driver,String text) throws Exception {
-		String jsPath ="document.querySelectorAll('ion-label').length";
-		int length=0;
-		for (int i = 0; i <2000; i++) {
+		// ajith
+		public Object executeJavaScriptReturnObject(String xpath) throws Exception {
 			try {
-				 String label = executeJavaScriptReturnObject(jsPath).toString();
-				 System.out.println(label);
-				length = Integer.parseInt(label);
-				if (length!=0) {
-					System.err.println(length);
-					break;
-				}
+				Object executeScript = js.executeScript("return "+xpath);
+				return executeScript;
 			} catch (Exception e) {
-				if (i==1999) {
-					Assert.fail(e.getMessage());
-				}
-			}
-		}
-		for (int i = 0; i <length ; i++) {
-			String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
-			String label = executeJavaScriptReturnObject(jsPath1).toString();
-			//System.out.println(label);
-			if (label.trim().contentEquals(text)) {
-				String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
-				System.out.println(jsPath2);
-				clickOnElement(driver, jsPath2, true);
-				break;
+				throw new Exception("javascript executor failed");
 			}
 			
+			
+
 		}
+	   //ajith
+		public void clickWebElementUsingText(WebDriver driver,String text) throws Exception {
+			String jsPath ="document.querySelectorAll('ion-label').length";
+			int length=0;
+			for (int i = 0; i <2000; i++) {
+				try {
+					 String label = executeJavaScriptReturnObject(jsPath).toString();
+				//	 System.out.println(label);
+					length = Integer.parseInt(label);
+					if (length!=0) {
+				//		System.err.println(length);
+						break;
+					}
+				} catch (Exception e) {
+					if (i==1999) {
+						Assert.fail(e.getMessage());
+					}
+				}
+			}
+			for (int i = 0; i <length ; i++) {
+				String jsPath1 ="document.querySelectorAll('ion-label')["+i+"].innerText";
+				String label = executeJavaScriptReturnObject(jsPath1).toString();
+				//System.out.println(label);
+				if (label.trim().equalsIgnoreCase(text)) {
+					String jsPath2 ="document.querySelectorAll('ion-label')["+i+"]";
+					//System.out.println(jsPath2);
+					clickOnElement(driver, jsPath2, true);
+					break;
+				}
+				if (i==length-1) {
+					Assert.fail("Element not clicked mismatch with text");
+				}
+			}
+			
 
-	}
-
-//	
+		}
 	public boolean elementIsSelected(WebDriver driver, String xpath) {
 
 		WebElement webElement;
@@ -637,8 +637,8 @@ public class UserUtility_614 {
 		moveToElement(driver, webElement);
 		boolean enabled = webElement.isDisplayed();
 		return enabled;
-	}
-
+	}	
+	
 	public void waitForElementwithFluentwait(WebDriver driver, String xpath, long waitTime) 
 	{ 	
 		
