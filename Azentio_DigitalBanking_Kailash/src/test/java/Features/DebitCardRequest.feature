@@ -96,8 +96,8 @@ And User_626 Click on the Show More button below the card details
 And User_626 Click on the Deactivate Below the card Details
 And User_626 Verify the Request Successfully Popup in Pinchange Screen 
 @AT_DCD_007
-Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Limit Update Screen)
-And User_626 loads the test datasetup for the test case id AT_DCD_006
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Limit Update POS Screen)
+And User_626 loads the test datasetup for the test case id AT_DCD_007
 Given user_5679 navigates to the omni_corporate_web_portal
 And User_626 enters the CorporateUser in the login page for omni_web_portal
 And User_626 enters the CorporatePass in the login page for omni_web_portal
@@ -122,6 +122,53 @@ And User_626 Verify the Remaining Currency Field Available or Not in POS Limit U
 And User_626 Check the Remaining Currency Field is in read only Mode POS Limit Update
 And User_626 Verify the Requested POS Limit Field Available or Not in POS Limit Update
 And User_626 Check the Requested POS Limit Field is in Editable POS Limit Update
+@AT_DCD_008
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Withdrawal Limit Screen)
+And User_626 loads the test datasetup for the test case id AT_DCD_008
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Verify the Currency field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Currency field is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Current Withdrawal Limit Available or Not in Withdrawal Limit Update
+And User_626 Check the  Current Withdrawal Limit is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Periodicity Wd field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Periodicity Wd field is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Utilized Currency WD field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Utilized Currency WD field is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Utilized Withdrawal Limit field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Utilized Withdrawal Limit field is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Remaining Currency WD field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Remaining Currency WD field is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Remaining Withdrawal Limit field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Remaining Withdrawal Limit field is in ReadOnly Withdrawal Limit Update
+And User_626 Verify the Requested Withdrawal field Available or Not in Withdrawal Limit Update
+And User_626 Check the  Requested  Withdrawal field is in Editable Withdrawal Limit Update
+@AT_DCD_009
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Withdrawal Limit Screen)
+And User_626 loads the test datasetup for the test case id AT_DCD_008
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the next button below Withdrawal Limit Update
+
+
 
 
 

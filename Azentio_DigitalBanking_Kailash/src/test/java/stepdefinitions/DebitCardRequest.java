@@ -325,6 +325,12 @@ public class DebitCardRequest {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DeactivateVisi_DebitDetails"), false);
 	}
 	//At_DCD_007
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_007")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_007() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_007");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@Given("User_626 Click on the Limit Update For Field Verification")
 	public void user_click_on_the_limit_update_for_field_verification() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("LimitVisi_DebitDetails"), false);
@@ -356,8 +362,9 @@ public class DebitCardRequest {
 
 	@Given("User_626 Check the Current POS Limit Field is in read only Mode POS Limit Update")
 	public void user_check_the_current_pos_limit_field_is_in_read_only_mode_pos_limit_update() {
-		us.elementIsEnabled(driver, DataReader.locatorsMap.get("Cards").get("Current_pos_limit_DebitDetails"));
-//		String CurrentPOSLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("Current_pos_limit_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+	
+	boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("Current_pos_limit_DebitDetailsReadOnly")).isEnabled();
+	Assert.assertFalse(enabled);
 //		for (int i = 0; i <2000; i++) {
 //            try {
 //                Assert.assertTrue(CurrentPOSLimit.contains("true"));
@@ -417,17 +424,18 @@ public class DebitCardRequest {
 
 	@Given("User_626 Check the Utilized POS Limit Field is in read only Mode POS Limit Update")
 	public void user_check_the_utilized_pos_limit_field_is_in_read_only_mode_pos_limit_update() {
-		String UtilizedPOSLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedPOSLIMIT_debitdetails_Disabled")).getAttribute("aria-disabled");
-		for (int i = 0; i <2000; i++) {
-            try {
-                Assert.assertTrue(UtilizedPOSLimit.contains("true"));
-                break;
-            } catch (Exception e) {
-                if (i==1999) {
-                    Assert.fail(e.getMessage());
-                }
-            }
-        }
+		String CurrentPOSLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedPOSLIMIT_debitdetails_Disabled")).getAttribute("disabled");
+//		String UtilizedPOSLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedPOSLIMIT_debitdetails_Disabled")).getAttribute("aria-disabled");
+//		for (int i = 0; i <2000; i++) {
+//            try {
+//                Assert.assertTrue(UtilizedPOSLimit.contains("true"));
+//                break;
+//            } catch (Exception e) {
+//                if (i==1999) {
+//                    Assert.fail(e.getMessage());
+//                }
+//            }
+//        }
 	}
 
 	@Given("User_626 Verify the Remaining Currency Field Available or Not in POS Limit Update")
@@ -457,10 +465,27 @@ public class DebitCardRequest {
 
 	@Given("User_626 Check the Requested POS Limit Field is in Editable POS Limit Update")
 	public void user_check_the_requested_pos_limit_field_is_in_editable_pos_limit_update() {
-		String RemainingCurrency = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RequestPOSLimit_DebitDetails_Editable")).getAttribute("inputmode");
+		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("RequestPOSLimit_DebitDetails"),
+				testData.get("RequestPOS"), false);
+	}
+	//AT_DCD_008
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_008")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_008() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_008");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@Given("User_626 Verify the Currency field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_currency_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CurrencywdCode_DebitDetails"));
+	}
+
+	@Given("User_626 Check the  Currency field is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_currency_field_is_in_read_only_withdrawal_limit_update() {
+		String CurrencyWithdrawal = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("CurrencywdCode_DebitDetailsReadOnly")).getAttribute("aria-disabled");
 		for (int i = 0; i <2000; i++) {
             try {
-                Assert.assertTrue(RemainingCurrency.contains("true"));
+                Assert.assertTrue(CurrencyWithdrawal.contains("true"));
                 break;
             } catch (Exception e) {
                 if (i==1999) {
@@ -470,5 +495,113 @@ public class DebitCardRequest {
         }
 	}
 
+	@Given("User_626 Verify the Current Withdrawal Limit Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_current_withdrawal_limit_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CurrencyWDLimit_DebitDetails"));
+	}
 
+	@Given("User_626 Check the  Current Withdrawal Limit is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_current_withdrawal_limit_is_in_read_only_withdrawal_limit_update() {
+		boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("CurrencyWDLimit_DebitDetailsreadonly")).isEnabled();
+		Assert.assertFalse(enabled);
+
+	}
+
+	@Given("User_626 Verify the Periodicity Wd field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_periodicity_wd_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("WdPeriodicity_DebitDetails"));
+	}
+
+	@Given("User_626 Check the  Periodicity Wd field is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_periodicity_wd_field_is_in_read_only_withdrawal_limit_update() {
+		String PeriodicityWithdrawalLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("WdPeriodicity_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(PeriodicityWithdrawalLimit.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
+	@Given("User_626 Verify the Utilized Currency WD field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_utilized_currency_wd_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyWD_DebitDetails"));
+	}
+
+	@Given("User_626 Check the  Utilized Currency WD field is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_utilized_currency_wd_field_is_in_read_only_withdrawal_limit_update() {
+		String UtilizedCurrencyWD = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyWD_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(UtilizedCurrencyWD.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
+	@Given("User_626 Verify the Utilized Withdrawal Limit field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_utilized_withdrawal_limit_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyLimit_DebitDetails"));
+	}
+
+	@Given("User_626 Check the  Utilized Withdrawal Limit field is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_utilized_withdrawal_limit_field_is_in_read_only_withdrawal_limit_update() {
+		boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyLimit_DebitDetailsReadOnly")).isEnabled();
+	Assert.assertFalse(enabled);
+	}
+
+	@Given("User_626 Verify the Remaining Currency WD field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_remaining_currency_wd_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RemainingCurrencyWd_DebitDetails"));
+	}
+
+	@Given("User_626 Check the  Remaining Currency WD field is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_remaining_currency_wd_field_is_in_read_only_withdrawal_limit_update() {
+		String RemainingCurrencyWD = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RemainingCurrencyWd_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+	        try {
+	            Assert.assertTrue(RemainingCurrencyWD.contains("true"));
+	            break;
+	        } catch (Exception e) {
+	            if (i==1999) {
+	                Assert.fail(e.getMessage());
+	            }
+	        }
+	    }
+	}
+
+	@Given("User_626 Verify the Remaining Withdrawal Limit field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_remaining_withdrawal_limit_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RemainingWdLimit_DebitDetails"));
+	}
+
+	@Given("User_626 Check the  Remaining Withdrawal Limit field is in ReadOnly Withdrawal Limit Update")
+	public void user_check_the_remaining_withdrawal_limit_field_is_in_read_only_withdrawal_limit_update() {
+		boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RemainingWdLimit_DebitDetailsReadOnly")).isEnabled();
+	Assert.assertFalse(enabled);
+	}
+
+	@Given("User_626 Verify the Requested Withdrawal field Available or Not in Withdrawal Limit Update")
+	public void user_verify_the_requested_withdrawal_field_available_or_not_in_withdrawal_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"));
+	}
+
+	@Given("User_626 Check the  Requested  Withdrawal field is in Editable Withdrawal Limit Update")
+	public void user_check_the_requested_withdrawal_field_is_in_editable_withdrawal_limit_update() {
+		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"),
+				testData.get("RequestWithdrwal"),false);
+	}
+//AT_DCD_009
+	
+	
+	
+	
 }
