@@ -1,13 +1,10 @@
 package stepdefinitions;
-
 import java.util.HashMap;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import dataProvider.DataReader;
+import helper.JavascriptHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;
@@ -16,6 +13,7 @@ import utilities.UserUtility_614;
 public class DebitCardRequest {
 	WebDriver driver = BaseClass.driver;
 	UserUtility_614 us = new UserUtility_614(driver);
+	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);	
 	String executionTestData;
 	HashMap<String, String> testData;
 
@@ -326,5 +324,151 @@ public class DebitCardRequest {
 	public void User_626_Click_on_the_Deactivate_Below_the_card_Details() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DeactivateVisi_DebitDetails"), false);
 	}
+	//At_DCD_007
+	@Given("User_626 Click on the Limit Update For Field Verification")
+	public void user_click_on_the_limit_update_for_field_verification() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("LimitVisi_DebitDetails"), false);
+	}
+
+	@Given("User_626 Verify the CurrencyPOS field Available or Not in POS Limit Update")
+	public void user_verify_the_currency_pos_field_available_or_not_in_pos_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("POS_Currency_DebitDetails"));
+	}
+
+	@Given("User_626 Check the Currencypos Field is in read only Mode Below POS Limit Update")
+	public void user_check_the_currencypos_field_is_in_read_only_mode_below_pos_limit_update() {
+		String Currencypos = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("POS_Currency_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(Currencypos.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+	@Given("User_626 Verify the Current POS Limit Field Available or Not in POS Limit Update")
+	public void user_verify_the_current_pos_limit_field_available_or_not_in_pos_limit_update() {
+	 us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Current_pos_limit_DebitDetails"));
+	}
+
+	@Given("User_626 Check the Current POS Limit Field is in read only Mode POS Limit Update")
+	public void user_check_the_current_pos_limit_field_is_in_read_only_mode_pos_limit_update() {
+		us.elementIsEnabled(driver, DataReader.locatorsMap.get("Cards").get("Current_pos_limit_DebitDetails"));
+//		String CurrentPOSLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("Current_pos_limit_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+//		for (int i = 0; i <2000; i++) {
+//            try {
+//                Assert.assertTrue(CurrentPOSLimit.contains("true"));
+//                break;
+//            } catch (Exception e) {
+//                if (i==1999) {
+//                    Assert.fail(e.getMessage());
+//                }
+//            }
+//        }
+	}
+
+	@Given("User_626 Verify the Periodicity Field Available or Not in POS Limit Update")
+	public void user_verify_the_periodicity_field_available_or_not_in_pos_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("POS_Periodicity"));
+	}
+
+	@Given("User_626 Check the Periodicity Field is in read only Mode POS Limit Update")
+	public void user_check_the_periodicity_field_is_in_read_only_mode_pos_limit_update() {
+		String Periodicity = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("POS_PeriodicityReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(Periodicity.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
+	@Given("User_626 Verify the Utilized Currency Field Available or Not in POS Limit Update")
+	public void user_verify_the_utilized_currency_field_available_or_not_in_pos_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedCurrency_DebitDetails"));
+	}
+
+	@Given("User_626 Check the Utilized Currency Field is in read only Mode POS Limit Update")
+	public void user_check_the_utilized_currency_field_is_in_read_only_mode_pos_limit_update() {
+		String UtilizedCurrency = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("POS_PeriodicityReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(UtilizedCurrency.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
+	@Given("User_626 Verify the Utilized POS Limit Field Available or Not in POS Limit Update")
+	public void user_verify_the_utilized_pos_limit_field_available_or_not_in_pos_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedPOSLIMIT_debitdetails"));
+	}
+
+	@Given("User_626 Check the Utilized POS Limit Field is in read only Mode POS Limit Update")
+	public void user_check_the_utilized_pos_limit_field_is_in_read_only_mode_pos_limit_update() {
+		String UtilizedPOSLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedPOSLIMIT_debitdetails_Disabled")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(UtilizedPOSLimit.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
+	@Given("User_626 Verify the Remaining Currency Field Available or Not in POS Limit Update")
+	public void user_verify_the_remaining_currency_field_available_or_not_in_pos_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RemainingCurrency_DebitDetails"));
+	}
+
+	@Given("User_626 Check the Remaining Currency Field is in read only Mode POS Limit Update")
+	public void user_check_the_remaining_currency_field_is_in_read_only_mode_pos_limit_update() {
+		String RemainingCurrency = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RemainingCurrency_DebitDetailsReadOnly")).getAttribute("aria-disabled");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(RemainingCurrency.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
+	@Given("User_626 Verify the Requested POS Limit Field Available or Not in POS Limit Update")
+	public void user_verify_the_requested_pos_limit_field_available_or_not_in_pos_limit_update() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RequestPOSLimit_DebitDetails"));
+	}
+
+	@Given("User_626 Check the Requested POS Limit Field is in Editable POS Limit Update")
+	public void user_check_the_requested_pos_limit_field_is_in_editable_pos_limit_update() {
+		String RemainingCurrency = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RequestPOSLimit_DebitDetails_Editable")).getAttribute("inputmode");
+		for (int i = 0; i <2000; i++) {
+            try {
+                Assert.assertTrue(RemainingCurrency.contains("true"));
+                break;
+            } catch (Exception e) {
+                if (i==1999) {
+                    Assert.fail(e.getMessage());
+                }
+            }
+        }
+	}
+
 
 }

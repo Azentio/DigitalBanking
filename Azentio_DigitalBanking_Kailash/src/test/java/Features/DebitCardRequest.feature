@@ -95,6 +95,35 @@ And user_5679 click on the My Cards under Cards in the homepage
 And User_626 Click on the Show More button below the card details
 And User_626 Click on the Deactivate Below the card Details
 And User_626 Verify the Request Successfully Popup in Pinchange Screen 
+@AT_DCD_007
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Limit Update Screen)
+And User_626 loads the test datasetup for the test case id AT_DCD_006
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Verify the CurrencyPOS field Available or Not in POS Limit Update
+And User_626 Check the Currencypos Field is in read only Mode Below POS Limit Update
+And User_626 Verify the Current POS Limit Field Available or Not in POS Limit Update
+And User_626 Check the Current POS Limit Field is in read only Mode POS Limit Update
+And User_626 Verify the Periodicity Field Available or Not in POS Limit Update
+And User_626 Check the Periodicity Field is in read only Mode POS Limit Update
+And User_626 Verify the Utilized Currency Field Available or Not in POS Limit Update
+And User_626 Check the Utilized Currency Field is in read only Mode POS Limit Update
+And User_626 Verify the Utilized POS Limit Field Available or Not in POS Limit Update
+And User_626 Check the Utilized POS Limit Field is in read only Mode POS Limit Update
+And User_626 Verify the Remaining Currency Field Available or Not in POS Limit Update
+And User_626 Check the Remaining Currency Field is in read only Mode POS Limit Update
+And User_626 Verify the Requested POS Limit Field Available or Not in POS Limit Update
+And User_626 Check the Requested POS Limit Field is in Editable POS Limit Update
+
+
 
 
 
