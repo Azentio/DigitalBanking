@@ -600,7 +600,101 @@ public class DebitCardRequest {
 				testData.get("RequestWithdrwal"),false);
 	}
 //AT_DCD_009
-	
+	@Given("User_626 Enter Data On Requested POS Limit field below POS Limit Update")
+	public void user_enter_data_on_requested_pos_limit_field_below_pos_limit_update() {
+		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("RequestPOSLimit_DebitDetails"),
+				testData.get("RequestPOS"), false);
+	}
+
+	@Given("User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update")
+	public void user_enter_data_on_requested_withdrawal_field_below_withdrawal_limit_update() {
+		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"),
+				testData.get("RequestWithdrwal"),false);
+	}
+
+	@Given("User_626 Verify the Next button in the limit Update Screen")
+	public void user_verify_the_next_button_in_the_limit_update_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"));
+	}
+
+	@Given("User_626 Verify the Cancel button in the limit Update Screen")
+	public void user_verify_the_cancel_button_in_the_limit_update_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Cancel_DebitDetailsLUS"));
+	}
+
+	@Given("User_626 Verify the Save button in the limit Update Screen")
+	public void user_verify_the_save_button_in_the_limit_update_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Save_DebitDetailsLUS"));
+	}
+
+	@Given("User_626 Click On the Save button For Save the Draft in limit Update Screen")
+	public void user_click_on_the_save_button_for_save_the_draft_in_limit_update_screen() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Save_DebitDetailsLUS"),false);
+	}
+
+	@Given("User_626 Verify the draft title field After clicking save button")
+	public void user_verify_the_draft_title_field_after_clicking_save_button() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"));
+	}
+
+	@Given("User_626 Verify the Cancel button in draft Saving Screen")
+	public void user_verify_the_cancel_button_in_draft_saving_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DraftCancel_debitDetails"));
+	}
+
+	@Given("User_626 Verify the Submit button in draft Saving Screen")
+	public void user_verify_the_submit_button_in_draft_saving_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DraftSubmit_debitDetails"));
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_011")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_011() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_011");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@Given("User_626 Click on the Next button in limit Update Screen")
+	public void user_click_on_the_next_button_in_limit_update_screen() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);	
+	}
+	@Given("User_626 Click on the I agree Check Box in Screen2")
+	public void user_click_on_the_i_agree_check_box_in_screen2() {
+		try {
+			us.clickOnElementNoWait(driver,
+					DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 30, false);
+			
+		} catch (Exception e) {
+
+		}
+	}
+
+	@Given("User_626 Click on the Save button in Screen2")
+	public void user_click_on_the_save_button_in_screen2() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Save_DebitDetailsLUS"),false);
+	}
+
+	@Given("User_626 Enter Draft Name for save the Debit Detail request")
+	public void user_enter_draft_name_for_save_the_debit_detail_request() {
+		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
+				testData.get("DraftName"),false);
+	}
+	@Given("User_626 Click on sumbit button Save the Data")
+	public void user_click_on_sumbit_button_save_the_data() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DraftSubmit_debitDetails"),false);
+	}
+
+	@Given("User_626 Click on the To Do Screen For check the Saved Draft")
+	public void user_click_on_the_to_do_screen_for_check_the_saved_draft() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
+				false);
+	}
+
+	@Given("User_626 Click on the saved Draft data for verification")
+	public void user_click_on_the_saved_draft_data_for_verification() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
+				false);	}
+
 	
 	
 	
