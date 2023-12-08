@@ -493,7 +493,7 @@ public void user_click_on_the_ok_button_for_the_successful_login_page_for_omni_w
 
 
 @And("user_612 Click the  Cards Menu under omni_web_portal")
-public void user_click_the_cards_menu_under_omni_web_portal(Integer int1) {
+public void user_click_the_cards_menu_under_omni_web_portal( ) {
 	us.clickOnElementNoWait(driver, 
 			DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"), 
 			20,

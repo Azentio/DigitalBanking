@@ -249,61 +249,63 @@ public class  AccountTransferSteps_612 {
 	
 	@And("^user_612 click on the ok button for the successful login page for omni_corporate_web_portal$")
 	public void user_612ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin"), true);
 		
-		try {
-			us.clickOnElementNoWait(driver, 
-					DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 
-					45,
-					false);
-		} 
-		
-		catch (Exception e) {
-			try {
-				us.clickOnElementNoWait(driver, 
-						DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
-						10,
-						false);
-			} catch (Exception X) {
-				try {
-					us.clickOnElementNoWait(driver, 
-							DataReader.locatorsMap.get("OmniScreen_Login").get("SomethingWentWrong_OKbtn_omni"), 
-							20,
-							false);
-				} catch (Exception e11) {
-					
-					try {
-						us.clickOnElementNoWait(driver, 
-								DataReader.locatorsMap.get("OmniScreen_Login").get("SecurityAlert_OKbtn_Omni"), 
-								20,
-								false);
-					} catch (Exception e111) {
-						try {
-							
-							us.clickOnElementNoWait(driver, 
-									DataReader.locatorsMap.get("OmniScreen_Login").get("SessionReloaded_Omni"), 
-									20,
-									false);
-							
-						} catch (Exception e2) {
-							try {								us.clickOnElementNoWait(driver, 
-										DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 
-										45,
-										false);
-							} 
-							
-							catch (Exception e1111) {
-									us.clickOnElementNoWait(driver, 
-											DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
-											10,
-											false);
-							
-					}
-				}
-			}
-		}
-		
-			}
-		}
+//		try {
+//			us.clickOnElementNoWait(driver, 
+//					DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 
+//					45,
+//					false);
+//		} 
+//		
+//		catch (Exception e) {
+//			try {
+//				us.clickOnElementNoWait(driver, 
+//						DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
+//						10,
+//						false);
+//			} catch (Exception X) {
+//				try {
+//					us.clickOnElementNoWait(driver, 
+//							DataReader.locatorsMap.get("OmniScreen_Login").get("SomethingWentWrong_OKbtn_omni"), 
+//							20,
+//							false);
+//				} catch (Exception e11) {
+//					
+//					try {
+//						us.clickOnElementNoWait(driver, 
+//								DataReader.locatorsMap.get("OmniScreen_Login").get("SecurityAlert_OKbtn_Omni"), 
+//								20,
+//								false);
+//					} catch (Exception e111) {
+//						try {
+//							
+//							us.clickOnElementNoWait(driver, 
+//									DataReader.locatorsMap.get("OmniScreen_Login").get("SessionReloaded_Omni"), 
+//									20,
+//									false);
+//							
+//						} catch (Exception e2) {
+//							try {								us.clickOnElementNoWait(driver, 
+//										DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin1"), 
+//										45,
+//										false);
+//							} 
+//							
+//							catch (Exception e1111) {
+//									us.clickOnElementNoWait(driver, 
+//											DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin2"),
+//											10,
+//											false);
+//							
+//					}
+//				}
+//			}
+//		}
+//		
+			//}
+		//}
 		
 	}
 	

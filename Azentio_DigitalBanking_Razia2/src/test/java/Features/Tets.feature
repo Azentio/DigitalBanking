@@ -3,10 +3,12 @@ Feature: Checking the functionalities of Account Transfer
 
 @AT_003
 Scenario: gghghh
-
-And user_612 validate screen2 is displaying or not 
-And user_612 Click pevious button in screen2 
-And user_612 verify the previous button is working and go to homepage
+And user_612 validate credit card is display or not
+And user_612 validate Settlement Account is display or not
+And user_612 validate currency  display or not
+And user_612 validate amount display or not
+And user_612 validate save button display or not 
+And user_612 validate next button display or not
 
 
 
