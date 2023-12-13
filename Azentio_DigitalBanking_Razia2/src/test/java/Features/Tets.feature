@@ -2,15 +2,10 @@ Feature: Checking the functionalities of Account Transfer
 
 
 @AT_003
-Scenario: gghghh
-And user_612 validate credit card is display or not
-And user_612 validate Settlement Account is display or not
-And user_612 validate currency  display or not
-And user_612 validate amount display or not
-And user_612 validate save button display or not 
-And user_612 validate next button display or not
+Scenario: dfdf
 
 
+ And User_612 click the issuse field under change card status in card management
 
 #Given user_614 navigates to the omni_corporate_web_portal
 #And user_614 loads the test datasetup for the test case id AT_003

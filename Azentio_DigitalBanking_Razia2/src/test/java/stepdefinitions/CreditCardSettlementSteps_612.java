@@ -46,7 +46,7 @@ public void user_click_credit_card_settlement_submenu_under_cards_menu() {
 		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CreditCardSettlement_Menu"),20, false);
 		
 	} catch (Exception e) {
-		// TODO: handle exception
+		
 	}
 	
    }
@@ -76,38 +76,37 @@ public void user_click_mycredit_card_settlement() {
 
 @Given("user_612 validate credit card is display or not")
 public void user_validate_credit_card_is_display_or_not() {
-	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get(""));  
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("validate_creditcard_CCS"));  
   
 }
 
 @Given("user_612 validate Settlement Account is display or not")
 public void user_validate_settlement_account_is_display_or_not() {
-	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get(""));
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CCS_Settlement Account"));
   
 }
 
 @Given("user_612 validate currency  display or not")
 public void user_validate_currency_display_or_not() {
 	
-	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get(""));
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("validate_Currency_CCS"));
   
 }
 
 @Given("user_612 validate amount display or not")
 public void user_validate_amount_display_or_not() {
-	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Validate_LoclcreditCardSettlement"));
-  
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Validate_Amount_CSS"));
 }
 
 @Given("user_612 validate save button display or not")
 public void user_validate_save_button_display_or_not() {
-   
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCR_Screen2_save"));
   
 }
 
 @Given("user_612 validate next button display or not")
 public void user_validate_next_button_display_or_not() {
-   
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCR_Screen2_next"));
   
 }
 
