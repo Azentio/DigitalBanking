@@ -1,4 +1,4 @@
-Feature: To Test the Functionality of Debit Card details
+Feature: To Test the Functionality of Debit Card details (11,14)
 @AT_DCD_001
 Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu
 And User_626 loads the test datasetup for the test case id AT_DCD_001
@@ -169,7 +169,6 @@ And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Upd
 And User_626 Verify the Next button in the limit Update Screen
 And User_626 Verify the Cancel button in the limit Update Screen
 And User_626 Verify the Save button in the limit Update Screen 
-#AT_DCD_010
 And User_626 Click On the Save button For Save the Draft in limit Update Screen
 And User_626 Verify the draft title field After clicking save button
 And User_626 Verify the Cancel button in draft Saving Screen
@@ -197,14 +196,190 @@ And User_626 Click on sumbit button Save the Data
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification  
-
-
-
-
-
-
-
-
+@AT_DCD_012
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Record Saving)
+And User_626 loads the test datasetup for the test case id AT_DCD_012
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Next button in the limit Update Screen
+And User_626 Verify the Save button is visible After clicking edit
+@AT_DCD_013
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(Screen2)
+And User_626 loads the test datasetup for the test case id AT_DCD_013
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Verify the Submit is showing in Debit Card PinChange Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Verify the draft title field After clicking save button
+And User_626 Verify the Cancel button in draft Saving Screen
+And User_626 Verify the Submit button in draft Saving Screen
+@AT_DCD_014
+Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu(RecordSaving3)
+And User_626 loads the test datasetup for the test case id AT_DCD_014
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Verify the Submit is showing in Debit Card PinChange Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the To Do Screen For check the Saved Draft
+And User_626 Click on the saved Draft data for verification  
+@AT_DCD_015
+Scenario: Verify the previous button in screen2 in debit card details
+And User_626 loads the test datasetup for the test case id AT_DCD_015
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Verify the Submit is showing in Debit Card PinChange Screen
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 Click on the Previous button in Debit Card details Screen
+#And User_626 Verify the Screen2 with the help of Card information Tab
+And User_626 Verify the Current POS Limit Field Available or Not in POS Limit Update
+@AT_DCD_016
+Scenario: Verify the navigatable in screen2 in debit card details
+And User_626 loads the test datasetup for the test case id AT_DCD_016
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Verify the Submit is showing in Debit Card PinChange Screen
+@AT_DCD_017
+Scenario: Verify the Draft Details in Screen2 and 
+And User_626 loads the test datasetup for the test case id AT_DCD_017
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Cancel is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Verify the Submit is showing in Debit Card PinChange Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Verify the Draft title is avaible or not
+And User_626 Verify the Cancel button the Draft details screen
+And User_626 Verify the submit button the draft details screen 
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the To Do Screen For check the Saved Draft
+And User_626 Click on the saved Draft data for verification  
+@AT_DCD_018
+Scenario: verify the all screen previous button in Limit Update screen debit details
+And User_626 loads the test datasetup for the test case id AT_DCD_018
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Verify the Draft title is avaible or not
+And User_626 Verify the Cancel button the Draft details screen
+And User_626 Verify the submit button the draft details screen 
+And User_626 Click on the cancel button in the draft screen 
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 verify the screen3 into screen2 by clicking previous
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 verify the screen2 into screen1 by clicking previous
 
 
 
