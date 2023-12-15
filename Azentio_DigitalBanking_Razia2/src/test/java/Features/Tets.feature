@@ -4,9 +4,10 @@ Feature: Checking the functionalities of Account Transfer
 @AT_003
 Scenario: dfdf
 
-And user_612 search currency type under serach input
-And user_612 select the currency type under search or not
-#And user_612 verify the cancel button is displaying or not
+And user_612 validate the credit card type  in screen3
+And user_612 validate the settlement account in screen3
+And user_612 validate the Amount in screen3
+
 
 #Given user_614 navigates to the omni_corporate_web_portal
 #And user_614 loads the test datasetup for the test case id AT_003

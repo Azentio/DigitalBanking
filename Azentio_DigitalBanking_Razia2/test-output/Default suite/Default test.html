@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 14 12:42:49 IST 2023</td>
+<td>Started on:</td><td>Fri Dec 15 17:48:46 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>223 seconds (223294 ms)</td>
+<tr><td>Total time:</td><td>151 seconds (151785 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,10 +76,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Verify the Credit Card Settlement Sub Menu and MyCredit Card Settlement Screen1 validation", "Optional[Checking the functionalities of CreditCardSettlement]"</td>
-<td></td>
-<td>203</td>
-<td>Runner.TestApplication@660acfb</td></tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that User Navigate to Summary Screen3 to go back home screen", "Optional[Checking the functionalities of CreditCardSettlement]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-icon[@id=&apos;back_icon&apos;] (tried for 20 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
+	at stepdefinitions.CreditCardSettlementSteps_612.user_click_previous_button_under_my_credit_card_settlement(CreditCardSettlementSteps_612.java:218)
+	at ✽.user_612 click previous button under my credit card settlement(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/CreditCardSettlement_612.feature:212)
+</pre></div><a href='#' onClick='toggleBox("stack-trace717249075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace717249075'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-icon[@id=&apos;back_icon&apos;] (tried for 20 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
+	at stepdefinitions.CreditCardSettlementSteps_612.user_click_previous_button_under_my_credit_card_settlement(CreditCardSettlementSteps_612.java:218)
+	at ✽.user_612 click previous button under my credit card settlement(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/CreditCardSettlement_612.feature:212)
+</pre></div></td>
+<td>132</td>
+<td>Runner.TestApplication@5d908d47</td></tr>
 </table><p>
 </body>
 </html>
