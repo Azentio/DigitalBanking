@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/6/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 12 18:34:02 IST 2023</td>
+<td>Started on:</td><td>Thu Dec 14 12:42:49 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>1466 seconds (1466798 ms)</td>
+<tr><td>Total time:</td><td>223 seconds (223294 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,201 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that Retail user Navigate to Debit Card Request Screens (screen1)", "Optional[Checking the functionalities of DebitCardRequest]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;menu_content_complex&apos;]//ps-action-menu-item//ion-label[text()=&apos; Cards &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_the_cards_menu_under_omni_web_portal(DebitCardRequestSteps_612.java:376)
-	at ✽.user_612 Click the  CardsMenu under omni_web_portal(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:183)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1619630608", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1619630608'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;menu_content_complex&apos;]//ps-action-menu-item//ion-label[text()=&apos; Cards &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_the_cards_menu_under_omni_web_portal(DebitCardRequestSteps_612.java:376)
-	at ✽.user_612 Click the  CardsMenu under omni_web_portal(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:183)
-</pre></div></td>
-<td>68</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user Navigate to Debit Card RequestScreen(screen1)", "Optional[Checking the functionalities of DebitCardRequest]"</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
-  (Session info: chrome=117.0.5938.92)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [965979ed17d0f407691a076855371e76, executeScript {script=arguments[0].click();, args=[null]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49297}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49297/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 965979ed17d0f407691a076855371e76
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:164)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:196)
-	at stepdefinitions.AccountTransferSteps_612.user_612ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal(AccountTransferSteps_612.java:252)
-	at ✽.user_612 click on the ok button for the successful login page for omni_corporate_web_portal(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace844185066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace844185066'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
-  (Session info: chrome=117.0.5938.92)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [965979ed17d0f407691a076855371e76, executeScript {script=arguments[0].click();, args=[null]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49297}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49297/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 965979ed17d0f407691a076855371e76
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:164)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:196)
-	at stepdefinitions.AccountTransferSteps_612.user_612ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal(AccountTransferSteps_612.java:252)
-	at ✽.user_612 click on the ok button for the successful login page for omni_corporate_web_portal(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:11)
-</pre></div></td>
-<td>194</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user Navigate to Debit Card RequestScreen(screen2)", "Optional[Checking the functionalities of DebitCardRequest]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:54)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1267791005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1267791005'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:54)
-</pre></div></td>
-<td>247</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user Navigate to Debit Card Request Screen3", "Optional[Checking the functionalities of DebitCardRequest]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:107)
-</pre></div><a href='#' onClick='toggleBox("stack-trace511600595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace511600595'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:107)
-</pre></div></td>
-<td>244</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Functionality of Previous button - Screen 3", "Optional[Checking the functionalities of DebitCardRequest]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:163)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1554399192", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1554399192'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:163)
-</pre></div></td>
-<td>243</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Functionality of save Button in debit card request - Screen 3", "Optional[Checking the functionalities of DebitCardRequest]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:132)
-</pre></div><a href='#' onClick='toggleBox("stack-trace902010316", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace902010316'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Cancel &apos;] (tried for 20 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.DebitCardRequestSteps_612.user_click_cancel_btn_in_maps_location(DebitCardRequestSteps_612.java:262)
-	at ✽.user_612 click cancel btn in maps location(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardRequest_612.feature:132)
-</pre></div></td>
-<td>150</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -271,10 +76,10 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Functionality of previous button - Screen 2", "Optional[Checking the functionalities of DebitCardRequest]"</td>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Verify the Credit Card Settlement Sub Menu and MyCredit Card Settlement Screen1 validation", "Optional[Checking the functionalities of CreditCardSettlement]"</td>
 <td></td>
-<td>257</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
+<td>203</td>
+<td>Runner.TestApplication@660acfb</td></tr>
 </table><p>
 </body>
 </html>
