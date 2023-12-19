@@ -13,7 +13,7 @@ import io.cucumber.java.en.Given;
 import resources.BaseClass;
 import utilities.UserUtility_614;
 
-public class DebitCardRequest {
+public class DebitCardDetails {
 	WebDriver driver = BaseClass.driver;
 	UserUtility_614 us = new UserUtility_614(driver);
 	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);	
@@ -51,6 +51,24 @@ public class DebitCardRequest {
 	@And("User_626 loads the test datasetup for the test case id AT_DCD_006")
 	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_006() {
 		executionTestData = DataReader.executionTestData.get("AT_DCD_006");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_021")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_021() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_021");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_022")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_022() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_022");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_023")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_023() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_023");
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
@@ -746,6 +764,25 @@ public class DebitCardRequest {
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
+	@Given("User_626 loads the test datasetup for the test case id AT_DCD_018")
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_018() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_018");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+
+@Given("User_626 loads the test datasetup for the test case id AT_DCD_019")
+public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_019() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_019");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@Given("User_626 loads the test datasetup for the test case id AT_DCD_020")
+public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_020() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_020");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
 
 	@Given("User_626 Verify the Draft title is avaible or not")
 	public void user_626_verify_the_draft_title_is_avaible_or_not() {
@@ -761,8 +798,246 @@ public class DebitCardRequest {
 	public void user_626_verify_the_submit_button_the_draft_details_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("SubmitVisi_DebitDetails"));
 	}
-
+	@Given("User_626 Click on the cancel button in the draft screen")
+	public void User_626_Click_on_the_cancel_button_in_the_draft_screen() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel"),false);
+	}
+//razia	
 	
+	
+	@Given("^user_612 navigates to the omni_corporate_web_portal$")
+	public void user_612NavigatesToTheOmni_Corporate_Web_Portal() {
+		driver.get(DataReader.configFileMap.get("omni_Corporate_web_portal"));
+
+	}
+	
+	@And("User_612 loads the test datasetup for the test case id AT_CCS_002")
+    public void User_612_loads_the_test_datasetup_for_the_test_case_id_AT_CCS_002() {
+        executionTestData = DataReader.executionTestData.get("AT_CCS_002");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+    }
+	@Given("user_612 enters the Corpusername in the login page for omni_corp_portal")
+	public void user_enters_the_corpusername_in_the_login_page_for_omni_corp_portal() {
+	   //us.enterDataAndTab(driver, DataReader.locatorsMap.get("OmniScreen_L").get("usernameRetail"),testData.get("UserName1"),true);
+		us.enterData(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
+				testData.get("UserName1"),
+				false);
+	   
+	}
+	@Given("user_612 enters the Corppassword in the login page for omni_corp_portal")
+	public void user_enters_the_Corppassword_in_the_login_page_for_omni_corp_portal() {
+		us.enterDataAndEnter(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
+				testData.get("Password1"),
+				false);
+	   	}
+	
+
+@Given("user_612 click credit card settlement submenu  under CardsMenu")
+public void user_click_credit_card_settlement_submenu_under_cards_menu() {
+	try {
+		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CreditCardSettlement_Menu"),20, false);
+		
+	} catch (Exception e) {
+		
+	}
+	
+   }
+@Given("user_612 click mycredit card settlement submenu  under CardsMenu")
+public void user_click_mycredit_card_settlement_submenu_under_cards_menu() {
+	try {
+		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("Validate_MycreditCardSettlement"),20, false);
+		
+	} catch (Exception e) {
+		
+	}
+	
+   }
+
+@Given("user_612 click Mycredit card settlement")
+public void user_click_mycredit_card_settlement() {
+	us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("Validate_MycreditCardSettlement"),20, false);
+	}
+@And("user_612 Click the  CardMenu under omni_corp_portal")
+public void user_click_the_cardmenu_under_omni_corp_portal( ) {
+	try {
+		us.clickOnElementNoWait(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"),30,false);
+		 //Assert.assertEquals(driver.getPageSource().contains(testData.get("operation")), false);
+	} catch (Exception e) {
+		
+	}
+}
+
+@Given("User_612 Click on the Selection of creditCard in Credit Card settlement Screen")
+public void user_click_on_the_selection_of_credit_card_in_credit_card_settlement_screen() {
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("validate_creditcard_CCS"),false);
+}
+
+@Given("User_612 Select the credit Card in the Dropdown CreditCard in Credit Card settlement Screen")
+public void user_select_the_credit_card_in_the_dropdown_credit_card_in_credit_card_settlement_screen() {
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("CreditCardSelection_CCS"),false);
+}
+
+@Given("User_612 Click on the Settlement Account Dropdown in Credit Card settlement Screen")
+public void user_click_on_the_settlement_account_dropdown_in_credit_card_settlement_screen() {
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("CCS_Settlement Account"),false);
+}
+
+@Given("User_612 Select the Settlement Account in Credit Card settlement Screen")
+public void user_select_the_settlement_account_in_credit_card_settlement_screen() {
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("SettlementAccount_Selection"),false);
+}
+
+@Given("User_612 click on the currency and enter currency name in search box")
+public void user_click_on_the_currency_and_enter_currency_name_in_search_box() {
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("validate_Currency_CCS"),false);
+	us.enterDataAndTab(driver,DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),
+			testData.get("CurrencyType"),
+			false);
+	
+}
+
+@Given("User_612 Select the Currency Name in the Dropdown")
+public void user_select_the_currency_name_in_the_dropdown() {
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search_Select"),false);
+}
+
+@Given("User_612 Enter the Transction Amount in Credit Card settlement Screen")
+public void user_enter_the_transction_amount_in_credit_card_settlement_screen() {
+	us.enterDataAndTab(driver,DataReader.locatorsMap.get("Cards").get("TransactionAmount_CCS"),
+			testData.get("EnterAmount"),
+			false);
+}
+@Given("user_612 click dropdown btn in credit card under Mycredit card settlement")
+public void user_612_click_dropdown_btn_in_credit_card_under_mycredit_card_settlement() {
+	us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("MyCreditCardSettlelment_dropdown"), 20, false);
+    
+    }
+
+@Given("user_612 select credit card under dropdown")
+public void user_612_select_credit_card_under_dropdown() {
+    us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("MYCreditCardSettlelment_selectcreditcard"), 20, false);
+    
+}
+
+
+@Given("user_612 click dropdown btn in settlment Account")
+public void user_612click_dropdown_btn_in_settlment_account() {
+    us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("MyCreditCardSettlelment_dropdown_Account"), 20, false);
+    
+}
+
+@Given("user_612 select setlement Account  under dropdown")
+public void user_612select_setlement_account_under_dropdown() {
+    us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("SettlementAccount_Selection"), 20, false);
+    
+}
+@Given("User_626 verify the screen3 into screen2 by clicking previous")
+public void user_verify_the_screen3_into_screen2_by_clicking_previous() {
+  us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Screen2_Verification"));
+}
+
+@Given("User_626 verify the screen2 into screen1 by clicking previous")
+public void user_verify_the_screen2_into_screen1_by_clicking_previous() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("POS_Currency_DebitDetails"));
+}
+@Given("User_626 validate the Current POS Limit in Debit Details Screen3")
+public void user_validate_the_current_pos_limit_in_debit_details_screen3() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_CurrentPOSLimit_s3"));
+}
+@Given("User_626 validate the Utilized POS Limit in Debit Details Screen3")
+public void user_validate_the_utilized_pos_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_UtilizedPOSlimit_s3"));
+  
+}
+
+@Given("User_626 validate the Remaining POS Limit in Debit Details Screen3")
+public void user_validate_the_remaining_pos_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_RemainingPOSLimit_s3"));
+    
+}
+
+@Given("User_626 validate the Requested POS Limit in Debit Details Screen3")
+public void user_validate_the_requested_pos_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_RequestedPOSLimit_s3"));
+    
+}
+
+@Given("User_626 validate the Current withdrawal Limit in Debit Details Screen3")
+public void user_validate_the_current_withdrawal_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_CurrentwithdrawalLimit_s3"));
+    
+}
+@Given("User_626 validate the Periodicity2 in Debit Details Screen3")
+public void user_validate_the_periodicity2_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_Periodicity2_s3"));
+    }
+
+@Given("User_626 validate the Utilized withdrawal Limit in Debit Details Screen3")
+public void user_validate_the_utilized_withdrawal_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_UtilizedwithdrawalLimit_s3"));
+    }
+
+@Given("User_626 validate the Remaining withdrawal Limit in Debit Details Screen3")
+public void user_validate_the_remaining_withdrawal_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_RemainingwithdrawalLimit_s3"));
+    }
+
+@Given("User_626 validate the Requested withdrawal Limit in Debit Details Screen3")
+public void user_validate_the_requested_withdrawal_limit_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_RequestedwithdrawalLimit_s3"));
+    }
+
+@Given("User_626 validate the I Agree Terms and condition in Debit Details Screen3")
+public void user_validate_the_i_agree_terms_and_condition_in_debit_details_screen3() {
+    us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_I_agree_S3"));
+    }	
+@Given("User_626 Click on the block card below the show more button")
+public void user_click_on_the_block_card_below_the_show_more_button() {
+	 us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("BlockVisi_DebitDetails"),false);
+}
+
+@Given("User_626 Validate the Card information section in block card Screen")
+public void user_validate_the_card_information_section_in_block_card_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Card_Information_DCD"));
+}
+
+@Given("User_626 Validate the Card Block options section in block card Screen")
+public void user_validate_the_card_block_options_section_in_block_card_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CardBlockOptions_DCD"));
+}
+
+@Given("User_626 Validate the block card reason below the Card block options")
+public void user_validate_the_block_card_reason_below_the_card_block_options() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_CardBlockReason"));
+}
+
+@Given("User_626 Validate the Toggle button below the Card block options")
+public void user_validate_the_toggle_button_below_the_card_block_options() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ToggleButton_click"),false);
+}
+
+@Given("User_626 click on the block card reason in the block card Screen")
+public void user_click_on_the_block_card_reason_in_the_block_card_screen() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCD_CardBlockReason"),false);
+}
+
+@Given("User_626 Select the option below the block card Screen")
+public void user_select_the_option_below_the_block_card_screen() throws InterruptedException { 
+	//us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
+	String xpath ="//ion-label[contains(text(),'"+testData.get("Block_card_Reason")+"')]";
+	   us.clickOnElement(driver, xpath, false);
+	//us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCD_CardBlockReason_Option"),false);
+}
+
+@Given("User_626 Click on the toggle button re issue card in block card Screen")
+public void user_click_on_the_toggle_button_re_issue_card_in_block_card_screen() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ToggleButton_clickJS"),true);
+}
+
 	
 	
 }

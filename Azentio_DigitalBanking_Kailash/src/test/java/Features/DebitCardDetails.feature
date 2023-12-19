@@ -381,6 +381,162 @@ And User_626 verify the screen3 into screen2 by clicking previous
 And User_626 Click on the Previous button in Debit Card details Screen
 And User_626 verify the screen2 into screen1 by clicking previous
 
+#@AT_CCS_002
+#Scenario: Credit card Settlement Save and Retrive in draft 
+#And User_612 loads the test datasetup for the test case id AT_CCS_002
+#Given user_5679 navigates to the omni_corporate_web_portal
+#And user_612 enters the Corpusername in the login page for omni_corp_portal
+#And user_612 enters the Corppassword in the login page for omni_corp_portal
+#And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+#And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+#And user_612 Click the  CardMenu under omni_corp_portal
+#And user_612 click credit card settlement submenu  under CardsMenu
+#And user_612 click mycredit card settlement submenu  under CardsMenu
+#And user_612 click dropdown btn in credit card under Mycredit card settlement
+#And user_612 select credit card under dropdown  
+#And user_612 click dropdown btn in settlment Account 
+#And user_612 select setlement Account  under dropdown
+#And User_612 click on the currency and enter currency name in search box
+#And User_612 Select the Currency Name in the Dropdown
+#And User_612 Enter the Transction Amount in Credit Card settlement Screen
+#And User_626 Click on the Next button in limit Update Screen
+#And User_626 Click on the I agree Check Box in Screen2
+#And User_626 Click on the Next button in limit Update Screen
+#And User_626 Click on the Save button in Screen2
+#And User_626 Enter Draft Name for save the Debit Detail request
+#And User_626 Click on sumbit button Save the Data
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+#And User_626 Click on the To Do Screen For check the Saved Draft
+#And User_612 Click on the saved Draft data for verification for creditCard SettleMent 
+@AT_DCD_019
+Scenario: Verify That user can Navigate to Limit Update - Screen3 -Summary
+And User_626 loads the test datasetup for the test case id AT_DCD_019
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 validate the Current POS Limit in Debit Details Screen3
+And User_626 validate the Utilized POS Limit in Debit Details Screen3
+And User_626 validate the Remaining POS Limit in Debit Details Screen3
+And User_626 validate the Requested POS Limit in Debit Details Screen3
+And User_626 validate the Current withdrawal Limit in Debit Details Screen3
+And User_626 validate the Periodicity2 in Debit Details Screen3
+And User_626 validate the Utilized withdrawal Limit in Debit Details Screen3
+And User_626 validate the Remaining withdrawal Limit in Debit Details Screen3
+And User_626 validate the Requested withdrawal Limit in Debit Details Screen3
+And User_626 validate the I Agree Terms and condition in Debit Details Screen3
+@AT_DCD_020
+Scenario: Verify That user can able to do Limit Update
+And User_626 loads the test datasetup for the test case id AT_DCD_020
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the Limit Update For Field Verification
+And User_626 Enter Data On Requested POS Limit field below POS Limit Update
+And User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update
+And User_626 Click on the Next button in limit Update Screen for pos screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+@AT_DCD_021
+Scenario: Verify That user can Navigate to Block Card
+And User_626 loads the test datasetup for the test case id AT_DCD_021
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the block card below the show more button
+And User_626 Validate the Card information section in block card Screen
+And User_626 Validate the Card Block options section in block card Screen
+And User_626 Validate the block card reason below the Card block options
+#And User_626 Validate the Toggle button below the Card block options
+And User_626 click on the block card reason in the block card Screen
+And User_626 Select the option below the block card Screen
+#And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the Next button in limit Update Screen
+@AT_DCD_022
+Scenario: Verify that Save,Cancel,next button is dsiplayed under block card screen 1
+And User_626 loads the test datasetup for the test case id AT_DCD_022
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the block card below the show more button
+And User_626 Validate the Card information section in block card Screen
+And User_626 Validate the Card Block options section in block card Screen
+And User_626 Validate the block card reason below the Card block options
+#And User_626 Validate the Toggle button below the Card block options
+And User_626 click on the block card reason in the block card Screen
+And User_626 Select the option below the block card Screen
+#And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+@AT_DCD_023
+Scenario: Verify That user can Navigate to Block Card-Card Block Options-Screen2
+And User_626 loads the test datasetup for the test case id AT_DCD_023
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the block card below the show more button
+And User_626 Validate the Card information section in block card Screen
+And User_626 Validate the Card Block options section in block card Screen
+And User_626 Validate the block card reason below the Card block options
+#And User_626 Validate the Toggle button below the Card block options
+And User_626 click on the block card reason in the block card Screen
+And User_626 Select the option below the block card Screen
+#And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Validate the terms and conditions page
+And User_626 validate the I Agree Terms and condition in Debit Details Screen3
+And User_626 Verify the Next button in the limit Update Screen
+And User_626 Verify the Cancel button in the limit Update Screen
+And User_626 Verify the Save button in the limit Update Screen 
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+       
+
 
 
       
