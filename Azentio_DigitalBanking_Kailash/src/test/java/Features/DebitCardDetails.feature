@@ -474,10 +474,10 @@ And User_626 Click on the block card below the show more button
 And User_626 Validate the Card information section in block card Screen
 And User_626 Validate the Card Block options section in block card Screen
 And User_626 Validate the block card reason below the Card block options
-#And User_626 Validate the Toggle button below the Card block options
+And User_626 Validate the Toggle button below the Card block options
 And User_626 click on the block card reason in the block card Screen
 And User_626 Select the option below the block card Screen
-#And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the toggle button re issue card in block card Screen
 And User_626 Click on the Next button in limit Update Screen
 @AT_DCD_022
 Scenario: Verify that Save,Cancel,next button is dsiplayed under block card screen 1
@@ -495,10 +495,10 @@ And User_626 Click on the block card below the show more button
 And User_626 Validate the Card information section in block card Screen
 And User_626 Validate the Card Block options section in block card Screen
 And User_626 Validate the block card reason below the Card block options
-#And User_626 Validate the Toggle button below the Card block options
+And User_626 Validate the Toggle button below the Card block options
 And User_626 click on the block card reason in the block card Screen
 And User_626 Select the option below the block card Screen
-#And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the toggle button re issue card in block card Screen
 And User_626 Click on the Next button in limit Update Screen
 And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
@@ -520,13 +520,14 @@ And User_626 Click on the block card below the show more button
 And User_626 Validate the Card information section in block card Screen
 And User_626 Validate the Card Block options section in block card Screen
 And User_626 Validate the block card reason below the Card block options
-#And User_626 Validate the Toggle button below the Card block options
+And User_626 Validate the Toggle button below the Card block options
 And User_626 click on the block card reason in the block card Screen
 And User_626 Select the option below the block card Screen
-#And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the toggle button re issue card in block card Screen
 And User_626 Click on the Next button in limit Update Screen
 And User_626 Validate the terms and conditions page
-And User_626 validate the I Agree Terms and condition in Debit Details Screen3
+And User_626 validate the I Agree Terms and condition in Block Card Screen
+And User_626 Click on the I agree Check Box in Screen2 
 And User_626 Verify the Next button in the limit Update Screen
 And User_626 Verify the Cancel button in the limit Update Screen
 And User_626 Verify the Save button in the limit Update Screen 
@@ -535,10 +536,57 @@ And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
-       
-
-
-
-      
+@AT_DCD_024      
+Scenario: 
+And User_626 loads the test datasetup for the test case id AT_DCD_024
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the block card below the show more button
+And User_626 click on the block card reason in the block card Screen
+And User_626 Select the option below the block card Screen
+And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Validate the terms and conditions page
+And User_626 validate the I Agree Terms and condition in Block Card Screen
+And User_626 Click on the I agree Check Box in Screen2 
+And User_626 Verify the Next button in the limit Update Screen
+And User_626 Verify the Cancel button in the limit Update Screen
+And User_626 Verify the Save button in the limit Update Screen 
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+@AT_DCD_024_01
+Scenario: Navigations of the Block Card in debit card details  
+And User_626 loads the test datasetup for the test case id AT_DCD_024_01
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal
+And User_626 enters the CorporatePass in the login page for omni_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And User_626 Click on the Show More button below the card details
+And User_626 Click on the block card below the show more button
+And User_626 click on the block card reason in the block card Screen
+And User_626 Select the option below the block card Screen
+And User_626 Click on the toggle button re issue card in block card Screen
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Click on the cancel button in the draft screen
+And User_626 Click on the Next button in limit Update Screen 
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 verify the screen3 into screen2 by clicking previous
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 verify the screen2 into screen1 by clicking previous in block card screen
 
 

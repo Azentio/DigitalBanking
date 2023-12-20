@@ -72,7 +72,18 @@ public class DebitCardDetails {
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
-
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_024")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_024() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_024");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_DCD_024_01")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_024_01() {
+		executionTestData = DataReader.executionTestData.get("AT_DCD_024");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@Given("user_5679 click on the Cards screen in the homepage")
 	public void user_5679_click_on_the_cards_screen_in_the_homepage() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"), false);
@@ -677,6 +688,7 @@ public class DebitCardDetails {
 	public void user_click_on_the_next_button_in_limit_update_screen() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
 	}
+	
 	@Given("User_626 Click on the Next button in limit Update Screen for pos screen")
 	public void user_click_on_the_next_button_in_limit_update_screenfor_pos_screen() throws InterruptedException {
 		Thread.sleep(10000);
@@ -1026,8 +1038,13 @@ public void user_click_on_the_block_card_reason_in_the_block_card_screen() {
 
 @Given("User_626 Select the option below the block card Screen")
 public void user_select_the_option_below_the_block_card_screen() throws InterruptedException { 
-	//us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
+	driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"))).click();
+	for (int i = 0; i <20; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"))).sendKeys(Keys.BACK_SPACE);	
+	}
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
+	
 	String xpath ="//ion-label[contains(text(),'"+testData.get("Block_card_Reason")+"')]";
 	   us.clickOnElement(driver, xpath, false);
 	//us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCD_CardBlockReason_Option"),false);
@@ -1037,7 +1054,38 @@ public void user_select_the_option_below_the_block_card_screen() throws Interrup
 public void user_click_on_the_toggle_button_re_issue_card_in_block_card_screen() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ToggleButton_clickJS"),true);
 }
+@Given("User_626 Validate the terms and conditions page")
+public void User_626_Validate_the_terms_and_conditions_page() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("TermsConditionPage_DCD"));
+}
+@Given("User_626 validate the I Agree Terms and condition in Block Card Screen")
+public void User_626_validate_the_I_Agree_Terms_and_condition_in_Block_Card_Screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("IagreeConditions"));
+}
+@Given("User_626 verify the screen2 into screen1 by clicking previous in block card screen")
+public void user_verify_the_screen2_into_screen1_by_clicking_previous_in_block_card_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Card_Information_DCD"));
+}
 
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
