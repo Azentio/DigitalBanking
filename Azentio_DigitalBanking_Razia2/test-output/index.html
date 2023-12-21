@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse--998257319\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-1233854871\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,10 +103,29 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that User Navigate to Summary Screen3 to go back home screen&quot;, &quot;Optional[Checking the functi...)">runScenario("Verify that User Navigate to Summary Screen3 to go back home screen", "Optional[Checking the functi...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;remove the operation &quot;session activity history&quot; to business profile and login with corporate user&quot;,...)">runScenario("remove the operation "session activity history" to business profile and login with corporate user",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;remove the operation &quot;session activity history&quot; to business profile and login with agent user&quot;, &quot;Op...)">runScenario("remove the operation "session activity history" to business profile and login with agent user", "Op...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;check if Field Add Close Session Activity History Report Availble in OADM&quot;, &quot;Optional[Checking the ...)">runScenario("check if Field Add Close Session Activity History Report Availble in OADM", "Optional[Checking the ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -126,20 +145,72 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify that User Navigate to Summary Screen3 to go back home screen&quot;, &quot;Optional[Checking the functi...)">
-                  </a> <!-- runScenario("Verify that User Navigate to Summary Screen3 to go back home screen", "Optional[Checking the functi...) -->
+                  <a name="runScenario(&quot;remove the operation &quot;session activity history&quot; to business profile and login with corporate user&quot;,...)">
+                  </a> <!-- runScenario("remove the operation "session activity history" to business profile and login with corporate user",...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify that User Navigate to Summary Screen3 to go back home screen","Optional[Checking the functionalities of CreditCardSettlement]")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-icon[@id=&apos;back_icon&apos;] (tried for 20 second(s) with 1000 milliseconds interval)
+                  <span class="parameters">("remove the operation "session activity history" to business profile and login with corporate user","Optional[Checking the functionality of Activity History]")</span>
+                  <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=117.0.5938.92)
 Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
-	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
-	at stepdefinitions.CreditCardSettlementSteps_612.user_click_previous_button_under_my_credit_card_settlement(CreditCardSettlementSteps_612.java:218)
-	at ✽.user_612 click previous button under my credit card settlement(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/CreditCardSettlement_612.feature:212)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b0afe074ec16cd466b44fb5193eb28f, executeScript {script=arguments[0].click();, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63081}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63081/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b0afe074ec16cd466b44fb5193eb28f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:164)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:196)
+	at stepdefinitions.ActivityHistorySteps_612.user_612_Click_the_Save_Button_in_Customer_under_Parameters(ActivityHistorySteps_612.java:688)
+	at ✽.user_612 Click the Save Button in Customer under Parameters(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/ActivityHistory_612.feature:34)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;remove the operation &quot;session activity history&quot; to business profile and login with agent user&quot;, &quot;Op...)">
+                  </a> <!-- runScenario("remove the operation "session activity history" to business profile and login with agent user", "Op...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("remove the operation "session activity history" to business profile and login with agent user","Optional[Checking the functionality of Activity History]")</span>
+                  <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=117.0.5938.92)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c1db5ae1eebe71c077cbf0f17e440d1e, executeScript {script=arguments[0].click();, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63326}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63326/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c1db5ae1eebe71c077cbf0f17e440d1e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:164)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:196)
+	at stepdefinitions.ActivityHistorySteps_612.user_612_Click_the_Save_Button_in_Customer_under_Parameters(ActivityHistorySteps_612.java:688)
+	at ✽.user_612 Click the Save Button in Customer under Parameters(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/ActivityHistory_612.feature:104)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -148,10 +219,28 @@ Driver info: driver.version: unknown
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Runner.TestApplication</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;check if Field Add Close Session Activity History Report Availble in OADM&quot;, &quot;Optional[Checking the ...)">
+                  </a> <!-- runScenario("check if Field Add Close Session Activity History Report Availble in OADM", "Optional[Checking the ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("check if Field Add Close Session Activity History Report Availble in OADM","Optional[Checking the functionality of Activity History]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse--998257319\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-1233854871\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -208,16 +297,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 132065);
+data.setCell(0, 3, 350067);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'Runner.TestApplication')
+data.setCell(1, 3, 237511);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'Runner.TestApplication')
+data.setCell(2, 3, 29);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 9 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,12 +348,22 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Verify that User Navigate to Summary Screen3 to go back home screen", "Optional[Checking the functi...)</span>
-                <span class="method-start">1223 ms</span>
+                <span class="method-name">runScenario("remove the operation "session activity history" to business profile and login with corporate user",...)</span>
+                <span class="method-start">945 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("remove the operation "session activity history" to business profile and login with agent user", "Op...)</span>
+                <span class="method-start">351027 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("check if Field Add Close Session Activity History Report Availble in OADM", "Optional[Checking the ...)</span>
+                <span class="method-start">588544 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">133296 ms</span>
+                <span class="method-start">588582 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

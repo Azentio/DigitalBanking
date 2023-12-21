@@ -142,9 +142,8 @@ And user_612 click on the force logout btn in the login page for omni_corporate_
 And user_612 click on the ok button for the successful login page for omni_corporate_web_portal1
 
 
-
+#blocked
 @AH_011
-
 Scenario: check if Field Add Close Session Activity History Report Availble in OADM
 
 

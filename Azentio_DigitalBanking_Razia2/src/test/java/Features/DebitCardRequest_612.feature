@@ -194,25 +194,6 @@ And user_612 validate the save button
 
 
 
-#
-#And user_612 click on the loggin button in the login page for omni_corporate_web_portal
-#And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
-#And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
-#And user_612 Click the  CardMenu under omni_corp_portal
-#And user_612 click on Debit Card Request cards Menu
-#And user_612 validate the Debit Card Request dropdown
-#And user_612 click the Primary Account dropdown button
-#And user_612 slect the Account under the primary Account
-#And User_612 enter the cardHolder under DCR screen
-#And user_612 validate the RequestBranch dropdown
-#And user_612 validate the Collect_or_reveiver_details
-#And user_612 validate the next button
-#And user_612 validate the save button
-
-
-
-
-
 
 
 

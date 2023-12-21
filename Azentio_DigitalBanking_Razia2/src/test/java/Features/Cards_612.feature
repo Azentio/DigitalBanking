@@ -43,8 +43,9 @@ Given user_612 navigates to the omni_web_portal
 And user_612 enters the Retail  username in the login page for omni_web_portal
 And user_612 enters the Retail password in the login page for omni_web_portal
 And user_612 click on the loggin button in the login page for omni_web_portal
-And user_612 click on the force logout btn in the login page for omni_web_portal
-And user_612 click on the ok button for the successful login page for omni_web_portal
+And user_612 click on the force logout btn in the login page for 
+And user_612 click ok Button in retail omni web page
+#And user_612 click on the ok button for the successful login page for omni_web_portal
 And user_612 Click the  Cards Menu under omni_web_portal
 And user_612 clicks on logout btn to logout from omni web portal
 
@@ -92,7 +93,8 @@ And user_612 enters the Retail  username in the login page for omni_web_portal
 And user_612 enters the Retail password in the login page for omni_web_portal
 And user_612 click on the loggin button in the login page for omni_web_portal
 And user_612 click on the force logout btn in the login page for omni_web_portal
-And user_612 click on the ok button for the successful login page for omni_web_portal
+And user_612 click ok Button in retail omni web page
+#And user_612 click on the ok button for the successful login page for omni_web_portal
 And user_612 Click the  Cards Menu under omni_web_portal
 And user_612 clicks on logout btn to logout from omni web portal
 
@@ -139,7 +141,8 @@ And user_612 enters the Retail  username in the login page for omni_web_portal
 And user_612 enters the Retail password in the login page for omni_web_portal
 And user_612 click on the loggin button in the login page for omni_web_portal
 And user_612 click on the force logout btn in the login page for omni_web_portal
-And user_612 click on the ok button for the successful login page for omni_web_portal
+#And user_612 click on the ok button for the successful login page for omni_web_portal
+And user_612 click ok Button in retail omni web page
 And user_612 Click the  Cards Menu under omni_web_portal
 And user_612 clicks on logout btn to logout from omni web portal
 
@@ -186,7 +189,8 @@ And user_612 enters the Retail  username in the login page for omni_web_portal
 And user_612 enters the Retail password in the login page for omni_web_portal
 And user_612 click on the loggin button in the login page for omni_web_portal
 And user_612 click on the force logout btn in the login page for omni_web_portal
-And user_612 click on the ok button for the successful login page for omni_web_portal
+#And user_612 click on the ok button for the successful login page for omni_web_portal
+And user_612 click ok Button in retail omni web page
 And user_612 Click the  Cards Menu under omni_web_portal
 And user_612 clicks on logout btn to logout from omni web portal
 
@@ -198,7 +202,8 @@ And user_612 enters the maker username1 in the login page for omni_corporate_web
 And user_612 enters the maker password1 in the login page for omni_corporate_web_portal
 And user_612 click on the loggin button in the login page for omni_corporate_web_portal
 And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
-And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_612 click ok Button in retail omni web page
+#And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
 And user_612 Click the  Cards Menu under omni_web_portal
 And user_612 click on the My Cards under Cards in the homepage
 And user_612 click on the Show More button in Debit cards page
