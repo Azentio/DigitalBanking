@@ -22,11 +22,75 @@ WebDriver driver = BaseClass.driver;
 	String executionTestData;
 	HashMap<String, String> testData;
 	
+	
+	@And("^user_612 enters the maker username1 in the login page for omni_corporate_web_portalA$")
+	public void user_612EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_PortalA() {
+		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),testData.get("UserName1"),false);
+		
+	}
+	
+
+	@And("^user_612 enters the maker password1 in the login page for omni_corporate_web_portalA$")
+	public void user_612EntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_PortalA() {
+		us.enterDataAndEnter(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
+				testData.get("Password1"),
+				false);
+	}
+
+	
     @And("^user_612 loads the test datasetup for the test case id ALR_015$")
     public void User_612LoadsTheTestDatasetupForTheTestCaseIdALR_015() {
     	executionTestData = DataReader.executionTestData.get("ALR_015");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
+    @And("^user_612 loads the test datasetup for the test case id ALR_016$")
+    public void User_612LoadsTheTestDatasetupForTheTestCaseIdALR_016() {
+    	executionTestData = DataReader.executionTestData.get("ALR_016");
+    	
+		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
+    }
+    
+	@And("^user_612 selects the from account from the dropdown in transfers within own accountsA$")
+	public void user_612SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccountsA() throws Throwable {
+		
+		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"), 
+				"TESTDATAVARIABLE", 
+				testData.get("FromAccount1"));
+		us.clickOnElement(driver, xpath, false);
+		
+	}
+	
+	
+	@And("^user_612 selects the To account from the dropdown in transfers within own accountsA$")
+	public void user_612SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccountsA() {
+		
+		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"), 
+				"TESTDATAVARIABLE", 
+				testData.get("ToAccount1"));
+		us.clickOnElement(driver, xpath, false);
+				
+	}
+	@And("^user_612 enters the transaction amount in the transfers screenA$")
+	public void user_612EntersTheTransactionAmountInTheTransfersScreenA() {
+		us.enterDataAndTab(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"), 
+				testData.get("TransferAmount"), 
+				false);
+		
+	}
+	
+	@And("^user_612 enters the purpose of transaction in the transfers screenA$")
+	public void user_612EntersThePurposeOfTransactionInTheTransfersScreenA() throws InterruptedException {
+		us.enterDataAndTab(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), 
+				testData.get("PurposeOfTrnx"), 
+				false);
+		
+		Thread.sleep(3000);
+	}
+	
+	
 	@Given("user_612 click on the profile Info in ALR")
 	public void user_612_click_on_the_profile_info_in_alr() throws InterruptedException {
 		Thread.sleep(3000);

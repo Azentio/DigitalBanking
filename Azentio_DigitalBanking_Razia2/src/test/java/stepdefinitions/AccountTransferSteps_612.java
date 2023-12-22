@@ -352,7 +352,7 @@ public class  AccountTransferSteps_612 {
 	}
 	
 	@And("^user_612 selects the from account from the dropdown in transfers within own accounts$")
-	public void user_612SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() {
+	public void user_612SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() throws Throwable {
 		
 		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"), 
 				"TESTDATAVARIABLE", 
