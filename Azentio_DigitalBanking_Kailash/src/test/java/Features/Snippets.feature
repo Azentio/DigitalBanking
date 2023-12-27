@@ -4,11 +4,15 @@ Feature: Title of your feature
   I want to use this template for my feature file
 
 Scenario: Submit International Transfer - scheduled with corporate user have maker checker access address_line2_mandatory_verification
-And User_626 Click on the block card below the show more button
-And User_626 Validate the Card information section in block card Screen
-And User_626 Validate the Card Block options section in block card Screen
-And User_626 Validate the block card reason below the Card block options
-And User_626 Validate the Toggle button below the Card block options
-And User_626 click on the block card reason in the block card Screen
-And User_626 Select the option below the block card Screen
-And User_626 Click on the toggle button re issue card in block card Screen
+And user_00722 Click the Add button in BR screen
+And user_00722 Enter the Currency Value in BR screen
+And user_00722 Enter the Amount value in BR Screen
+And user_00722 click the Charges button in BR Screen
+And user_00722 Enter the Charge CY amount
+And user_00722 Enter the Waiver charge percenage 
+And user_00722 click the waiver charge button
+And user_00722 click the Save button in BR Screen
+And user_00722 click the Approve button in Transaction 
+And user_00722 Enter the GL code value in Approve
+And user_00722 Double click the Appove code value
+And user_00722 submit the code cheque book

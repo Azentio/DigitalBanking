@@ -84,6 +84,36 @@ public class DebitCardDetails {
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
+	@And("User_626 loads the test datasetup for the test case id AT_PCR_001")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_001() {
+		executionTestData = DataReader.executionTestData.get("AT_PCR_001");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_PCR_002")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_002() {
+		executionTestData = DataReader.executionTestData.get("AT_PCR_002");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_PCR_004")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_004() {
+		executionTestData = DataReader.executionTestData.get("AT_PCR_004");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_PCR_005")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_005() {
+		executionTestData = DataReader.executionTestData.get("AT_PCR_005");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User_626 loads the test datasetup for the test case id AT_PCR_003")
+	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_003() {
+		executionTestData = DataReader.executionTestData.get("AT_PCR_003");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@Given("user_5679 click on the Cards screen in the homepage")
 	public void user_5679_click_on_the_cards_screen_in_the_homepage() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"), false);
@@ -669,7 +699,7 @@ public class DebitCardDetails {
 
 	@Given("User_626 Verify the Submit button in draft Saving Screen")
 	public void user_verify_the_submit_button_in_draft_saving_screen() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DraftSubmit_debitDetails"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Draft_Submit_PCR"));
 	}
 	@And("User_626 loads the test datasetup for the test case id AT_DCD_011")
 	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_011() {
@@ -719,6 +749,11 @@ public class DebitCardDetails {
 	public void user_enter_draft_name_for_save_the_debit_detail_request() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
 				testData.get("DraftName"),false);
+		for (int i = 0; i <50; i++) {
+			driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
+		}
+		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
+				testData.get("DraftName"),false);
 	}
 	@Given("User_626 Click on sumbit button Save the Data")
 	public void user_click_on_sumbit_button_save_the_data() {
@@ -727,16 +762,14 @@ public class DebitCardDetails {
 
 	@Given("User_626 Click on the To Do Screen For check the Saved Draft")
 	public void user_click_on_the_to_do_screen_for_check_the_saved_draft() {
-		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
-				false);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"),false);
 	}
 
 	@Given("User_626 Click on the saved Draft data for verification")
 	public void user_click_on_the_saved_draft_data_for_verification() {
-		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
-				false);	}
+		String xpath ="//div[contains(text(),'"+testData.get("DraftName")+"')]";
+		   us.clickOnElement(driver, xpath, false);
+		}
 	@And("User_626 loads the test datasetup for the test case id AT_DCD_013")
 	public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_013() {
 		executionTestData = DataReader.executionTestData.get("AT_DCD_013");
@@ -1040,10 +1073,10 @@ public void user_click_on_the_block_card_reason_in_the_block_card_screen() {
 public void user_select_the_option_below_the_block_card_screen() throws InterruptedException { 
 	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
 	driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"))).click();
-	for (int i = 0; i <20; i++) {
+	for (int i = 0; i <50; i++) {
 		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"))).sendKeys(Keys.BACK_SPACE);	
 	}
-	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
 	
 	String xpath ="//ion-label[contains(text(),'"+testData.get("Block_card_Reason")+"')]";
 	   us.clickOnElement(driver, xpath, false);
@@ -1066,11 +1099,55 @@ public void User_626_validate_the_I_Agree_Terms_and_condition_in_Block_Card_Scre
 public void user_verify_the_screen2_into_screen1_by_clicking_previous_in_block_card_screen() {
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Card_Information_DCD"));
 }
+@Given("User_626 Validate the Card block reason in Block Card screen3")
+public void user_validate_the_card_block_reason_in_block_card_screen3() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_CardBlockReason"));
+	}
+@Given("User_626 Validate the Re issue Card in Block Card screen3")
+public void user_validate_the_re_issue_card_in_block_card_screen3() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_ReissueCard_S3"));
+}
 
+@Given("User_626 Validate the I agree terms in Block Card screen3")
+public void user_validate_the_i_agree_terms_in_block_card_screen3() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_IAGree_S3"));
+}
+@Given("User_626 Click on the Prepaid Card Request below the card details")
+public void User_626_Click_on_the_Prepaid_Card_Request_below_the_card_details() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCD_PrepaidCardRequest"),false);
+}
+@Given("User_626 Verify the Reference Card is showing in Prepaid Card Request Screen")
+public void user_verify_the_reference_card_is_showing_in_prepaid_card_request_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ClickReferenceCard_Dropdown"));
+}
 
+@Given("User_626 Click on the reference card drop down in Prepaid Card Request Screen")
+public void user_click_on_the_reference_card_drop_down_in_prepaid_card_request_screen() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ClickReferenceCard_Dropdown"),false);
+}
 
+@Given("User_626 Select reference card in Prepaid Card Request Screen")
+public void user_select_reference_card_in_prepaid_card_request_screen() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR"),false);
+}
+@Given("User_626 Click the Back Arrow button in the 1st Screen of prepaid card request")
+public void User_626_Click_the_Cancel_button_in_the_1st_Screen_of_prepaid_card_request() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR"));
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("PCR_1StScreen_Backbutton"),false);
+}
+@Given("User_626 Verify the progress screen was closed in prepaid card request")
+public void  User_626_Verify_the_progress_screen_was_closed_in_prepaid_card_request() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("PCR_1StScreen_Verification"));
+}
 
-
+@Given("User_626 Verify the Cancel button in draft Saving ScreenWO index")
+public void user_verify_the_cancel_button_in_draft_saving_screenWO_index() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Draft_ForWO_Cancel"));
+}
+@Given("User_626 Verify the value missing for user does not allow to navigate screen")
+public void User_626_Verify_the_value_missing_for_user_does_not_allow_to_navigate_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ValueMissing_forValidation"));
+}
 
 
 
