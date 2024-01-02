@@ -181,8 +181,8 @@ public void user_612_verify_the_draft_title_is_display_or_not() {
 @Given("user_612 verify the submit button is displaying or not")
 public void user_612_verify_the_submit_button_is_displaying_or_not() {
     
-	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CreditCardDetails_DraftDetails_SubmitButton"));
-}
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("DCR_Sumbit"));
+} //CreditCardDetails_DraftDetails_SubmitButton
 
 @Given("user_612 verify the cancel button is displaying or not")
 public void user_612_verify_the_cancel_button_is_displaying_or_not() {
@@ -224,6 +224,7 @@ public void user_612_verify_screen_is_closed_and_switched_to_home_screen() {
     
     us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("MyCreditCardSettlelment_homepage"));
 }
+
 @Given("User_612 Enter Draft Name for save the Debit Detail request")
 
 public void user_612_enter_draft_name_for_save_the_debit_detail_request() {
@@ -244,9 +245,9 @@ public void user_612_enter_draft_name_for_save_the_debit_detail_request() {
 @Given("User_612 Click on sumbit button Save the Data")
 
 public void user_612_click_on_sumbit_button_save_the_data() throws Throwable {
-
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DraftSubmit_debitDetails"),false);
  Thread.sleep(2000);
+	us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("DCR_Sumbit"),30,false);//DraftSubmit_debitDetails
+ 
 }
 
 @Given("User_612 Click on the Save button in Screen2")
@@ -314,7 +315,8 @@ public void user_612_verify_not_allowed_to_navigate_screen3( ) {
 }
 
 @Given("user_612 click the cancel button1")
-public void user_612_click_the_cancel_button1() {
+public void user_612_click_the_cancel_button1() throws Throwable {
+	Thread.sleep(2000);
 	us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get(""),20,false);
   
 }
@@ -363,6 +365,17 @@ public void user_612_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_030() 
     executionTestData = DataReader.executionTestData.get("AT_DCD_030");
     testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 }
+@And("User_612 loads the test datasetup for the test case id AT_DCD_033")
+public void user_612_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_033() {
+    executionTestData = DataReader.executionTestData.get("AT_DCD_033");
+    testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_612 loads the test datasetup for the test case id AT_DCD_035")
+public void user_612_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_035() {
+    executionTestData = DataReader.executionTestData.get("AT_DCD_035");
+    testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+
 @Given("User_612 Click on the Show More button below the card details")
 public void user_612_click_on_the_show_more_button_below_the_card_details() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ShowMoreClick_DebitDetails"), true);
@@ -531,6 +544,28 @@ public void user_612_click_dropdown_button_under_prepaid_card_request( ) {
 public void user_612_select_account_under_the_drop_down( ) {
     us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCD_showmore_prepaidCard_lookup_refernce card_selectAct"),false);
 }
+@Given("user_612 verify Screen is closed and switched to screen1")
+public void user_verify_screen_is_closed_and_switched_to_screen1( ) {
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("DCD_prepaidcardmaindetails_validate"));
+    
+}
+@And("^user_612 click on the I agree to terms and conditions checkbox DCD$")
+public void user_612ClickOnTheIAgreeToTermsAndConditionsCheckboxdcd() {
+		us.clickOnElementNoWait(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 
+				30,
+				false);
+
+}
+@Given("user_612 validate the Reference card is display or not in screen3")
+public void user_612_validate_the_reference_card_is_display_or_not_in_screen3( ) {
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("DCD_Referencecard_screen3"));
+}
+@Given("user_612 click back button under my credit card settlement")
+public void user_click_back_button_under_my_credit_card_settlement() {
+  us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("MyCreditCardSettlelment_backbtn"),20,false);
+}
+
 }
 
 

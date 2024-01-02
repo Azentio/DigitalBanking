@@ -372,7 +372,8 @@ public class  AccountTransferSteps_612 {
 	}
 	
 	@And("^user_612 enters the transaction amount in the transfers screen$")
-	public void user_612EntersTheTransactionAmountInTheTransfersScreen() {
+	public void user_612EntersTheTransactionAmountInTheTransfersScreen() throws Throwable {
+		Thread.sleep(2000);
 		us.enterDataAndTab(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"), 
 				testData.get("TransferAmount"), 

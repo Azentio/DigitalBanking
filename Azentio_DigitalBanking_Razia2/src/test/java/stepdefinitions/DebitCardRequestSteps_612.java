@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -198,8 +199,8 @@ public void user_click_to_do_button_under_tha_for_omni_corporate_web_portal() {
    us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("DCR_TO Do"), 20, false);
 }
 
-@Given("user_612 varify the record save in TO DO List for draft")
-public void user_varify_the_record_save_in_to_do_list_for_draft() {
+@Given("user_612 verify the record save in TO DO List for draft")
+public void user_verify_the_record_save_in_to_do_list_for_draft() {
 	
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("DCR_TO Do_LIst_VerifyData"));
 }
@@ -208,7 +209,7 @@ public void user_click_the_next_button_under_debit_card_request( ) {
 	try {
 		us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("Debit_Card_Request_next"), 20, false);
 	} catch (Exception e) {
-		// TODO: handle exception
+		
 	}
 	
   
@@ -235,7 +236,7 @@ public void user_validate_the_save_button_in_maps_screen( ) {
 }
 @Given("user_612 click the maps location")
 public void user_click_the_maps_location( ) throws Throwable {
-	//Thread.sleep(3000);
+	Thread.sleep(2000);
 	for (int i = 0; i < 200; i++) {
 		try {
 			us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("DCR_MapsLoaction"),20, false);
@@ -264,9 +265,20 @@ public void user_click_cancel_btn_in_maps_location( ) throws Throwable {
 
 @Given("user_612 enter draft Title under popup under screen2")
 public void user_enter_draft_title_under_popup_under_screen2( ) {
-		us.enterData
-	(driver, DataReader.locatorsMap.get("Cards").get("DCR_enterDraft"), testData.get("CardName"),false);
+//		us.enterData
+//	(driver, DataReader.locatorsMap.get("Cards").get("DCR_enterDraft"), testData.get("CardName"),false);
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DCR_enterDraft"),
+
+			testData.get("CardName"),false);
+	for (int i = 0; i <50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DCR_enterDraft"))).sendKeys(Keys.BACK_SPACE);	
+	}
+	
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DCR_enterDraft"),
+
+			testData.get("CardName"),false);
 }
+
 
 @Given("user_612 validate the draft title in screen2")
 public void user_validate_the_draft_title_in_screen2( ) {
@@ -377,9 +389,14 @@ public void user_click_the_cards_menu_under_omni_web_portal( ) {
 			DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"), 
 			20,
 			false);
-	 //Assert.assertEquals(driver.getPageSource().contains(testData.get("operation")), false);
-}
 	
+}
+
+@Given("user_612 select the Account under the primary Account in Retail")
+public void user_select_the_account_under_the_primary_account_in_retail() throws Throwable {
+	Thread.sleep(2000);
+	us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("DCR_primaryAcct_Retail"),30,false);
+}
 
 }
 

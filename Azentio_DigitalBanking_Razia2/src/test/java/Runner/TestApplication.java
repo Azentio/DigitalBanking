@@ -1,3 +1,4 @@
+
 package Runner;
 
 import org.junit.After;
@@ -8,14 +9,14 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/Features/Activitylogreport_612.feature"},
+@CucumberOptions(features = {"src/test/java/Features/DebitCardRequest_612.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
-              //dryRun = false ,//to check compilation errors  ActivityHistory_612    Activitylogreport_612  AccountTransfer_612                               
-             ,tags="@ALR_016"
+              //dryRun = false ,//to check compilation errors  ActivityHistory_612 check   Activitylogreport_612  AccountTransfer_612 CreditCardSettlement_612                              
+            ,tags="@AT_DCR_007"//  
 
 )
 

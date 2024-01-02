@@ -1,47 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-22T18:17:47 IST" name="Default suite" finished-at="2023-12-22T18:19:44 IST" duration-ms="117213">
+  <suite started-at="2024-01-02T18:25:38 IST" name="Default suite" finished-at="2024-01-02T18:28:16 IST" duration-ms="158166">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5d908d47]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-12-22T18:17:47 IST" name="Default test" finished-at="2023-12-22T18:19:44 IST" duration-ms="117213">
+    <test started-at="2024-01-02T18:25:38 IST" name="Default test" finished-at="2024-01-02T18:28:16 IST" duration-ms="158166">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5d908d47]" started-at="2023-12-22T18:17:47 IST" name="setUpClass" finished-at="2023-12-22T18:17:48 IST" duration-ms="983" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@5d908d47]" started-at="2024-01-02T18:25:38 IST" name="setUpClass" finished-at="2024-01-02T18:25:39 IST" duration-ms="1001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5d908d47]" started-at="2023-12-22T18:17:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-12-22T18:19:29 IST" duration-ms="101075" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@5d908d47]" started-at="2024-01-02T18:25:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-02T18:27:58 IST" duration-ms="138624" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["check if the system Validate Activity log for edit   beneficiary internal  Transfer "Retail _IB""]]>
+                <![CDATA["Verify that Retail user Navigate to Debit Card Request Screens (screen1)"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Checking the functionalities of Activitylogreport]"]]>
+                <![CDATA["Optional[Checking the functionalities of DebitCardRequest (11 test only)]"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "java.util.HashMap.get(Object)" because "this.testData" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.HashMap.get(Object)" because "this.testData" is null
-at stepdefinitions.AccountTransferSteps_612.user_612EntersTheTransactionAmountInTheTransfersScreen(AccountTransferSteps_612.java:378)
-at ✽.user_612 enters the transaction amount in the transfers screen(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/Activitylogreport_612.feature:55)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5d908d47]" started-at="2023-12-22T18:19:29 IST" name="tearDownClass" finished-at="2023-12-22T18:19:44 IST" duration-ms="15084" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@5d908d47]" started-at="2024-01-02T18:27:58 IST" name="tearDownClass" finished-at="2024-01-02T18:28:16 IST" duration-ms="18457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

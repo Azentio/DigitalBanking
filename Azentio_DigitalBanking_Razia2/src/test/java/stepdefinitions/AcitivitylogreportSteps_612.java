@@ -63,13 +63,13 @@ WebDriver driver = BaseClass.driver;
 	
 	
 	@And("^user_612 selects the To account from the dropdown in transfers within own accountsA$")
-	public void user_612SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccountsA() {
+	public void user_612SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccountsA() throws Throwable {
 		
 		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"), 
 				"TESTDATAVARIABLE", 
 				testData.get("ToAccount1"));
 		us.clickOnElement(driver, xpath, false);
-				
+			Thread.sleep(5000);	
 	}
 	@And("^user_612 enters the transaction amount in the transfers screenA$")
 	public void user_612EntersTheTransactionAmountInTheTransfersScreenA() {

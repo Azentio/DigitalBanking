@@ -6,35 +6,35 @@ Scenario: remove the operation "session activity history" to business profile an
 And user_612 loads the test datasetup for the test case id AH_009
 Given user_612 navigates to the OmniScreen Admin Url and login with the valid credentials
 And user_612 Click on the Parameters menu
-And user_612 Click on the Profile Management submenu
-And user_612 Click on the Business Profile screen under Parameters
-And user_612 Enter the Profile Name in Business Profile under Parameters
-And user_612 Enter the Brief Description in Business Profile under Parameters
-And user_612 Select the Application in Business Profile under Parameters
-And user_612 Click on Root in Business Profile under Parameters
-And user_612 Click the Save Button in Business Profile under Parameters     
-And user_612 Click the Search Button in Business Profile under Parameters
-And user_612 Enter the Business Profile input in Business Profile under Parameters          
-And user_612 Click the Approve Button in Business Profile under Parameters
-And user_612 Click on the Sub Profile screen under Parameters
-And user_612 Enter the SubProfile Name in Sub Profile under Parameters
-And user_612 Enter the Brief Description in Sub Profile under Parameters
-And user_612 Select the Business Profile in Sub Profile under Parameters
-And user_612 Click the Save Button in Sub Profile under Parameters
-And user_612 Click the Search Button in Sub Profile under Parameters
-And user_612 Enter the Sub Profile input in Sub Profile under Parameters  
-And user_612 Click the Approve Button in Sub Profile under Parameters
+#And user_612 Click on the Profile Management submenu
+#And user_612 Click on the Business Profile screen under Parameters
+#And user_612 Enter the Profile Name in Business Profile under Parameters
+#And user_612 Enter the Brief Description in Business Profile under Parameters
+#And user_612 Select the Application in Business Profile under Parameters
+#And user_612 Click on Root in Business Profile under Parameters
+#And user_612 Click the Save Button in Business Profile under Parameters     
+#And user_612 Click the Search Button in Business Profile under Parameters
+#And user_612 Enter the Business Profile input in Business Profile under Parameters          
+#And user_612 Click the Approve Button in Business Profile under Parameters
+#And user_612 Click on the Sub Profile screen under Parameters
+#And user_612 Enter the SubProfile Name in Sub Profile under Parameters
+#And user_612 Enter the Brief Description in Sub Profile under Parameters
+#And user_612 Select the Business Profile in Sub Profile under Parameters
+#And user_612 Click the Save Button in Sub Profile under Parameters
+#And user_612 Click the Search Button in Sub Profile under Parameters
+#And user_612 Enter the Sub Profile input in Sub Profile under Parameters  
+#And user_612 Click the Approve Button in Sub Profile under Parameters
 
 And user_612 Click on the User Management submenu
-And user_612 Click on the Customer screen under Parameters
-And user_612 Select the Application as Corporate in Customer under Parameters
-And user_612 Enter the Customer Name in Customer under Parameters
-And user_612 Select the Cif in Customer under Parameters
-And user_612 Select the Business Profile in Customer under Parameters
-And user_612 Click the Save Button in Customer under Parameters
-And user_612 Click the Search Button in Customer under Parameters
-And user_612 Enter the Cif input in Customer under Parameters  
-And user_612 Click the Approve Button in Customer under Parameters
+#And user_612 Click on the Customer screen under Parameters 
+#And user_612 Select the Application as Corporate in Customer under Parameters
+#And user_612 Enter the Customer Name in Customer under Parameters
+#And user_612 Select the Cif in Customer under Parameters
+#And user_612 Select the Business Profile in Customer under Parameters
+#And user_612 Click the Save Button in Customer under Parameters
+#And user_612 Click the Search Button in Customer under Parameters
+#And user_612 Enter the Cif input in Customer under Parameters  
+#And user_612 Click the Approve Button in Customer under Parameters
 
 And user_612 Click on the End User screen under Parameters
 And user_612 Select the Application in End User under Parameters

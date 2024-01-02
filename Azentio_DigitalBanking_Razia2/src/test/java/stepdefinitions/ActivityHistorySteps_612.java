@@ -204,7 +204,7 @@ public void user_612_clicks_on_logout_btn_to_logout_from_admin_portal() {
 		BusinessProfile_Code = CodeElement.getAttribute("initialvalue");
 		System.out.println("BusinessProfile_Code is : " + BusinessProfile_Code);
 		Thread.sleep(2000);
-
+      
 	}
 
 	@And("^user_612 Click the Approve Button in Business Profile under Parameters$")
