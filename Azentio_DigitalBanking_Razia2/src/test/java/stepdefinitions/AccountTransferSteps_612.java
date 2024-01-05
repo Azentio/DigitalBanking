@@ -671,10 +671,14 @@ public class  AccountTransferSteps_612 {
 				DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), 
 				30,
 				false);
+		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"),30, false);
+	
+				    
 	}
 	@And("^user_612 click on the single future date from the dropdown in scheduled transfer$")
 	public void user_612ClickOnTheSingleFutureDateFromTheDropdownInScheduledTransfer() {
-		
+				
+		//us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransf
 		try {
 			us.clickOnElementNoWait(driver, 
 					DataReader.locatorsMap.get("OmniScreen_Login").get("SelectSingleFutureDate_ScheduledTransfer"), 
@@ -748,9 +752,11 @@ public class  AccountTransferSteps_612 {
 	}
 
 	@Given("user_612 click on the international transfers under the Transfers")
-	public void user_click_on_the_international_transfers_under_the_transfers() {
+	public void user_click_on_the_international_transfers_under_the_transfers() throws Throwable {
 		 us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Transfers_AMANAPaymnets"), false);
+	Thread.sleep(2000);
 	}
+	
 
 	@And("user_612 select from account under international transfers")
 	public void user_select_from_account_under_international_transfers() {	

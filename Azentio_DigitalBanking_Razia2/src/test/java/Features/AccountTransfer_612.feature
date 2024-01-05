@@ -1,4 +1,4 @@
-Feature: Checking the functionalities of Account Transfer
+Feature: Checking the functionalities of Account Transfer 
 
 @AT_002
 Scenario: Submit own account transfer - one time with corporate user and one approval is required
@@ -129,7 +129,7 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 
-@At_011_01
+@AT_011_01
 Scenario: Submit International Transfer one time with corporate user and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_011
@@ -155,7 +155,7 @@ And user_612 gets the reference number from the submission report
 And user_612 clicks on logout btn to logout from omni web portal
 
 #Checker Approval1
-@At_011_02
+@AT_011_02
 Scenario: Submit International Transfer one time with corporate user and one approval is required
 Given user_612 navigates to the omni_corporate_web_portal
 And user_612 loads the test datasetup for the test case id AT_011
@@ -337,6 +337,9 @@ And user_612 selects the To account from the dropdown in transfers within own ac
 And user_612 enters the transaction amount in the transfers screen
 And user_612 enters the purpose of transaction in the transfers screen
 And user_612 click on next btn in the transfers screen
+And user_612  click on the I agree to terms and conditions checkbox
+And user_612 click on next btn in the transfers screen
+And user_612 click on next btn in the transfers screen
 And user_612 click on submit btn in the transfers screen
 And user_612 waits for the confirmation on the submission report
 And user_612 gets the reference number from the submission report
@@ -378,6 +381,7 @@ And user_612 enters the transaction amount in the transfers screen
 And user_612 enters the purpose of transaction in the transfers screen
 And user_612 click on next btn in the transfers screen
 And user_612  click on the I agree to terms and conditions checkbox
+And user_612 click on next btn in the transfers screen
 And user_612 click on submit btn in the transfers screen
 And user_612 waits for the confirmation on the submission report for own bank transfer
 And user_612 gets the reference number from the submission report

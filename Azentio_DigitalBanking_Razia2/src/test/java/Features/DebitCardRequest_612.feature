@@ -87,7 +87,6 @@ And user_612 Click pevious button in screen2
 And user_612 verify the previous button is working and go to homepage
 And user_612 clicks on logout btn to logout from omni web portal
 
-@AT_DCR_004
 Scenario: Verify that user Navigate to Debit Card Request Screen3 
 And User_612 loads the test datasetup for the test case id AT_DCR_004
  Given user_612 navigates to the omni_corporate_web_portal
@@ -212,7 +211,7 @@ And user_612 enters the Retailpassword in the login page for omni_corp_portal
 And user_612 click on the loggin button in the login page for omni_corporate_web_portal
 And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
-And  user_612 Click the  CardMenu under omni_corp_portal
+And user_612 Click the  CardsMenu under omni_web_portal
 And user_612 click on Debit Card Request cards Menu
 And user_612 click the Primary Account dropdown button
 And user_612 select the Account under the primary Account in Retail
@@ -271,7 +270,7 @@ And user_612 enters the Retailpassword in the login page for omni_corp_portal
 And user_612 click on the loggin button in the login page for omni_corporate_web_portal
 And user_612 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_612 click on the ok button for the successful login page for omni_corporate_web_portal
-And  user_612 Click the  CardMenu under omni_corp_portal
+And user_612 Click the  CardsMenu under omni_web_portal
 And user_612 click on Debit Card Request cards Menu
 And user_612 click the Primary Account dropdown button
 And user_612 select the Account under the primary Account in Retail
@@ -283,8 +282,6 @@ And user_612 validate screen2 is displaying or not
 And user_612 Click pevious button in screen2 
 And user_612 verify the previous button is working and go to homepage
 And user_612 clicks on logout btn to logout from omni web portal
-
-
 
 @AT_DCR_010
 Scenario: Verify the Functionality of save Button in debit card request - Screen 3
@@ -348,8 +345,6 @@ And user_612 clicks on logout btn to logout from omni web portal
 
 
 
-
-#sren4
 
 
 

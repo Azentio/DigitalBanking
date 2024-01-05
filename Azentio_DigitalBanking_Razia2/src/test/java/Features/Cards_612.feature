@@ -1,6 +1,5 @@
 Feature: Checking the functionalities of Cards
 
-
 @CRD_025_01
 Scenario: Activate Debit Card - identification  
 And User_612 loads the test datasetup for the test case id CRD_025
@@ -159,8 +158,8 @@ And User_612 Click on Root in Business Profile under Parameters
 And User_612 Click on Retail in Business Profile under Parameters
 And User_612 click on Cards section in Retail under parameters
 And User_612 click on the Intergration Submenu under parameters
-#And User_612 click the Alertmapping underIntergration Settings
-#And User_612 Search the Block credit card field in screen under AlertMapping
+And User_612 click the Alertmapping underIntergration Settings
+And User_612 Search the Block credit card field in screen under AlertMapping
 And User_612 click the ReportsMapping1 under Intergration Settings
 And User_612 click the ReportsMappingC under Intergration Settings
 And User_612 click on LimitManagement under parameters

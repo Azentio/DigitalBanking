@@ -77,12 +77,12 @@ public class DebitCardRequestSteps_612 {
 	}
 
 @Given("user_612 click on Debit Card Request cards Menu")
-public void user_click_on_debit_card_request_cards_menu() {
+public void user_click_on_debit_card_request_cards_menu() throws Throwable {
 	us.clickOnElementNoWait(driver, 
 			DataReader.locatorsMap.get("Cards").get("Debit_Card_Request"), 
 			20,false);
 		//us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Debit_Card_Request"));
-  
+   Thread.sleep(2000);
 }
 
 @Given("user_612 validate the Debit Card Request dropdown")
@@ -206,11 +206,12 @@ public void user_verify_the_record_save_in_to_do_list_for_draft() {
 }
 @Given("user_612 click the next button under Debit card request")
 public void user_click_the_next_button_under_debit_card_request( ) {
-	try {
+	
+	//try {
 		us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("Debit_Card_Request_next"), 20, false);
-	} catch (Exception e) {
+	//} catch (Exception e) {
 		
-	}
+	//}
 	
   
 }

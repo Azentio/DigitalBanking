@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -48,7 +49,8 @@ public class CreditCardSettlementSteps_612 {
 	
 
 @Given("user_612 click credit card settlement submenu  under CardsMenu")
-public void user_612_click_credit_card_settlement_submenu_under_cards_menu() {
+public void user_612_click_credit_card_settlement_submenu_under_cards_menu() throws Throwable {
+	Thread.sleep(2000);
 	try {
 		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CreditCardSettlement_Menu"),20, false);
 		
@@ -118,34 +120,30 @@ public void user_612_validate_next_button_display_or_not() {
 }
 
 @Given("user_612 click dropdown btn in credit card under Mycredit card settlement")
-public void user_612_click_dropdown_btn_in_credit_card_under_mycredit_card_settlement() {
+public void user_612_click_dropdown_btn_in_credit_card_under_mycredit_card_settlement() throws Throwable {
 	us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("MyCreditCardSettlelment_dropdown"), 20, false);
-    
+    Thread.sleep(2000);
     }
 
 @Given("user_612 select credit card under dropdown")
-public void user_612_select_credit_card_under_dropdown() {
+public void user_612_select_credit_card_under_dropdown() throws Throwable {
     us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("MYCreditCardSettlelment_selectcreditcard"), 20, false);
+   
     
 }
 
 @Given("user_612 click dropdown btn in settlment Account")
-public void user_612_click_dropdown_btn_in_settlment_account() {
+public void user_612_click_dropdown_btn_in_settlment_account() throws Throwable {
+	
     us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("MyCreditCardSettlelment_dropdown_Account"), 20, false);
-    
+   // Thread.sleep(2000);
 }
 
 @Given("user_612 select setlement Account  under dropdown")
 public void user_612_select_setlement_account_under_dropdown() {
-	
-	try {
+
 		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("SettlementAccount_Selection"), 20, false);
-		
-	} catch (Exception e) {
-		
-	}
-   // us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("SettlementAccount_Selection"), 20, false);
-}
+		}
 
 @Given("user_612 click currency under Mycredit card settlement")
 public void user_612_click_dropdown_button_in_currency_under_mycredit_card_settlement() {
@@ -154,7 +152,7 @@ public void user_612_click_dropdown_button_in_currency_under_mycredit_card_settl
 }
 @Given("user_612 search currency type under serach input")
 public void user_612_search_currency_type_under_serach_input( ) {
-	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("CardName") , false);
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("CurrencyType") , false);
 }
 @Given("user_612 select the currency type under search")
 public void user_612_select_the_currency_type_under_search( ) {
@@ -314,12 +312,12 @@ public void user_612_verify_not_allowed_to_navigate_screen3( ) {
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CCS_ValueMissing_validate"));   
 }
 
-@Given("user_612 click the cancel button1")
-public void user_612_click_the_cancel_button1() throws Throwable {
-	Thread.sleep(2000);
-	us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get(""),20,false);
-  
-}
+//@Given("user_612 click the cancel button1")
+//public void user_612_click_the_cancel_button1() throws Throwable {
+//	Thread.sleep(2000);
+//	us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get(""),20,false);
+//  
+//}
 
 
 
@@ -327,9 +325,16 @@ public void user_612_click_the_cancel_button1() throws Throwable {
 //Retail user
 @And("User_612 loads the test datasetup for the test case id AT_CCS_009")
 public void user_612_loads_the_test_datasetup_for_the_test_case_id_AT_CCS_009() {
-    executionTestData = DataReader.executionTestData.get("AT_CCS_009");
+    executionTestData = DataReader.executionTestData.get("AT_DCD_053");
     testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 }
+@And("User_612 loads the test datasetup for the test case id AT_CCS_011")
+public void user_612_loads_the_test_datasetup_for_the_test_case_id_AT_CCS_011() {
+    executionTestData = DataReader.executionTestData.get("AT_CCS_011");
+    testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+
+
 @Given("user_612 enters the Retailusername in the login page for omni_web_portal1")
 public void user_612_enters_the_retailusername_in_the_login_page_for_omni_web_portal1() {
    
@@ -349,6 +354,41 @@ public void user_612_enters_the_retailpassword_in_the_login_page_for_omni_web_po
 			false);
    
 }
+@Given("user_612 select credit card under dropdown in Retail")
+public void user_612_select_credit_card_under_dropdown_retail() {
+//	for (int i = 0; i <200; i++) {
+//		try {
+			 us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CCS_Selectcreditcard_primary"), 20, false);
+//			    
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
+   
+}
+@Given("user_612 select setlement Account  under dropdown in Retail")
+public void user_612_select_setlement_account_under_dropdown_in_retail() {
+
+		us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("CSS_SettlementAcct_Retail"),false);
+//		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ValueMissing_forValidation"));
+//		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CSS_SettlementAcct_Retail"), 20, false);
+		
+		}
+
+
+@Given("user_612 verify the record save in TO DO List for draftData")
+public void user_612_verify_the_record_save_in_to_do_list_for_draftdata() {
+	
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CCS_TODO_verify_retail"));
+}
+
+
+
+
+
+
+
+
 //debit card details
 @And("User_612 loads the test datasetup for the test case id AT_DCD_027")
 public void user_612_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_027() {

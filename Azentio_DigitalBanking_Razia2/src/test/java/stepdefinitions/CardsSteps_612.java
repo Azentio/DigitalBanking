@@ -205,7 +205,7 @@ public class CardsSteps_612 {
   
     @Given("User_612 check the block credit card field in Authentication Matrix Screen")
     public void user_check_the_block_credit_card_field_in_authentication_matrix_screen( ) throws InterruptedException {
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     	WebElement Block_credit = driver.findElement(By.xpath("//table[@id='authenticationMatrixServiceGrid_Id_OADM10140']//td[text()='Block Credit Card']"));
     	  us.scrollDownTillElement(driver, Block_credit);
         Assert.assertEquals(Block_credit.isDisplayed(),true);

@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
@@ -44,12 +46,7 @@ WebDriver driver = BaseClass.driver;
     	executionTestData = DataReader.executionTestData.get("ALR_015");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
     }
-    @And("^user_612 loads the test datasetup for the test case id ALR_016$")
-    public void User_612LoadsTheTestDatasetupForTheTestCaseIdALR_016() {
-    	executionTestData = DataReader.executionTestData.get("ALR_016");
-    	
-		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
-    }
+   
     
 	@And("^user_612 selects the from account from the dropdown in transfers within own accountsA$")
 	public void user_612SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccountsA() throws Throwable {
@@ -58,7 +55,7 @@ WebDriver driver = BaseClass.driver;
 				"TESTDATAVARIABLE", 
 				testData.get("FromAccount1"));
 		us.clickOnElement(driver, xpath, false);
-		
+		Thread.sleep(2000);
 	}
 	
 	
@@ -120,6 +117,12 @@ WebDriver driver = BaseClass.driver;
 
 @Given("user_612 Get the Time value of the Activity Log Report and verify the value")
 public void user_612_get_the_time_value_of_the_activity_log_report_and_verify_the_value() {
+	
+//	DateTimeFormatter dtFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//    LocalDate date =LocalDate.now();
+//    String format = date.format(dtFormatter);
+//       ///csmtransaction_612.CSMDateInUserRunningDate_612().sendKeys(format);
+   
    String verifyALR=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Verify_ActivityLog"),true);
    for (int i = 0; i <= 500; i++) {
 		try {
@@ -131,6 +134,9 @@ public void user_612_get_the_time_value_of_the_activity_log_report_and_verify_th
 			}
 		}
 	}
+	
+	
+	
 }
 	
 	

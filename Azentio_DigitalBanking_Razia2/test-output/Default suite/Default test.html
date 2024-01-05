@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 02 18:25:38 IST 2024</td>
+<td>Started on:</td><td>Fri Jan 05 18:01:20 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>158 seconds (158166 ms)</td>
+<tr><td>Total time:</td><td>299 seconds (299912 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,9 +76,56 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that Retail user Navigate to Debit Card Request Screens (screen1)", "Optional[Checking the functionalities of DebitCardRequest (11 test only)]"</td>
-<td></td>
-<td>138</td>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify That user can Navigate to Add on Card screen1", "Optional[Check the funcnality of  DebitCardDetails  sprint 13,14]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Submit &apos;] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
+	at stepdefinitions.CreditCardSettlementSteps_612.user_612_click_on_sumbit_button_save_the_data(CreditCardSettlementSteps_612.java:247)
+	at ✽.User_612 Click on sumbit button Save the Data(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardDetails_612.feature:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1775829753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1775829753'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; Submit &apos;] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
+	at stepdefinitions.CreditCardSettlementSteps_612.user_612_click_on_sumbit_button_save_the_data(CreditCardSettlementSteps_612.java:247)
+	at ✽.User_612 Click on sumbit button Save the Data(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardDetails_612.feature:29)
+</pre></div></td>
+<td>139</td>
+<td>Runner.TestApplication@5d908d47</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the functionality of screen3 and Verify That user can able to do prepaid card Request", "Optional[Check the funcnality of  DebitCardDetails  sprint 13,14]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-checkbox[@role=&apos;checkbox&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
+	at stepdefinitions.CreditCardSettlementSteps_612.user_612ClickOnTheIAgreeToTermsAndConditionsCheckboxdcd(CreditCardSettlementSteps_612.java:594)
+	at ✽.user_612 click on the I agree to terms and conditions checkbox DCD(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardDetails_612.feature:265)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1404608759", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1404608759'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-checkbox[@role=&apos;checkbox&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:154)
+	at utilities.UserUtility_614.clickOnElementNoWait(UserUtility_614.java:215)
+	at stepdefinitions.CreditCardSettlementSteps_612.user_612ClickOnTheIAgreeToTermsAndConditionsCheckboxdcd(CreditCardSettlementSteps_612.java:594)
+	at ✽.user_612 click on the I agree to terms and conditions checkbox DCD(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/DebitCardDetails_612.feature:265)
+</pre></div></td>
+<td>131</td>
 <td>Runner.TestApplication@5d908d47</td></tr>
 </table><p>
 </body>
