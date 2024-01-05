@@ -175,12 +175,11 @@ public class DebitCardDetails {
 		// us.waitHelper(driver,DataReader.locatorsMap.get("Cards").get("CurrencyName_DebitCardDetails"));
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CurrencyName_DebitCardDetails"));
 	}
-
+		
 	@Given("User_626 Verify the Card Holder Name is showing in Debit Card Segment")
 	public void user_verify_the_card_holder_name_is_showing_in_debit_card_segment() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CardHolderName_DebitDetails"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR_Retail"));
 	}
-
 	@Given("User_626 Verify the Status of the Card is showing in Debit Card Segment")
 	public void user_verify_the_status_of_the_card_is_showing_in_debit_card_segment() {
 		// String xpath= "//ion-label[contains(text(),+'
@@ -202,7 +201,7 @@ public class DebitCardDetails {
 	public void user_click_on_the_edit_button_in_debit_card_details() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("EditIconClick_DebitDetails"), true);
 	}
-
+	
 	@Given("User_626 Verify the Card change name button is visible")
 	public void user_verify_the_card_change_name_button_is_visible() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ChangeCardNameVisible_debitDetails"));
@@ -380,6 +379,11 @@ public class DebitCardDetails {
 	public void user_verify_the_request_successfully_popup_in_pinchange_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_L").get("SuccessPopUP"));
 	}
+	@Given("User_626 Verify the Draft Saved Successfully After click Submit")
+	public void User_626_Verify_the_Draft_Saved_Successfully_After_click_Submit() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_L").get("DraftSuccessPopUP"));
+	}
+	
 	@Given("User_626 Click on the Deactivate Below the card Details")
 	public void User_626_Click_on_the_Deactivate_Below_the_card_Details() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DeactivateVisi_DebitDetails"),false);
@@ -694,7 +698,7 @@ public class DebitCardDetails {
 
 	@Given("User_626 Verify the Cancel button in draft Saving Screen")
 	public void user_verify_the_cancel_button_in_draft_saving_screen() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DraftCancel_debitDetails"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel_PCR"));
 	}
 
 	@Given("User_626 Verify the Submit button in draft Saving Screen")
@@ -1148,17 +1152,98 @@ public void user_verify_the_cancel_button_in_draft_saving_screenWO_index() {
 public void User_626_Verify_the_value_missing_for_user_does_not_allow_to_navigate_screen() {
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ValueMissing_forValidation"));
 }
-
-
-
-
-
-
-
-
-
-
-
+@And("User_626 loads the test datasetup for the test case id AT_PCR_006")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_006() {
+	executionTestData = DataReader.executionTestData.get("AT_PCR_006");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_PCR_007")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_007() {
+	executionTestData = DataReader.executionTestData.get("AT_PCR_006");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_PCR_008")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_008() {
+	executionTestData = DataReader.executionTestData.get("AT_PCR_008");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_PCR_009")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_PCR_009() {
+	executionTestData = DataReader.executionTestData.get("AT_PCR_009");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_053")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_053() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_053");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@Given("User_626 Select reference card in Prepaid Card Request Screen for retailUser")
+public void user_select_reference_card_in_prepaid_card_request_screen_for_retailUser() {
+	us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR_Retail"),false);
+//	for (int i = 0; i <30; i++) {
+//        try {
+//        	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR_Retail"),false);
+//                   break;
+//              } catch (Exception e) {
+//            if (i==30) {
+//                Assert.fail(e.getMessage());
+//            }
+//        }
+//    }
+}	
+@Given("User_626 Verify the reference Card in the summary Screen")
+public void user_verify_the_reference_card_in_the_summary_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("PCR_Screen3_ReferenceCard"));
+   
+}
+@Given("User_626 Click on the submit in 3st Screen of prepaid card request")
+public void User_626_Click_on_the_submit_in_3st_Screen_of_prepaid_card_request() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DraftSubmit_debitDetails"),false);
+}
+@Given("User_626 Verify the Currency Name is showing in Debit Card Segment of Retail User")
+public void user_verify_the_currency_name_is_showing_in_debit_card_segmentof_Retail_User() {
+	// us.waitHelper(driver,DataReader.locatorsMap.get("Cards").get("CurrencyName_DebitCardDetails"));
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Oguiya_CurrencyName"));
+}
+@Given("User_626 Verify the Card Holder Name is showing in Debit Card Segment of Retail User")
+public void user_verify_the_card_holder_name_is_showing_in_debit_card_segmentof_Retail_User() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CardHolderName_DebitDetails_retail"));
+}
+@Given("User_626 Verify the Status of the Card is showing in Debit Card Segment of Retail User")
+public void user_verify_the_status_of_the_card_is_showing_in_debit_card_segmentof_Retail_User() {
+	// String xpath= "//ion-label[contains(text(),+'
+	// testData.get("FromAccount1")+"'))]/ancestor::mat-card-header//mat-card-subtitle//ion-label[contains(text(),'Active')]";
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("StatusOfCard_retail"));
+}
+@Given("User_626 Verify the Edit Icon is showing in Debit Card Segment of Retail User")
+public void user_verify_the_edit_icon_is_showing_in_debit_card_segment_of_Retail_User() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("EditIcon_debitDetails_Retail"));
+}
+@Given("User_626 Click on the edit button in Debit card details of Retail User")
+public void user_click_on_the_edit_button_in_debit_card_detailsof_Retail_User() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("EditIconClick_DebitDetails_Retail"), false);
+}
+@Given("User_626 Verify the Card change name button is visible of Retail User")
+public void user_verify_the_card_change_name_button_is_visible_of_Retail_User() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ChangeCardNameVisible_DCD_RT"));
+}
+@Given("User_626 Click on the Show More button below the card details of Retail User")
+public void user_click_on_the_show_more_button_below_the_card_details_of_Retail_User() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Click_Show_More_retail"), false);
+}
+@Given("User_626 Verify the Expiry Date is showing in Debit Card Segment of Retail User")
+public void user_verify_the_expiry_date_is_showing_in_debit_card_segmentof_Retail_User() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ExpiryDate_retail"));
+}
+@Given("User_626 Verify the Applicant Address is showing in Debit Card Segment of Retail User")
+public void user_verify_the_applicant_address_is_showing_in_debit_card_segmentof_Retail_User() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Address_Retail"));
+}
 
 
 

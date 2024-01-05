@@ -405,15 +405,17 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	
 	
 	
-	
+
 	
 	
 	@Given("^user_5679 navigates to the omni_corporate_web_portal$")
 	public void UserNavigatesToTheOmni_Corporate_Web_Portal() {
 		driver.get(DataReader.configFileMap.get("omni_Corporate_web_portal"));
-
 	}
-	
+	@Given("^user_5679 navigates to the omni_corporate_portal_retail$")
+	public void UserNavigatesToTheOmni_corporate_portal_retail() {
+		driver.get(DataReader.configFileMap.get("omni_web_portal"));
+	}
 	@And("^user_5679 enters the maker username1 in the login page for omni_corporate_web_portal$")
 	public void User5679EntersTheMakerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		
