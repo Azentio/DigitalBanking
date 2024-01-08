@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import dataProvider.DataReader;
 import helper.JavascriptHelper;
@@ -19,6 +20,7 @@ public class DebitCardDetails {
 	JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);	
 	String executionTestData;
 	HashMap<String, String> testData;
+	Actions action;
 
 	@Given("User_626 enters the CorporateUser in the login page for omni_web_portal")
 	public void user_enters_the_CorporateUser_in_the_login_page_for_omni_web_portal() {
@@ -1182,6 +1184,24 @@ public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_053() {
 	System.out.println(executionTestData);
 	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 }
+@And("User_626 loads the test datasetup for the test case id AT_DCD_054")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_054() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_054");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_058")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_058() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_058");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_060")
+public void User_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_060() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_060");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
 @Given("User_626 Select reference card in Prepaid Card Request Screen for retailUser")
 public void user_select_reference_card_in_prepaid_card_request_screen_for_retailUser() {
 	us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR_Retail"),false);
@@ -1244,7 +1264,20 @@ public void user_verify_the_expiry_date_is_showing_in_debit_card_segmentof_Retai
 public void user_verify_the_applicant_address_is_showing_in_debit_card_segmentof_Retail_User() {
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Address_Retail"));
 }
+@Given("User_626 Verify the Screen2 back into Screen1 in retail Limit Update")
+public void User_626_Verify_the_Screen2_back_into_Screen1_in_retail_Limit_Update() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("POS_Currency_DebitDetails"));
+	}
+@Given("User_626 Verify the Screen3 back into Screen2 in retail Limit Update")
+public void User_626_Verify_the_Screen3_back_into_Screen2_in_retail_Limit_Update() {
+	try {
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 30, false);
+		
+	} catch (Exception e) {
 
+	}
+	}
 
 
 

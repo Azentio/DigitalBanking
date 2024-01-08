@@ -1,4 +1,4 @@
-Feature: Title of your feature
+Feature: Prepaid Card request Screen all functionality Test Cases
 @AT_PCR_001
 Scenario: Test the Functionality of prepaid card request 1st Screen
 And User_626 loads the test datasetup for the test case id AT_PCR_001
