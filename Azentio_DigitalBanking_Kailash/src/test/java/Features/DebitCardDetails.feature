@@ -1,4 +1,55 @@
-Feature: To Test the Functionality of Debit Card details (11,14)
+Feature: To Test the Functionality of Cards (11,14)
+@CRD_021
+Scenario: block card -- maker - checker testing - disabled
+And user_5679 loads the test datasetup for the test case id CRD_021
+Given user_5679 navigates to the omni_corporate_web_portal
+And user_5679 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_5679 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And user_5679 click on the Show More button in Debit cards page 
+And user_5679 click on the block for block the selected Debit Card
+And user_5679 click on the Block card reason in Block Card page
+And user_5679 Select the Block card reason in Block Card page
+And user_5679 click on the Next button in Block Card page
+And user_5679 click i agree on terms and conditions
+And user_5679 click on the Next button in Block Card page
+And user_5679 click submit button under Block Card page
+And user_5679 click ok on User privileges in Afer Sumbit
+And user_5679 click log out button
+#request is send to csm webservice and card is blocked successfully 
+
+@CRD_022
+Scenario: activate card -- maker - checker testing - enabled and approve
+And user_5679 loads the test datasetup for the test case id CRD_022
+Given user_5679 navigates to the omni_corporate_web_portal
+And user_5679 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_5679 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And user_5679 click on the Show More button in Debit cards page 
+# NO ACTIVATE BUTTON EXECUTION BLOCKED BECAUSE OF BUG
+
+@CRD_023
+Scenario: activate card -- maker - checker testing - enabled and reject
+And user_5679 loads the test datasetup for the test case id CRD_023
+Given user_5679 navigates to the omni_corporate_web_portal
+And user_5679 enters the maker username1 in the login page for omni_corporate_web_portal
+And user_5679 enters the maker password1 in the login page for omni_corporate_web_portal
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_5679 click on the My Cards under Cards in the homepage
+And user_5679 click on the Show More button in Debit cards page
+#NO ACTIVATE BUTTON EXECUTION BLOCKED BECAUSE OF BUG
+
 @AT_DCD_001
 Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu
 And User_626 loads the test datasetup for the test case id AT_DCD_001
@@ -593,7 +644,8 @@ And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
-And User_626 Click on the saved Draft data for verification  
+And User_626 Click on the saved Draft data for verification 
+And user_5679 click log out button 
 @AT_PCR_002
 Scenario: Test the Functionality of prepaid card request 2st Screen(terms and conditions)
 And User_626 loads the test datasetup for the test case id AT_PCR_002
@@ -621,7 +673,8 @@ And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
 #And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
-And User_626 Click on the saved Draft data for verification 
+And User_626 Click on the saved Draft data for verification
+And user_5679 click log out button 
 @AT_PCR_002_01 
 Scenario: Test the Functionality of prepaid card request 2st Screen(Back button Functionality)
 And User_626 loads the test datasetup for the test case id AT_PCR_002
@@ -669,6 +722,7 @@ And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification 
+And user_5679 click log out button
 @AT_PCR_004
 Scenario: Test the Functionality of prepaid card request 3st Screen(Back button Functionality)
 And User_626 loads the test datasetup for the test case id AT_PCR_004
@@ -692,6 +746,7 @@ And User_626 Click on the I agree Check Box in Screen2
 And User_626 Click on the Previous button in Debit Card details Screen
 And User_626 Click the Back Arrow button in the 1st Screen of prepaid card request
 And User_626 Verify the progress screen was closed in prepaid card request
+And user_5679 click log out button
 @AT_PCR_004_01
 Scenario: Verify that user able to Submit Prepaid card request
 And User_626 loads the test datasetup for the test case id AT_PCR_004
@@ -711,6 +766,7 @@ And User_626 Click on the I agree Check Box in Screen2
 And User_626 Click on the Next button in limit Update Screen
 And User_626 Click on the Submit button in debit Card PinChange Screen
 And User_626 Verify the Request Successfully Popup in Pinchange Screen
+And user_5679 click log out button
 @AT_PCR_005
 Scenario: Verify that user able to Submit Prepaid card request
 And User_626 loads the test datasetup for the test case id AT_PCR_005
@@ -731,6 +787,7 @@ And User_626 Click on the Next button in limit Update Screen
 And User_626 Verify the value missing for user does not allow to navigate screen
 And User_626 Click on the I agree Check Box in Screen2 
 And User_626 Click on the Next button in limit Update Screen
+And user_5679 click log out button
 
 @AT_PCR_006
 Scenario: Test the Functionality of prepaid card request 1st Screen in retail Link

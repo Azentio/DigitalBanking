@@ -26,7 +26,7 @@ public class AdminScreen_Steps_5679 {
 	
 	
 	@Given("^user_5679navigates to the OmniScreen Admin Url and login with the valid credentials_RIDA$")
-	public void UserNavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials_Rida() {
+	public void User_5679NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials_Rida() {
 		
 		driver.get(DataReader.configFileMap.get("omni_adminScreen"));
 		
@@ -60,25 +60,25 @@ public class AdminScreen_Steps_5679 {
 	}
 	
 	@And("^user_5679loads the test datasetup for the test case id AT_003$")
-	public void UserLoadsTheTestDatasetupForTheTestCaseIdAt_003() {
+	public void User_5679LoadsTheTestDatasetupForTheTestCaseIdAt_003() {
 		executionTestData = DataReader.executionTestData.get("AT_003");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	@And("user_5679 loads the test datasetup for the test case id AT_020")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_020_01() {
+	public void user_5679_loads_the_test_datasetup_for_the_test_case_id_at_020_01() {
 		executionTestData = DataReader.executionTestData.get("AT_020");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	@And("^user_5679 click on the TODO icon in homescreen on omni web portal$")
-	public void user_5679ClickOnTheTodoIconInHomescreenOnOmniWebPortal() {
+	public void user_5679_ClickOnTheTodoIconInHomescreenOnOmniWebPortal() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
 				false);
 	}
 	
 	@And("^user_5679 click on the 1st pending item in the list$")
-	public void user_5679ClickOnThe1StPendingItemInTheList() throws InterruptedException {
+	public void user_5679_ClickOnThe1StPendingItemInTheList() throws InterruptedException {
 		
 		Thread.sleep(30000);
 		
@@ -94,20 +94,20 @@ public class AdminScreen_Steps_5679 {
 				true);
 	}
 	@And("user_5679 loads the test datasetup for the test case id AT_022")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_022() {
+	public void user_5679loads_the_test_datasetup_for_the_test_case_id_at_022() {
 		executionTestData = DataReader.executionTestData.get("AT_022_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 	@And("user_5679 loads the test datasetup for the test case id AT_042")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_042() {
+	public void user_5679loads_the_test_datasetup_for_the_test_case_id_at_042() {
 		executionTestData = DataReader.executionTestData.get("AT_042_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 
 @Given("user_5679 loads the test datasetup for the test case id AT_045")
-public void user_loads_the_test_datasetup_for_the_test_case_id_at_045() {
+public void user_5679loads_the_test_datasetup_for_the_test_case_id_at_045() {
 	executionTestData = DataReader.executionTestData.get("AT_045_01");
 	System.out.println(executionTestData);
 	testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
@@ -266,7 +266,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	
 	
 	@And("^user_5679click on the parameters features in the OmniScreen admin page$")
-	public void UserClickOnTheParametersFeaturesInTheOmniscreenAdminPage() {
+	public void User_5679_ClickOnTheParametersFeaturesInTheOmniscreenAdminPage() {
 		
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("ParametersLabel_AdminScreen"), false);
@@ -274,26 +274,26 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679click on the user_5679management label in the admin screen$")
-	public void UserClickOnTheUserManagementLabelInTheAdminScreen() {
+	public void User_5679_ClickOnTheUserManagementLabelInTheAdminScreen() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("UserManagement_ParametersLabel_AdminScreen"), false);
 	}
 	
 	@And("^user_5679click on the cutomer approval matrix feature under the parameters$")
-	public void UserClickOnTheCutomerApprovalMatrixFeatureUnderTheParameters() {
+	public void User_5679_ClickOnTheCutomerApprovalMatrixFeatureUnderTheParameters() {
 		
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("Customer_ApprovalMatrix_UserManagement_ParametersLabel"), false);
 
 	}
 	@And("^user_5679click on the search icon in the customer approval matrix$")
-	public void UserClickOnTheSearchIconInTheCustomerApprovalMatrix() {
+	public void User_5679_ClickOnTheSearchIconInTheCustomerApprovalMatrix() {
 		us.clickOnElement(
 				driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("searchIcon_Customer_ApprovalMatrix_UserManagement"), false);
 	}
 	@And("^user_5679enters the approval matrix code in the code field and click on the enter button$")
-	public void UserEntersTheApprovalMatrixCodeInTheCodeFieldAndClickOnTheEnterButton() {
+	public void User_5679_EntersTheApprovalMatrixCodeInTheCodeFieldAndClickOnTheEnterButton() {
 		us.enterDataAndEnter(
 				driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("approvalMatrixCodeField_Customer_ApprovalMatrix_UserManagement"), 
@@ -301,7 +301,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				false);
 	}
 	@And("^user_5679selects the inputed code from the search result and double click on it$")
-	public void UserSelectsTheInputedCodeFromTheSearchResultAndDoubleClickOnIt() {
+	public void User_5679_SelectsTheInputedCodeFromTheSearchResultAndDoubleClickOnIt() {
 		String xpath = us.textReplacer(
 				DataReader.locatorsMap.get("Omni_Admin").get("selectTheApprovalMatrixCode_approvalMatrixCodeField_Customer_ApprovalMatrix"),
 				"TESTDATAVARIABLE",
@@ -311,7 +311,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679selects the already defined limit types and delete if anything is already defined$")
-	public void UserSelectsTheAlreadyDefinedLimitTypesAndDeleteIfAnythingIsAlreadyDefined() {
+	public void User_5679_SelectsTheAlreadyDefinedLimitTypesAndDeleteIfAnythingIsAlreadyDefined() {
 		
 		us.clickOnElement(driver,
 				DataReader.locatorsMap.get("Omni_Admin").get("limitfield_Customer_ApprovalMatrix_UserManagement"),
@@ -326,14 +326,14 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				);
 	}
 	@And("^user_5679click on the add button and add the first limit type in the customer approval matrix$")
-	public void UserClickOnTheAddButtonAndAddTheFirstLimitTypeInTheCustomerApprovalMatrix() {
+	public void User_5679_ClickOnTheAddButtonAndAddTheFirstLimitTypeInTheCustomerApprovalMatrix() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("addBtn_Customer_ApprovalMatrix_UserManagement_ParametersLabel"), 
 				false);
 	}
 	
 	@And("^user_5679 click on the limit type and select the range option in customer approval matrix$")
-	public void UserClickOnTheLimitTypeAndSelectTheRangeOptionInCustomerApprovalMatrix() {
+	public void User_5679_ClickOnTheLimitTypeAndSelectTheRangeOptionInCustomerApprovalMatrix() {
 		
 		us.clickOnElement(driver,
 				DataReader.locatorsMap.get("Omni_Admin").get("limitfield_Customer_ApprovalMatrix_UserManagement"),
@@ -345,48 +345,48 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 enter the minimum amount in customer approval matrix for first row$")
-	public void UserEnterTheMinimumAmountInCustomerApprovalMatrixForFirstRow() {
+	public void User_5679_EnterTheMinimumAmountInCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("minimumfield_Customer_ApprovalMatrix_UserManagement"), 
 				testData.get("MinimumAmount1"), false);
 	}
 	@And("^user_5679enter the maximum amount in customer approval matrix for first row$")
-	public void UserEnterTheMaximumAmountInCustomerApprovalMatrixForFirstRow() {
+	public void User_5679_EnterTheMaximumAmountInCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("maximumfield_Customer_ApprovalMatrix_UserManagement"), 
 				testData.get("MaximumAmount1"), false);
 	}
 	@And("^user_5679 enter the group id in customer approval matrix for first row$")
-	public void UserEnterTheGroupIdInCustomerApprovalMatrixForFirstRow() throws InterruptedException {
+	public void User_5679_EnterTheGroupIdInCustomerApprovalMatrixForFirstRow() throws InterruptedException {
 		Thread.sleep(5000);
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("groupCode_Customer_ApprovalMatrix_UserManagement"), 
 				testData.get("GroupCode1"), false);
 	}
 	@And("^user_5679 enter the number of user_5679in the customer approval matrix for first row$")
-	public void UserEnterTheNumberOfUserInTheCustomerApprovalMatrixForFirstRow() {
+	public void User_5679_EnterTheNumberOfUserInTheCustomerApprovalMatrixForFirstRow() {
 		us.enterData(driver, DataReader.locatorsMap.get("Omni_Admin").get("noOfUsers_Customer_ApprovalMatrix_UserManagement"), 
 				testData.get("noOfUsers1"), false);
 	}
 	
 	@And("^user_5679 click on the save button in the customer approval matrix$")
-	public void UserClickOnTheSaveButtonInTheCustomerApprovalMatrix() {
+	public void User_5679_ClickOnTheSaveButtonInTheCustomerApprovalMatrix() {
 		us.clickOnElement(driver,
 				DataReader.locatorsMap.get("Omni_Admin").get("saveBtn_Customer_ApprovalMatrix_UserManagement"),
 				false);		
 	}	
 	
 	@And("^user_5679 click on the ok button for the warning popup in the customer approval matrix$")
-	public void UserClickOnTheOkButtonForTheWarningPopupInTheCustomerApprovalMatrix() {
+	public void User_5679_ClickOnTheOkButtonForTheWarningPopupInTheCustomerApprovalMatrix() {
 		us.clickOnElement(driver,
 				DataReader.locatorsMap.get("Omni_Admin").get("warningOkBtn_Customer_ApprovalMatrix_UserManagement"),
 				false);
 	}
 	@And("^user_5679 click on the ok button for the Success popup in the customer approval matrix$")
-	public void UserClickOnTheOkButtonForTheSuccessPopupInTheCustomerApprovalMatrix() {
+	public void User_5679_ClickOnTheOkButtonForTheSuccessPopupInTheCustomerApprovalMatrix() {
 		us.clickOnElement(driver,
 				DataReader.locatorsMap.get("Omni_Admin").get("successPopupOkBtn_Customer_ApprovalMatrix_UserManagement"),
 				false);
 	}
 	@And("^user_5679 clicks on the approve button in the customer approval matrix$")
-	public void UserClicksOnTheApproveButtonInTheCustomerApprovalMatrix() {
+	public void User_5679_ClicksOnTheApproveButtonInTheCustomerApprovalMatrix() {
 		us.clickOnElement(driver,
 				DataReader.locatorsMap.get("Omni_Admin").get("approveBtn_Customer_ApprovalMatrix_UserManagement"),
 				false);
@@ -409,15 +409,15 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	
 	
 	@Given("^user_5679 navigates to the omni_corporate_web_portal$")
-	public void UserNavigatesToTheOmni_Corporate_Web_Portal() {
+	public void User_5679_NavigatesToTheOmni_Corporate_Web_Portal() {
 		driver.get(DataReader.configFileMap.get("omni_Corporate_web_portal"));
 	}
 	@Given("^user_5679 navigates to the omni_corporate_portal_retail$")
-	public void UserNavigatesToTheOmni_corporate_portal_retail() {
+	public void User_5679_NavigatesToTheOmni_corporate_portal_retail() {
 		driver.get(DataReader.configFileMap.get("omni_web_portal"));
 	}
 	@And("^user_5679 enters the maker username1 in the login page for omni_corporate_web_portal$")
-	public void User5679EntersTheMakerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_EntersTheMakerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		
 		for (int i = 0; i <2000; i++) {
 			try {
@@ -438,7 +438,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	
 
 	@And("^user_5679 enters the maker password1 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
+	public void User_5679_EntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
 		try {
 			us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"), testData.get("Password1"), true);
 			
@@ -450,7 +450,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		
 	}
 	@And("^user_5679 enters the maker username2 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheMakerUsername2InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_EntersTheMakerUsername2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		
 		for (int i = 0; i <2000; i++) {
 			try {
@@ -469,7 +469,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				true);
 	}
 	@And("^user_5679 enters the maker password2 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheMakerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
+	public void User_5679_EntersTheMakerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
 		try {
 			us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"), testData.get("Password2"), true);
 			
@@ -481,7 +481,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		
 	}
 	@And("^user_5679 click on the loggin button in the login page for omni_corporate_web_portal$")
-	public void UserClickOnTheLogginButtonInTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
+	public void User_5679_ClickOnTheLogginButtonInTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
 		//Thread.sleep(5000);
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn"), 
@@ -506,7 +506,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 click on the force logout btn in the login page for omni_corporate_web_portal$")
-	public void UserClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
 		try {
 			us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen"), 
 					20,
@@ -517,47 +517,47 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 click on the ok button for the successful login page for omni_corporate_web_portal$")
-	public void UserClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
 		us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin"), true);
 	}
 	
 	@And("^user_5679 click on the AMANA payment screen in the homepage$")
-	public void UserClickOnTheAmanaPaymentScreenInTheHomepage() {
+	public void User_5679_ClickOnTheAmanaPaymentScreenInTheHomepage() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("AMANAPayments_HomeScreen"), 
 				false);
 	}
 	
 	@And("^user_5679 click on the transfers under the AMANA payment screen$")
-	public void UserClickOnTheTransfersUnderTheAmanaPaymentScreen() {
+	public void User_5679_ClickOnTheTransfersUnderTheAmanaPaymentScreen() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("Transfers_AMANAPayments"), 
 				false);
 	}
 	
 	@And("^user_5679 click on the transfers within own accounts under transfer_Amana payment screen$")
-	public void UserClickOnTheTransfersWithinOwnAccountsUnderTransfer_AmanaPaymentScreen() {
+	public void User_5679_ClickOnTheTransfersWithinOwnAccountsUnderTransfer_AmanaPaymentScreen() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("TransferWithinOwnAccounts_Transfers_AMANAPaymnets"), 
 				false);
 	}
 	
 	@And("^user_5679 click on the From accounts from the transfers within own accounts$")
-	public void UserClickOnTheFromAccountsFromTheTransfersWithinOwnAccounts() {
+	public void User_5679_ClickOnTheFromAccountsFromTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), 
 				true);
 	}
 	
 	@And("^user_5679 click on the To accounts from the transfers within own accounts$")
-	public void UserClickOnTheToAccountsFromTheTransfersWithinOwnAccounts() {
+	public void User_5679_ClickOnTheToAccountsFromTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer"), 
 				true);
 	}
 	
 	@And("^user_5679 selects the from account from the dropdown in transfers within own accounts$")
-	public void UserSelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() {
+	public void User_5679_SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() {
 		
 		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"), 
 				"TESTDATAVARIABLE", 
@@ -567,7 +567,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 selects the To account from the dropdown in transfers within own accounts$")
-	public void UserSelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccounts() {
+	public void User_5679_SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccounts() {
 		
 		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"), 
 				"TESTDATAVARIABLE", 
@@ -576,7 +576,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		}
 	
 	@And("^user_5679 enters the transaction amount in the transfers within own accounts$")
-	public void UserEntersTheTransactionAmountInTheTransfersWithinOwnAccounts() {
+	public void User_5679_EntersTheTransactionAmountInTheTransfersWithinOwnAccounts() {
 		us.enterData(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"), 
 				testData.get("TransferAmount"), 
@@ -585,7 +585,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 enters the purpose of transaction in the transfers within own accounts$")
-	public void UserEntersThePurposeOfTransactionInTheTransfersWithinOwnAccounts() {
+	public void User_5679_EntersThePurposeOfTransactionInTheTransfersWithinOwnAccounts() {
 		us.enterData(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), 
 				testData.get("PurposeOfTrnx"), 
@@ -594,21 +594,21 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 click on next btn in the transfers within own accounts$")
-	public void UserClickOnNextBtnInTheTransfersWithinOwnAccounts() {
+	public void User_5679_ClickOnNextBtnInTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer"), 
 				true);
 	}
 	
 	@And("^user_5679 click on submit btn in the transfers within own accounts$")
-	public void UserClickOnSubmitBtnInTheTransfersWithinOwnAccounts() {
+	public void User_5679_ClickOnSubmitBtnInTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer"), 
 				true);
 	}
 	
 	@And("^user_5679 enters the checker username1 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheCheckerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_EntersTheCheckerUsername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
 				testData.get("UserName2"),
@@ -616,7 +616,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679 enters the checker password1 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheCheckerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_EntersTheCheckerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"),
 				testData.get("Password2"),
@@ -624,7 +624,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679enters the checker username2 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheCheckerUsername2InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_EntersTheCheckerUsername2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen"),
 				testData.get("UserName3"),
@@ -632,7 +632,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679enters the checker password2 in the login page for omni_corporate_web_portal$")
-	public void UserEntersTheCheckerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() {
+	public void User_5679_EntersTheCheckerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen"),
 				testData.get("Password3"),
@@ -640,13 +640,13 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679waits for the confirmation on the submission report$")
-	public void UserWaitsForTheConfirmationOnTheSubmissionReport() {
+	public void User_5679_WaitsForTheConfirmationOnTheSubmissionReport() {
 		us.elementIsVisible(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ReportConfirmationInOwnAccountTransfer"));
 	}
 	
 	@And("^user_5679gets the reference number from the submission report$")
-	public void UserGetsTheReferenceNumberFromTheSubmissionReport() {
+	public void User_5679_GetsTheReferenceNumberFromTheSubmissionReport() {
 		String refNumber = us.getText(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("RefNo_ConfirmationInOwnAccountTransfer"), 
 				false);
@@ -654,21 +654,21 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679clicks on logout btn to logout from omni web portal$")
-	public void UserClicksOnLogoutBtnToLogoutFromOmniWebPortal() {
+	public void User_5679_ClicksOnLogoutBtnToLogoutFromOmniWebPortal() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb"), 
 				true);
 	}
 	
 	@And("^user_5679click on the TODO icon in homescreen on omni web portal$")
-	public void UserClickOnTheTodoIconInHomescreenOnOmniWebPortal() {
+	public void User_5679_ClickOnTheTodoIconInHomescreenOnOmniWebPortal() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen"), 
 				true);
 	}
 	
 	@And("^user_5679click on the 1st pending item in the list$")
-	public void UserClickOnThe1StPendingItemInTheList() throws InterruptedException {
+	public void User_5679_ClickOnThe1StPendingItemInTheList() throws InterruptedException {
 		
 		Thread.sleep(30000);
 		
@@ -678,7 +678,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("^user_5679click on the approve btn for the pending transfer request from the maker$")
-	public void UserClickOnTheApproveBtnForThePendingTransferRequestFromTheMaker() {
+	public void User_5679_ClickOnTheApproveBtnForThePendingTransferRequestFromTheMaker() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ApproveBtnForPendingTransfer"), 
 				true);
@@ -688,18 +688,18 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	//021
 	
 	@And("user_5679 click scheduled transfer under AMANA payment screen")
-	public void user_072_click_scheduled_transfer_under_amana_payment_screen() {
+	public void User_5679click_scheduled_transfer_under_amana_payment_screen() {
 	    us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledTransfers_Transfers_AMANA"), false);
 	}
 	@And("user_5679 click scheduled other bank transfer under the AMANA payment screen")
-	public void user_072_click_scheduled_other_bank_transfer_under_the_amana_payment_screen_072() {
+	public void User_5679click_scheduled_other_bank_transfer_under_the_amana_payment_screen_072() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOtherBankTransfer"), 
 				false);
 	}
 
 	@And("user_5679 select from account under scheduled other bank transfer")
-	public void user_072_select_from_account_under_scheduled_other_bank_transfer() throws Exception {	
+	public void user_5679_select_from_account_under_scheduled_other_bank_transfer() throws Exception {	
 	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
 	   String xpath="//ion-label[contains(text(),' Scheduled Other Bank Transfer ')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']//ion-label[contains(text(),'"
 	   		+ testData.get("FromAccount1")+"')]";
@@ -719,7 +719,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	    
 	}
 	@And("user_5679 select beneficiary under scheduled other bank transfer")
-	public void user_072_select_beneficiary_under_scheduled_other_bank_transfer() {
+	public void user_5679_select_beneficiary_under_scheduled_other_bank_transfer() {
 	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Benefi_ScheduledOtherBankTransfer"), true);
 	   String xpath ="//ion-label[contains(text(),' Scheduled Other Bank Transfer ')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
 	   		+ "//ion-label[contains(text(),'"+testData.get("ToAccount1")+"' )]";
@@ -728,25 +728,25 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 
 	@And("user_5679 enter transfer amount under scheduled other bank transfer")
-	public void user_072_enter_transfer_amount_under_scheduled_other_bank_transfer() {
+	public void user_5679_enter_transfer_amount_under_scheduled_other_bank_transfer() {
 	   us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_ScheduledOtherBankTransfer"), testData.get("TransferAmount"), true);
 	    
 	}
 
 	@And("user_5679 enter purpose of transfer under scheduled other bank transfer")
-	public void user_072_enter_purpose_of_transfer_under_scheduled_other_bank_transfer() throws InterruptedException {
+	public void user_5679_enter_purpose_of_transfer_under_scheduled_other_bank_transfer() throws InterruptedException {
 	   us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
 	   Thread.sleep(15000);
 	    
 	}
 
 	@And("user_5679 click next button under scheduled other bank transfer")
-	public void user_072_click_next_button_under_scheduled_other_bank_transfer() {
+	public void user_5697_click_next_button_under_scheduled_other_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
 			}
 
 	@And("user_5679 select periodicity under scheduled other bank transfer")
-	public void user_072_select_periodicity_under_scheduled_other_bank_transfer() {
+	public void user_5679_select_periodicity_under_scheduled_other_bank_transfer() {
 	   us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityDropdown_ScheduledTransfer"), false);
 	   String xpath ="//ion-label[contains(text(),'"+testData.get("SelectPeriodicity")+"')]";
 	   us.clickOnElement(driver, xpath, false);
@@ -754,69 +754,69 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 
 	@And("user_5679 enter number of payments under scheduled other bank transfer")
-	public void user_072_enter_number_of_payments_under_scheduled_other_bank_transfer() {
+	public void user_5679_enter_number_of_payments_under_scheduled_other_bank_transfer() {
 	   us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_ScheduledOtherBankTransfer"),testData.get("NoOfPayments"), true);
 	    
 	}
 
 	@And("user_5679 click submit button under scheduled other bank transfer")
-	public void user_072_click_submit_button_under_scheduled_other_bank_transfer() {
+	public void user_5679_click_submit_button_under_scheduled_other_bank_transfer() {
 	   us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
 	}
 
 	@And("user_5679 click ok button for request submitted successfully or request time")
-	public void user_072_click_ok_button_for_request_submitted_successfully_or_request_time() {
+	public void user_5679_click_ok_button_for_request_submitted_successfully_or_request_time() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnRequestTimeOut"), true);
 	}
 	@Given("user_5679 click on the international transfers under the Transfers")
-	public void user_click_on_the_international_transfers_under_the_transfers() {
+	public void user_626_click_on_the_international_transfers_under_the_transfers() {
 		 us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Transfers_AMANAPaymnets"), false);
 
 	}
 
 	@And("user_5679 select from account under international transfers")
-	public void user_select_from_account_under_international_transfers() {	
+	public void user_626_select_from_account_under_international_transfers() {	
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_InternationalTransfer"), false);
 		 String xpath ="//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
 		 us.clickOnElement(driver, xpath, false);
 	}	
 
 	@And("user_5679 select beneficiary under international transfer")
-	public void user_select_beneficiary_under_international_transfer() {
+	public void user_626_select_beneficiary_under_international_transfer() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Benefi_internationalTransfer"), false);
 	
 	
 	}
 
 	@And("user_5679 enter transfer amount under international transfer")
-	public void user_enter_transfer_amount_under_international_transfer() {
+	public void user_626_enter_transfer_amount_under_international_transfer() {
 		 us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_ScheduledOtherBankTransfer"), testData.get("TransferAmount"), true);
 	}
 
 	@And("user_5679 enter purpose of transfer under international transfer")
-	public void user_enter_purpose_of_transfer_under_international_transfer() throws InterruptedException {
+	public void user_626_enter_purpose_of_transfer_under_international_transfer() throws InterruptedException {
 		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
 		  Thread.sleep(15000);
 	}
 
 	@And("user_5679 click next button under international transfer")
-	public void user_click_next_button_under_international_transfer() {
+	public void user_626_click_next_button_under_international_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
 	}
 
 	@And("user_5679 click submit button under international transfer")
-	public void user_click_submit_button_under_international_transfer() {
+	public void user_626_click_submit_button_under_international_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
 	}
 
 	@And("user_5679 click Scheduled own bank transfer Under scheduled transfer")
-	public void user_click_scheduled_own_bank_transfer_under_scheduled_transfer() {
+	public void user_626_click_scheduled_own_bank_transfer_under_scheduled_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnBankTransfer_ScheduledTransfer"), false);
 		
 	}
 
 	@And("user_5679 select from account under Scheduled own bank transfer")
-	public void user_select_from_account_under_scheduled_own_bank_transfer() {
+	public void user_626_select_from_account_under_scheduled_own_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
 		String xpath ="//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
 		 //us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
@@ -826,7 +826,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 
 	@And("user_5679 select beneficiary under Scheduled own bank transfer")
-	public void user_select_beneficiary_under_scheduled_own_bank_transfer() {
+	public void user_626_select_beneficiary_under_scheduled_own_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer"), true);
 		String xpath ="//ion-label[contains(text(),'"+testData.get("ToAccount1")+"')]";
 		 us.scrollDownTillElement(driver, driver.findElement(By.xpath(xpath)));
@@ -834,34 +834,34 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 
 	@And("user_5679 enter transfer amount under Scheduled own bank transfer")
-	public void user_enter_transfer_amount_under_scheduled_own_bank_transfer() {
+	public void user_626_enter_transfer_amount_under_scheduled_own_bank_transfer() {
 		 us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Amount_ScheduledOtherBankTransfer"), testData.get("TransferAmount"), true);
 	}
 
 	@And("user_5679 enter purpose of transfer under Scheduled own bank transfer")
-	public void user_enter_purpose_of_transfer_under_scheduled_own_bank_transfer() throws InterruptedException {
+	public void user_626_enter_purpose_of_transfer_under_scheduled_own_bank_transfer() throws InterruptedException {
 		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), testData.get("PurposeOfTrnx"), false);
 		  Thread.sleep(15000);
 	}
 
 	@And("user_5679 click next button under Scheduled own bank transfer")
-	public void user_click_next_button_under_scheduled_own_bank_transfer() {
+	public void user_626_click_next_button_under_scheduled_own_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PurposeNXT_ScheduledOtherBankTransfer"), false);
 	}
 
 	@And("user_5679 click submit button under Scheduled own bank transfer")
-	public void user_click_submit_button_under_scheduled_own_bank_transfer() {
+	public void user_626_click_submit_button_under_scheduled_own_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("NoOfPayments_SUB_ScheduledOtherBankTransfer"), true);
 	}
 	
 	@Given("user_5679 loads the test datasetup for the test case id AT_075")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_075() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_075() {
 		executionTestData = DataReader.executionTestData.get("AT_075_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	    }
 	@And("^user_5679 enters the transaction amount in the transfers screen$")
-	public void user_5679EntersTheTransactionAmountInTheTransfersScreen() {
+	public void user_626_5679EntersTheTransactionAmountInTheTransfersScreen() {
 		us.enterDataAndTab(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"),
 				testData.get("TransferAmount"), false);
@@ -915,7 +915,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		Thread.sleep(30000);
 	}
 	@Given("user_5679 loads the test datasetup for the test case id AT_037")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_037() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_037() {
 		executionTestData = DataReader.executionTestData.get("AT_037_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
@@ -1053,7 +1053,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	}
 	
 	@And("user_5679 loads the test datasetup for the test case id AT_071")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_071() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_071() {
 		executionTestData = DataReader.executionTestData.get("AT_071_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
@@ -1179,18 +1179,18 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 
 	
 	@And("user_5679 loads the test datasetup for the test case id AT_072")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_072() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_072() {
 		executionTestData = DataReader.executionTestData.get("AT_072_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	    }
 	@And("user_5679 click international scheduled transfer under scheduled transfer")
-	public void user_click_international_scheduled_transfer_under_scheduled_transfer() {
+	public void user_626_click_international_scheduled_transfer_under_scheduled_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Scheduled_International_Transfer"), false);
 	}
 
 	@And("user_5679 select from account under scheduled international bank transfer")
-	public void user_select_from_account_under_scheduled_international_bank_transfer() {
+	public void user_626_select_from_account_under_scheduled_international_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer"), true);
 		   String xpath ="//ion-label[contains(text(),'Scheduled_international_transfer')]/ancestor::div[@id='main-header']/following-sibling::div[@id='main-content']"
 					+ "//ion-label[contains(text(),'"+testData.get("FromAccount1")+"')]";
@@ -1209,56 +1209,56 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	    
 	}
 	@And("user_5679 click on to other button for select non pre defined beneficiary")
-	public void user_click_on_to_other_button_for_select_non_pre_defined_beneficiary() {
+	public void user_626_click_on_to_other_button_for_select_non_pre_defined_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("To_Other_Scheduled_International_Transfer"), true);
 	}
 	@And("user_5679 loads the test datasetup for the test case id AT_074")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_074() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_074() {
 		executionTestData = DataReader.executionTestData.get("AT_074_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	    }
 	@And("user_5679 loads the test datasetup for the test case id AT_073")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_at_073() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_073() {
 		executionTestData = DataReader.executionTestData.get("AT_073_01");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	    }
 	@And("user_5679 click on the own bank transfer under the Transfer")
-	public void user_click_on_the_own_bank_transfer_under_the_transfer() {
+	public void user_626_click_on_the_own_bank_transfer_under_the_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("OwnbankTransfers_Transfers_AMANAPaymnets"), false);
 	}
 
 	@And("user_5679 click on From account and select the account for own bank transfer")
-	public void user_click_on_from_account_and_select_the_account_for_own_bank_transfer() {
+	public void user_626_click_on_from_account_and_select_the_account_for_own_bank_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_ownBankTransfer"), false);
 	}
 	
 	@And("user_5679 loads the test datasetup for the test case id CRD_019")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_019() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_crd_019() {
 		executionTestData = DataReader.executionTestData.get("CRD_019");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
 	@And("user_5679 loads the test datasetup for the test case id CRD_020")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_020() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_crd_020() {
 		executionTestData = DataReader.executionTestData.get("CRD_020");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
 	@And("user_5679 loads the test datasetup for the test case id CRD_021")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_021() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_crd_021() {
 		executionTestData = DataReader.executionTestData.get("CRD_021");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
 	
 	@Given("user_5679 click on the My Cards under Cards in the homepage")
-	public void user_5679_click_on_the_my_cards_under_cards_in_the_homepage() {
+	public void user_626_5679_click_on_the_my_cards_under_cards_in_the_homepage() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("MyCards_Cards_OmniHomeScreen"), false);
 	    }
 	@Given("user_5679 click on the Show More button in Debit cards page")
-	public void user_5679_click_on_the_show_more_button_in_debit_cards_page() {
+	public void user_626_5679_click_on_the_show_more_button_in_debit_cards_page() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("FirstActiveCreditCard_CreditCards_MyCards_Cards_OmniHomeScreen"), false);
 	    }
 	@Given("user_5679 click on the block for block the selected Debit Card")
@@ -1301,19 +1301,19 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				true);
 	 }
 	@And("user_5679 loads the test datasetup for the test case id CRD_022")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_022() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_crd_022() {
 		executionTestData = DataReader.executionTestData.get("CRD_022");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
 	@And("user_5679 loads the test datasetup for the test case id CRD_023")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_crd_023() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_crd_023() {
 		executionTestData = DataReader.executionTestData.get("CRD_023");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
 	@And("user_5679 loads the test datasetup for the test case id TDO_017")
-	public void user_loads_the_test_datasetup_for_the_test_case_id_tdo_017() {
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_tdo_017() {
 		executionTestData = DataReader.executionTestData.get("TDO_017");
 		System.out.println(executionTestData);
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
@@ -1483,7 +1483,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		testData =	DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	    }
 	@Given("user_5679 Get the Time value of the Activity Log Report and verify the value")
-	public void user_get_the_time_value_of_the_activity_log_report_and_verify_the_value() {
+	public void user_626_get_the_time_value_of_the_activity_log_report_and_verify_the_value() {
 	   String verifyALR=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Verify_ActivityLog"),true);
 	   for (int i = 0; i <= 500; i++) {
 			try {
@@ -1510,7 +1510,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 		}
 	
 	@Given("user_5679 Get The Value of USD in text and verify")
-	public void user_get_the_value_of_usd_in_text_and_verify() {
+	public void user_626_get_the_value_of_usd_in_text_and_verify() {
 		String OwnBank_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("own_USD_VERIFY"),true);
 		   for (int i = 0; i <= 500; i++) {
 				try {
@@ -1524,7 +1524,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 			}
 	}
 	@Given("user_5679 Get The TO Account Value of USD in text and verify")
-	public void user_get_the_to_account_value_of_usd_in_text_and_verify() {
+	public void user_626_get_the_to_account_value_of_usd_in_text_and_verify() {
 		String OwnBankto_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("own_to_USD_VERIFY"),true);
 		   for (int i = 0; i <= 500; i++) {
 				try {
@@ -1538,15 +1538,15 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 			}
 	}
 	@Given("user_5679 Click on the Transfer to other bank account Under Transfer")
-	public void user_click_on_the_transfer_to_other_bank_account_under_transfer() {
+	public void user_626_click_on_the_transfer_to_other_bank_account_under_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Other_bank_Transfers"), true);
 	}
 	@Given("user_5679 click on the To accounts from the transfers Other bank accounts")
-	public void user_click_on_the_to_accounts_from_the_transfers_other_bank_accounts() {
+	public void user_626_click_on_the_to_accounts_from_the_transfers_other_bank_accounts() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("To_Beneficiary"), true);
 	}
 	@Given("user_5679 Get The TO Account Value of Other Bank USD in text and verify")
-	public void user_get_the_to_account_value_of_other_bank_usd_in_text_and_verify() {
+	public void user_626_get_the_to_account_value_of_other_bank_usd_in_text_and_verify() {
 		String OwnBankto_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Other_to_USD_VERIFY"),true);
 		   for (int i = 0; i <= 500; i++) {
 				try {
@@ -1560,7 +1560,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 			}
 		   }	
 	@Given("user_5679 Get The Value of money mru in text and verify")
-	public void user_get_the_value_of_money_mru_in_text_and_verify() {
+	public void user_626_get_the_value_of_money_mru_in_text_and_verify() {
 		String OwnBank_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("inter_from_VERIFY"),true);
 		   for (int i = 0; i <= 500; i++) {
 				try {
@@ -1574,7 +1574,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 			}
 		   }
 	@Given("user_5679 click on the to account in international transfer")
-	public void user_click_on_the_to_account_in_international_transfer() {
+	public void user_626_click_on_the_to_account_in_international_transfer() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("inter_beneficiary"), true);
 	}
 	@Given("user_5679 Get The TO Account Value of International USD in text and verify")
@@ -1592,7 +1592,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 			}
 	}
 	@Given("user_5679 Get The Value of Scheduled own Money MRU in text and verify")
-	public void user_get_the_value_of_scheduled_own_money_mru_in_text_and_verify() {
+	public void user_626_get_the_value_of_scheduled_own_money_mru_in_text_and_verify() {
 		String OwnBank_USD=us.getText(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Scheduled_Own_MRU"),true);
 		   for (int i = 0; i <= 500; i++) {
 				try {
@@ -1606,13 +1606,13 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 			}
 	}
 	@Given("user_5679 click Scheduled other bank transfer Under scheduled transfer")
-	public void user_click_scheduled_other_bank_transfer_under_scheduled_transfer() {
+	public void user_626_click_scheduled_other_bank_transfer_under_scheduled_transfer() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("Scheduled_other_bank"), 
 				true);
 	}
 	@Given("user_5679 click from account international transfers")
-	public void user_click_from_account_international_transfers() {
+	public void user_626_click_from_account_international_transfers() {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("International_from_account"), 
 				true);
