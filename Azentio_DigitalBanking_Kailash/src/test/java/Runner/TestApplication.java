@@ -8,21 +8,21 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/PCR_Run.feature"},
+@CucumberOptions(features = {"src/test/java/features/Cards.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               // ,dryRun = false //to check compilation errors                                      
-            // , tags="@AT_PCR_005 or @AT_PCR_006"
-
+   , tags="@CRD_021"
+       		
 )
 
 
 
 public class TestApplication extends AbstractTestNGCucumberTests {
-	/*
+	/* 
 	 * @Override
 	 *
 	 * @DataProvider(parallel = true) public Object[][] scenarios() { return

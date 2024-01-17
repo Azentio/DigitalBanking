@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 09 11:47:21 IST 2024</td>
+<td>Started on:</td><td>Wed Jan 17 10:10:46 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>253 seconds (253755 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91845 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,15 +76,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to Submit Prepaid card request", "Optional[Prepaid Card request Screen all functionality Test Cases]"</td>
-<td></td>
-<td>84</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
-<tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Test the Functionality of prepaid card request 1st Screen in retail Link", "Optional[Prepaid Card request Screen all functionality Test Cases]"</td>
-<td></td>
-<td>140</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "block card -- maker - checker testing - disabled", "Optional[Testing the functionalities of Cards (11,14)]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.DebitCardDetails.user_626_select_the_option_below_the_block_card_screen(DebitCardDetails.java:1073)
+	at ✽.User_626 Select the option below the block card Screen(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Cards.feature:82)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1571143070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1571143070'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.get(Object)&quot; because &quot;this.testData&quot; is null
+	at stepdefinitions.DebitCardDetails.user_626_select_the_option_below_the_block_card_screen(DebitCardDetails.java:1073)
+	at ✽.User_626 Select the option below the block card Screen(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Cards.feature:82)
+</pre></div></td>
+<td>90</td>
+<td>Runner.TestApplication@5efa40fe</td></tr>
 </table><p>
 </body>
 </html>

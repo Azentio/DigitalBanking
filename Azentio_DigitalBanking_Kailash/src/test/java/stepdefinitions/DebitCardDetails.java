@@ -858,13 +858,10 @@ public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_020() 
 	}
 //razia	
 	
-	
 	@Given("^user_612 navigates to the omni_corporate_web_portal$")
 	public void user626_NavigatesToTheOmni_Corporate_Web_Portal() {
 		driver.get(DataReader.configFileMap.get("omni_Corporate_web_portal"));
-
 	}
-	
 	@And("User_612 loads the test datasetup for the test case id AT_CCS_002")
     public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_CCS_002() {
         executionTestData = DataReader.executionTestData.get("AT_CCS_002");
@@ -877,7 +874,7 @@ public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_020() 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
 				testData.get("UserName1"),
 				false);
-	   
+
 	}
 	@Given("user_612 enters the Corppassword in the login page for omni_corp_portal")
 	public void user_626_enters_the_Corppassword_in_the_login_page_for_omni_corp_portal() {
@@ -886,15 +883,12 @@ public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_020() 
 				testData.get("Password1"),
 				false);
 	   	}
-	
-
 @Given("user_612 click credit card settlement submenu  under CardsMenu")
 public void user_626_click_credit_card_settlement_submenu_under_cards_menu() {
 	try {
 		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CreditCardSettlement_Menu"),20, false);
 		
 	} catch (Exception e) {
-		
 	}
 	
    }
@@ -904,9 +898,7 @@ public void user_626_click_mycredit_card_settlement_submenu_under_cards_menu() {
 		us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("Validate_MycreditCardSettlement"),20, false);
 		
 	} catch (Exception e) {
-		
 	}
-	
    }
 
 @Given("user_612 click Mycredit card settlement")
@@ -920,15 +912,13 @@ public void user_626_click_the_cardmenu_under_omni_corp_portal( ) {
 				DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"),30,false);
 		 //Assert.assertEquals(driver.getPageSource().contains(testData.get("operation")), false);
 	} catch (Exception e) {
-		
+
 	}
 }
-
 @Given("User_612 Click on the Selection of creditCard in Credit Card settlement Screen")
 public void user_626_click_on_the_selection_of_credit_card_in_credit_card_settlement_screen() {
 	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("validate_creditcard_CCS"),false);
 }
-
 @Given("User_612 Select the credit Card in the Dropdown CreditCard in Credit Card settlement Screen")
 public void user_626_select_the_credit_card_in_the_dropdown_credit_card_in_credit_card_settlement_screen() {
 	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("CreditCardSelection_CCS"),false);
@@ -1086,7 +1076,6 @@ public void user_626_select_the_option_below_the_block_card_screen() throws Inte
 		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"))).sendKeys(Keys.BACK_SPACE);	
 	}
 	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("CCS_Currency_Search"),testData.get("Block_card_Reason"),false);
-	
 	String xpath ="//ion-label[contains(text(),'"+testData.get("Block_card_Reason")+"')]";
 	   us.clickOnElement(driver, xpath, false);
 	//us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCD_CardBlockReason_Option"),false);
