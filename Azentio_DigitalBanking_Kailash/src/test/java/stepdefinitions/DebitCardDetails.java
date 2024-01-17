@@ -542,7 +542,7 @@ public class DebitCardDetails {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CurrencywdCode_DebitDetails"));
 	}
 
-	@Given("User_626 Check the  Currency field is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Currency field is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_currency_field_is_in_read_only_withdrawal_limit_update() {
 		String CurrencyWithdrawal = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("CurrencywdCode_DebitDetailsReadOnly")).getAttribute("aria-disabled");
 		for (int i = 0; i <2000; i++) {
@@ -562,7 +562,7 @@ public class DebitCardDetails {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CurrencyWDLimit_DebitDetails"));
 	}
 
-	@Given("User_626 Check the  Current Withdrawal Limit is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Current Withdrawal Limit is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_current_withdrawal_limit_is_in_read_only_withdrawal_limit_update() {
 		boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("CurrencyWDLimit_DebitDetailsreadonly")).isEnabled();
 		Assert.assertFalse(enabled);
@@ -574,7 +574,7 @@ public class DebitCardDetails {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("WdPeriodicity_DebitDetails"));
 	}
 
-	@Given("User_626 Check the  Periodicity Wd field is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Periodicity Wd field is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_periodicity_wd_field_is_in_read_only_withdrawal_limit_update() {
 		String PeriodicityWithdrawalLimit = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("WdPeriodicity_DebitDetailsReadOnly")).getAttribute("aria-disabled");
 		for (int i = 0; i <2000; i++) {
@@ -594,7 +594,7 @@ public class DebitCardDetails {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyWD_DebitDetails"));
 	}
 
-	@Given("User_626 Check the  Utilized Currency WD field is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Utilized Currency WD field is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_utilized_currency_wd_field_is_in_read_only_withdrawal_limit_update() {
 		String UtilizedCurrencyWD = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyWD_DebitDetailsReadOnly")).getAttribute("aria-disabled");
 		for (int i = 0; i <2000; i++) {
@@ -612,7 +612,7 @@ public class DebitCardDetails {
 	public void user_626_verify_the_utilized_withdrawal_limit_field_available_or_not_in_withdrawal_limit_update() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyLimit_DebitDetails"));
 	}
-	@Given("User_626 Check the  Utilized Withdrawal Limit field is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Utilized Withdrawal Limit field is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_utilized_withdrawal_limit_field_is_in_read_only_withdrawal_limit_update() {
 		boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("UtilizedCurrencyLimit_DebitDetailsReadOnly")).isEnabled();
 	Assert.assertFalse(enabled);
@@ -621,7 +621,7 @@ public class DebitCardDetails {
 	public void user_626_verify_the_remaining_currency_wd_field_available_or_not_in_withdrawal_limit_update() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RemainingCurrencyWd_DebitDetails"));
 	}
-	@Given("User_626 Check the  Remaining Currency WD field is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Remaining Currency WD field is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_remaining_currency_wd_field_is_in_read_only_withdrawal_limit_update() {
 		String RemainingCurrencyWD = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RemainingCurrencyWd_DebitDetailsReadOnly")).getAttribute("aria-disabled");
 		for (int i = 0; i <2000; i++) {
@@ -639,7 +639,7 @@ public class DebitCardDetails {
 	public void user_626_verify_the_remaining_withdrawal_limit_field_available_or_not_in_withdrawal_limit_update() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RemainingWdLimit_DebitDetails"));
 	}
-	@Given("User_626 Check the  Remaining Withdrawal Limit field is in ReadOnly Withdrawal Limit Update")
+	@Given("User_626 Check the Remaining Withdrawal Limit field is in Read Only Withdrawal Limit Update")
 	public void user_626_check_the_remaining_withdrawal_limit_field_is_in_read_only_withdrawal_limit_update() {
 		boolean enabled = JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Cards").get("RemainingWdLimit_DebitDetailsReadOnly")).isEnabled();
 	Assert.assertFalse(enabled);
@@ -650,7 +650,7 @@ public class DebitCardDetails {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"));
 	}
 
-	@Given("User_626 Check the  Requested  Withdrawal field is in Editable Withdrawal Limit Update")
+	@Given("User_626 Check the Requested Withdrawal field is in Editable Withdrawal Limit Update")
 	public void user_626_check_the_requested_withdrawal_field_is_in_editable_withdrawal_limit_update() {
 		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"),
 				testData.get("RequestWithdrwal"),false);
@@ -1200,6 +1200,48 @@ public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_062() 
 	System.out.println(executionTestData);
 	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 }
+@And("User_626 loads the test datasetup for the test case id AT_DCD_063")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_063() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_062");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_064")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_064() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_062");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_065")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_065() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_062");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_066")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_066() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_062");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_067")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_067() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_067");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_068")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_068() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_067");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_069")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_069() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_069");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
 @Given("User_626 Select reference card in Prepaid Card Request Screen for retailUser")
 public void user_626_select_reference_card_in_prepaid_card_request_screen_for_retailUser() {
 	us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR_Retail"),false);
@@ -1596,12 +1638,11 @@ public void user_612_verify_the_draft_title_is_display_or_not() {
 @Given("user_612 verify the cancel button is displaying or not")
 public void user_612_verify_the_cancel_button_is_displaying_or_not() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CreditCardDetails_DraftDetails_CancelButton"));
-    
+ 
 }
 
 @Given("user_612 verify the record save in TO DO List for draft Data")
 public void user_612_verify_the_record_save_in_to_do_list_for_draft_data() {
-	
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CCS_TodoDraft_verify"));
 }
 
