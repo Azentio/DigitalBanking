@@ -28,6 +28,7 @@ public class DebitCardDetails {
 		// DataReader.locatorsMap.get("OmniScreen_L").get("usernameRetail"),testData.get("UserName1"),true);
 		us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
 				testData.get("UserName1"), false);
+		
 	}
 
 	@Given("User_626 enters the CorporatePass in the login page for omni_web_portal")
@@ -381,6 +382,10 @@ public class DebitCardDetails {
 	public void user_626verify_the_request_successfully_popup_in_pinchange_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_L").get("SuccessPopUP"));
 	}
+	@Given("User_626 Verify the Deactivate Request Successfully Popup in Pinchange Screen")
+	public void user_626verify_Deactivate_the_request_successfully_popup_in_pinchange_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_L").get("DeactivatePopUP"));
+	}
 	@Given("User_626 Verify the Draft Saved Successfully After click Submit")
 	public void User_626_Verify_the_Draft_Saved_Successfully_After_click_Submit() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_L").get("DraftSuccessPopUP"));
@@ -458,7 +463,6 @@ public class DebitCardDetails {
             }
         }
 	}
-
 	@Given("User_626 Verify the Utilized Currency Field Available or Not in POS Limit Update")
 	public void user_626_verify_the_utilized_currency_field_available_or_not_in_pos_limit_update() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("UtilizedCurrency_DebitDetails"));
@@ -665,8 +669,6 @@ public class DebitCardDetails {
 	@Given("User_626 Enter Data On Requested Withdrawal field below Withdrawal Limit Update")
 	public void user_626enter_data_on_requested_withdrawal_field_below_withdrawal_limit_update() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"),testData.get("RequestWithdrwal"),false);
-		
-		
 //		WebElement webElement;
 //		WebElement withdrawal = (driver, DataReader.locatorsMap.get("Cards").get("RequestedWDLimitDebitDetails"));
 //		withdrawal.sendKeys(Keys.TAB);
@@ -1238,7 +1240,13 @@ public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_068() 
 }
 @And("User_626 loads the test datasetup for the test case id AT_DCD_069")
 public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_069() {
-	executionTestData = DataReader.executionTestData.get("AT_DCD_069");
+	executionTestData = DataReader.executionTestData.get("AT_DCD_070");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
+@And("User_626 loads the test datasetup for the test case id AT_DCD_070")
+public void User_626_loads_the_test_datasetup_for_the_test_case_id_AT_DCD_070() {
+	executionTestData = DataReader.executionTestData.get("AT_DCD_070");
 	System.out.println(executionTestData);
 	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 }
@@ -1293,7 +1301,18 @@ public void user_626_verify_the_card_change_name_button_is_visible_of_Retail_Use
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ChangeCardNameVisible_DCD_RT"));
 }
 @Given("User_626 Click on the Show More button below the card details of Retail User")
-public void user_626_click_on_the_show_more_button_below_the_card_details_of_Retail_User() {
+public void user_626_click_on_the_show_more_button_below_the_card_details_of_Retail_User() throws Exception {
+//	for (int i = 0; i <= 500; i++) {
+//		try {
+//			WebElement ShowMore = us.executeJavaScriptReturnWebElement(DataReader.locatorsMap.get("Cards").get("Click_Show_More_retail"));
+//			ShowMore.click();
+//			break;
+//		} catch (Exception e) {
+//			if (i == 500) {
+//				Assert.fail(e.getMessage());
+//			}
+//		}
+//	}
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Click_Show_More_retail"), false);
 }
 @Given("User_626 Verify the Expiry Date is showing in Debit Card Segment of Retail User")
@@ -1645,7 +1664,6 @@ public void user_612_verify_the_cancel_button_is_displaying_or_not() {
 public void user_612_verify_the_record_save_in_to_do_list_for_draft_data() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CCS_TodoDraft_verify"));
 }
-
 
 
 
