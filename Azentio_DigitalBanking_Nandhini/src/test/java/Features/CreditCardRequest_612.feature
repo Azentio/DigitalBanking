@@ -1,7 +1,7 @@
 Feature: Checking the functionalities of Credit card request (9 testcase only)
 
   @AT_CCR_001
-  Scenario: Verify the Functionality of save Button in Credit card request - Screen 1
+  Scenario: Verify the Function ality of save Button in Credit card request - Screen 1
     And User_612 loads the test datasetup for the test case id AT_CCR_001
     Given user_612 navigates to the omni_corporate_web_portal
     And user_612 enters the username in the login page for omni_corp_portal
