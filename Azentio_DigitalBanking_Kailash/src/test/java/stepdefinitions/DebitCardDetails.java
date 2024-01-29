@@ -726,6 +726,12 @@ public class DebitCardDetails {
 	public void user_626_click_on_the_next_button_in_limit_update_screen() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
 	}
+	@Given("User_626 Click on the Next button in limit Update Screen with Wait")
+	public void user_626_click_on_the_next_button_in_limit_update_screen_with_Wait() throws InterruptedException {
+		Thread.sleep(20000);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
+	}
+	
 	
 	@Given("User_626 Click on the Next button in limit Update Screen for pos screen")
 	public void user_626_click_on_the_next_button_in_limit_update_screenfor_pos_screen() throws InterruptedException {

@@ -34,6 +34,12 @@ public class CreditCardSettlement {
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
+	@And("User_626 loads the test datasetup for the test case id AT_CCS_043")
+	public void user_626loads_the_test_datasetup_for_the_test_case_id_AT_CCS_043() {
+		executionTestData = DataReader.executionTestData.get("AT_CCS_043");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@Given("User_626 enters the CorporateUser in the login page for omni_web_portal For CreditCard")
 	public void user_626626enters_the_CorporateUser_in_the_login_page_for_omni_web_portal() {
 		// us.enterDataAndTab(driver,
@@ -209,8 +215,15 @@ public void user_validate_the_purpose_in_summary_screen_of_bank_ccs() {
 public void user_validate_the_i_agree_on_terms_and_conditions_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_Iagree"));
 }
-	
-	
+@Given("User_626 Verify the Navigation By the I agree Page")
+public void User_626_Verify_the_Navigation_By_the_I_agree_Page() {
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("IAgreeTnC_ScheduledTransfer"));
+}	
+@Given("User_626 without click the checkbox system not allow screen3")
+public void User_626_without_click_the_checkbox_system_not_allow_screen3() throws InterruptedException {
+	Thread.sleep(5000);
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CCS_ValueMissing_validate"));
+}
 	
 	
 	

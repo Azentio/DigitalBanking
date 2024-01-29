@@ -164,3 +164,56 @@ And User_626 Validate the Exchange in Summary Screen of BankCCS
 And User_626 Validate the Purpose in Summary Screen of BankCCS
 And User_626 Validate the I agree on terms and conditions in Summary Screen of BankCCS
 
+@AT_CCS_043
+Scenario: Verify that User Navigate to SummaryScreen to agree Screen(Functionality of back button)
+And User_626 loads the test datasetup for the test case id AT_CCS_043
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal For CreditCard
+And User_626 enters the CorporatePass in the login page for omni_web_portal For CreditCard
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_626 click credit card settlement submenu under CardsMenu  
+And user_626 click the Bank credit card settlement under cardsmenu
+And User_626 click on the from account for Bankccs
+And User_626 select the from account in Bank Credit Card Settlement Page
+And User_626 Click on the to beneficiary for select to account in BankCCS
+And User_626 select the to beneficiary account in BankCCS 
+And User_626 Enter the Amount Value in the Bank Credit Card Settlement Page
+And User_626 Enter the Purpose in the Bank Credit Card Settlement Page
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the I agree Check Box in Screen2 
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Validate the From Account in Summary Screen of BankCCS
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Verify the Navigation By the I agree Page
+
+@AT_CCS_044
+Scenario: Verify that User does not Navigate to Summary before click i agree(Functionality of Next Before fill the field button)
+And User_626 loads the test datasetup for the test case id AT_CCS_043
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal For CreditCard
+And User_626 enters the CorporatePass in the login page for omni_web_portal For CreditCard
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And user_5679 click on the Cards screen in the homepage
+And user_626 click credit card settlement submenu under CardsMenu  
+And user_626 click the Bank credit card settlement under cardsmenu
+And User_626 click on the from account for Bankccs
+And User_626 select the from account in Bank Credit Card Settlement Page
+And User_626 Click on the to beneficiary for select to account in BankCCS
+And User_626 select the to beneficiary account in BankCCS 
+And User_626 Enter the Amount Value in the Bank Credit Card Settlement Page
+And User_626 Enter the Purpose in the Bank Credit Card Settlement Page
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+#And User_626 Click on the Next button in limit Update Screen with Wait
+And User_626 without click the checkbox system not allow screen3
+
+
+
