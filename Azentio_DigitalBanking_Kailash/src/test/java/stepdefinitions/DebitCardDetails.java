@@ -1376,17 +1376,13 @@ public void user_612_click_on_the_show_more_button_below_the_card_details() {
 }
 @Given("user_612 Click on the saved Draft data for verification")
 public void user_612_click_on_the_saved_draft_data_for_verification() {
-	us.clickOnElement(driver, 
-			DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), 
-			false);	
+	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), false);	
 	}
 
 @Given("user_612 Click Add on Card button under show more")
-
 public void user_612_click_add_on_card_button_under_show_more() {
   us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("AddOnCardVisi_DebitDetails"),false);;
- 
-}
+ }
 
 @Given("user_612 verify the card information is display or Not")
 public void user_612_verify_the_card_information_is_display_or_not() {

@@ -6,14 +6,14 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/DebitCardDetails.feature","src/test/java/features/CreditCardSettlement.feature"},
+@CucumberOptions(features = {"src/test/java/features/ScheduledTransfers.feature",},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               // ,dryRun = false  //to check compilation errors                                      
-  ,tags="@AT_CCS_043"  
+  ,tags="@AT_ST_001"  
 		  //DebitCardDetails
 		   //CreditCardSettlement
 )

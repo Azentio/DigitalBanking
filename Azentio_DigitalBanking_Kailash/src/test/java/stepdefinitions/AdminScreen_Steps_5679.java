@@ -391,23 +391,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				DataReader.locatorsMap.get("Omni_Admin").get("approveBtn_Customer_ApprovalMatrix_UserManagement"),
 				false);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
-	
 	@Given("^user_5679 navigates to the omni_corporate_web_portal$")
 	public void User_5679_NavigatesToTheOmni_Corporate_Web_Portal() {
 		driver.get(DataReader.configFileMap.get("omni_Corporate_web_portal"));
@@ -1605,6 +1589,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 				}
 			}
 	}
+	
 	@Given("user_5679 click Scheduled other bank transfer Under scheduled transfer")
 	public void user_626_click_scheduled_other_bank_transfer_under_scheduled_transfer() {
 		us.clickOnElement(driver, 

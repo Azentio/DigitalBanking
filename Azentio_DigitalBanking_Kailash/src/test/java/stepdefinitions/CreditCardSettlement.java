@@ -224,10 +224,22 @@ public void User_626_without_click_the_checkbox_system_not_allow_screen3() throw
 	Thread.sleep(5000);
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("CCS_ValueMissing_validate"));
 }
+@Given("User_626 verify the screen1 into Home screen by clicking previous in Bankccs")
+public void User_626_Verify_the_screen1_into_Home_screen_by_clicking_previous_in_Bankccs() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("PCR_1StScreen_Verification"));
+}	
+@Given("User_626 verify the screen2 into screen1 by clicking previous in Bankccs")
+public void User_626_verify_the_screen2_into_screen1_by_clicking_previous_in_Bankccs() {
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("ValidateCCS_FromAccount"));
+}		
 	
-	
-	
-	
+//CreditCard Details
+@And("User_626 loads the test datasetup for the test case id AT_CCD_074")
+public void user_626_loads_the_test_datasetup_for_the_test_case_id_AT_CCD_074() {
+	executionTestData = DataReader.executionTestData.get("AT_CCD_074");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+}
 	
 	
 	
