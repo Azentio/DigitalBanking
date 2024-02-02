@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-31T14:18:23 IST" name="Default suite" finished-at="2024-01-31T14:19:57 IST" duration-ms="93866">
+  <suite started-at="2024-02-02T18:03:49 IST" name="Default suite" finished-at="2024-02-02T18:06:45 IST" duration-ms="176348">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-01-31T14:18:23 IST" name="Default test" finished-at="2024-01-31T14:19:57 IST" duration-ms="93866">
+    <test started-at="2024-02-02T18:03:49 IST" name="Default test" finished-at="2024-02-02T18:06:45 IST" duration-ms="176348">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-01-31T14:18:23 IST" name="setUpClass" finished-at="2024-01-31T14:18:24 IST" duration-ms="854" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-02T18:03:49 IST" name="setUpClass" finished-at="2024-02-02T18:03:50 IST" duration-ms="853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-01-31T14:18:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-31T14:19:39 IST" duration-ms="75486" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-02T18:03:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-02T18:06:37 IST" duration-ms="167068" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify the All fields and dropdown value in the Scheduled transfer"]]>
+                <![CDATA["Verify the All fields in screen3 of Scheduled transfer"]]>
               </value>
             </param>
             <param index="1">
@@ -27,21 +27,31 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.java.PendingException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[TODO: implement me]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[contains(text(),' Transfer Details ')]/ancestor::div//following::ion-item//ion-label[text()=" From Account "]//sup (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
-at stepdefinitions.Transfers.user_select_the_from_account_for_scheduled_own_account_transfer(Transfers.java:113)
-at ✽.User_626 select the from account for Scheduled own Account Transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:26)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[contains(text(),' Transfer Details ')]/ancestor::div//following::ion-item//ion-label[text()=" From Account "]//sup (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+at stepdefinitions.Transfers.user_click_on_the_from_account_field_for_select_from_account_for_transfer(Transfers.java:109)
+at ✽.User_626 Click on the from account field for select from account for transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:56)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.java.PendingException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-01-31T14:19:39 IST" name="tearDownClass" finished-at="2024-01-31T14:19:57 IST" duration-ms="17470" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-02T18:06:37 IST" name="tearDownClass" finished-at="2024-02-02T18:06:45 IST" duration-ms="8371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

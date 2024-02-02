@@ -45,7 +45,7 @@ public class Transfers {
 	}
 	@And("User_626 loads the test datasetup for the test case id AT_ST_002")
 	public void User_626loads_the_test_datasetup_for_the_test_case_id_AT_ST_002() {
-		executionTestData = DataReader.executionTestData.get("AT_ST_002");
+		executionTestData = DataReader.executionTestData.get("AT_ST_001");
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
@@ -144,47 +144,46 @@ public class Transfers {
 	}
 
 	@Given("User_626 Click on the periodicity for verify the dropdown Values")
-	public void user_click_on_the_periodicity_for_verify_the_dropdown_values() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Periodicity_ScheduledOtherBankTransfer"), false);
+	public void user_click_on_the_periodicity_for_verify_the_dropdown_values()   {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("PeriodicityClick"), false);
+		
 	}
 
 	@Given("User_626 Verify Recurring Daily Value is avaiable below the periodicity dropdown")
 	public void user_verify_recurring_daily_value_is_avaiable_below_the_periodicity_dropdown() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Recurringdaily"));
 	}
 
 	@Given("User_626 Verify Recurring Yearly Value is avaiable below the periodicity dropdown")
 	public void user_verify_recurring_yearly_value_is_avaiable_below_the_periodicity_dropdown() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("RecurrringYearly"));
 	}
 
 	@Given("User_626 Verify Single Future Date Value is avaiable below the periodicity dropdown")
 	public void user_verify_single_future_date_value_is_avaiable_below_the_periodicity_dropdown() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SinglefutureDate"));
 	}
 
 	@Given("User_626 Verify Recurring weekly Value is avaiable below the periodicity dropdown")
 	public void user_verify_recurring_weekly_value_is_avaiable_below_the_periodicity_dropdown() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Recurringweekly"));
 	}
 
 	@Given("User_626 Verify Recurring Monthly Value is avaiable below the periodicity dropdown")
 	public void user_verify_recurring_monthly_value_is_avaiable_below_the_periodicity_dropdown() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("RecurringMonthly"));
 	}
 
 	@Given("User_626 Select the periodicity as Recurring Daily in the dropdown")
 	public void user_select_the_periodicity_as_recurring_daily_in_the_dropdown() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Given("User_626 Click on the No of payments in Scheduled own account transfer")
-	public void user_click_on_the_no_of_payments_in_scheduled_own_account_transfer() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("PeriodicitySearch"),testData.get("SelectPeriodicity"),false);
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("PeriodicitySearch"))).click();
+		for (int i = 0; i <50; i++) {
+			driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("PeriodicitySearch"))).sendKeys(Keys.BACK_SPACE);	
+		}
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("PeriodicitySearch"),testData.get("SelectPeriodicity"),false);
+		String xpath ="//ion-label[contains(text(),'"+testData.get("SelectPeriodicity")+"')]";
+		   us.clickOnElement(driver, xpath, false);
 	}
 
 	@Given("User_626 Verify the Value is missing when fields are not filed")
@@ -192,5 +191,67 @@ public class Transfers {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
+	@Given("User_626 Verify the From Account field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_from_account_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Summaryfromacc"));
+	}
+
+	@Given("User_626 Verify the To Account field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_to_account_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Summarytoacc"));
+	}
+
+	@Given("User_626 Verify the Amount field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_amount_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryAmount"));
+	}
+	@Given("User_626 Verify the ExchangedAmount field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_ExchangedAmount_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryExchangedAmount"));
+	}
+	@Given("User_626 Verify the ExchangedRate field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_ExchangedRate_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryExchangedRate"));
+	}
+
+	@Given("User_626 Verify the Purpose field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_purpose_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryPurpose"));
+	}
+
+	@Given("User_626 Verify the I Agree On Term field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_i_agree_on_term_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryIagree"));
+	}
+
+	@Given("User_626 Verify the Periodicity field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_periodicity_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryPeriodicity"));
+	}
+
+	@Given("User_626 Verify the No of Payments field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_no_of_payments_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryNOofPayments"));
+	}
+
+	@Given("User_626 Verify the Start Date field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_start_date_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryStart"));
+	}
+
+	@Given("User_626 Verify the End Date field is avaiable in summary of Scheduled own account transfer")
+	public void user_verify_the_end_date_field_is_avaiable_in_summary_of_scheduled_own_account_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SummaryEnd"));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

@@ -118,7 +118,7 @@ public class CreditCardSettlement {
 
 @Given("User_626 click on the to other for verifying all fields")
 public void user_626click_on_the_to_other_for_verifying_all_fields() {
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ClickToother_BankCcs"),false);     
+	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_L").get("To_Other_Scheduled_International_Transfer"),false);     
 }
 
 @Given("User_626 Verify the Name field Below the to other beneficiary")
@@ -152,7 +152,7 @@ public void user_626on_the_toggle_in_to_other_beneficiary_bank_ccs_screen() {
 }
 @Given("User_626 Enter the Amount Value in the Bank Credit Card Settlement Page")
 public void user_enter_the_amount_value_in_the_bank_credit_card_settlement_page() {
-	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("ValidateAmountCCS_BankCcs"),testData.get("EnterAmount"),false);
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("TransactionAmount_CCS"),testData.get("EnterAmount"),false);
 }
 
 @Given("User_626 Enter the Purpose in the Bank Credit Card Settlement Page")

@@ -36,7 +36,6 @@ And User_626 Verify Single Future Date Value is avaiable below the periodicity d
 And User_626 Verify Recurring weekly Value is avaiable below the periodicity dropdown
 And User_626 Verify Recurring Monthly Value is avaiable below the periodicity dropdown
 And User_626 Select the periodicity as Recurring Daily in the dropdown
-And User_626 Click on the No of payments in Scheduled own account transfer
 And User_626 Click on the Next button in limit Update Screen
 And User_626 Click on the Next button in limit Update Screen
 And User_626 Verify the Value is missing when fields are not filed
@@ -46,7 +45,7 @@ And User_626 Click on the Next button in limit Update Screen
 @AT_ST_002
 Scenario: Verify the All fields in screen3 of Scheduled transfer
 And User_626 loads the test datasetup for the test case id AT_ST_002
-Given user_5679 navigates to the omni_corporate_web_portal
+Given user_5679 navigates to the omni_corporate_portal_retail
 And User_626 enters the CorporateUser in the login page for omni_web_portal for Scheduled Transfers
 And User_626 enters the CorporatePass in the login page for omni_web_portal for Scheduled Transfers
 And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
@@ -63,20 +62,19 @@ And User_626 Enter Purpose for Scheduled own Account Transfer
 And User_626 Click on the Next button in limit Update Screen
 And User_626 Click on the periodicity for verify the dropdown Values
 And User_626 Select the periodicity as Recurring Daily in the dropdown
-And User_626 Click on the No of payments in Scheduled own account transfer
 And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the From Account field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the To Account field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the Amount field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the ExchangedAmount field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the ExchangedRate field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the Purpose field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the I Agree On Term field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the Periodicity field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the No of Payments field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the Start Date field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the End Date field is avaiable in summary of Scheduled own account transfer
 
 
-
- 
-     
-
-
-
-
-
-
-
- 
 
 

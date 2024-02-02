@@ -723,7 +723,8 @@ public class DebitCardDetails {
 	}
 
 	@Given("User_626 Click on the Next button in limit Update Screen")
-	public void user_626_click_on_the_next_button_in_limit_update_screen() {
+	public void user_626_click_on_the_next_button_in_limit_update_screen() throws InterruptedException {
+		Thread.sleep(20000);
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
 	}
 	@Given("User_626 Click on the Next button in limit Update Screen with Wait")
@@ -1587,7 +1588,7 @@ public void user_612_validate_purpose_is_display_or_not_under_bank_css() {
 }
 @Given("User_612 Enter Draft Name for save the Debit Detail request")
 
-public void user_612_enter_draft_name_for_save_the_debit_detail_request() {
+public void user_612_enter_draft_name_for_save_the_debit_detail_request(){
 	
 	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
 

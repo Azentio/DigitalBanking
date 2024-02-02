@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 31 14:18:23 IST 2024</td>
+<td>Started on:</td><td>Fri Feb 02 18:03:49 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>93 seconds (93866 ms)</td>
+<tr><td>Total time:</td><td>176 seconds (176348 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the All fields and dropdown value in the Scheduled transfer", "Optional[To test the functionality of the CreditCard Settlement in my Cards Page]"</td>
-<td><div><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepdefinitions.Transfers.user_select_the_from_account_for_scheduled_own_account_transfer(Transfers.java:113)
-	at ✽.User_626 select the from account for Scheduled own Account Transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:26)
-</pre></div><a href='#' onClick='toggleBox("stack-trace914903833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace914903833'><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepdefinitions.Transfers.user_select_the_from_account_for_scheduled_own_account_transfer(Transfers.java:113)
-	at ✽.User_626 select the from account for Scheduled own Account Transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:26)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the All fields in screen3 of Scheduled transfer", "Optional[To test the functionality of the CreditCard Settlement in my Cards Page]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[contains(text(),&apos; Transfer Details &apos;)]/ancestor::div//following::ion-item//ion-label[text()=&quot; From Account &quot;]//sup (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Transfers.user_click_on_the_from_account_field_for_select_from_account_for_transfer(Transfers.java:109)
+	at ✽.User_626 Click on the from account field for select from account for transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:56)
+</pre></div><a href='#' onClick='toggleBox("stack-trace631007928", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace631007928'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[contains(text(),&apos; Transfer Details &apos;)]/ancestor::div//following::ion-item//ion-label[text()=&quot; From Account &quot;]//sup (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Transfers.user_click_on_the_from_account_field_for_select_from_account_for_transfer(Transfers.java:109)
+	at ✽.User_626 Click on the from account field for select from account for transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:56)
 </pre></div></td>
-<td>75</td>
+<td>167</td>
 <td>Runner.TestApplication@660acfb</td></tr>
 </table><p>
 </body>
