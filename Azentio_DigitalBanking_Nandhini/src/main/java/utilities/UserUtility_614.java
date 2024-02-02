@@ -30,7 +30,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import freemarker.template.utility.NullArgumentException;
 
 public class UserUtility_614 {

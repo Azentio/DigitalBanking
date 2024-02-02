@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,11 +21,12 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-1153283473\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00613\AppData\Local\Temp\testng-eclipse-1690868850\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that User able to Naviagate to Bank credit Card Settlement Screen 1&quot;, &quot;Optional[Checking the...)">runScenario("Verify that User able to Naviagate to Bank credit Card Settlement Screen 1", "Optional[Checking the...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)&quot;, &quot;...)">runScenario("Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)", "...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,38 +119,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Runner.TestApplication</span>
+              <img src="passed.png"/>
+              <span class="class-name">runner.TestApplication</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify that User able to Naviagate to Bank credit Card Settlement Screen 1&quot;, &quot;Optional[Checking the...)">
-                  </a> <!-- runScenario("Verify that User able to Naviagate to Bank credit Card Settlement Screen 1", "Optional[Checking the...) -->
+                  <a name="runScenario(&quot;Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)&quot;, &quot;...)">
+                  </a> <!-- runScenario("Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)", "...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify that User able to Naviagate to Bank credit Card Settlement Screen 1","Optional[Checking the functionalities of CreditCardSettlement]")</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:53)
-	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:630)
-	at stepdefinitions.CreditCardSettlementSteps_612.user_612_validate_the_from_account_is_display_or_not_under_bank_ccs(CreditCardSettlementSteps_612.java:616)
-	at ✽.user_612 validate the FromAccount  is display or not under BankCCS(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/CreditCardSettlement_612.feature:573)
-
-</div> <!-- stack-trace -->
+                  <span class="parameters">("Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)", "Optional[Checking the functionalities of CreditCardSettlement]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00612\AppData\Local\Temp\testng-eclipse-1153283473\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00613\AppData\Local\Temp\testng-eclipse-1690868850\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +149,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Runner.TestApplication&quot;/&gt;
+      &lt;class name=&quot;runner.TestApplication&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -209,13 +200,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 59724);
+data.setCell(0, 2, 'runner.TestApplication')
+data.setCell(0, 3, 287249);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 59 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -241,20 +232,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Runner.TestApplication</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runner.TestApplication</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Verify that User able to Naviagate to Bank credit Card Settlement Screen 1", "Optional[Checking the...)</span>
-                <span class="method-start">1049 ms</span>
+                <span class="method-name">runScenario("Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)", "...)</span>
+                <span class="method-start">2617 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">60787 ms</span>
+                <span class="method-start">289870 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

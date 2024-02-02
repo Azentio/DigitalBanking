@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;

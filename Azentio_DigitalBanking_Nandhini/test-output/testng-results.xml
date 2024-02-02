@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-12T17:41:43 IST" name="Default suite" finished-at="2024-01-12T17:42:53 IST" duration-ms="70507">
+  <suite started-at="2024-02-02T13:10:13 IST" name="Default suite" finished-at="2024-02-02T13:15:20 IST" duration-ms="307564">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@7d9d0818]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-01-12T17:41:43 IST" name="Default test" finished-at="2024-01-12T17:42:53 IST" duration-ms="70507">
-      <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-01-12T17:41:43 IST" name="setUpClass" finished-at="2024-01-12T17:41:44 IST" duration-ms="1036" status="PASS">
+    <test started-at="2024-02-02T13:10:13 IST" name="Default test" finished-at="2024-02-02T13:15:20 IST" duration-ms="307564">
+      <class name="runner.TestApplication">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestApplication@7d9d0818]" started-at="2024-02-02T13:10:13 IST" name="setUpClass" finished-at="2024-02-02T13:10:15 IST" duration-ms="2562" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-01-12T17:41:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-12T17:42:44 IST" duration-ms="59724" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@7d9d0818]" started-at="2024-02-02T13:10:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-02T13:15:03 IST" duration-ms="287249" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify that User able to Naviagate to Bank credit Card Settlement Screen 1"]]>
+                <![CDATA["Verify the Functionality of cancel buttonLocal credit Card Settlement - Screen3 (With To Other)"]]>
               </value>
             </param>
             <param index="1">
@@ -27,30 +27,14 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Cannot find elements when the XPath is null.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-at org.openqa.selenium.By$ByXPath.<init>(By.java:286)
-at org.openqa.selenium.By.xpath(By.java:89)
-at utilities.UserUtility_614.waitHelper(UserUtility_614.java:53)
-at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:630)
-at stepdefinitions.CreditCardSettlementSteps_612.user_612_validate_the_from_account_is_display_or_not_under_bank_ccs(CreditCardSettlementSteps_612.java:616)
-at ✽.user_612 validate the FromAccount  is display or not under BankCCS(file:///C:/Users/inindc00612/git/DigitalBanking/Azentio_DigitalBanking_Razia2/src/test/java/Features/CreditCardSettlement_612.feature:573)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-01-12T17:42:44 IST" name="tearDownClass" finished-at="2024-01-12T17:42:53 IST" duration-ms="9688" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestApplication@7d9d0818]" started-at="2024-02-02T13:15:03 IST" name="tearDownClass" finished-at="2024-02-02T13:15:20 IST" duration-ms="17631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- Runner.TestApplication -->
+      </class> <!-- runner.TestApplication -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

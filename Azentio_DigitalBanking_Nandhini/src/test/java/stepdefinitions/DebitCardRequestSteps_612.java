@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;
@@ -74,6 +74,16 @@ public class DebitCardRequestSteps_612 {
 		}
 		
 				
+	}
+	@And("User7180 Click the  CardMenu under omni_corp_portal")
+	public void user7180_click_the_cardmenu_under_omni_corp_portal( ) {
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("Cards_OmniHomeScreen"),30,false);
+			 //Assert.assertEquals(driver.getPageSource().contains(testData.get("operation")), false);
+		} catch (Exception e) {
+			
+		}
 	}
 
 @Given("user_612 click on Debit Card Request cards Menu")

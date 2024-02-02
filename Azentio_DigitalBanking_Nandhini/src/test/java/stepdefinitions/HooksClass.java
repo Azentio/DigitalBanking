@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import helper.ScreenshotHelper;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;

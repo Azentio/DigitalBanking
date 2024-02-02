@@ -7,7 +7,7 @@ import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;

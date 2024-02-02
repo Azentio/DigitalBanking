@@ -11,7 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 
 public class BaseClass {
 	Logger log = LogManager.getLogger(BaseClass.class.getName());
@@ -27,7 +27,7 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			options.setBinary("C:\\Users\\ININDC00612\\Downloads\\chrome-win64\\chrome-win64\\chrome.exe");
+			options.setBinary("C:\\Users\\ININDC00613\\Downloads\\chrome-win64\\chrome-win64\\chrome.exe");
 			driver = new ChromeDriver(options);
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {

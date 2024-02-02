@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;
@@ -201,6 +201,7 @@ public class  AccountTransferSteps_612 {
 
 	}
 	
+	
 	@And("^user_612 enters the maker username1 in the login page for omni_corporate_web_portal$")
 	public void user_612EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),testData.get("UserName1"),false);
@@ -227,9 +228,38 @@ public class  AccountTransferSteps_612 {
 		} catch (Exception e) {
 		}
 	}
+	@And("^User7180 click on the loggin button in the login page for omni_corporate_web_portal$")
+	public void user7180_ClickOnTheLogginButtonInTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
+		Thread.sleep(5000);
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn1"), 
+					20,
+					false);
+		} catch (Exception e) {
+		}
+	}
 	
 	@And("^user_612 click on the force logout btn in the login page for omni_corporate_web_portal$")
 	public void user_612ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
+		try {
+			us.clickOnElementNoWait(driver, 
+					DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
+					20,
+					false);
+		} catch (Exception e) {
+			
+			try {
+				us.clickOnElementNoWait(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
+						20,
+						false);
+			} catch (Exception e1) {
+			}
+		}
+	}
+	@And("^User7180 click on the force logout btn in the login page for omni_corporate_web_portal$")
+	public void user7180_ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
 		try {
 			us.clickOnElementNoWait(driver, 
 					DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
@@ -308,6 +338,13 @@ public class  AccountTransferSteps_612 {
 		//}
 		
 	}
+	@And("^User7180 click on the ok button for the successful login page for omni_corporate_web_portal$")
+	public void user7180_ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin"), true);
+		
+	}
+
 	
 	@And("^user_612 click on the AMANA payment screen in the homepage$")
 	public void user_612ClickOnTheAmanaPaymentScreenInTheHomepage() {

@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Locatable;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import dataProvider.DataReader;
+import dataprovider.DataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;
