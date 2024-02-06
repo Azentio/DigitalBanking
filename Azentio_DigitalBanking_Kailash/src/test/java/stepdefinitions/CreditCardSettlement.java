@@ -118,7 +118,7 @@ public class CreditCardSettlement {
 
 @Given("User_626 click on the to other for verifying all fields")
 public void user_626click_on_the_to_other_for_verifying_all_fields() {
-	us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_L").get("To_Other_Scheduled_International_Transfer"),false);     
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Cards_CSS_ToOthers"),true);     
 }
 
 @Given("User_626 Verify the Name field Below the to other beneficiary")
@@ -148,76 +148,74 @@ public void user_626enter_the_given_card_number_in_to_other_beneficiary_card_num
 
 @Given("User_626 ON the toggle in to other beneficiary BankCCS Screen")
 public void user_626on_the_toggle_in_to_other_beneficiary_bank_ccs_screen() {
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ToOtherSaveBeneToggle_BankCCS"),false); 
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Cards_CCS_BankCCS_toother_ToggleBTN"),false); 
 }
 @Given("User_626 Enter the Amount Value in the Bank Credit Card Settlement Page")
-public void user_enter_the_amount_value_in_the_bank_credit_card_settlement_page() {
+public void user_626_enter_the_amount_value_in_the_bank_credit_card_settlement_page() {
 	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("TransactionAmount_CCS"),testData.get("EnterAmount"),false);
 }
 
 @Given("User_626 Enter the Purpose in the Bank Credit Card Settlement Page")
-public void user_enter_the_purpose_in_the_bank_credit_card_settlement_page() {
+public void user_626_enter_the_purpose_in_the_bank_credit_card_settlement_page() {
 	//us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"),testData.get("Purpose_Account_Transafer"),false);
-	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"),
-			testData.get("Purpose_Account_Transafer"),false);
-	for (int i = 0; i <50; i++) {
-		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"))).sendKeys(Keys.BACK_SPACE);	
-	}
 	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"),
 			testData.get("Purpose_Account_Transafer"),false);
-
-
+//	for (int i = 0; i <50; i++) {
+//		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"))).sendKeys(Keys.BACK_SPACE);	
+//	}
+//	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"),
+//			testData.get("Purpose_Account_Transafer"),false);
 }
 @Given("User_626 Verify the Screen2 to Screen Previous Back Navigations")
 public void User_626_Verify_the_Screen2_to_Screen_Previous_Back_Navigations() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"));
 }
 @Given("User_626 Click on the back button in the Bank credit settlement Page")
-public void user_click_on_the_back_button_in_the_bank_credit_settlement_page() {
+public void user_626_click_on_the_back_button_in_the_bank_credit_settlement_page() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Backicon_BankCCs"),false);
 }
 
 @Given("User_626 Verify the Functionality of the Back button")
-public void user_verify_the_functionality_of_the_back_button() {
+public void user_626_verify_the_functionality_of_the_back_button() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Generalaccounts_BanKCCS"));
 }
 @Given("User_626 Validate the From Account in Summary Screen of BankCCS")
-public void user_validate_the_from_account_in_summary_screen_of_bank_ccs() {
+public void user_626_validate_the_from_account_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_FromAcc"));
 }
 
 @Given("User_626 Validate the To card beneficiary in Summary Screen of BankCCS")
-public void user_validate_the_to_card_beneficiary_in_summary_screen_of_bank_ccs() {
+public void user_626_validate_the_to_card_beneficiary_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_ToBene"));
 }
 
 @Given("User_626 Validate the Amount in Summary Screen of BankCCS")
-public void user_validate_the_amount_in_summary_screen_of_bank_ccs() {
+public void user_626_validate_the_amount_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_Amount"));
 }
 
 @Given("User_626 Validate the Exchanged amount in Summary Screen of BankCCS")
-public void user_validate_the_exchanged_amount_in_summary_screen_of_bank_ccs() {
+public void user_626_validate_the_exchanged_amount_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_ExchangedAmount"));
 }
 
 @Given("User_626 Validate the Exchange in Summary Screen of BankCCS")
-public void user_validate_the_exchange_in_summary_screen_of_bank_ccs() {
+public void user_626_validate_the_exchange_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_ExchangedRate"));
 }
 
 @Given("User_626 Validate the Purpose in Summary Screen of BankCCS")
-public void user_validate_the_purpose_in_summary_screen_of_bank_ccs() {
+public void user_626validate_the_purpose_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_Purpose"));
 }
 
 @Given("User_626 Validate the I agree on terms and conditions in Summary Screen of BankCCS")
-public void user_validate_the_i_agree_on_terms_and_conditions_in_summary_screen_of_bank_ccs() {
+public void user_626_validate_the_i_agree_on_terms_and_conditions_in_summary_screen_of_bank_ccs() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_Iagree"));
 }
 @Given("User_626 Verify the Navigation By the I agree Page")
 public void User_626_Verify_the_Navigation_By_the_I_agree_Page() {
-	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("IAgreeTnC_ScheduledTransfer"));
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("AgreeScreenValidation"));
 }	
 @Given("User_626 without click the checkbox system not allow screen3")
 public void User_626_without_click_the_checkbox_system_not_allow_screen3() throws InterruptedException {

@@ -503,6 +503,7 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 	@And("^user_5679 click on the ok button for the successful login page for omni_corporate_web_portal$")
 	public void User_5679_ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal() {
 		us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("okBtnAfterSuccessLogin"), true);
+	
 	}
 	
 	@And("^user_5679 click on the AMANA payment screen in the homepage$")
