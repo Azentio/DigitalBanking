@@ -802,7 +802,7 @@ public void user7180_enter_the_amount_under_currency_tab_in_local_credit_card_se
 
 @Given("User7180 Enter the purpose in Local credit card settlement")
 public void user7180_enter_the_purpose_in_local_credit_card_settlement() {
-	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"),
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("Cards_CCS_BankCCS_purpose"),
 				testData.get("Purpose_Account_Transafer"),false);
 //		for (int i = 0; i <50; i++) {
 //			driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"))).sendKeys(Keys.BACK_SPACE);	
@@ -811,6 +811,7 @@ public void user7180_enter_the_purpose_in_local_credit_card_settlement() {
 //				testData.get("Purpose_Account_Transafer"),false);
 	 
 }
+
 
 @Given("User7180 Click on the back button for navigate into home Screen")
 public void user7180_click_on_the_back_button_for_navigate_into_home_screen() {

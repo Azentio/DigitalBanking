@@ -91,6 +91,16 @@ public class  AccountTransferSteps_612 {
         executionTestData = DataReader.executionTestData.get("AT_IT_001");
         testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
+	@And("User7180 loads the test datasetup for the test case id AT_ST_014")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_ST_014() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_ST_015")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_ST_015() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@And("^user_612 click on the parameters features in the OmniScreen admin page$")
 	public void user_612ClickOnTheParametersFeaturesInTheOmniscreenAdminPage() {
 		us.clickOnElement(driver, 
@@ -406,6 +416,11 @@ public class  AccountTransferSteps_612 {
 		us.clickOnElement(driver, 
 		  DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer1"),false);
 	}
+	@And("^User7180 click on the To accounts from the transfers$")
+	public void user7180_ClickOnTheToAccountsFromTheTransfers() {
+		us.clickOnElement(driver, 
+		  DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_InternationalTransfer"),false);
+	}
 	
 	@And("^User7180 selects the from account from the dropdown in transfers within own accounts$")
 	public void user7180_SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() throws Throwable {
@@ -419,13 +434,13 @@ public class  AccountTransferSteps_612 {
 	
 	@And("^User7180 selects the To account from the dropdown in transfers within own accounts$")
 	public void user7180_SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccounts() {
-		
-//		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"),"TESTDATAVARIABLE", 
-//	    testData.get("ToAccount1"));
-//		us.clickOnElement(driver, xpath, false);
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("Cards").get("Select_ToAccount_InternationalTransfer"), false);
-		
+	}
+	@And("^User7180 selects the To account from the dropdown in transfers$")
+	public void user7180_SelectsTheToAccountFromTheDropdownInTransfers() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("Cards").get("ToAccountonOwnBank"), false);
 	}
 	
 	@And("^User7180 enters the transaction amount in the transfers screen$")
@@ -1306,6 +1321,12 @@ public class  AccountTransferSteps_612 {
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("AccountonOwnBankTransfer"), false);
 	}
+	@Given("User7180 select the Zero Balance Account in Own Bank Transfer screen")
+	public void user7180_select_the_zero_balance_account_in_own_bank_transfer_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ZeroBalanceAccount"), false);
+	}
+
 
 	@Given("User7180 Enter the Iban Account Number in Own Bank Transfer screen")
 	public void user7180_enter_the_iban_account_number_in_own_bank_transfer_screen() {
@@ -1322,5 +1343,21 @@ public class  AccountTransferSteps_612 {
 	public void user7180_validate_the_iban_account_number_in_own_bank_transfer_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("AccountNo_TransfersToOtherBankAccount"));
 	}
-
+	@Given("User7180 Enter the purpose in Own Bank Transfer screen")
+	public void user7180_enter_the_purpose_in_own_bank_transfer_screen() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("Cards_CCS_BankCCS_purpose"),
+					testData.get("Purpose_Account_Transafer"),false);
+	}
+	@Given("User7180 validate the invalid value popup in Own Bank Transfer screen")
+	public void user7180_validate_the_invalid_value_popup_in_own_bank_transfer_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ValueMissing_forValidation"));
+	}
+	@Given("User7180 verify the Beneficiary currency in Own Bank Transfer screen")
+	public void user7180_verify_the_beneficiary_currency_in_own_bank_transfer_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("BeneficiaryCurrency_ownBankTransfer"));
+	}
+	@Given("User7180 verify the Recipient Name in Own Bank Transfer screen")
+	public void user7180_verify_the_recipient_name_in_own_bank_transfer_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("RecipientName"));
+	}
 }

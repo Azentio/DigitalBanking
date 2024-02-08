@@ -137,7 +137,41 @@ Feature: To verify the functionalities on International Transfer
     And User7180 Verify the Excel in Export screen
     And User7180 Verify the Cancel in Export screen
     And User7180 Click the cancel button in Draft screen
-
+    @AT_ST_014
+    Scenario: To verify the blank field validation in Scheduled Own Bank Transfer  
+     And User7180 loads the test datasetup for the test case id AT_ST_014
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username1 in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password1 in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 click on the AMANA payment screen in the homepage
+    And User7180 click on the transfers under the AMANA payment screen
+		And User7180 click on Own Bank Transfer under Payment screen
+    And User7180 click on next btn in the transfers screen
+    And User7180 validate the invalid value popup in Own Bank Transfer screen
+    
+ @AT_ST_015
+    Scenario: To verify the invalid amount validation in Scheduled Own Bank Transfer  
+    And User7180 loads the test datasetup for the test case id AT_ST_015
+     Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username1 in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password1 in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 click on the AMANA payment screen in the homepage
+    And User7180 click on the transfers under the AMANA payment screen
+		And User7180 click on Own Bank Transfer under Payment screen
+		And User7180 click the From Bank in Own Bank Transfer screen
+		And User7180 select the Zero Balance Account in Own Bank Transfer screen
+		And User7180 click on the To accounts from the transfers
+    And User7180 selects the To account from the dropdown in transfers
+    And User7180 Enter the Amount under currency tab in Local credit card settlement
+    And User7180 verify the Enter the value popup
+    
+		
   @AT_ST_016
   Scenario: To verify invalid account validation in Scheduled Own Bank Transfer under To other screen
     And User7180 loads the test datasetup for the test case id AT_ST_016
@@ -159,7 +193,7 @@ Feature: To verify the functionalities on International Transfer
 		@AT_ST_017
   Scenario: To verify the functionality of terms and condition flag in Scheduled Other Bank Transfer
   
-    And User7180 loads the test datasetup for the test case id AT_ST_016
+    And User7180 loads the test datasetup for the test case id AT_ST_017
     Given User7180 navigates to the omni_corporate_web_portal
     And User7180 enters the maker username1 in the login page for omni_corporate_web_portal
     And User7180 enters the maker password1 in the login page for omni_corporate_web_portal
@@ -184,13 +218,21 @@ Feature: To verify the functionalities on International Transfer
 		And User7180 Validate the Save Beneficiary button in Local credit card settlement
     And User7180 verify the Amount in International transfer screen
     And User7180 verify the Purpose in International transfer screen
+    And User7180 verify the Recipient Name in Own Bank Transfer screen
+    And User7180 verify the Beneficiary currency in Own Bank Transfer screen
     And User7180 Validate the Next Button in Local credit card settlement
     And User7180 Validate the Save Button in Local credit card settlement
     And User7180 Enter the Iban Account Number in Own Bank Transfer screen
-     And User7180 Enter the Card Number in To other screen in Local credit card settlement
+    And User7180 Enter the Card Number in To other screen in Local credit card settlement
     And User7180 Click the save beneficiary button in To other screen in Local credit card settlement
     And User7180 Enter the Amount under currency tab in Local credit card settlement
-    And User7180 Enter the purpose in Local credit card settlement
-    
+    And User7180 Enter the purpose in Own Bank Transfer screen
+    And User7180 click on next btn in the transfers screen
+    And User7180 validate save button display or not
+    And User7180 validate next button display or not
+    And User7180 validate previous button display or not
+    And User7180 click on the I agree to terms and conditions checkbox DCD
+    And User7180 click on next btn in the transfers screen
+   
     
 		
