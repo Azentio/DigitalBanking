@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/Features/CreditCardSettlement_80.feature"
+@CucumberOptions(features = {"src/test/java/Features/InternationalTransfer_80.feature"
 		//,"src/test/java/Features/CreditCardSettlement_612.feature"
 		
 },
@@ -20,7 +20,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               //dryRun = false ,//to check compilation errors CreditCardRequest  AccountTransfer_612 CreditCardSettlement_612                              
                // ,tags="@AT_CCS_050"//or @AT_DCR_008 or @AT_DCR_009 or @AT_DCR_0010 or @AT_DCR_011" //or @AT_CCR_004 or @AT_CCR_008 or @AT_CCR_009 " 
-,tags="@AT_CCS_067"
+,tags="@AT_ST_016"
             	
 )
 //

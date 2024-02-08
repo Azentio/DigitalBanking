@@ -254,7 +254,7 @@ public void user_612_enter_value_of_amount_under_mycredit_card_settlemet() {
 
 @Given("User7180 click save button under mycredit card settlement")
 public void user7180_click_save_button_under_mycredit_card_settlement() {
-    us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("CreditCardDetails_SaveButton"), 20, false);
+    us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("CreditCardDetails_SaveButton"),false);
     
 }
 
@@ -267,8 +267,8 @@ public void user7180_verify_the_draft_title_is_display_or_not() {
 @Given("User7180 verify the submit button is displaying or not")
 public void user7180_verify_the_submit_button_is_displaying_or_not() {
     
-	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("DCR_Sumbit"));
-} //CreditCardDetails_DraftDetails_SubmitButton
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Draft_Submit_PCR"));
+} 
 
 @Given("User7180 verify the cancel button is displaying or not")
 public void user7180_verify_the_cancel_button_is_displaying_or_not() {
@@ -278,7 +278,7 @@ public void user7180_verify_the_cancel_button_is_displaying_or_not() {
 
 @Given("User7180 click the cancel button")
 public void user7180_click_the_cancel_button() {
-	us.clickOnElementNoWait(driver,DataReader.locatorsMap.get("Cards").get("CreditCardDetails_DraftDetails_CancelButton"),20,false);
+	us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("CreditCardDetails_DraftDetails_CancelButton"),false);
   
 }
 
@@ -327,7 +327,7 @@ public void user7180_enter_draft_name_for_save_the_debit_detail_request() {
 
 public void user7180_click_on_sumbit_button_save_the_data() throws Throwable {
  Thread.sleep(2000);
-	us.clickOnElementNoWait(driver, DataReader.locatorsMap.get("Cards").get("DCR_Sumbit"),30,false);//DraftSubmit_debitDetails
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("DCR_Sumbit"),false);//DraftSubmit_debitDetails
  
 }
 
@@ -727,12 +727,12 @@ public void user7180_validate_the_select_from_account_in_local_credit_card_settl
 
 @Given("User7180 Validate the To beneficiary segement in Local credit card settlement")
 public void user7180_validate_the_to_beneficiary_segement_in_local_credit_card_settlement() {
-	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("ValidateCCS_ToBeneficiarySeg"));
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Cards_CSS_ToBenefSeg"));
 }
 
 @Given("User7180 Validate the To other in Local credit card settlement")
 public void user7180_validate_the_to_account_in_local_credit_card_settlement() {
-	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("ValidateCCS_ToOther"));
+	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Cards_CSS_ToOther"));
 }
 
 @Given("User7180 Validate the Enter amount in Local credit card settlement")
@@ -944,13 +944,13 @@ public void user7180_validate_the_purpose_under_summary_in_local_credit_card_set
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("BankCCS_Summary_Purpose"));
 }
 
-@Given("User_626 click on the from account for Bankccs")
-public void user_626click_on_the_from_account_for_bankccs() {
+@Given("User7180 click on the from account for Bankccs")
+public void user7180_click_on_the_from_account_for_bankccs() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("ValidateCCS_FromAccount"),false);
 }
 
-@Given("User_626 select the from account in Bank Credit Card Settlement Page")
-public void user_626select_the_from_account_in_bank_credit_card_settlement_page() {
+@Given("User7180 select the from account in Bank Credit Card Settlement Page")
+public void user7180_select_the_from_account_in_bank_credit_card_settlement_page() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("AccouctFromSlect"),false);
 }
 

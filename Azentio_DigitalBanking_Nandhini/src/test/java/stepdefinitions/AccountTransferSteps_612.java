@@ -11,19 +11,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import resources.BaseClass;
 import utilities.UserUtility_614;
-
+import java.io.File;
+import org.testng.asserts.SoftAssert;
 public class  AccountTransferSteps_612 {
 	
 	WebDriver driver = BaseClass.driver;
-	
+	SoftAssert softAssert = new SoftAssert();
 	UserUtility_614 us = new UserUtility_614(driver);
 	
 	String executionTestData;
 	HashMap<String, String> testData;
-		
-		
-
-	
 	
 	@Given("^user_612 navigates to the OmniScreen Admin Url and login with the valid credentials_RIDA$")
 	public void user_612NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials_Rida() {
@@ -64,14 +61,40 @@ public class  AccountTransferSteps_612 {
 		executionTestData = DataReader.executionTestData.get("AT_002");
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
-	
-	
+	@And("User7180 loads the test datasetup for the test case id AT_IT_001")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_IT_001() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_IT_002")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_IT_002() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_IT_003")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_IT_003() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_IT_004")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_IT_004() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_ST_016")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_ST_016() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_ST_017")
+    public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_ST_017() {
+        executionTestData = DataReader.executionTestData.get("AT_IT_001");
+        testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@And("^user_612 click on the parameters features in the OmniScreen admin page$")
 	public void user_612ClickOnTheParametersFeaturesInTheOmniscreenAdminPage() {
-		
 		us.clickOnElement(driver, 
 				DataReader.locatorsMap.get("Omni_Admin").get("ParametersLabel_AdminScreen"), false);
-
 	}
 	
 	@And("^user_612 click on the user_612 management label in the admin screen$")
@@ -202,15 +225,15 @@ public class  AccountTransferSteps_612 {
 	}
 	
 	
-	@And("^user_612 enters the maker username1 in the login page for omni_corporate_web_portal$")
-	public void user_612EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
+	@And("^User7180 enters the maker username1 in the login page for omni_corporate_web_portal$")
+	public void user7180_EntersTheMakerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),testData.get("UserName1"),false);
 		
 	}
 	
 
-	@And("^user_612 enters the maker password1 in the login page for omni_corporate_web_portal$")
-	public void user_612EntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
+	@And("^User7180 enters the maker password1 in the login page for omni_corporate_web_portal$")
+	public void user7180_EntersTheMakerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterDataAndEnter(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
 				testData.get("Password1"),
@@ -346,18 +369,16 @@ public class  AccountTransferSteps_612 {
 	}
 
 	
-	@And("^user_612 click on the AMANA payment screen in the homepage$")
-	public void user_612ClickOnTheAmanaPaymentScreenInTheHomepage() {
+	@And("^User7180 click on the AMANA payment screen in the homepage$")
+	public void user7180_ClickOnTheAmanaPaymentScreenInTheHomepage() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("AMANAPayments_HomeScreen"), 
-				false);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("PaymentforInternationalTransfer"),false);
 	}
 	
-	@And("^user_612 click on the transfers under the AMANA payment screen$")
-	public void user_612ClickOnTheTransfersUnderTheAmanaPaymentScreen() {
+	@And("^User7180 click on the transfers under the AMANA payment screen$")
+	public void user7180_ClickOnTheTransfersUnderTheAmanaPaymentScreen() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("Transfers_AMANAPayments"), 
-				false);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("TransferunderPayment"), false);
 	}
 	
 	@And("^user_612 click on the transfers within own banks under transfer_Amana payment screen$")
@@ -374,74 +395,66 @@ public class  AccountTransferSteps_612 {
 				false);
 	}
 	
-	@And("^user_612 click on the From accounts from the transfers within own accounts$")
-	public void user_612ClickOnTheFromAccountsFromTheTransfersWithinOwnAccounts() {
+	@And("^User7180 click on the From accounts from the transfers within own accounts$")
+	public void user7180_ClickOnTheFromAccountsFromTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer1"), 
-				false);
+		 DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_TransferWithinOwnAccountTransfer1"),false);
 	}
 	
-	@And("^user_612 click on the To accounts from the transfers within own accounts$")
-	public void user_612ClickOnTheToAccountsFromTheTransfersWithinOwnAccounts() {
+	@And("^User7180 click on the To accounts from the transfers within own accounts$")
+	public void user7180_ClickOnTheToAccountsFromTheTransfersWithinOwnAccounts() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer1"), 
-				false);
+		  DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer1"),false);
 	}
 	
-	@And("^user_612 selects the from account from the dropdown in transfers within own accounts$")
-	public void user_612SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() throws Throwable {
+	@And("^User7180 selects the from account from the dropdown in transfers within own accounts$")
+	public void user7180_SelectsTheFromAccountFromTheDropdownInTransfersWithinOwnAccounts() throws Throwable {
 		
-		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"), 
-				"TESTDATAVARIABLE", 
-				testData.get("FromAccount1"));
-		us.clickOnElement(driver, xpath, false);
+//		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectFromAccountInOwnAccountTransfer"), "TESTDATAVARIABLE",
+//		testData.get("FromAccount1"));
+//		us.clickOnElement(driver, xpath, false);
+		us.clickOnElement(driver, 
+			DataReader.locatorsMap.get("Cards").get("SettlementAccount_Selection"), false);
+	}
+	
+	@And("^User7180 selects the To account from the dropdown in transfers within own accounts$")
+	public void user7180_SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccounts() {
+		
+//		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"),"TESTDATAVARIABLE", 
+//	    testData.get("ToAccount1"));
+//		us.clickOnElement(driver, xpath, false);
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("Cards").get("Select_ToAccount_InternationalTransfer"), false);
 		
 	}
 	
-	@And("^user_612 selects the To account from the dropdown in transfers within own accounts$")
-	public void user_612SelectsTheToAccountFromTheDropdownInTransfersWithinOwnAccounts() {
-		
-		String xpath = us.textReplacer(DataReader.locatorsMap.get("OmniScreen_Login").get("SelectToAccountInOwnAccountTransfer"), 
-				"TESTDATAVARIABLE", 
-				testData.get("ToAccount1"));
-		us.clickOnElement(driver, xpath, false);
-		
-	}
-	
-	@And("^user_612 enters the transaction amount in the transfers screen$")
-	public void user_612EntersTheTransactionAmountInTheTransfersScreen() throws Throwable {
+	@And("^User7180 enters the transaction amount in the transfers screen$")
+	public void user7180_EntersTheTransactionAmountInTheTransfersScreen() throws Throwable {
 		Thread.sleep(2000);
 		us.enterDataAndTab(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"), 
-				testData.get("TransferAmount"), 
-				false);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterAmountInOwnAccountTransfer"),
+				testData.get("TransferAmount"), false);
 		
 	}
 	
-	@And("^user_612 enters the purpose of transaction in the transfers screen$")
-	public void user_612EntersThePurposeOfTransactionInTheTransfersScreen() throws InterruptedException {
+	@And("^User7180 enters the purpose of transaction in the transfers screen$")
+	public void user7180_EntersThePurposeOfTransactionInTheTransfersScreen() throws InterruptedException {
 		us.enterDataAndTab(driver, 
 				DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"), 
-				testData.get("PurposeOfTrnx"), 
-				false);
-		
+				testData.get("PurposeOfTrnx"), false);
 		Thread.sleep(3000);
 	}
 	
-	@And("^user_612 click on next btn in the transfers screen$")
-	public void user_612ClickOnNextBtnInTheTransfersScreen() throws InterruptedException {
-		
-		Thread.sleep(5000);
+	@And("^User7180 click on next btn in the transfers screen$")
+	public void user7180_ClickOnNextBtnInTheTransfersScreen() throws InterruptedException {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"), 
-				false);
+			   DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"),false);
 	}
 	
 	@And("^user_612 click on submit btn in the transfers screen$")
 	public void user_612ClickOnSubmitBtnInTheTransfersScreen() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer1"), 
-				false);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ClickSubmitBtnInOwnAccountTransfer1"),false);
 	}
 	
 	@And("^user_612 enters the checker username1 in the login page for omni_corporate_web_portal$")
@@ -758,8 +771,7 @@ public class  AccountTransferSteps_612 {
 	@And("^user_612 waits for the confirmation on the submission report for scheduled own account transfer$")
 	public void user_612WaitsForTheConfirmationOnTheSubmissionReportForScheduledOwnAccountTransfer() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ReportConfirmationInScheduledOwnAccountTransfer"), 
-				false);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ReportConfirmationInScheduledOwnAccountTransfer"), false);
 	}
 	@And("^user_612 waits for the confirmation on the submission report for own bank transfer$")
 	public void User_612WaitsForTheConfirmationOnTheSubmissionReportForOwnBankTransfer() {
@@ -778,8 +790,7 @@ public class  AccountTransferSteps_612 {
 	@And("^user_612 click on the scheduled transfers within own bank transfer under scheduled transfer_Amana payment screen$")
 	public void user_612ClickOnTheScheduledTransfersWithinOwnBankTransferUnderScheduledTransfer_AmanaPaymentScreen() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnBankTransfer_ScheduledTransfer"), 
-				false);
+				DataReader.locatorsMap.get("OmniScreen_Login").get("ScheduledOwnBankTransfer_ScheduledTransfer"), false);
 	}
 	//024
 	@And("^user_612 loads the test datasetup for the test case id AT_024$")
@@ -788,12 +799,51 @@ public class  AccountTransferSteps_612 {
 		testData =	DataReader.testDataMap.get("AccountTransferOmni").get(executionTestData);
 	}
 
-	@Given("user_612 click on the international transfers under the Transfers")
-	public void user_click_on_the_international_transfers_under_the_transfers() throws Throwable {
+	@Given("User7180 click on the international transfers under the Transfers")
+	public void user7180_click_on_the_international_transfers_under_the_transfers() throws Throwable {
 		 us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternationalTransfer_Transfers_AMANAPaymnets"), false);
-	Thread.sleep(2000);
 	}
 	
+	@Given("User7180 verify the From Accounts in International transfer screen")
+	public void user7180_verify_the_from_accounts_in_international_transfer_screen() {
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("FromAcc_InternationalTransfer"));	
+		}
+
+	@Given("User7180 verify the To Accounts in International transfer screen")
+	public void user7180_verify_the_to_accounts_in_international_transfer_screen() {
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_InternationalTransfer"));
+	}
+
+//	@Given("User7180 verify the Currency in International transfer screen")
+//	public void user7180_verify_the_currency_in_international_transfer_screen() {
+//		us.elementIsVisible(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("ToAcc_TransferWithinOwnAccountTransfer1"));
+//	}
+
+	@Given("User7180 verify the Amount in International transfer screen")
+	public void user7180_verify_the_amount_in_international_transfer_screen() {
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Cards_CSS_Amount"));
+	}
+
+	@Given("User7180 verify the Purpose in International transfer screen")
+	public void user7180_verify_the_purpose_in_international_transfer_screen() {
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("Purpose_InternationalTransfer"));
+		}
+
+//	@Given("User7180 verify the Exchange Amount in International transfer screen")
+//	public void user7180_verify_the_exchange_amount_in_international_transfer_screen() {
+//	    // Write code here that turns the phrase above into concrete actions
+//	    throw new io.cucumber.java.PendingException();
+//	}
+
+	@Given("User7180 verify the To Beneficiary seg in International transfer screen")
+	public void user7180_verify_the_to_beneficiary_seg_in_international_transfer_screen() {
+		//us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Cards_CSS_ToBeneficiary"));
+	}
+	@Given("User7180 verify the To other in International transfer screen")
+	public void user7180_verify_the_to_other_in_international_transfer_screen() {
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Cards_CSS_ToOther"));
+	}
+
 
 	@And("user_612 select from account under international transfers")
 	public void user_select_from_account_under_international_transfers() {	
@@ -1136,6 +1186,141 @@ public class  AccountTransferSteps_612 {
 			}
 		}  
 	}
-	
+	@Given("User7180 Validate the To Account under summary in International Transfer")
+	public void user7180_validate_the_to_account_under_summary_in_international_transfer() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ToAccount_InternationalTransfer_summary"));
+	}
+	@Given("User7180 Click the cancel button in Draft screen")
+	public void user7180_click_the_cancel_button_in_draft_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("Cards").get("CreditCardDetails_PinChange_CancelButton"), false);
+	}
+
+	@Given("User7180 Verify the Internal Ref in submission screen")
+	public void user7180_verify_the_internal_ref_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("InternalRef_ScheduledTransfer"));
+	}
+
+	@Given("User7180 Verify the Transfer From in submission screen")
+	public void user7180_verify_the_transfer_from_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Transferredfrom"));
+	}
+
+	@Given("User7180 Verify the Transfer To in Submission screen")
+	public void user7180_verify_the_transfer_to_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_TransferredTO"));
+	}
+
+	@Given("User7180 Verify the Amount in Submission screen")
+	public void user7180_verify_the_amount_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Amount"));
+	}
+
+	@Given("User7180 Verify the Currency in Submission screen")
+	public void user7180_verify_the_currency_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Currency"));
+	}
+
+	@Given("User7180 Verify the Purpose in Submission screen")
+	public void user7180_verify_the_purpose_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Purpose"));
+	}
+
+	@Given("User7180 Verify the Send to Self in Submission screen")
+	public void user7180_verify_the_send_to_self_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SendToSelf"));
+	}
+
+	@Given("User7180 Verify the Export in Submission screen")
+	public void user7180_verify_the_export_in_submission_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_EXport"));
+	}
+	@Given("User7180 click the Export in Submission screen")
+	public void user7180_click_the_export_in_submission_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_EXport"), false);
+	}
+
+	@Given("User7180 Verify the PDF in Export screen")
+	public void user7180_verify_the_pdf_in_export_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Pdf"));
+	}
+
+	@Given("User7180 Verify the Excel in Export screen")
+	public void user7180_verify_the_excel_in_export_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Excel"));
+	}
+
+	@Given("User7180 Verify the Cancel in Export screen")
+	public void user7180_verify_the_cancel_in_export_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Cancel"));
+	}
+
+	@Given("User7180 click the Excel in Export screen")
+	public void user7180_click_the_excel_in_export_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Excel"), false);
+	}
+	@Given("User7180 click the PDF in Export screen")
+	public void user7180_click_the_pdf_in_export_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Pdf"), false);
+	}
+	@Given("User7180 Verify the system should have the downloaded excel file")
+	public void user7180_verify_the_system_should_have_the_downloaded_excel_file() throws Throwable{
+		String homepath=System.getProperty("user.home");
+		String filePath = homepath + "/Downloads";
+		File file = new File(filePath);
+		File[] listFiles = file.listFiles();
+		file.delete();
+		for (File downloadsFile : listFiles) {
+			System.out.println(downloadsFile.getName());
+			if (downloadsFile.getName().contains("MorginMoneyDataFile_export_")) {
+				//System.out.println("If condition " + downloadsFile.getName());
+				softAssert.assertTrue(downloadsFile.getName().contains("International Transfer"),
+						"File is not downloaded hence failed");
+				downloadsFile.delete();
+			}
+		}
+		
+	}
+
+	@Given("User7180 Click the Send to Self in Submission screen")
+	public void user7180_click_the_send_to_self_in_submission_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("SendToSelf"), false);
+	}
+	@Given("User7180 click on Own Bank Transfer under Payment screen")
+	public void user7180_click_on_own_bank_transfer_under_payment_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("OwnBankTransfer_Payment"),false);
+	}
+	@Given("User7180 click the From Bank in Own Bank Transfer screen")
+	public void user7180_click_the_from_bank_in_own_bank_transfer_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("Cards").get("DropdownArrow"),false);
+	}
+
+	@Given("User7180 select the Account in Own Bank Transfer screen")
+	public void user7180_select_the_account_in_own_bank_transfer_screen() {
+		us.clickOnElement(driver, 
+				DataReader.locatorsMap.get("OmniScreen_Login").get("AccountonOwnBankTransfer"), false);
+	}
+
+	@Given("User7180 Enter the Iban Account Number in Own Bank Transfer screen")
+	public void user7180_enter_the_iban_account_number_in_own_bank_transfer_screen() {
+		us.enterDataAndEnter(driver, 
+		  DataReader.locatorsMap.get("Omni_Admin").get("AccountNo_TransfersToOtherBankAccount"), 
+		  testData.get("TransferAmount"),false);
+	}
+
+	@Given("User7180 verify the Enter the value popup")
+	public void user7180_verify_the_enter_the_value_popup() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("Validate_okPopUp"));
+	}
+	@Given("User7180 validate the Iban Account Number in Own Bank transfer screen")
+	public void user7180_validate_the_iban_account_number_in_own_bank_transfer_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("AccountNo_TransfersToOtherBankAccount"));
+	}
 
 }

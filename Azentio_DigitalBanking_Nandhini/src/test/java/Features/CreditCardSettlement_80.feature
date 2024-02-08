@@ -609,8 +609,8 @@ Feature: Checking the functionalities of CreditCardSettlement
     And User7180 Click the  CardMenu under omni_corp_portal
     And User7180 click credit card settlement submenu  under CardsMenu
     And User7180 Click Local credit card settlement Under credit card settlement
-    And User_626 click on the from account for Bankccs
-    And User_626 select the from account in Bank Credit Card Settlement Page
+    And User7180 click on the from account for Bankccs
+    And User7180 select the from account in Bank Credit Card Settlement Page
     #And User7180 click the dropdown under From Account in Local credit card settlement
     #And User7180 click the Account under From Account in Local credit card settlement
     And User7180 click the To Other in Local credit card settlement
