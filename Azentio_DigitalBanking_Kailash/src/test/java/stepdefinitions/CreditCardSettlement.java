@@ -30,7 +30,7 @@ public class CreditCardSettlement {
 	}
 	@And("User_626 loads the test datasetup for the test case id AT_CCS_032")
 	public void user_626loads_the_test_datasetup_for_the_test_case_id_AT_CCS_032() {
-		executionTestData = DataReader.executionTestData.get("AT_CCS_031");
+		executionTestData = DataReader.executionTestData.get("AT_CCS_032");
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
@@ -89,12 +89,12 @@ public class CreditCardSettlement {
 
 	@Given("User_626 validate the amount is display or not under bankCCS")
 	public void user_626626_validate_the_amount_is_display_or_not_under_bank_ccs() {
-		us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("ValidateAmountCCS_BankCcs"));
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("TransactionAmount_CCS"));
 	}
 
 	@Given("User_626 validate purpose is display or not under bankCSS")
 	public void user_626626_validate_purpose_is_display_or_not_under_bank_css() {
-		us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("ValidatePurpose_BankCCS"));
+		us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("Cards_CCS_BankCCS_purpose"));
 	}
 	@Given("User_626 click on the from account for Bankccs")
 	public void user_626click_on_the_from_account_for_bankccs() {

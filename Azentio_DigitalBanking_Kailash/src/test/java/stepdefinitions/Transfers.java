@@ -145,16 +145,12 @@ public class Transfers {
 
 	@Given("User_626 Enter Purpose for Scheduled own Account Transfer")
 	public void user_626_enter_purpose_for_scheduled_own_account_transfer() {
-		us.enterDataAndTab(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"),
-
-				testData.get("PurposeOfTrnx"),false);
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"),testData.get("PurposeOfTrnx"),false);
 		for (int i = 0; i <50; i++) {
 			driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"))).sendKeys(Keys.BACK_SPACE);	
 		}
 		
-		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"),
-
-				testData.get("PurposeOfTrnx"),false);
+		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("EnterPurposeInOwnAccountTransfer"),testData.get("PurposeOfTrnx"),false);
 	}
 
 	@Given("User_626 Click on the periodicity for verify the dropdown Values")

@@ -53,6 +53,7 @@ And user_5679 click on the Next button in Block Card page
 And user_5679 click submit button under Block Card page
 And user_5679 click ok on User privileges in Afer Sumbit
 And user_5679 click log out button
+
 #reject block card request
 And user_5679 loads the test datasetup for the test case id CRD_020
 Given user_5679 navigates to the omni_corporate_web_portal

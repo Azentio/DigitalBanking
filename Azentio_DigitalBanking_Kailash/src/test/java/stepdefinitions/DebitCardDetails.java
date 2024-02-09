@@ -403,8 +403,20 @@ public class DebitCardDetails {
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
 	@Given("User_626 Click on the Limit Update For Field Verification")
-	public void user_626click_on_the_limit_update_for_field_verification() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("LimitVisi_DebitDetails"), false);
+	public void user_626click_on_the_limit_update_for_field_verification() throws InterruptedException {
+		Thread.sleep(50000);
+		
+		for (int i = 0; i <= 500; i++) {
+			try {
+				us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("LimitVisi_DebitDetails"), false);
+				break;
+			} catch (Exception e) {
+				if (i == 500) {
+					Assert.fail(e.getMessage());
+				}
+			}
+		}
+		//us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("LimitVisi_DebitDetails"), false);
 	}
 	@Given("User_626 Verify the CurrencyPOS field Available or Not in POS Limit Update")
 	public void user_626verify_the_currency_pos_field_available_or_not_in_pos_limit_update() {
@@ -723,8 +735,7 @@ public class DebitCardDetails {
 	}
 
 	@Given("User_626 Click on the Next button in limit Update Screen")
-	public void user_626_click_on_the_next_button_in_limit_update_screen() throws InterruptedException {
-		Thread.sleep(20000);
+	public void user_626_click_on_the_next_button_in_limit_update_screen() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
 	}
 	@Given("User_626 Click on the Next button in limit Update Screen with Wait")
@@ -762,13 +773,20 @@ public class DebitCardDetails {
 
 	@Given("User_626 Enter Draft Name for save the Debit Detail request")
 	public void user_626_enter_draft_name_for_save_the_debit_detail_request() {
-		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
-				testData.get("DraftName"),false);
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("DraftName"),false);
 		for (int i = 0; i <50; i++) {
 			driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
 		}
 		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
 				testData.get("DraftName"),false);
+	}
+	@Given("User_626 Enter Draft Name for save the Debit Detail request With CardName")
+	public void user_626_enter_draft_name_for_save_the_debit_detail_request_With_CardName() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("CardName"),false);
+		for (int i = 0; i <50; i++) {
+			driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
+		}
+		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("CardName"),false);
 	}
 	@Given("User_626 Click on sumbit button Save the Data")
 	public void user_626_click_on_sumbit_button_save_the_data() {
@@ -785,7 +803,6 @@ public class DebitCardDetails {
 		String xpath ="//div[contains(text(),'"+testData.get("DraftName")+"')]";
 		   us.clickOnElement(driver, xpath, false);
 		}
-	
 	
 	// Non Duplicate Steps 
 	@And("User_626 loads the test datasetup for the test case id AT_DCD_013")
@@ -1309,7 +1326,7 @@ public void user_626_verify_the_card_change_name_button_is_visible_of_Retail_Use
 }
 @Given("User_626 Click on the Show More button below the card details of Retail User")
 public void user_626_click_on_the_show_more_button_below_the_card_details_of_Retail_User() throws Exception {
-//	for (int i = 0; i <= 500; i++) {
+//	for (int i = 0; i <= 30; i++) {
 //		try {
 //			WebElement ShowMore = us.executeJavaScriptReturnWebElement(DataReader.locatorsMap.get("Cards").get("Click_Show_More_retail"));
 //			ShowMore.click();
@@ -1320,7 +1337,7 @@ public void user_626_click_on_the_show_more_button_below_the_card_details_of_Ret
 //			}
 //		}
 //	}
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Click_Show_More_retail"), false);
+us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Click_Show_More_retail"), false);
 }
 @Given("User_626 Verify the Expiry Date is showing in Debit Card Segment of Retail User")
 public void user_626_verify_the_expiry_date_is_showing_in_debit_card_segmentof_Retail_User() {
