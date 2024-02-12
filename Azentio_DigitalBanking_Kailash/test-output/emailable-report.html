@@ -9,20 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">194,494</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">253,989</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1707466101208</td><td rowspan="1">183909</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runner.TestApplication</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1707732942482</td><td rowspan="1">234740</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify the All fields in screen3 of Scheduled transfer&quot;</td><td>&quot;Optional[To test the functionality of the CreditCard Settlement in my Cards Page]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//ion-label[contains(text(),&apos; Transfer Details &apos;)]/ancestor::div//following::ps-label//ion-label[text()=&quot; 0001000197821026510114932000 &quot;])[2] (tried for 100 second(s) with 1000 milliseconds interval)
+<h2>Default test</h2><h3 id="m0">Runner.TestApplication#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Add a beneficiary for the own bank transfer for retail user with Invalid account details&quot;</td><td>&quot;Optional[Testing the functionalities of Beneficiary in omni]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //ion-label[text()=&quot; Previous &quot;] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-	at stepdefinitions.Transfers.user_626_select_the_from_account_for_scheduled_own_account_transfer(Transfers.java:128)
-	at ✽.User_626 select the from account for Scheduled own Account Transfer(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/ScheduledTransfers.feature:58)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:53)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:635)
+	at stepdefinitions.DebitCardDetails.user_626verify_the_Previous_is_showing_in_debit_card_pin_change_screen(DebitCardDetails.java:314)
+	at ✽.User_626 Verify the Previous is showing in Debit Card PinChange Screen(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:93)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

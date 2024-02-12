@@ -1028,7 +1028,6 @@ public void user_626_validate_the_remaining_pos_limit_in_debit_details_screen3()
     us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_RemainingPOSLimit_s3"));
     
 }
-
 @Given("User_626 validate the Requested POS Limit in Debit Details Screen3")
 public void user_626_validate_the_requested_pos_limit_in_debit_details_screen3() {
     us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("DCD_RequestedPOSLimit_s3"));
@@ -1632,15 +1631,11 @@ public void user_612_verify_the_request_successfully_popup() {
 }
 @Given("User_612 Click on the To Do Screen For check the Saved Draft")
 public void user_612_click_on_the_to_do_screen_for_check_the_saved_draft() {
-
-	us.clickOnElement(driver, 
-
-			DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), false);
+	us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), false);
 }
 @And("^user_612 clicks on logout btn to logout from omni web portal$")
 public void user_612ClicksOnLogoutBtnToLogoutFromOmniWebPortal() throws InterruptedException {
-	us.clickOnElement(driver, 
-			DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb1"), 
+	us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("LogoutBtnOmniWeb1"), 
 			false);
 	Thread.sleep(30000);
 }
@@ -1679,7 +1674,6 @@ public void user_612_verify_the_cancel_button_is_displaying_or_not() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CreditCardDetails_DraftDetails_CancelButton"));
  
 }
-
 @Given("user_612 verify the record save in TO DO List for draft Data")
 public void user_612_verify_the_record_save_in_to_do_list_for_draft_data() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CCS_TodoDraft_verify"));
