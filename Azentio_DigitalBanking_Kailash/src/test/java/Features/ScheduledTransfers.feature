@@ -139,9 +139,40 @@ And User_626 Verify the PDF field below the Submission Report of Scheduled own a
 And User_626 Verify the Excel field below the Submission Report of Scheduled own account transfer
 And User_626 Verify the Cancel field below the Submission Report of Scheduled own account transfer
 And User_626 Click on the PDF below the Submission Report of Scheduled own account transfer
+And User_626 Verify the PDF Downloaded in local folder as pdf  
 
 @AT_ST_005
-Scenario:
+Scenario: Verify the Fields send to self report and Download the excel file in Export
+And User_626 loads the test datasetup for the test case id AT_ST_005
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal for Scheduled Transfers
+And User_626 enters the CorporatePass in the login page for omni_web_portal for Scheduled Transfers
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Payments for transfer in home Screen of corporate portal
+And user_5679 click scheduled transfer under AMANA payment screen
+And User_626 Click on the Scheduled own account transfer Below the Payments
+And User_626 Click on the from account field for select from account for transfer
+And User_626 select the from account for Scheduled own Account Transfer
+And User_626 Click on the to account field for select from account for transfer
+And User_626 select the to account for Scheduled own Account Transfer
+And User_626 Enter Amount for Scheduled own Account Transfer 
+And User_626 Enter Purpose for Scheduled own Account Transfer
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the periodicity for verify the dropdown Values
+And User_626 Select the periodicity as Recurring Daily in the dropdown
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the From Account field is avaiable in summary of Scheduled own account transfer
+And User_626 Verify the To Account field is avaiable in summary of Scheduled own account transfer
+And User_626 Click on sumbit button Save the Data
+And User_626 Click on the send to self Below the submission report
+And User_626 Verify the PDF field below the Submission Report of Scheduled own account transfer
+And User_626 Verify the Excel field below the Submission Report of Scheduled own account transfer
+And User_626 Verify the Cancel field below the Submission Report of Scheduled own account transfer
+And User_626 Click on the Cancel in Send to self Below the submission report 
+And User_626 Click on the Export below the Submission Report of Scheduled own account transfer
+And User_626 Click on the Excel below the Submission Report of Scheduled own account transfer
 
 @AT_ST_006
 Scenario: Verify the Value is missing and Max Allowed Value in Scheduled Transfer
@@ -221,4 +252,22 @@ And User_626 Enter the Special Char Value in To Other Screen
 And User_626 Verify the Special Char Value Error in the To Other Screen
 
 @AT_ST_009
-Scenario: 
+Scenario: Verify the fields in Scheduled Own Bank Transfer To Other Segment Screen
+And User_626 loads the test datasetup for the test case id AT_ST_008
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal for Scheduled Transfers
+And User_626 enters the CorporatePass in the login page for omni_web_portal for Scheduled Transfers
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Payments for transfer in home Screen of corporate portal
+And user_5679 click scheduled transfer under AMANA payment screen
+And User_626 Click on the Scheduled Own Bank Transfer Below the Payments
+And User_626 click on the to other for verifying all fields
+
+
+
+
+
+
+ 

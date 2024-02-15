@@ -476,10 +476,12 @@ public void user_5679click_the_submit_button_of_non_predefined_beneficiary_under
 					break;
 				}
 			} catch (Exception e) {
-				if (i==199) {
+				if (i==20||i==40||i==60||i==80||i==100||i==120
+						||i==140||i==160||i==180||i==199) {
 					us.clickOnElement(driver, 
 							DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn"), 
 							true);
+					
 				}
 			}
 		}

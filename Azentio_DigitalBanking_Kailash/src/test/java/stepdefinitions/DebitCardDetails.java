@@ -360,6 +360,21 @@ public class DebitCardDetails {
 		}
 	}
 
+	@Given("User_626 Click on the Submit button in Beneficiary")
+	public void user_626click_on_the_submit_button_in_Beneficiary() throws Throwable {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SubmitForBeneficiary"),false);
+//		for (int i = 0; i <= 500; i++) {
+//			try {
+//				WebElement submitButton = us.executeJavaScriptReturnWebElement(DataReader.locatorsMap.get("Beneficiary").get("SubmitForBeneficiary"));
+//				submitButton.click();
+//				break;
+//			} catch (Exception e) {
+//				if (i == 500) {
+//					Assert.fail(e.getMessage());
+//				}
+//			}
+//		}
+	}
 	@Given("User_626 Click on the Submit button in debit Card PinChange Screen")
 	public void user_626click_on_the_submit_button_in_debit_card_pin_change_screen() throws Throwable {
 		for (int i = 0; i <= 500; i++) {

@@ -1,11 +1,13 @@
 package stepdefinitions;
 
+import java.io.File;
 import java.util.HashMap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 import dataProvider.DataReader;
 import helper.JavascriptHelper;
@@ -310,7 +312,7 @@ public class Transfers {
 	}
 	@Given("User_626 Click on the PDF below the Submission Report of Scheduled own account transfer")
 	public void User_626_Click_on_the_PDF_below_the_Submission_Report_of_Scheduled_own_account_transfer() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Pdf"));
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Pdf"),false);
 	}
 	@Given("User_626 Verify the Max Allowed Value when fields are not filed")
 	public void User_626_Verify_the_Max_Allowed_Value_when_fields_are_not_filed() {
@@ -356,9 +358,36 @@ public class Transfers {
 	public void user_626_validate_the_to_account_field_is_available_in_scheduled_own_Bank_transfer() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("TOAccForScheduledOwnBankTransfer"));
 	}
+	@Given("User_626 Verify the PDF Downloaded in local folder as pdf")
+	public void User_626_Verify_the_PDF_Downloaded_in_local_folder_as_pdf() {
+		String homepath=System.getProperty("user.home");
+		String filePath = homepath + "/Downloads";
+		File file = new File(filePath);
+		File[] listFiles = file.listFiles();
+		file.delete();
+		for (File downloadsFile : listFiles) {
+			System.out.println(downloadsFile.getName());
+			if (downloadsFile.getName().contains("MorginMoneyDataFile_export_")) {
+				//System.out.println("If condition " + downloadsFile.getName());
+				Assert.assertTrue(downloadsFile.getName().contains("International Transfer"),
+						"File is not downloaded hence failed");
+				downloadsFile.delete();
+			}
+		}
+	}
 
-	
-	
+	@Given("User_626 Click on the Excel below the Submission Report of Scheduled own account transfer")
+	public void User_626_Click_on_the_Excel_below_the_Submission_Report_of_Scheduled_own_account_transfer() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Excel"),false);
+	}
+	@Given("User_626 Click on the send to self Below the submission report")
+	public void User_626_Click_on_the_send_to_self_Below_the_submission_report() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SendToSelf"),false);
+	}
+	@Given("User_626 Click on the Cancel in Send to self Below the submission report")
+	public void  User_626_Click_on_the_Cancel_in_Send_to_self_Below_the_submission_report () {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Cancel"),false);
+	}
 	
 	
 	
