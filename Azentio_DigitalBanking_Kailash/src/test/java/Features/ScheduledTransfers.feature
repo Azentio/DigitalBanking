@@ -264,8 +264,22 @@ And User_626 Click on the Payments for transfer in home Screen of corporate port
 And user_5679 click scheduled transfer under AMANA payment screen
 And User_626 Click on the Scheduled Own Bank Transfer Below the Payments
 And User_626 click on the to other for verifying all fields
-
-
+And user_626 Verify the Account no in to other Scheduled transfer
+And User_626 Verify the save beneficiary in to other Scheduled transfer
+And User_626 Verify the Currency in to other Scheduled transfer
+And User_626 Verify the Amount in to other Scheduled transfer
+And User_626 Verify the Purpose in to other Scheduled transfer
+And User_626 Verify the Next in to other Scheduled transfer       
+And User_626 Verify the Save in to other Scheduled transfer
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Next button in the limit Update Screen
+And User_626 Verify the Previous is showing in Debit Card PinChange Screen
+And User_626 Verify the Save button is visible After clicking edit
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Value is missing when fields are not filed
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on sumbit button Save the Data
 
 
 

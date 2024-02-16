@@ -78,17 +78,17 @@ public class Beneficiary {
 	}
 
 	@Given("User_626 Click on the Beneficiary Management in the Home screen Retail User")
-	public void user_click_on_the_beneficiary_management_in_the_home_screen_retail_user() {
+	public void user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Beneficiay_Management"),false);
 	}
 
 	@Given("User_626 Click Add ineternal Beneficiary Below the Beneficiary Management Bank Screen")
-	public void user_click_add_ineternal_beneficiary_below_the_beneficiary_management_bank_screen() {
+	public void user_626_click_add_ineternal_beneficiary_below_the_beneficiary_management_bank_screen() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("AddInternalBeneficiary"),false);
 	}
 
 	@Given("User_626 Enter the Valid Account number below the Add ineternal Beneficiary")
-	public void user_enter_the_valid_account_number_below_the_add_ineternal_beneficiary() throws Exception {
+	public void user_626_enter_the_valid_account_number_below_the_add_ineternal_beneficiary() throws Exception {
 		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Beneficiary").get("AccNumber"),testData.get("AccountNumber"),false);
 //		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Validation_in_process"));
 //		Thread.sleep(30000);
@@ -111,24 +111,24 @@ public class Beneficiary {
 	}
 
 	@Given("User_626 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary")
-	public void user_enter_the_valid_name_of_beneficiary_below_the_add_ineternal_beneficiary() {
+	public void user_626_enter_the_valid_name_of_beneficiary_below_the_add_ineternal_beneficiary() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BeneName"),testData.get("NameOfBeneficiary"),false);
 	}
 	@Given("User_626 click on the country for selecting below the Add ineternal Beneficiary")
-	public void user_click_on_the_country_for_selecting_below_the_add_ineternal_beneficiary() {
+	public void user_626_click_on_the_country_for_selecting_below_the_add_ineternal_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Country"),false);
 	}
 	@Given("User_626 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown")
-	public void user_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary_dropdown() {
+	public void user_626_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary_dropdown() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Mobilecode"),false);
 	}
 
 	@Given("User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary")
-	public void user_select_the_mobile_number_code_for_enter_the_mobile_no_below_the_add_ineternal_beneficiary() {
+	public void user_626_select_the_mobile_number_code_for_enter_the_mobile_no_below_the_add_ineternal_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
 	}
 	@Given("User_626 Enter the Mobile Invalid number below the Add ineternal Beneficiary")
-	public void user_enter_the_mobile_Invalid_number_below_the_add_ineternal_beneficiary() {
+	public void user_626_enter_the_mobile_Invalid_number_below_the_add_ineternal_beneficiary() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),testData.get("InvalidACC"),false);
 	}
 	@Given("User_626 Validate the Invalid Number Validation below the Add ineternal Beneficiary")
@@ -138,7 +138,7 @@ public class Beneficiary {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("ValueMissing_forValidation"));
 	}
 	@Given("User_626 Enter the Mobile number below the Add ineternal Beneficiary")
-	public void user_enter_the_mobile_number_below_the_add_ineternal_beneficiary() {
+	public void user_626_enter_the_mobile_number_below_the_add_ineternal_beneficiary() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),testData.get("MobileNumber"),false);
 		for (int i = 0; i <50; i++) {
 			driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("MobileNum"))).sendKeys(Keys.BACK_SPACE);	
@@ -146,7 +146,7 @@ public class Beneficiary {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),testData.get("MobileNumber"),false);
 	}
 	@Given("User_626 Enter the Purpose of the Add Internal Beneficiary Bank")
-	public void user_enter_the_purpose_of_the_add_internal_beneficiary_bank() {
+	public void user_626_enter_the_purpose_of_the_add_internal_beneficiary_bank() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"),testData.get("Purpose"),false);
 		for (int i = 0; i <50; i++) {
 			driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"))).sendKeys(Keys.BACK_SPACE);	
@@ -159,11 +159,11 @@ public class Beneficiary {
 		   us.elementIsVisible(driver, xpath);
 	}
 	@Given("User_626 Enter the InValid Account number below the Add ineternal Beneficiary")
-	public void user_enter_the_in_valid_account_number_below_the_add_ineternal_beneficiary() {
+	public void user_626_enter_the_in_valid_account_number_below_the_add_ineternal_beneficiary() {
 		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Beneficiary").get("AccNumber"),testData.get("InvalidACC"),false);
 	}
 	@Given("User_626 Validate the Invalid Account Number below the Add ineternal Beneficiary")
-	public void user_validate_the_invalid_account_number_below_the_add_ineternal_beneficiary() {
+	public void user_626_validate_the_invalid_account_number_below_the_add_ineternal_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("OK_Invalid"),false);
 	}
 	

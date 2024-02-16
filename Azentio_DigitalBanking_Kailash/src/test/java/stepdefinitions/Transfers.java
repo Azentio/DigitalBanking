@@ -103,7 +103,7 @@ public class Transfers {
 
 	@Given("User_626 Validate the To Account field is Available in Scheduled own account transfer")
 	public void user_626_validate_the_to_account_field_is_available_in_scheduled_own_account_transfer() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("ToAccForScheduledOwnAccTransfer"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("ST_ToAccount"));
 	}
 
 	@Given("User_626 Validate the Currency field is Available in Scheduled own account transfer")
@@ -389,7 +389,47 @@ public class Transfers {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("SubReport_Cancel"),false);
 	}
 	
-	
+	@Given("user_626 Verify the Account no in to other Scheduled transfer")
+	public void user_626_verify_the_account_no_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	@Given("User_626 Verify the save beneficiary in to other Scheduled transfer")
+	public void user_626_verify_the_save_beneficiary_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Given("User_626 Verify the Currency in to other Scheduled transfer")
+	public void user_626verify_the_currency_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Given("User_626 Verify the Amount in to other Scheduled transfer")
+	public void user_626verify_the_amount_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Given("User_626 Verify the Purpose in to other Scheduled transfer")
+	public void user_626verify_the_purpose_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Given("User_626 Verify the Next in to other Scheduled transfer")
+	public void user_626verify_the_next_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Given("User_626 Verify the Save in to other Scheduled transfer")
+	public void user_626verify_the_save_in_to_other_scheduled_transfer() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
 	
 	
 	
