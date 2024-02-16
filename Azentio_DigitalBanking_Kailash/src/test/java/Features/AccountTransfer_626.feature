@@ -23,7 +23,7 @@ And user_5679 click submit button under scheduled other bank transfer
 And user_5679 click ok button for request submitted successfully or request time
 
 @AT_020_02
-Scenario: Submit the transfer record in checker
+Scenario:  Submit the transfer record in checker
 And user_5679 loads the test datasetup for the test case id AT_020
 Given user_5679 navigates to the omni_corporate_web_portal
 And user_5679 enters the maker username2 in the login page for omni_corporate_web_portal
