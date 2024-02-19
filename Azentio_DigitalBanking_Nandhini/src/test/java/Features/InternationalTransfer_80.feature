@@ -108,6 +108,7 @@ Feature: To verify the functionalities on International Transfer
     And User7180 Verify the Cancel in Export screen
     And User7180 click the PDF in Export screen
     And User7180 Verify the system should have the downloaded excel file
+    And User7180 clicks on logout btn to logout from omni web portal
 
   @AT_IT_004
   Scenario: To Verify the PDF file in corporate user
@@ -137,6 +138,8 @@ Feature: To verify the functionalities on International Transfer
     And User7180 Verify the Excel in Export screen
     And User7180 Verify the Cancel in Export screen
     And User7180 Click the cancel button in Draft screen
+    And User7180 clicks on logout btn to logout from omni web portal
+     
     @AT_ST_014
     Scenario: To verify the blank field validation in Scheduled Own Bank Transfer  
      And User7180 loads the test datasetup for the test case id AT_ST_014
@@ -151,10 +154,11 @@ Feature: To verify the functionalities on International Transfer
 		And User7180 click on Own Bank Transfer under Payment screen
     And User7180 click on next btn in the transfers screen
     And User7180 validate the invalid value popup in Own Bank Transfer screen
-    
+    And User7180 clicks on logout btn to logout from omni web portal
+     
  @AT_ST_015
     Scenario: To verify the invalid amount validation in Scheduled Own Bank Transfer  
-    And User7180 loads the test datasetup for the test case id AT_ST_015
+     And User7180 loads the test datasetup for the test case id AT_ST_015
      Given User7180 navigates to the omni_corporate_web_portal
     And User7180 enters the maker username1 in the login page for omni_corporate_web_portal
     And User7180 enters the maker password1 in the login page for omni_corporate_web_portal
@@ -170,6 +174,7 @@ Feature: To verify the functionalities on International Transfer
     And User7180 selects the To account from the dropdown in transfers
     And User7180 Enter the Amount under currency tab in Local credit card settlement
     And User7180 verify the Enter the value popup
+    And User7180 clicks on logout btn to logout from omni web portal
     
 		
   @AT_ST_016
@@ -184,15 +189,15 @@ Feature: To verify the functionalities on International Transfer
     And User7180 click on the AMANA payment screen in the homepage
     And User7180 click on the transfers under the AMANA payment screen
 		And User7180 click on Own Bank Transfer under Payment screen
-		And User7180 click the From Bank in Own Bank Transfer screen
-		And User7180 select the Account in Own Bank Transfer screen
+#		And User7180 click the From Bank in Own Bank Transfer screen
+#		And User7180 select the Account in Own Bank Transfer screen
 		And User7180 click the To Other in Local credit card settlement
 		And User7180 Enter the Iban Account Number in Own Bank Transfer screen
 		And User7180 verify the Enter the value popup
+		And User7180 clicks on logout btn to logout from omni web portal
 		
-		@AT_ST_017
-  Scenario: To verify the functionality of terms and condition flag in Scheduled Other Bank Transfer
-  
+ @AT_ST_017
+    Scenario: To verify the functionality of terms and condition flag in Scheduled Other Bank Transfer
     And User7180 loads the test datasetup for the test case id AT_ST_017
     Given User7180 navigates to the omni_corporate_web_portal
     And User7180 enters the maker username1 in the login page for omni_corporate_web_portal
@@ -233,6 +238,7 @@ Feature: To verify the functionalities on International Transfer
     And User7180 validate previous button display or not
     And User7180 click on the I agree to terms and conditions checkbox DCD
     And User7180 click on next btn in the transfers screen
+    And User7180 clicks on logout btn to logout from omni web portal
    
     
 		

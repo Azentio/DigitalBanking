@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 07 17:46:57 IST 2024</td>
+<td>Started on:</td><td>Sat Feb 17 12:06:59 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>95 seconds (95116 ms)</td>
+<tr><td>Total time:</td><td>107 seconds (107268 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,27 +75,63 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify invalid account validation in Scheduled Own Bank Transfer under To other screen", "Optional[To verify the functionalities on International Transfer]"</td>
-<td><div><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:198)
-	at stepdefinitions.AccountTransferSteps_612.user7180_click_the_from_bank_in_own_bank_transfer_screen(AccountTransferSteps_612.java:1279)
-	at ✽.User7180 click the From Bank in Own Bank Transfer screen(file:///C:/Users/inindc00613/git/DBS_Nandhini/Azentio_DigitalBanking_Nandhini/src/test/java/Features/InternationalTransfer_80.feature:153)
-</pre></div><a href='#' onClick='toggleBox("stack-trace63259849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace63259849'><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:198)
-	at stepdefinitions.AccountTransferSteps_612.user7180_click_the_from_bank_in_own_bank_transfer_screen(AccountTransferSteps_612.java:1279)
-	at ✽.User7180 click the From Bank in Own Bank Transfer screen(file:///C:/Users/inindc00613/git/DBS_Nandhini/Azentio_DigitalBanking_Nandhini/src/test/java/Features/InternationalTransfer_80.feature:153)
+<td title='runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the pay options post adding of the beneficiary detials in the beneficiary management for the own bank transfer", "Optional[Verify the functionalities on Beneficiary Management on Retail screen]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos;Validation_in_process&apos;)]&quot;}
+  (Session info: chrome=117.0.5938.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ebc34e069225082e63ebe66faf5a45ee, findElement {using=xpath, value=//p[contains(text(),&apos;Validation_in_process&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58218/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ebc34e069225082e63ebe66faf5a45ee
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at stepdefinitions.Beneficiary_Management_80.user7180_enter_the_valid_account_number_below_the_add_ineternal_beneficiary(Beneficiary_Management_80.java:137)
+	at ✽.User7180 Enter the Valid Account number below the Add ineternal Beneficiary(file:///C:/Users/inindc00613/git/DBS_Nandhini/Azentio_DigitalBanking_Nandhini/src/test/java/Features/BeneficiaryManagement_80.feature:160)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1633360815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1633360815'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos;Validation_in_process&apos;)]&quot;}
+  (Session info: chrome=117.0.5938.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ebc34e069225082e63ebe66faf5a45ee, findElement {using=xpath, value=//p[contains(text(),&apos;Validation_in_process&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58218/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ebc34e069225082e63ebe66faf5a45ee
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at stepdefinitions.Beneficiary_Management_80.user7180_enter_the_valid_account_number_below_the_add_ineternal_beneficiary(Beneficiary_Management_80.java:137)
+	at ✽.User7180 Enter the Valid Account number below the Add ineternal Beneficiary(file:///C:/Users/inindc00613/git/DBS_Nandhini/Azentio_DigitalBanking_Nandhini/src/test/java/Features/BeneficiaryManagement_80.feature:160)
 </pre></div></td>
-<td>84</td>
-<td>runner.TestApplication@7d9d0818</td></tr>
+<td>97</td>
+<td>runner.TestApplication@221a3fa4</td></tr>
 </table><p>
 </body>
 </html>

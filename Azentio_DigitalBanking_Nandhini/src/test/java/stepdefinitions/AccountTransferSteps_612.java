@@ -1319,7 +1319,7 @@ public class  AccountTransferSteps_612 {
 	@Given("User7180 select the Account in Own Bank Transfer screen")
 	public void user7180_select_the_account_in_own_bank_transfer_screen() {
 		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("OmniScreen_Login").get("AccountonOwnBankTransfer"), false);
+				DataReader.locatorsMap.get("Cards").get("SettlementAccount_Selection"), false);
 	}
 	@Given("User7180 select the Zero Balance Account in Own Bank Transfer screen")
 	public void user7180_select_the_zero_balance_account_in_own_bank_transfer_screen() {
@@ -1331,7 +1331,7 @@ public class  AccountTransferSteps_612 {
 	@Given("User7180 Enter the Iban Account Number in Own Bank Transfer screen")
 	public void user7180_enter_the_iban_account_number_in_own_bank_transfer_screen() {
 		us.enterDataAndEnter(driver, 
-		  DataReader.locatorsMap.get("Omni_Admin").get("AccountNo_TransfersToOtherBankAccount"), 
+		  DataReader.locatorsMap.get("OmniScreen_Login").get("AccountNo_TransfersToOtherBankAccount"), 
 		  testData.get("TransferAmount"),false);
 	}
 

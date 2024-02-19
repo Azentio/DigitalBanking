@@ -316,10 +316,10 @@ public void user_612_verify_screen_is_closed_and_switched_to_home_screen() {
 public void user7180_enter_draft_name_for_save_the_debit_detail_request() {
 	
 	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("DraftName"),false);
-//	for (int i = 0; i <50; i++) {
-//		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
-//	}
-//	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("DraftName"),false);
+	for (int i = 0; i <50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
+	}
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("DraftName"),false);
 
 }
 
@@ -835,7 +835,14 @@ public void user7180_ClicksOnLogoutBtnToLogoutFromOmniWebPortal() throws Interru
 }
 @Given("User7180 click the To Other in Local credit card settlement")
 public void user7180_click_the_to_other_in_local_credit_card_settlement() {
+//	for(int i=0;i<100;i++) {
+//	try {
    us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Cards_CSS_ToOther"), true);
+//	}
+//	catch(Exception e) {
+//		
+//	}
+//	}
 }
 
 @Given("User7180 Click the dropdown under bank in To other screen in Local credit card settlement")

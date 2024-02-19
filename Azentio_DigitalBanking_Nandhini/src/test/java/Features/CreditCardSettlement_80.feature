@@ -907,7 +907,7 @@ Feature: Checking the functionalities of CreditCardSettlement
     And User7180 clicks on logout btn to logout from omni web portal
     @AT_CCS_066
     Scenario: Verify the Functionality of save Button in Local credit Card Settlement - Screen3 (With To Other)  
-And User7180 loads the test datasetup for the test case id AT_CCS_066
+    And User7180 loads the test datasetup for the test case id AT_CCS_066
     Given User7180 navigates to the omni_corporate_web_portal
     And User7180 enters the Corpusername in the login page for omni_corp_portal
     And User7180 enters the Corppassword in the login page for omni_corp_portal

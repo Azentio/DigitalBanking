@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00613\AppData\Local\Temp\testng-eclipse-982927875\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00613\AppData\Local\Temp\testng-eclipse--296452028\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;To verify invalid account validation in Scheduled Own Bank Transfer under To other screen&quot;, &quot;Option...)">runScenario("To verify invalid account validation in Scheduled Own Bank Transfer under To other screen", "Option...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)">runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,18 +127,36 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To verify invalid account validation in Scheduled Own Bank Transfer under To other screen&quot;, &quot;Option...)">
-                  </a> <!-- runScenario("To verify invalid account validation in Scheduled Own Bank Transfer under To other screen", "Option...) -->
+                  <a name="runScenario(&quot;Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)">
+                  </a> <!-- runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To verify invalid account validation in Scheduled Own Bank Transfer under To other screen", "Optional[To verify the functionalities on International Transfer]")</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:198)
-	at stepdefinitions.AccountTransferSteps_612.user7180_click_the_from_bank_in_own_bank_transfer_screen(AccountTransferSteps_612.java:1279)
-	at ✽.User7180 click the From Bank in Own Bank Transfer screen(file:///C:/Users/inindc00613/git/DBS_Nandhini/Azentio_DigitalBanking_Nandhini/src/test/java/Features/InternationalTransfer_80.feature:153)
+                  <span class="parameters">("Check the pay options post adding of the beneficiary detials in the beneficiary management for the own bank transfer", "Optional[Verify the functionalities on Beneficiary Management on Retail screen]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos;Validation_in_process&apos;)]&quot;}
+  (Session info: chrome=117.0.5938.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ebc34e069225082e63ebe66faf5a45ee, findElement {using=xpath, value=//p[contains(text(),&apos;Validation_in_process&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58218/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ebc34e069225082e63ebe66faf5a45ee
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at stepdefinitions.Beneficiary_Management_80.user7180_enter_the_valid_account_number_below_the_add_ineternal_beneficiary(Beneficiary_Management_80.java:137)
+	at ✽.User7180 Enter the Valid Account number below the Add ineternal Beneficiary(file:///C:/Users/inindc00613/git/DBS_Nandhini/Azentio_DigitalBanking_Nandhini/src/test/java/Features/BeneficiaryManagement_80.feature:160)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -150,7 +168,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00613\AppData\Local\Temp\testng-eclipse-982927875\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00613\AppData\Local\Temp\testng-eclipse--296452028\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,7 +229,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestApplication')
-data.setCell(0, 3, 84014);
+data.setCell(0, 3, 97290);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -250,12 +268,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("To verify invalid account validation in Scheduled Own Bank Transfer under To other screen", "Option...)</span>
-                <span class="method-start">1001 ms</span>
+                <span class="method-name">runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)</span>
+                <span class="method-start">1132 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">85030 ms</span>
+                <span class="method-start">98426 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
