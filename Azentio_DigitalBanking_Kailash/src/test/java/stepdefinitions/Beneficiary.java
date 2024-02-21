@@ -76,7 +76,12 @@ public class Beneficiary {
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
 	}
-
+	@And("User_626 loads the test datasetup for the test case id AT_BM_032")
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_AT_BM_032() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_032");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+	}
 	@Given("User_626 Click on the Beneficiary Management in the Home screen Retail User")
 	public void user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Beneficiay_Management"),false);
@@ -172,11 +177,165 @@ public class Beneficiary {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Cancel_DebitDetailsLUS"));
 	}
 	
+	@Given("User_626 Enter Draft Name for save the Beneficiary request")
+	public void user_626_enter_draft_name_for_save_the_debit_detail_request() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("DraftName"),false);
+		for (int i = 0; i <50; i++) {
+			driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
+		}
+		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
+				testData.get("DraftName"),false);
+	}
 	
 	
+	@Given("User_626 Click on the local bank transfer in beneficiary management")
+	public void User_626_Click_on_the_local_bank_transfer_in_beneficiary_management() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Local_Transfer_beneficiary"),true);
+	}
+	@Given("User_626 Click on the Bank dropdown below the local beneficiary")
+	public void user_click_on_the_bank_dropdown_below_the_local_beneficiary() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"),false);
+	}
+
+	@Given("User_626 Search bank name and select the bank in the dropdown")
+	public void user_search_bank_name_and_select_the_bank_in_the_dropdown() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("BankName"),false);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
+	}
+
+	@Given("User_626 Click on the currency dropdown for select Currency")
+	public void user_click_on_the_currency_dropdown_for_select_currency() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"),false);
+	}
+
+	@Given("User_626 Search Currency and select the Currency in the dropdown")
+	public void user_search_currency_and_select_the_currency_in_the_dropdown() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Currency"),false);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
+	}
+
 	
-	
-	
+	@Given("User_626 Verify the saved Local Transfer Beneficiary data")
+	public void user_verify_the_saved_local_transfer_beneficiary_data() {
+		String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]";
+		   us.elementIsVisible(driver, xpath);
+	}
+
+	@Given("User_626 Click on the saved data showmore button")
+	public void user_click_on_the_saved_data_showmore_button() {
+		String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' show more ']";
+		   us.clickOnElement(driver, xpath,false);
+	}
+
+	@Given("User_626 Verify the currency field in record of beneficiary")
+	public void user_verify_the_currency_field_in_record_of_beneficiary() {
+		String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-header//span[contains(text(),'"+testData.get("Currency")+"')]";
+		   us.elementIsVisible(driver, xpath);
+	}
+
+	@Given("User_626 Verify the Status field in record of beneficiary")
+	public void user_verify_the_status_field_in_record_of_beneficiary() {
+	String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-header//ion-label[text()=' Active ']";
+	us.elementIsVisible(driver, Xpath);
+	}
+
+	@Given("User_626 Verify the Name of the beneficiary field in record of beneficiary")
+	public void user_verify_the_name_of_the_beneficiary_field_in_record_of_beneficiary() {
+		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' Benef_name ']";
+		us.elementIsVisible(driver, Xpath);
+	}
+
+	@Given("User_626 Verify the Bank Name field in record of beneficiary")
+	public void user_verify_the_bank_name_field_in_record_of_beneficiary() {
+		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' Bank ']";
+		us.elementIsVisible(driver, Xpath);
+	}
+	@Given("User_626 Verify the Bank Verification number field in record of beneficiary")
+	public void user_verify_the_bank_verification_number_field_in_record_of_beneficiary() {
+		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' Beneficiary Bank Verification Number ']";
+		us.elementIsVisible(driver, Xpath);
+	}
+
+	@Given("User_626 Verify the branch field in record of beneficiary")
+	public void user_verify_the_branch_field_in_record_of_beneficiary() {
+		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content/ion-label[text()=' Beneficiary Bank Verification Number ']";
+		us.elementIsVisible(driver, Xpath);
+	}
+	@Given("User_626 Verify the Edit Field in record of beneficiary")
+	public void user_626_verify_the_edit_field_in_record_of_beneficiary() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("RecodEdit"));
+		}
+
+	@Given("User_626 Verify the pay Field in record of beneficiary")
+	public void user_626_verify_the_pay_field_in_record_of_beneficiary() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordPay"));
+	}
+
+	@Given("User_626 Verify the delete Field in record of beneficiary")
+	public void user_626_verify_the_delete_field_in_record_of_beneficiary() {
+		JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Beneficiary").get("RecordPay")).isDisplayed();
+	}
+
+	@Given("User_626 Verify the details Field in record of beneficiary")
+	public void user_626_verify_the_details_field_in_record_of_beneficiary() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordDetails"));
+	}
+	@Given("User_626 Click on the Add local beneficiary in beneficiary management")
+	public void user_626_click_on_the_add_local_beneficiary_in_beneficiary_management() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("AddLocalBene"),false);
+	}
+	@Given("User_626 Enter the BVN Number below the Add Local Beneficiary")
+	public void User_626_Enter_the_BVN_Number_below_the_Add_Local_Beneficiary() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BeneName"),testData.get("BVN"),false);
+	}
+	@Given("User_626 Click on the edit button in Beneficiary")
+	public void user_click_on_the_edit_button_in_beneficiary() {
+		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-header//ion-icon";
+		us.clickOnElement(driver, Xpath, false);
+		
+	}
+
+	@Given("User_626 Enter the Nick Name Below the beneficiary")
+	public void user_enter_the_nick_name_below_the_beneficiary() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("ChangeCardNameVisible_debitDetails"),testData.get("NickName"),false);
+	}
+
+	@Given("User_626 Save the nick Name Below the beneficiary")
+	public void user_save_the_nick_name_below_the_beneficiary() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Save_DebitDetails"),false);
+	}
+	@Given("User_626 click the details menu in saved beneficiary record")
+	public void user_click_the_details_menu_in_saved_beneficiary_record() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("RecordDetails"),false);
+	}
+	@Given("User_626 Verify the summary screen of beneficiary management")
+	public void user_verify_the_summary_screen_of_beneficiary_management() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("SummaryScreen"));
+	}
+	@Given("User_626 Verify the Previous functionality of beneficiary")
+	public void user_verify_the_previous_functionality_of_beneficiary() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("BeneDetailsPrevious"));
+	}
+	@Given("User_626 Click on the Pay in Beneficiary Details")
+	public void user_click_on_the_pay_in_beneficiary_details() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordPay"),false);
+	}
+	@Given("User_626 Click on the from Acc Below Transfer Details of Beneficiary")
+	public void user_click_on_the_from_acc_below_transfer_details_of_beneficiary() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("FromACC_TransferDetails"),false); 
+	}
+	@Given("User_626 Select the from Acc Below Transfer Details of Beneficiary")
+	public void user_select_the_from_acc_below_transfer_details_of_beneficiary() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Select_FromACC_TransferDetails"),false); 
+	}
+	@Given("User_626 Enter Amount Below Transfer Details of Beneficiary")
+	public void user_enter_amount_below_transfer_details_of_beneficiary() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("TransactionAmount_CCS"),testData.get("EnterAmount"),false);
+	}
+	@Given("User_626 Click the Cancel button in draft Saving Screen")
+	public void User_626_Click_the_Cancel_button_in_draft_Saving_Screen() {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel_PCR"),false);
+	}
 	
 	
 	

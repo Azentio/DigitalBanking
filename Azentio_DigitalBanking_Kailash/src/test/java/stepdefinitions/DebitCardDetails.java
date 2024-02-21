@@ -336,10 +336,8 @@ public class DebitCardDetails {
 	@Given("User_626 Enter Confirm New_pin For Update new in Debit Card PinChange Screen")
 	public void user_626enter_confirm_new_pin_for_update_new_in_debit_card_pin_change_screen() throws Exception {
 		String jsPaths = DataReader.locatorsMap.get("Cards").get("ConfirmPin_DebitDetails");
-
 		us.enterData(driver, DataReader.locatorsMap.get("Cards").get("ConfirmPin_DebitDetails"),
 				testData.get("ConfrimNewPin"), true);
-
 		for (int i = 0; i <= 30000; i++) {
 			try {
 				WebElement element = us.executeJavaScriptReturnWebElement(
