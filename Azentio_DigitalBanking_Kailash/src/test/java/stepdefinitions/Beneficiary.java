@@ -336,8 +336,55 @@ public class Beneficiary {
 	public void User_626_Click_the_Cancel_button_in_draft_Saving_Screen() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel_PCR"),false);
 	}
-	
-	
+	@Given("User_626 Verify the functionality of the previous in Terms transfer Screen")
+	public void user_verify_the_functionality_of_the_previous_in_terms_transfer_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("NavigationsecScreen"));
+	}
+
+	@Given("User_626 Verify the functionality of the previous in From Acc transfer Screen")
+	public void user_verify_the_functionality_of_the_previous_in_from_acc_transfer_screen() {
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("EnterAmount"));
+	}	
+
+@Given("User_626 Click on the edit button Below the showmore")
+public void user_click_on_the_edit_button_below_the_showmore() throws InterruptedException {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("EDIT_Benef"),false);
+	Thread.sleep(5000);
+}
+
+@Given("User_626 Verify the Bank_Edit_Summary field in Edit Beneficiary Screen")
+public void user_verify_the_bank_edit_summary_field_in_edit_beneficiary_screen() {
+	us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Edit_Summary"));
+}
+
+@Given("User_626 Verify the BVN_Edit_Summary field in Edit Beneficiary Screen")
+public void user_verify_the_bvn_edit_summary_field_in_edit_beneficiary_screen() {
+   us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("BVN_Edit_Summary"));
+}
+
+@Given("User_626 Verify the ACC_NO_Edit_Summary field in Edit Beneficiary Screen")
+public void user_verify_the_acc_no_edit_summary_field_in_edit_beneficiary_screen() {
+   us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("ACC_NO_Edit_Summary"));
+}
+
+@Given("User_626 Verify the NameOfBeneficiary_Edit_Summary field in Edit Beneficiary Screen")
+public void user_verify_the_name_of_beneficiary_edit_summary_field_in_edit_beneficiary_screen() {
+   us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("NameOfBeneficiary_Edit_Summary"));
+}
+
+@Given("User_626 Verify the field MobNO_Edit_summary in Edit Beneficiary Screen")
+public void user_verify_the_field_mob_no_edit_summary_in_edit_beneficiary_screen() {
+   us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("MobNO_Edit_summary"));
+}
+
+@Given("User_626 Verify the Purpose_edit_summary field in Edit Beneficiary Screen")
+public void user_verify_the_purpose_edit_summary_field_in_edit_beneficiary_screen() {
+   us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_edit_summary"));
+}
+@Given("User_626 Click on the Show More button below the Edit Beneficiary details")
+public void User_626_Click_on_the_Show_More_button_below_the_Edit_Beneficiary_details() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("ShowMore_Beneficiary"), false);
+}
 	
 	
 	

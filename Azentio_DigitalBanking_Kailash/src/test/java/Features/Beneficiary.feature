@@ -510,8 +510,8 @@ And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click the Cancel button in draft Saving Screen
 
 @AT_BM_037
-Scenario: Save the transfer details in the TnC page while using the pay option in the beneficiary
-management for the Local bank transfer for retail user with valid account details
+Scenario: Save the transfer details in the TnC page while using the pay option in the beneficiary management for the Local bank transfer
+for retail user with valid account details and Check if the user is able to cancel while saving the transfer details 
 And User_626 loads the test datasetup for the test case id AT_BM_032
 Given user_5679 navigates to the omni_corporate_portal_retail
 And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
@@ -547,10 +547,80 @@ And User_626 Click on the Next button in limit Update Screen
 And User_626 Click on the I agree Check Box in Screen2
 And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click the Cancel button in draft Saving Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification
 
-@AT_BM_037_01
-Scenario: 
- 
+@AT_BM_038
+Scenario: Verify the field and previous buttons are working while using the pay option in the beneficiary management for
+the Local bank transfer for retail user with valid account details 
+And User_626 loads the test datasetup for the test case id AT_BM_032
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click on the local bank transfer in beneficiary management
+And User_626 Click on the Add local beneficiary in beneficiary management
+And User_626 Click on the Bank dropdown below the local beneficiary
+And User_626 Search bank name and select the bank in the dropdown
+And User_626 Enter the BVN Number below the Add Local Beneficiary
+And User_626 Enter the Valid Account number below the Add ineternal Beneficiary
+And User_626 Click on the currency dropdown for select Currency
+And User_626 Search Currency and select the Currency in the dropdown 
+And User_626 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary
+And User_626 click on the country for selecting below the Add ineternal Beneficiary
+And User_626 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown
+And User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+And User_626 Enter the Mobile number below the Add ineternal Beneficiary
+And User_626 Enter the Purpose of the Add Internal Beneficiary Bank
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Submit button in Beneficiary 
+And User_626 Verify the saved Local Transfer Beneficiary data
+And User_626 Click on the saved data showmore button
+And User_626 Click on the Pay in Beneficiary Details
+And User_626 Click on the from Acc Below Transfer Details of Beneficiary
+And User_626 Select the from Acc Below Transfer Details of Beneficiary
+And User_626 Enter Amount Below Transfer Details of Beneficiary
+And User_626 Enter the Purpose of the Add Internal Beneficiary Bank
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the I agree Check Box in Screen2
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 Verify the functionality of the previous in Terms transfer Screen
+And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 Verify the functionality of the previous in From Acc transfer Screen
+
+@AT_BM_038_01
+Scenario: Check the edit options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer
+And User_626 loads the test datasetup for the test case id AT_BM_032
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click on the local bank transfer in beneficiary management
+And User_626 Click on the Show More button below the Edit Beneficiary details
+And User_626 Click on the edit button Below the showmore
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Bank_Edit_Summary field in Edit Beneficiary Screen 
+And User_626 Verify the BVN_Edit_Summary field in Edit Beneficiary Screen
+And User_626 Verify the ACC_NO_Edit_Summary field in Edit Beneficiary Screen
+And User_626 Verify the NameOfBeneficiary_Edit_Summary field in Edit Beneficiary Screen
+And User_626 Verify the field MobNO_Edit_summary in Edit Beneficiary Screen
+And User_626 Verify the Purpose_edit_summary field in Edit Beneficiary Screen
+
+
+
+
+
+
+
+

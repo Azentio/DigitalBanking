@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 21 09:48:41 IST 2024</td>
+<td>Started on:</td><td>Thu Feb 22 15:36:58 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1951 ms)</td>
+<tr><td>Total time:</td><td>131 seconds (131377 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,5 +67,36 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the edit options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
+	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
+	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
+	at org.openqa.selenium.By.xpath(By.java:89)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_click_on_the_edit_button_below_the_showmore(Beneficiary.java:351)
+	at ✽.User_626 Click on the edit button Below the showmore(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:611)
+</pre></div><a href='#' onClick='toggleBox("stack-trace698263942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace698263942'><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
+	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
+	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
+	at org.openqa.selenium.By.xpath(By.java:89)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_click_on_the_edit_button_below_the_showmore(Beneficiary.java:351)
+	at ✽.User_626 Click on the edit button Below the showmore(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:611)
+</pre></div></td>
+<td>120</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+</table><p>
 </body>
 </html>
