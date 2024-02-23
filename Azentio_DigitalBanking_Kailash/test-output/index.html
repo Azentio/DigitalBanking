@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\inindc00626\AppData\Local\Temp\testng-eclipse--1982409449\testng-customsuite.xml</span>
+                    <span>C:\Users\inindc00626\AppData\Local\Temp\testng-eclipse--687965383\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the edit options post adding of the beneficiary detials in the beneficiary management for the...)">runScenario("Check the edit options post adding of the beneficiary detials in the beneficiary management for the...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the edit options post adding of the beneficiary details in the beneficiary management for the...)">runScenario("Check the edit options post adding of the beneficiary details in the beneficiary management for the...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,18 +126,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Check the edit options post adding of the beneficiary detials in the beneficiary management for the...)">
-                  </a> <!-- runScenario("Check the edit options post adding of the beneficiary detials in the beneficiary management for the...) -->
+                  <a name="runScenario(&quot;Check the edit options post adding of the beneficiary details in the beneficiary management for the...)">
+                  </a> <!-- runScenario("Check the edit options post adding of the beneficiary details in the beneficiary management for the...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check the edit options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-	at stepdefinitions.Beneficiary.user_click_on_the_edit_button_below_the_showmore(Beneficiary.java:351)
-	at ✽.User_626 Click on the edit button Below the showmore(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:611)
+                  <span class="parameters">("Check the edit options post adding of the beneficiary details in the beneficiary management for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.entrySet()&quot; because &quot;this.testData&quot; is null
+	at dataProvider.DataFromGoogleSheet.&lt;init&gt;(DataFromGoogleSheet.java:106)
+	at dataProvider.DataReader.&lt;init&gt;(DataReader.java:17)
+	at resources.BaseClass.initializeDriver(BaseClass.java:21)
+	at stepdefinitions.HooksClass.browserSetup(HooksClass.java:42)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -149,7 +146,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\inindc00626\AppData\Local\Temp\testng-eclipse--1982409449\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\inindc00626\AppData\Local\Temp\testng-eclipse--687965383\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -210,12 +207,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runner.TestApplication')
-data.setCell(0, 3, 120210);
+data.setCell(0, 3, 26129);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -249,12 +246,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Check the edit options post adding of the beneficiary detials in the beneficiary management for the...)</span>
-                <span class="method-start">1043 ms</span>
+                <span class="method-name">runScenario("Check the edit options post adding of the beneficiary details in the beneficiary management for the...)</span>
+                <span class="method-start">1202 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">121261 ms</span>
+                <span class="method-start">27344 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

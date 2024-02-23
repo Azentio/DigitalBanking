@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 22 15:36:58 IST 2024</td>
+<td>Started on:</td><td>Fri Feb 23 10:49:43 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>131 seconds (131377 ms)</td>
+<tr><td>Total time:</td><td>30 seconds (30196 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,26 +76,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the edit options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
-<td><div><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-	at stepdefinitions.Beneficiary.user_click_on_the_edit_button_below_the_showmore(Beneficiary.java:351)
-	at ✽.User_626 Click on the edit button Below the showmore(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:611)
-</pre></div><a href='#' onClick='toggleBox("stack-trace698263942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace698263942'><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
-	at org.openqa.selenium.By.xpath(By.java:89)
-	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-	at stepdefinitions.Beneficiary.user_click_on_the_edit_button_below_the_showmore(Beneficiary.java:351)
-	at ✽.User_626 Click on the edit button Below the showmore(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:611)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the edit options post adding of the beneficiary details in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.entrySet()&quot; because &quot;this.testData&quot; is null
+	at dataProvider.DataFromGoogleSheet.&lt;init&gt;(DataFromGoogleSheet.java:106)
+	at dataProvider.DataReader.&lt;init&gt;(DataReader.java:17)
+	at resources.BaseClass.initializeDriver(BaseClass.java:21)
+	at stepdefinitions.HooksClass.browserSetup(HooksClass.java:42)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1167066016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1167066016'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.entrySet()&quot; because &quot;this.testData&quot; is null
+	at dataProvider.DataFromGoogleSheet.&lt;init&gt;(DataFromGoogleSheet.java:106)
+	at dataProvider.DataReader.&lt;init&gt;(DataReader.java:17)
+	at resources.BaseClass.initializeDriver(BaseClass.java:21)
+	at stepdefinitions.HooksClass.browserSetup(HooksClass.java:42)
 </pre></div></td>
-<td>120</td>
+<td>26</td>
 <td>Runner.TestApplication@660acfb</td></tr>
 </table><p>
 </body>

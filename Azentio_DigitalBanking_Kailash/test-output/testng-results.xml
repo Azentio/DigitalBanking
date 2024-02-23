@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T15:36:58 IST" name="Default suite" finished-at="2024-02-22T15:39:09 IST" duration-ms="131377">
+  <suite started-at="2024-02-23T10:49:43 IST" name="Default suite" finished-at="2024-02-23T10:50:13 IST" duration-ms="30196">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-02-22T15:36:58 IST" name="Default test" finished-at="2024-02-22T15:39:09 IST" duration-ms="131377">
+    <test started-at="2024-02-23T10:49:43 IST" name="Default test" finished-at="2024-02-23T10:50:13 IST" duration-ms="30196">
       <class name="Runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-22T15:36:58 IST" name="setUpClass" finished-at="2024-02-22T15:36:59 IST" duration-ms="1009" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-23T10:49:43 IST" name="setUpClass" finished-at="2024-02-23T10:49:44 IST" duration-ms="1187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-22T15:36:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-22T15:38:59 IST" duration-ms="120210" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-23T10:49:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-23T10:50:10 IST" duration-ms="26129" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Check the edit options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer"]]>
+                <![CDATA["Check the edit options post adding of the beneficiary details in the beneficiary management for the Local bank transfer"]]>
               </value>
             </param>
             <param index="1">
@@ -27,26 +27,23 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot find elements when the XPath is null.]]>
+              <![CDATA[Cannot invoke "java.util.HashMap.entrySet()" because "this.testData" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
-at org.openqa.selenium.By$ByXPath.<init>(By.java:286)
-at org.openqa.selenium.By.xpath(By.java:89)
-at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
-at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-at stepdefinitions.Beneficiary.user_click_on_the_edit_button_below_the_showmore(Beneficiary.java:351)
-at ✽.User_626 Click on the edit button Below the showmore(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/Beneficiary.feature:611)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.HashMap.entrySet()" because "this.testData" is null
+at dataProvider.DataFromGoogleSheet.<init>(DataFromGoogleSheet.java:106)
+at dataProvider.DataReader.<init>(DataReader.java:17)
+at resources.BaseClass.initializeDriver(BaseClass.java:21)
+at stepdefinitions.HooksClass.browserSetup(HooksClass.java:42)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-22T15:38:59 IST" name="tearDownClass" finished-at="2024-02-22T15:39:09 IST" duration-ms="10084" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestApplication@660acfb]" started-at="2024-02-23T10:50:10 IST" name="tearDownClass" finished-at="2024-02-23T10:50:13 IST" duration-ms="2822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

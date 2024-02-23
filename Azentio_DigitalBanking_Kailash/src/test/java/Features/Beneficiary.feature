@@ -597,7 +597,7 @@ And User_626 Click on the Previous button in Debit Card details Screen
 And User_626 Verify the functionality of the previous in From Acc transfer Screen
 
 @AT_BM_038_01
-Scenario: Check the edit options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer
+Scenario: Check the edit options post adding of the beneficiary details in the beneficiary management for the Local bank transfer
 And User_626 loads the test datasetup for the test case id AT_BM_032
 Given user_5679 navigates to the omni_corporate_portal_retail
 And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
