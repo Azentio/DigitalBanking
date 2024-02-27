@@ -6,14 +6,14 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/features/Beneficiary.feature"},
+@CucumberOptions(features = {"src/test/java/features/beneficiary.feature"},
                 glue = "stepdefinitions",
                 //monochrome=false, //to make steps in color
                 plugin = { "pretty",
                            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               // ,dryRun = false  //to check compilation errors                                      
- ,tags="@AT_BM_038_01"
+ ,tags="@AT_BM_067"
 		  //DebitCardDetails
 		   //CreditCardSettlement
 )
@@ -27,6 +27,7 @@ public class TestApplication extends AbstractTestNGCucumberTests {
 	 * @DataProvider(parallel = true) public Object[][] scenarios() { return
 	 * super.scenarios(); }
 	 */
+	
 	
 
 	

@@ -82,6 +82,12 @@ public class Beneficiary {
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
 	}
+	@And("User_626 loads the test datasetup for the test case id AT_BM_065")
+	public void user_626_loads_the_test_datasetup_for_the_test_case_id_AT_BM_065() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_065");
+		System.out.println(executionTestData);
+		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+	}
 	@Given("User_626 Click on the Beneficiary Management in the Home screen Retail User")
 	public void user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Beneficiay_Management"),false);
@@ -110,9 +116,7 @@ public class Beneficiary {
 			}
 			
 			} 
-			
-		
-		
+				
 	}
 
 	@Given("User_626 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary")
@@ -127,7 +131,6 @@ public class Beneficiary {
 	public void user_626_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary_dropdown() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Mobilecode"),false);
 	}
-
 	@Given("User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary")
 	public void user_626_select_the_mobile_number_code_for_enter_the_mobile_no_below_the_add_ineternal_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
@@ -149,7 +152,7 @@ public class Beneficiary {
 			driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("MobileNum"))).sendKeys(Keys.BACK_SPACE);	
 		}
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),testData.get("MobileNumber"),false);
-	}
+		}
 	@Given("User_626 Enter the Purpose of the Add Internal Beneficiary Bank")
 	public void user_626_enter_the_purpose_of_the_add_internal_beneficiary_bank() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"),testData.get("Purpose"),false);
@@ -171,12 +174,10 @@ public class Beneficiary {
 	public void user_626_validate_the_invalid_account_number_below_the_add_ineternal_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("OK_Invalid"),false);
 	}
-	
 	@Given("User_626 Verify the Cancel button in Beneficiary Screen")
 	public void user_626_verify_the_cancel_button_in_the_limit_update_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Cancel_DebitDetailsLUS"));
 	}
-	
 	@Given("User_626 Enter Draft Name for save the Beneficiary request")
 	public void user_626_enter_draft_name_for_save_the_debit_detail_request() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("DraftName"),false);
@@ -186,8 +187,6 @@ public class Beneficiary {
 		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
 				testData.get("DraftName"),false);
 	}
-	
-	
 	@Given("User_626 Click on the local bank transfer in beneficiary management")
 	public void User_626_Click_on_the_local_bank_transfer_in_beneficiary_management() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Local_Transfer_beneficiary"),true);
@@ -196,37 +195,30 @@ public class Beneficiary {
 	public void user_click_on_the_bank_dropdown_below_the_local_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"),false);
 	}
-
 	@Given("User_626 Search bank name and select the bank in the dropdown")
 	public void user_search_bank_name_and_select_the_bank_in_the_dropdown() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("BankName"),false);
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
 	}
-
 	@Given("User_626 Click on the currency dropdown for select Currency")
 	public void user_click_on_the_currency_dropdown_for_select_currency() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"),false);
 	}
-
 	@Given("User_626 Search Currency and select the Currency in the dropdown")
 	public void user_search_currency_and_select_the_currency_in_the_dropdown() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Currency"),false);
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
 	}
-
-	
 	@Given("User_626 Verify the saved Local Transfer Beneficiary data")
 	public void user_verify_the_saved_local_transfer_beneficiary_data() {
 		String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]";
 		   us.elementIsVisible(driver, xpath);
 	}
-
 	@Given("User_626 Click on the saved data showmore button")
 	public void user_click_on_the_saved_data_showmore_button() {
 		String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' show more ']";
 		   us.clickOnElement(driver, xpath,false);
 	}
-
 	@Given("User_626 Verify the currency field in record of beneficiary")
 	public void user_verify_the_currency_field_in_record_of_beneficiary() {
 		String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-header//span[contains(text(),'"+testData.get("Currency")+"')]";
@@ -238,13 +230,11 @@ public class Beneficiary {
 	String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-header//ion-label[text()=' Active ']";
 	us.elementIsVisible(driver, Xpath);
 	}
-
 	@Given("User_626 Verify the Name of the beneficiary field in record of beneficiary")
 	public void user_verify_the_name_of_the_beneficiary_field_in_record_of_beneficiary() {
 		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' Benef_name ']";
 		us.elementIsVisible(driver, Xpath);
 	}
-
 	@Given("User_626 Verify the Bank Name field in record of beneficiary")
 	public void user_verify_the_bank_name_field_in_record_of_beneficiary() {
 		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' Bank ']";
@@ -255,7 +245,6 @@ public class Beneficiary {
 		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content//ion-label[text()=' Beneficiary Bank Verification Number ']";
 		us.elementIsVisible(driver, Xpath);
 	}
-
 	@Given("User_626 Verify the branch field in record of beneficiary")
 	public void user_verify_the_branch_field_in_record_of_beneficiary() {
 		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-content/ion-label[text()=' Beneficiary Bank Verification Number ']";
@@ -265,17 +254,14 @@ public class Beneficiary {
 	public void user_626_verify_the_edit_field_in_record_of_beneficiary() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("RecodEdit"));
 		}
-
 	@Given("User_626 Verify the pay Field in record of beneficiary")
 	public void user_626_verify_the_pay_field_in_record_of_beneficiary() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordPay"));
 	}
-
 	@Given("User_626 Verify the delete Field in record of beneficiary")
 	public void user_626_verify_the_delete_field_in_record_of_beneficiary() {
-		JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Beneficiary").get("RecordPay")).isDisplayed();
+		JavascriptHelper.executeScriptWithWebElement(DataReader.locatorsMap.get("Beneficiary").get("RecordDelete")).isDisplayed();
 	}
-
 	@Given("User_626 Verify the details Field in record of beneficiary")
 	public void user_626_verify_the_details_field_in_record_of_beneficiary() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordDetails"));
@@ -291,15 +277,12 @@ public class Beneficiary {
 	@Given("User_626 Click on the edit button in Beneficiary")
 	public void user_click_on_the_edit_button_in_beneficiary() {
 		String Xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]//ancestor::mat-card-header//ion-icon";
-		us.clickOnElement(driver, Xpath, false);
-		
+		us.clickOnElement(driver, Xpath, false);		
 	}
-
 	@Given("User_626 Enter the Nick Name Below the beneficiary")
 	public void user_enter_the_nick_name_below_the_beneficiary() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("ChangeCardNameVisible_debitDetails"),testData.get("NickName"),false);
 	}
-
 	@Given("User_626 Save the nick Name Below the beneficiary")
 	public void user_save_the_nick_name_below_the_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Save_DebitDetails"),false);
@@ -340,43 +323,35 @@ public class Beneficiary {
 	public void user_verify_the_functionality_of_the_previous_in_terms_transfer_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("NavigationsecScreen"));
 	}
-
 	@Given("User_626 Verify the functionality of the previous in From Acc transfer Screen")
 	public void user_verify_the_functionality_of_the_previous_in_from_acc_transfer_screen() {
 		us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("EnterAmount"));
 	}	
-
 @Given("User_626 Click on the edit button Below the showmore")
 public void user_click_on_the_edit_button_below_the_showmore() throws InterruptedException {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("EDIT_Benef"),false);
 	Thread.sleep(5000);
 }
-
 @Given("User_626 Verify the Bank_Edit_Summary field in Edit Beneficiary Screen")
 public void user_verify_the_bank_edit_summary_field_in_edit_beneficiary_screen() {
 	us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Edit_Summary"));
 }
-
 @Given("User_626 Verify the BVN_Edit_Summary field in Edit Beneficiary Screen")
 public void user_verify_the_bvn_edit_summary_field_in_edit_beneficiary_screen() {
    us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("BVN_Edit_Summary"));
 }
-
 @Given("User_626 Verify the ACC_NO_Edit_Summary field in Edit Beneficiary Screen")
 public void user_verify_the_acc_no_edit_summary_field_in_edit_beneficiary_screen() {
    us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("ACC_NO_Edit_Summary"));
 }
-
 @Given("User_626 Verify the NameOfBeneficiary_Edit_Summary field in Edit Beneficiary Screen")
 public void user_verify_the_name_of_beneficiary_edit_summary_field_in_edit_beneficiary_screen() {
    us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("NameOfBeneficiary_Edit_Summary"));
 }
-
 @Given("User_626 Verify the field MobNO_Edit_summary in Edit Beneficiary Screen")
 public void user_verify_the_field_mob_no_edit_summary_in_edit_beneficiary_screen() {
    us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("MobNO_Edit_summary"));
 }
-
 @Given("User_626 Verify the Purpose_edit_summary field in Edit Beneficiary Screen")
 public void user_verify_the_purpose_edit_summary_field_in_edit_beneficiary_screen() {
    us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_edit_summary"));
@@ -385,12 +360,106 @@ public void user_verify_the_purpose_edit_summary_field_in_edit_beneficiary_scree
 public void User_626_Click_on_the_Show_More_button_below_the_Edit_Beneficiary_details() {
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("ShowMore_Beneficiary"), false);
 }
-	
-	
-	
-	
-	
-	
+@Given("User_626 Click on the international bank transfer in beneficiary management")
+public void User_626_Click_on_the_international_bank_transfer_in_beneficiary_management() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Swift_BeneficiaryManagement"),true);
+}	
+@Given("User_626 Click on the international Show More button below the Edit Beneficiary details")
+public void User_626_Click_on_the_Show_More_international_button_below_the_Edit_Beneficiary_details() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("InternationalBeneShowmore"), false);
+}	
+@Given("User_626 Click on the edit button below the international beneficiary")
+public void user_click_on_the_edit_button_below_the_international_beneficiary() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("RecodEdit"), false);
+}
+@Given("User_626 Enter the branch below the international transfer beneficiary")
+public void user_enter_the_branch_below_the_international_transfer_beneficiary() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Branch_InternationalBene"),testData.get("BankName"),false);
+	for (int i = 0; i <50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("Branch_InternationalBene"))).sendKeys(Keys.BACK_SPACE);	
+	}
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Branch_InternationalBene"),testData.get("BankName"),false);
+}	
+@Given("User_626 Click on the Cancel button in draft Saving Screen")
+public void User_626_Click_on_the_Cancel_button_in_draft_Saving_Screen() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel_PCR"),false);
+}	
+@Given("User_626 Verify the Screen with help of purpose the international transfer beneficiary")
+public void user_verify_the_screen_with_help_of_purpose_the_international_transfer_beneficiary() {
+	 us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"));
+}
+@Given("User_626 Verify the Screen with help of  the international transfer beneficiary")
+public void user_verify_the_screen_with_help_of_the_international_transfer_beneficiary() {
+	 us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("BicSwift"));
+}	
+@Given("User_626 Click on the delete button below the Edit Beneficiary details")
+public void user_click_on_the_delete_button_below_the_edit_beneficiary_details() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordDelete"),true);
+}
+@Given("User_626 Click on the cancel for stop delete progress below the Edit Beneficiary details")
+public void user_click_on_the_cancel_for_stop_delete_progress_below_the_edit_beneficiary_details() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Cancel_Delete"),false);
+}
+@Given("User_626 Click on the OK button below the Edit Beneficiary details")
+public void user_click_on_the_ok_button_below_the_edit_beneficiary_details() {
+   us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("OK_Delete"));
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("OK_Delete"),false);
+}
+@And("User_626 loads the test datasetup for the test case id AT_BM_074")
+public void user_626_loads_the_test_datasetup_for_the_test_case_id_AT_BM_074() {
+	executionTestData = DataReader.executionTestData.get("AT_BM_074");
+	System.out.println(executionTestData);
+	testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+}
+// nandhini
+@Given("User_626 Click the Add International Benef button under Swift screen")
+public void User_626_click_the_add_international_benef_button_under_swift_screen() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Add_international_benef"),false);
+}
+@Given("User_626 Enter the Bic Swift Code in International Benef screen")
+public void User_626_enter_the_bic_swift_code_in_international_benef_screen() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Bic_Swift_code"),testData.get("InvalidACC"),false);
+	for (int i = 0; i <10; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("Bic_Swift_code"))).sendKeys(Keys.BACK_SPACE);	
+	}
+us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Beneficiary").get("Bic_Swift_code"),testData.get("InvalidACC"),false);
+
+}
+@Given("User_626 Enter the Bank Name in International Benef screen")
+public void User_626_enter_the_bank_name_in_international_benef_screen() {
+	System.out.println(testData.get("BankName"));
+	us.enterDataAndEnter(driver,DataReader.locatorsMap.get("Beneficiary").get("BankName_BenefManage"),testData.get("DraftName"),false);
+}
+@Given("User_626 Enter the Branch Name in International Benef screen")
+public void User_626_enter_the_branch_name_in_international_benef_screen() {
+	us.enterData(driver,DataReader.locatorsMap.get("Beneficiary").get("BranchName_BenefManage"),testData.get("BankName"),false);
+}
+@Given("User_626 Select the Country below the Add ineternal Beneficiary")
+public void User_626_Select_the_Country_below_the_Add_ineternal_Beneficiary() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
+}
+@Given("User_626 Enter the Country below the Add ineternal Beneficiary Dropdown")
+public void user_626_enter_the_country_below_the_add_ineternal_beneficiary_dropdown() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Country"),false);
+}
+@Given("User_626 Enter Draft Name for save the Debit Detail request For Swift Beneficiary")
+public void user_626_enter_draft_name_for_save_the_debit_detail_request_For_Swift_Beneficiary() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),testData.get("NameOfBeneficiary"),false);
+	for (int i = 0; i <50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"))).sendKeys(Keys.BACK_SPACE);	
+	}
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Cards").get("DraftTitle_DebitDetails"),
+			testData.get("NameOfBeneficiary"),false);
+}
+@Given("User_626 Click on the saved Draft data for verification for own bank beneficiary")
+public void user_626_click_on_the_saved_draft_data_for_verification_for_own_bank_beneficiary() {
+	String xpath ="//div[contains(text(),'"+testData.get("DraftName")+"')]";
+	   us.clickOnElement(driver,xpath,false);
+	}
+
+
+
+
 	
 	
 	

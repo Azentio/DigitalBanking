@@ -197,6 +197,7 @@ And User_626 Click on the cancel button in the draft screen
 @AT_BM_007
 Scenario: Check if the user is able to use the saved draft to add the beneficiary details for the 
 own bank transfer for retail user with valid account details
+Given user_5679 navigates to the omni_corporate_portal_retail
 And User_626 loads the test datasetup for the test case id AT_BM_005
 Given user_5679 navigates to the omni_corporate_portal_retail
 And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
@@ -395,7 +396,7 @@ And user_5679 click on the loggin button in the login page for omni_corporate_we
 And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
 And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the Beneficiary Management in the Home screen Retail User
-And User_626 Click on the local bank transfer in beneficiary management
+And User_626 Click on local bank transfer in beneficiary management
 And User_626 Click on the Add local beneficiary in beneficiary management
 And User_626 Click on the Bank dropdown below the local beneficiary
 And User_626 Search bank name and select the bank in the dropdown
@@ -617,10 +618,194 @@ And User_626 Verify the NameOfBeneficiary_Edit_Summary field in Edit Beneficiary
 And User_626 Verify the field MobNO_Edit_summary in Edit Beneficiary Screen
 And User_626 Verify the Purpose_edit_summary field in Edit Beneficiary Screen
 
+@AT_BM_065
+Scenario: Save the beneficiary details while using the edit option in the beneficiary management
+for the International bank transfer for retail user with valid account details and Cancellation draft 
+And User_626 loads the test datasetup for the test case id AT_BM_065
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click on the international bank transfer in beneficiary management
+And User_626 Click on the international Show More button below the Edit Beneficiary details
+And User_626 Click on the edit button below the international beneficiary
+And User_626 Enter the branch below the international transfer beneficiary
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click On the Save button For Save the Draft in limit Update Screen
+And User_626 Verify the draft title field After clicking save button
+And User_626 Verify the Cancel button in draft Saving Screen
+And User_626 Verify the Submit button in draft Saving Screen
+And User_626 Click on the Cancel button in draft Saving Screen
+And User_626 Click On the Save button For Save the Draft in limit Update Screen
+And User_626 Verify the draft title field After clicking save button
+And User_626 Verify the Cancel button in draft Saving Screen
+And User_626 Verify the Submit button in draft Saving Screen
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the To Do Screen For check the Saved Draft
+And User_626 Click on the saved Draft data for verification
 
+@AT_BM_066
+Scenario: Save the transfer details in the summary page while using the edit option in the beneficiary 
+management for the International bank transfer for retail user with valid account details
+And User_626 loads the test datasetup for the test case id AT_BM_065
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click on the international bank transfer in beneficiary management
+And User_626 Click on the international Show More button below the Edit Beneficiary details
+And User_626 Click on the edit button below the international beneficiary
+And User_626 Enter the branch below the international transfer beneficiary
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the currency dropdown for select Currency
+And User_626 Search Currency and select the Currency in the dropdown 
+And User_626 Verify the Screen with help of purpose the international transfer beneficiary  
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Screen with help of  the international transfer beneficiary  
+And User_626 Click On the Save button For Save the Draft in limit Update Screen
+And User_626 Verify the draft title field After clicking save button
+And User_626 Verify the Cancel button in draft Saving Screen
+And User_626 Verify the Submit button in draft Saving Screen
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on sumbit button Save the Data
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the To Do Screen For check the Saved Draft
+And User_626 Click on the saved Draft data for verification for own bank beneficiary
 
+@AT_BM_067
+Scenario: Check if the user is able to cancel while saving the transfer details in the summary page while using the 
+edit option in the beneficiary management for the International bank transfer for retail user with valid account details
+And User_626 loads the test datasetup for the test case id AT_BM_065
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click on the international bank transfer in beneficiary management
+And User_626 Click on the international Show More button below the Edit Beneficiary details
+And User_626 Click on the edit button below the international beneficiary
+And User_626 Enter the branch below the international transfer beneficiary
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the currency dropdown for select Currency
+And User_626 Search Currency and select the Currency in the dropdown 
+And User_626 Verify the Screen with help of purpose the international transfer beneficiary  
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Verify the Screen with help of  the international transfer beneficiary  
+And User_626 Click On the Save button For Save the Draft in limit Update Screen
+And User_626 Verify the draft title field After clicking save button
+And User_626 Verify the Cancel button in draft Saving Screen
+And User_626 Verify the Submit button in draft Saving Screen
+And User_626 Enter Draft Name for save the Debit Detail request
+And User_626 Click on the Cancel button in draft Saving Screen  
+  
+@AT_BM_068
+Scenario: Check if the user is able to delete the beneficiary details using the delete option in the beneficiary
+management for the International bank transfer for retail user with valid account details
+And User_626 loads the test datasetup for the test case id AT_BM_065
+Given user_5679 navigates to the omni_corporate_portal_retail
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click on the international bank transfer in beneficiary management
+And User_626 Click on the international Show More button below the Edit Beneficiary details
+And User_626 Verify the Edit Field in record of beneficiary
+And User_626 Verify the pay Field in record of beneficiary
+And User_626 Verify the details Field in record of beneficiary
+And User_626 Click on the delete button below the Edit Beneficiary details
+And User_626 Click on the cancel for stop delete progress below the Edit Beneficiary details
+And User_626 Click on the delete button below the Edit Beneficiary details
+And User_626 Click on the OK button below the Edit Beneficiary details
 
+@AT_BM_074
+Scenario: Save the beneficiary details for the own bank transfer for corporate user with valid account details
+And User_626 loads the test datasetup for the test case id AT_BM_074
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click Add ineternal Beneficiary Below the Beneficiary Management Bank Screen
+And User_626 Enter the Valid Account number below the Add ineternal Beneficiary
+And User_626 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary
+And User_626 click on the country for selecting below the Add ineternal Beneficiary
+And User_626 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown
+And User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+And User_626 Enter the Mobile number below the Add ineternal Beneficiary
+And User_626 Enter the Purpose of the Add Internal Beneficiary Bank
+And User_626 Click on the Save button in Screen2
+And User_626 Enter Draft Name for save the Beneficiary request
+And User_626 Click on sumbit button Save the Data
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the To Do Screen For check the Saved Draft
+And User_626 Click on the saved Draft data for verification for own bank beneficiary
 
+@AT_BM_075
+Scenario: Check if the user is able to cancel while saving the beneficiary details for the own bank transfer for
+corporate user with valid account details
+And User_626 loads the test datasetup for the test case id AT_BM_074
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click Add ineternal Beneficiary Below the Beneficiary Management Bank Screen
+And User_626 Enter the Valid Account number below the Add ineternal Beneficiary
+And User_626 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary
+And User_626 click on the country for selecting below the Add ineternal Beneficiary
+And User_626 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown
+And User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+And User_626 Enter the Mobile number below the Add ineternal Beneficiary
+And User_626 Enter the Purpose of the Add Internal Beneficiary Bank
+And User_626 Click on the Save button in Screen2
+And User_626 Verify the Draft title is avaible or not
+And User_626 Verify the Cancel button the Draft details screen
+And User_626 Verify the submit button the draft details screen 
+And User_626 Enter Draft Name for save the Debit Detail request For Swift Beneficiary
+And User_626 Click on the Cancel button in draft Saving Screen 
 
-
+@AT_BM_076
+Scenario: Save the beneficiary details on the summary screen for the own bank transfer for corporate user with valid account details
+And User_626 loads the test datasetup for the test case id AT_BM_074
+Given user_5679 navigates to the omni_corporate_web_portal
+And User_626 enters the CorporateUser in the login page for omni_web_portal for beneficiary
+And User_626 enters the CorporatePass in the login page for omni_web_portal for beneficiary
+And user_5679 click on the loggin button in the login page for omni_corporate_web_portal
+And user_5679 click on the force logout btn in the login page for omni_corporate_web_portal
+And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the Beneficiary Management in the Home screen Retail User
+And User_626 Click Add ineternal Beneficiary Below the Beneficiary Management Bank Screen
+And User_626 Enter the Valid Account number below the Add ineternal Beneficiary
+And User_626 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary
+And User_626 click on the country for selecting below the Add ineternal Beneficiary
+And User_626 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown
+And User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+And User_626 Enter the Mobile number below the Add ineternal Beneficiary
+And User_626 Enter the Purpose of the Add Internal Beneficiary Bank
+And User_626 Click on the Next button in limit Update Screen
+And User_626 Click on the Save button in Screen2
+And User_626 Verify the Draft title is avaible or not
+And User_626 Verify the Cancel button the Draft details screen
+And User_626 Verify the submit button the draft details screen 
+And User_626 Enter Draft Name for save the Beneficiary request
+And User_626 Click on sumbit button Save the Data
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+And User_626 Click on the To Do Screen For check the Saved Draft
+And User_626 Click on the saved Draft data for verification for own bank beneficiary
 

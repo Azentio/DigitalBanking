@@ -813,6 +813,7 @@ public class DebitCardDetails {
 
 	@Given("User_626 Click on the saved Draft data for verification")
 	public void user_626_click_on_the_saved_draft_data_for_verification() {
+		System.out.println(testData.get("DraftName"));
 		String xpath ="//div[contains(text(),'"+testData.get("DraftName")+"')]";
 		   us.clickOnElement(driver, xpath, false);
 		}
