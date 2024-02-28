@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 27 18:07:53 IST 2024</td>
+<td>Started on:</td><td>Wed Feb 28 15:22:16 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>207 seconds (207071 ms)</td>
+<tr><td>Total time:</td><td>281 seconds (281056 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,63 +76,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the transfer details in the summary page while using the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
-<td><div><pre>org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=117.0.5938.92)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a beneficiary for the own bank transfer for retail user with Invalid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //ion-label[text()=&quot; Previous &quot;] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40052b11b1ed6a4163972c8531f13e6c, clearElement {id=468E72F33B9E509B534AD6E62BDDD4D1_element_133}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64212/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (40052b11b1ed6a4163972c8531f13e6c)] -&gt; xpath: //ion-input[@psfcname=&quot;branch&quot;]]
-Session ID: 40052b11b1ed6a4163972c8531f13e6c
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
-	at utilities.UserUtility_614.enterDataAndTab(UserUtility_614.java:292)
-	at stepdefinitions.Beneficiary.user_enter_the_branch_below_the_international_transfer_beneficiary(Beneficiary.java:377)
-	at ✽.User_626 Enter the branch below the international transfer beneficiary(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:697)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2035258234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2035258234'><pre>org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=117.0.5938.92)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:53)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:635)
+	at stepdefinitions.DebitCardDetails.user_626verify_the_Previous_is_showing_in_debit_card_pin_change_screen(DebitCardDetails.java:314)
+	at ✽.User_626 Verify the Previous is showing in Debit Card PinChange Screen(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:92)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1647761466", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1647761466'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //ion-label[text()=&quot; Previous &quot;] (tried for 100 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40052b11b1ed6a4163972c8531f13e6c, clearElement {id=468E72F33B9E509B534AD6E62BDDD4D1_element_133}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64212/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (40052b11b1ed6a4163972c8531f13e6c)] -&gt; xpath: //ion-input[@psfcname=&quot;branch&quot;]]
-Session ID: 40052b11b1ed6a4163972c8531f13e6c
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
-	at utilities.UserUtility_614.enterDataAndTab(UserUtility_614.java:292)
-	at stepdefinitions.Beneficiary.user_enter_the_branch_below_the_international_transfer_beneficiary(Beneficiary.java:377)
-	at ✽.User_626 Enter the branch below the international transfer beneficiary(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:697)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelper(UserUtility_614.java:53)
+	at utilities.UserUtility_614.elementIsVisible(UserUtility_614.java:635)
+	at stepdefinitions.DebitCardDetails.user_626verify_the_Previous_is_showing_in_debit_card_pin_change_screen(DebitCardDetails.java:314)
+	at ✽.User_626 Verify the Previous is showing in Debit Card PinChange Screen(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:92)
 </pre></div></td>
-<td>194</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
+<td>263</td>
+<td>Runner.TestApplication@660acfb</td></tr>
 </table><p>
 </body>
 </html>
