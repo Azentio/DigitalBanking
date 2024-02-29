@@ -124,8 +124,9 @@ public class Beneficiary {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BeneName"),testData.get("NameOfBeneficiary"),false);
 	}
 	@Given("User_626 click on the country for selecting below the Add ineternal Beneficiary")
-	public void user_626_click_on_the_country_for_selecting_below_the_add_ineternal_beneficiary() {
+	public void user_626_click_on_the_country_for_selecting_below_the_add_ineternal_beneficiary() throws InterruptedException {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Country"),false);
+		Thread.sleep(500000);
 	}
 	@Given("User_626 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown")
 	public void user_626_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary_dropdown() {
@@ -134,6 +135,7 @@ public class Beneficiary {
 	@Given("User_626 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary")
 	public void user_626_select_the_mobile_number_code_for_enter_the_mobile_no_below_the_add_ineternal_beneficiary() {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
+			
 	}
 	@Given("User_626 Enter the Mobile Invalid number below the Add ineternal Beneficiary")
 	public void user_626_enter_the_mobile_Invalid_number_below_the_add_ineternal_beneficiary() {
@@ -152,6 +154,7 @@ public class Beneficiary {
 			driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("MobileNum"))).sendKeys(Keys.BACK_SPACE);	
 		}
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),testData.get("MobileNumber"),false);
+		
 		}
 	@Given("User_626 Enter the Purpose of the Add Internal Beneficiary Bank")
 	public void user_626_enter_the_purpose_of_the_add_internal_beneficiary_bank() {
