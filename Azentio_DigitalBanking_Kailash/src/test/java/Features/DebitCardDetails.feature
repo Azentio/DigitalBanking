@@ -201,7 +201,7 @@ And User_626 Click on the I agree Check Box in Screen2
 And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
-And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification
 
@@ -279,7 +279,7 @@ And User_626 Verify the Submit is showing in Debit Card PinChange Screen
 And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
-And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification
 
@@ -364,7 +364,7 @@ And User_626 Verify the Cancel button the Draft details screen
 And User_626 Verify the submit button the draft details screen 
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
-And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
+#And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification
 
@@ -393,7 +393,7 @@ And User_626 Verify the submit button the draft details screen
 And User_626 Click on the cancel button in the draft screen 
 And User_626 Click on the Previous button in Debit Card details Screen
 And User_626 verify the screen3 into screen2 by clicking previous
-And User_626 Click on the Previous button in Debit Card details Screen
+And User_626 Click on the Previous button in Debit Card details Screen With wait
 And User_626 verify the screen2 into screen1 by clicking previous
 
 @AT_DCD_019
@@ -493,7 +493,6 @@ And User_626 Click on the Next button in limit Update Screen
 And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
-And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 
 @AT_DCD_023
 Scenario: Verify That user can Navigate to Block Card-Card Block Options-Screen2
@@ -526,7 +525,6 @@ And User_626 Verify the Previous is showing in Debit Card PinChange Screen
 And User_626 Click on the Save button in Screen2
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
-And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 
 @AT_DCD_024
 Scenario: Verify That user can Navigate to Block Card-Card Block Options-Screen3
@@ -562,7 +560,6 @@ And User_626 Verify the Cancel button in draft Saving Screen
 And User_626 Verify the Submit button in draft Saving Screen 
 And User_626 Enter Draft Name for save the Debit Detail request
 And User_626 Click on sumbit button Save the Data
-And user_5679 click on the ok button for the successful login page for omni_corporate_web_portal
 And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification
 

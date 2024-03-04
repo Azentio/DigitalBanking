@@ -53,7 +53,7 @@ public class DebitCardDetails {
 
 	@And("User_626 loads the test datasetup for the test case id AT_DCD_006")
 	public void User_626loads_the_test_datasetup_for_the_test_case_id_AT_DCD_006() {
-		executionTestData = DataReader.executionTestData.get("AT_DCD_006");
+		executionTestData = DataReader.executionTestData.get("AT_DCD_005");
 		System.out.println(executionTestData);
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
@@ -181,7 +181,7 @@ public class DebitCardDetails {
 		
 	@Given("User_626 Verify the Card Holder Name is showing in Debit Card Segment")
 	public void user_626verify_the_card_holder_name_is_showing_in_debit_card_segment() {
-		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("SelectCard_PCR_Retail"));
+		us.elementIsVisible(driver, DataReader.locatorsMap.get("Cards").get("Card_Holder_Name"));
 	}
 	@Given("User_626 Verify the Status of the Card is showing in Debit Card Segment")
 	public void user_626verify_the_status_of_the_card_is_showing_in_debit_card_segment() {
@@ -202,7 +202,7 @@ public class DebitCardDetails {
 
 	@Given("User_626 Click on the edit button in Debit card details")
 	public void user_626click_on_the_edit_button_in_debit_card_details() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("EditIconClick_DebitDetails"), true);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("EditIconClick_DebitDetails"), false);
 	}
 	
 	@Given("User_626 Verify the Card change name button is visible")
@@ -417,7 +417,7 @@ public class DebitCardDetails {
 	}
 	@Given("User_626 Click on the Limit Update For Field Verification")
 	public void user_626click_on_the_limit_update_for_field_verification() throws InterruptedException {
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		
 		for (int i = 0; i <= 500; i++) {
 			try {
@@ -894,7 +894,7 @@ public void user_626_loads_the_test_datasetup_for_the_test_case_id_at_dcd_020() 
 	}
 	@Given("User_626 Click on the cancel button in the draft screen")
 	public void User_626_Click_on_the_cancel_button_in_the_draft_screen() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel"),false);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Cards").get("Draft_Cancel_PCR"),false);
 	}
 //razia	
 	
@@ -1692,7 +1692,12 @@ public void user_612_verify_the_cancel_button_is_displaying_or_not() {
 public void user_612_verify_the_record_save_in_to_do_list_for_draft_data() {
 	us.elementIsVisible(driver,DataReader.locatorsMap.get("Cards").get("CCS_TodoDraft_verify"));
 }
-
+@Given("User_626 Click on the Previous button in Debit Card details Screen With wait")
+public void user_626_Click_on_the_Previous_button_in_Debit_Card_details_Screen_With_wait() throws InterruptedException {
+	Thread.sleep(5000);
+	us.clickOnElement(driver, 
+			DataReader.locatorsMap.get("Cards").get("Previous_DebitDetails"),false);
+	}
 
 
 
