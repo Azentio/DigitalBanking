@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 32 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\inindc00626\AppData\Local\Temp\testng-eclipse--1601425095\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">35 methods, 32 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the Pay Functionality in saved record of beneficiary&quot;, &quot;Optional[Testing the functionalities...)">runScenario("Verify the Pay Functionality in saved record of beneficiary", "Optional[Testing the functionalities...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while saving the beneficiary details for the Local bank transfe...)">runScenario("Check if the user is able to cancel while saving the beneficiary details for the Local bank transfe...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the beneficiary details for the own bank transfer for retail user with valid account details&quot;,...)">runScenario("Save the beneficiary details for the own bank transfer for retail user with valid account details",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;currency, logo and code - To Account card component&quot;, &quot;Optional[Testing the functionalities of Bene...)">runScenario("currency, logo and code - To Account card component", "Optional[Testing the functionalities of Bene...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)">runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to use the saved draft to add the beneficiary details for the&quot;, &quot;Optional...)">runScenario("Check if the user is able to use the saved draft to add the beneficiary details for the", "Optional...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Add a beneficiary for the own bank transfer for retail user with valid account&quot;, &quot;Optional[Testing ...)">runScenario("Add a beneficiary for the own bank transfer for retail user with valid account", "Optional[Testing ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to delete the beneficiary details using the delete option in the benefici...)">runScenario("Check if the user is able to delete the beneficiary details using the delete option in the benefici...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)">runScenario("Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the beneficiary details while using the edit option in the beneficiary management&quot;, &quot;Optional[...)">runScenario("Save the beneficiary details while using the edit option in the beneficiary management", "Optional[...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while save the transfer details while using the pay option in t...)">runScenario("Check if the user is able to cancel while save the transfer details while using the pay option in t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while saving the transfer details in the summary page while usi...)">runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to go back to the beneficiary details page from summary page in beneficia...)">runScenario("Check if the user is able to go back to the beneficiary details page from summary page in beneficia...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the transfer details in the TnC page while using the pay option in the beneficiary management ...)">runScenario("Save the transfer details in the TnC page while using the pay option in the beneficiary management ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary ...)">runScenario("Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to use the saved draft to add the beneficiary details for the Local bank ...)">runScenario("Check if the user is able to use the saved draft to add the beneficiary details for the Local bank ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the transfer details in the summary page while using the pay option in the beneficiary&quot;, &quot;Opti...)">runScenario("Save the transfer details in the summary page while using the pay option in the beneficiary", "Opti...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the edit options post adding of the beneficiary details in the beneficiary management for the...)">runScenario("Check the edit options post adding of the beneficiary details in the beneficiary management for the...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Add a beneficiary for the own bank transfer for retail user with Invalid account details&quot;, &quot;Optiona...)">runScenario("Add a beneficiary for the own bank transfer for retail user with Invalid account details", "Optiona...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the all fields and data in the saved record of beneficiary&quot;, &quot;Optional[Testing the functiona...)">runScenario("Verify the all fields and data in the saved record of beneficiary", "Optional[Testing the functiona...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the beneficiary details on the summary screen for the Local bank transfer for corporate user w...)">runScenario("Save the beneficiary details on the summary screen for the Local bank transfer for corporate user w...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the Navigation buttons and data in the saved record of beneficiary&quot;, &quot;Optional[Testing the f...)">runScenario("Verify the Navigation buttons and data in the saved record of beneficiary", "Optional[Testing the f...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while saving the transfer details in the summary page while usi...)">runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the field and previous buttons are working while using the pay option in the beneficiary man...)">runScenario("Verify the field and previous buttons are working while using the pay option in the beneficiary man...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)">runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the transfer details in the summary page while using the edit option in the beneficiary&quot;, &quot;Opt...)">runScenario("Save the transfer details in the summary page while using the edit option in the beneficiary", "Opt...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)">runScenario("Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while saving the transfer details in the summary page while usi...)">runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check the details options post adding of the beneficiary details in the beneficiary management&quot;, &quot;O...)">runScenario("Check the details options post adding of the beneficiary details in the beneficiary management", "O...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the beneficiary details on the summary screen for the own bank transfer for retail user with v...)">runScenario("Save the beneficiary details on the summary screen for the own bank transfer for retail user with v...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while saving the beneficiary details for the&quot;, &quot;Optional[Testin...)">runScenario("Check if the user is able to cancel while saving the beneficiary details for the", "Optional[Testin...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;, &quot;Optional[Testing the functionalities of Beneficiary in omni]&quot;)">runScenario("", "Optional[Testing the functionalities of Beneficiary in omni]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the beneficiary details for the own bank transfer for corporate user with valid account detail...)">runScenario("Save the beneficiary details for the own bank transfer for corporate user with valid account detail...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Save the beneficiary details on the summary screen for the own bank transfer for corporate user wit...)">runScenario("Save the beneficiary details on the summary screen for the own bank transfer for corporate user wit...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Runner.TestApplication" class="method navigator-link" hash-for-method="runScenario(&quot;Check if the user is able to cancel while saving the beneficiary details for the own bank transfer ...)">runScenario("Check if the user is able to cancel while saving the beneficiary details for the own bank transfer ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Runner.TestApplication</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the Pay Functionality in saved record of beneficiary&quot;, &quot;Optional[Testing the functionalities...)">
+                  </a> <!-- runScenario("Verify the Pay Functionality in saved record of beneficiary", "Optional[Testing the functionalities...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the Pay Functionality in saved record of beneficiary","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:312)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while saving the beneficiary details for the Local bank transfe...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while saving the beneficiary details for the Local bank transfe...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while saving the beneficiary details for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:825)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the beneficiary details for the own bank transfer for retail user with valid account details&quot;,...)">
+                  </a> <!-- runScenario("Save the beneficiary details for the own bank transfer for retail user with valid account details",...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the beneficiary details for the own bank transfer for retail user with valid account details","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:108)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;currency, logo and code - To Account card component&quot;, &quot;Optional[Testing the functionalities of Bene...)">
+                  </a> <!-- runScenario("currency, logo and code - To Account card component", "Optional[Testing the functionalities of Bene...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("currency, logo and code - To Account card component","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;AMANA Payments&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.AdminScreen_Steps_5679.User_5679_ClickOnTheAmanaPaymentScreenInTheHomepage(AdminScreen_Steps_5679.java:513)
+	at ✽.user_5679 click on the AMANA payment screen in the homepage(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:11)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)">
+                  </a> <!-- runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check the pay options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer(Field validation)","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:350)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to use the saved draft to add the beneficiary details for the&quot;, &quot;Optional...)">
+                  </a> <!-- runScenario("Check if the user is able to use the saved draft to add the beneficiary details for the", "Optional...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to use the saved draft to add the beneficiary details for the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:208)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add a beneficiary for the own bank transfer for retail user with valid account&quot;, &quot;Optional[Testing ...)">
+                  </a> <!-- runScenario("Add a beneficiary for the own bank transfer for retail user with valid account", "Optional[Testing ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add a beneficiary for the own bank transfer for retail user with valid account","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:54)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to delete the beneficiary details using the delete option in the benefici...)">
+                  </a> <!-- runScenario("Check if the user is able to delete the beneficiary details using the delete option in the benefici...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to delete the beneficiary details using the delete option in the beneficiary","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:721)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while save the beneficiary details on the summary screen for th...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while save the beneficiary details on the summary screen for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:885)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the beneficiary details while using the edit option in the beneficiary management&quot;, &quot;Optional[...)">
+                  </a> <!-- runScenario("Save the beneficiary details while using the edit option in the beneficiary management", "Optional[...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the beneficiary details while using the edit option in the beneficiary management","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:631)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while save the transfer details while using the pay option in t...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while save the transfer details while using the pay option in t...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while save the transfer details while using the pay option in the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:398)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while saving the transfer details in the summary page while usi...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while saving the transfer details in the summary page while using the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:693)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to go back to the beneficiary details page from summary page in beneficia...)">
+                  </a> <!-- runScenario("Check if the user is able to go back to the beneficiary details page from summary page in beneficia...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to go back to the beneficiary details page from summary page in beneficiary management","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:953)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the transfer details in the TnC page while using the pay option in the beneficiary management ...)">
+                  </a> <!-- runScenario("Save the transfer details in the TnC page while using the pay option in the beneficiary management ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the transfer details in the TnC page while using the pay option in the beneficiary management for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:523)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary ...)">
+                  </a> <!-- runScenario("Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary management for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:982)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to use the saved draft to add the beneficiary details for the Local bank ...)">
+                  </a> <!-- runScenario("Check if the user is able to use the saved draft to add the beneficiary details for the Local bank ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to use the saved draft to add the beneficiary details for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:916)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the transfer details in the summary page while using the pay option in the beneficiary&quot;, &quot;Opti...)">
+                  </a> <!-- runScenario("Save the transfer details in the summary page while using the pay option in the beneficiary", "Opti...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the transfer details in the summary page while using the pay option in the beneficiary","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:438)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check the edit options post adding of the beneficiary details in the beneficiary management for the...)">
+                  </a> <!-- runScenario("Check the edit options post adding of the beneficiary details in the beneficiary management for the...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check the edit options post adding of the beneficiary details in the beneficiary management for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:609)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add a beneficiary for the own bank transfer for retail user with Invalid account details&quot;, &quot;Optiona...)">
+                  </a> <!-- runScenario("Add a beneficiary for the own bank transfer for retail user with Invalid account details", "Optiona...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add a beneficiary for the own bank transfer for retail user with Invalid account details","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:76)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the all fields and data in the saved record of beneficiary&quot;, &quot;Optional[Testing the functiona...)">
+                  </a> <!-- runScenario("Verify the all fields and data in the saved record of beneficiary", "Optional[Testing the functiona...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the all fields and data in the saved record of beneficiary","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:236)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the beneficiary details on the summary screen for the Local bank transfer for corporate user w...)">
+                  </a> <!-- runScenario("Save the beneficiary details on the summary screen for the Local bank transfer for corporate user w...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the beneficiary details on the summary screen for the Local bank transfer for corporate user with valid account details","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:854)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the Navigation buttons and data in the saved record of beneficiary&quot;, &quot;Optional[Testing the f...)">
+                  </a> <!-- runScenario("Verify the Navigation buttons and data in the saved record of beneficiary", "Optional[Testing the f...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the Navigation buttons and data in the saved record of beneficiary","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:278)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while saving the transfer details in the summary page while usi...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while saving the transfer details in the summary page while using the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-input[@psfcname=&quot;branch&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.enterDataAndTab(UserUtility_614.java:288)
+	at stepdefinitions.Beneficiary.user_626_enter_the_branch_below_the_international_transfer_beneficiary(Beneficiary.java:380)
+	at ✽.User_626 Enter the branch below the international transfer beneficiary(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1098)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the field and previous buttons are working while using the pay option in the beneficiary man...)">
+                  </a> <!-- runScenario("Verify the field and previous buttons are working while using the pay option in the beneficiary man...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the field and previous buttons are working while using the pay option in the beneficiary management for","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:568)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)">
+                  </a> <!-- runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check the pay options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1059)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the transfer details in the summary page while using the edit option in the beneficiary&quot;, &quot;Opt...)">
+                  </a> <!-- runScenario("Save the transfer details in the summary page while using the edit option in the beneficiary", "Opt...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the transfer details in the summary page while using the edit option in the beneficiary","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:662)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while save the beneficiary details on the summary screen for th...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while save the beneficiary details on the summary screen for the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:183)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while saving the transfer details in the summary page while usi...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while saving the transfer details in the summary page while using the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:482)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check the details options post adding of the beneficiary details in the beneficiary management&quot;, &quot;O...)">
+                  </a> <!-- runScenario("Check the details options post adding of the beneficiary details in the beneficiary management", "O...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check the details options post adding of the beneficiary details in the beneficiary management","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1022)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the beneficiary details on the summary screen for the own bank transfer for retail user with v...)">
+                  </a> <!-- runScenario("Save the beneficiary details on the summary screen for the own bank transfer for retail user with v...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the beneficiary details on the summary screen for the own bank transfer for retail user with valid account details","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:156)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while saving the beneficiary details for the&quot;, &quot;Optional[Testin...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while saving the beneficiary details for the", "Optional[Testin...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while saving the beneficiary details for the","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:134)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;&quot;, &quot;Optional[Testing the functionalities of Beneficiary in omni]&quot;)">
+                  </a> <!-- runScenario("", "Optional[Testing the functionalities of Beneficiary in omni]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Test name must not be null or empty
+	at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+	at com.aventstack.extentreports.ExtentTest.&lt;init&gt;(ExtentTest.java:96)
+	at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:153)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.createTestCase(ExtentCucumberAdapter.java:415)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleTestCaseStarted(ExtentCucumberAdapter.java:162)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.access$100(ExtentCucumberAdapter.java:62)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:106)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:103)
+	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:66)
+	at io.cucumber.core.runner.TestCase.emitTestCaseStarted(TestCase.java:228)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:92)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Runner.TestApplication</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the beneficiary details for the own bank transfer for corporate user with valid account detail...)">
+                  </a> <!-- runScenario("Save the beneficiary details for the own bank transfer for corporate user with valid account detail...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the beneficiary details for the own bank transfer for corporate user with valid account details","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Save the beneficiary details on the summary screen for the own bank transfer for corporate user wit...)">
+                  </a> <!-- runScenario("Save the beneficiary details on the summary screen for the own bank transfer for corporate user wit...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Save the beneficiary details on the summary screen for the own bank transfer for corporate user with valid account details","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if the user is able to cancel while saving the beneficiary details for the own bank transfer ...)">
+                  </a> <!-- runScenario("Check if the user is able to cancel while saving the beneficiary details for the own bank transfer ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if the user is able to cancel while saving the beneficiary details for the own bank transfer for","Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\inindc00626\AppData\Local\Temp\testng-eclipse--1601425095\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Runner.TestApplication&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(35);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'Runner.TestApplication')
+data.setCell(0, 3, 704288);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'Runner.TestApplication')
+data.setCell(1, 3, 696534);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'Runner.TestApplication')
+data.setCell(2, 3, 662169);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'Runner.TestApplication')
+data.setCell(3, 3, 215437);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'Runner.TestApplication')
+data.setCell(4, 3, 214804);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'Runner.TestApplication')
+data.setCell(5, 3, 211966);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'Runner.TestApplication')
+data.setCell(6, 3, 211140);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'Runner.TestApplication')
+data.setCell(7, 3, 209944);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'Runner.TestApplication')
+data.setCell(8, 3, 206605);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'Runner.TestApplication')
+data.setCell(9, 3, 205074);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'Runner.TestApplication')
+data.setCell(10, 3, 204927);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'Runner.TestApplication')
+data.setCell(11, 3, 204862);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'Runner.TestApplication')
+data.setCell(12, 3, 188138);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'Runner.TestApplication')
+data.setCell(13, 3, 183352);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'Runner.TestApplication')
+data.setCell(14, 3, 183240);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'Runner.TestApplication')
+data.setCell(15, 3, 180794);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'Runner.TestApplication')
+data.setCell(16, 3, 177535);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'Runner.TestApplication')
+data.setCell(17, 3, 177173);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'Runner.TestApplication')
+data.setCell(18, 3, 177043);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'Runner.TestApplication')
+data.setCell(19, 3, 176360);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'Runner.TestApplication')
+data.setCell(20, 3, 174474);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'Runner.TestApplication')
+data.setCell(21, 3, 174110);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'Runner.TestApplication')
+data.setCell(22, 3, 173379);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'Runner.TestApplication')
+data.setCell(23, 3, 173284);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'Runner.TestApplication')
+data.setCell(24, 3, 172613);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runScenario')
+data.setCell(25, 2, 'Runner.TestApplication')
+data.setCell(25, 3, 172268);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'runScenario')
+data.setCell(26, 2, 'Runner.TestApplication')
+data.setCell(26, 3, 172157);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'runScenario')
+data.setCell(27, 2, 'Runner.TestApplication')
+data.setCell(27, 3, 171999);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'runScenario')
+data.setCell(28, 2, 'Runner.TestApplication')
+data.setCell(28, 3, 171837);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'runScenario')
+data.setCell(29, 2, 'Runner.TestApplication')
+data.setCell(29, 3, 171711);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'runScenario')
+data.setCell(30, 2, 'Runner.TestApplication')
+data.setCell(30, 3, 170407);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'runScenario')
+data.setCell(31, 2, 'Runner.TestApplication')
+data.setCell(31, 3, 169910);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'runScenario')
+data.setCell(32, 2, 'Runner.TestApplication')
+data.setCell(32, 3, 169449);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'runScenario')
+data.setCell(33, 2, 'Runner.TestApplication')
+data.setCell(33, 3, 167178);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'runScenario')
+data.setCell(34, 2, 'Runner.TestApplication')
+data.setCell(34, 3, 57);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 hours</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Runner.TestApplication</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("currency, logo and code - To Account card component", "Optional[Testing the functionalities of Bene...)</span>
+                <span class="method-start">1185 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Add a beneficiary for the own bank transfer for retail user with valid account", "Optional[Testing ...)</span>
+                <span class="method-start">189348 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Add a beneficiary for the own bank transfer for retail user with Invalid account details", "Optiona...)</span>
+                <span class="method-start">361973 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the beneficiary details for the own bank transfer for retail user with valid account details",...)</span>
+                <span class="method-start">536453 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while saving the beneficiary details for the", "Optional[Testin...)</span>
+                <span class="method-start">708173 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the beneficiary details on the summary screen for the own bank transfer for retail user with v...)</span>
+                <span class="method-start">891422 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)</span>
+                <span class="method-start">1068601 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to use the saved draft to add the beneficiary details for the", "Optional...)</span>
+                <span class="method-start">1244967 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify the all fields and data in the saved record of beneficiary", "Optional[Testing the functiona...)</span>
+                <span class="method-start">1428322 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify the Navigation buttons and data in the saved record of beneficiary", "Optional[Testing the f...)</span>
+                <span class="method-start">1598238 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify the Pay Functionality in saved record of beneficiary", "Optional[Testing the functionalities...)</span>
+                <span class="method-start">1772353 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)</span>
+                <span class="method-start">1944648 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while save the transfer details while using the pay option in t...)</span>
+                <span class="method-start">2111830 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the transfer details in the summary page while using the pay option in the beneficiary", "Opti...)</span>
+                <span class="method-start">2283831 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...)</span>
+                <span class="method-start">2455998 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the transfer details in the TnC page while using the pay option in the beneficiary management ...)</span>
+                <span class="method-start">2636795 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify the field and previous buttons are working while using the pay option in the beneficiary man...)</span>
+                <span class="method-start">2813839 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check the edit options post adding of the beneficiary details in the beneficiary management for the...)</span>
+                <span class="method-start">2985679 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the beneficiary details while using the edit option in the beneficiary management", "Optional[...)</span>
+                <span class="method-start">3163217 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the transfer details in the summary page while using the edit option in the beneficiary", "Opt...)</span>
+                <span class="method-start">3336605 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...)</span>
+                <span class="method-start">3507016 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to delete the beneficiary details using the delete option in the benefici...)</span>
+                <span class="method-start">3676468 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Save the beneficiary details for the own bank transfer for corporate user with valid account detail...)</span>
+                <span class="method-start">3849757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check if the user is able to cancel while saving the beneficiary details for the own bank transfer ...)</span>
+                <span class="method-start">4546293 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Save the beneficiary details on the summary screen for the own bank transfer for corporate user wit...)</span>
+                <span class="method-start">5208464 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while saving the beneficiary details for the Local bank transfe...)</span>
+                <span class="method-start">5912756 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Save the beneficiary details on the summary screen for the Local bank transfer for corporate user w...)</span>
+                <span class="method-start">6128195 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while save the beneficiary details on the summary screen for th...)</span>
+                <span class="method-start">6340164 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to use the saved draft to add the beneficiary details for the Local bank ...)</span>
+                <span class="method-start">6545037 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to go back to the beneficiary details page from summary page in beneficia...)</span>
+                <span class="method-start">6751644 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary ...)</span>
+                <span class="method-start">6961590 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check the details options post adding of the beneficiary details in the beneficiary management", "O...)</span>
+                <span class="method-start">7176396 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check the pay options post adding of the beneficiary detials in the beneficiary management for the ...)</span>
+                <span class="method-start">7387539 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if the user is able to cancel while saving the transfer details in the summary page while usi...)</span>
+                <span class="method-start">7592614 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("", "Optional[Testing the functionalities of Beneficiary in omni]")</span>
+                <span class="method-start">7797551 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">7797611 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

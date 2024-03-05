@@ -1,0 +1,1010 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/32/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 04 18:56:25 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>7995 seconds (7995167 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Pay Functionality in saved record of beneficiary", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:312)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1322121934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1322121934'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:312)
+</pre></div></td>
+<td>172</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the beneficiary details for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:825)
+</pre></div><a href='#' onClick='toggleBox("stack-trace95622512", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace95622512'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:825)
+</pre></div></td>
+<td>215</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the beneficiary details for the own bank transfer for retail user with valid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:108)
+</pre></div><a href='#' onClick='toggleBox("stack-trace265563027", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace265563027'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:108)
+</pre></div></td>
+<td>171</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "currency, logo and code - To Account card component", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;AMANA Payments&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.AdminScreen_Steps_5679.User_5679_ClickOnTheAmanaPaymentScreenInTheHomepage(AdminScreen_Steps_5679.java:513)
+	at ✽.user_5679 click on the AMANA payment screen in the homepage(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace275719205", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace275719205'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;AMANA Payments&apos;)] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.AdminScreen_Steps_5679.User_5679_ClickOnTheAmanaPaymentScreenInTheHomepage(AdminScreen_Steps_5679.java:513)
+	at ✽.user_5679 click on the AMANA payment screen in the homepage(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:11)
+</pre></div></td>
+<td>188</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the pay options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer(Field validation)", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:350)
+</pre></div><a href='#' onClick='toggleBox("stack-trace249383766", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace249383766'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:350)
+</pre></div></td>
+<td>167</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to use the saved draft to add the beneficiary details for the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:208)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1699975837", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1699975837'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:208)
+</pre></div></td>
+<td>183</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a beneficiary for the own bank transfer for retail user with valid account", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:54)
+</pre></div><a href='#' onClick='toggleBox("stack-trace256779102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace256779102'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:54)
+</pre></div></td>
+<td>172</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to delete the beneficiary details using the delete option in the beneficiary", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:721)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2125739044", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2125739044'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:721)
+</pre></div></td>
+<td>173</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while save the beneficiary details on the summary screen for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:885)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1029929139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1029929139'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:885)
+</pre></div></td>
+<td>204</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the beneficiary details while using the edit option in the beneficiary management", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:631)
+</pre></div><a href='#' onClick='toggleBox("stack-trace345457862", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace345457862'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:631)
+</pre></div></td>
+<td>173</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while save the transfer details while using the pay option in the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:398)
+</pre></div><a href='#' onClick='toggleBox("stack-trace76465433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace76465433'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:398)
+</pre></div></td>
+<td>171</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the transfer details in the summary page while using the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:693)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1699446225", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1699446225'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:693)
+</pre></div></td>
+<td>169</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to go back to the beneficiary details page from summary page in beneficiary management", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:953)
+</pre></div><a href='#' onClick='toggleBox("stack-trace990612241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990612241'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:953)
+</pre></div></td>
+<td>209</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the transfer details in the TnC page while using the pay option in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:523)
+</pre></div><a href='#' onClick='toggleBox("stack-trace723482435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace723482435'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:523)
+</pre></div></td>
+<td>177</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the field and beneficiary details post adding of the beneficiary details in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:982)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1927248573", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1927248573'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:982)
+</pre></div></td>
+<td>214</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to use the saved draft to add the beneficiary details for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:916)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1998434814", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1998434814'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:916)
+</pre></div></td>
+<td>206</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the transfer details in the summary page while using the pay option in the beneficiary", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:438)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1623554976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1623554976'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:438)
+</pre></div></td>
+<td>172</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the edit options post adding of the beneficiary details in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:609)
+</pre></div><a href='#' onClick='toggleBox("stack-trace424447529", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace424447529'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:609)
+</pre></div></td>
+<td>177</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a beneficiary for the own bank transfer for retail user with Invalid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:76)
+</pre></div><a href='#' onClick='toggleBox("stack-trace249522421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace249522421'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:76)
+</pre></div></td>
+<td>174</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the all fields and data in the saved record of beneficiary", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:236)
+</pre></div><a href='#' onClick='toggleBox("stack-trace648028106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace648028106'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:236)
+</pre></div></td>
+<td>169</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the beneficiary details on the summary screen for the Local bank transfer for corporate user with valid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:854)
+</pre></div><a href='#' onClick='toggleBox("stack-trace760452920", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace760452920'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:854)
+</pre></div></td>
+<td>211</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Navigation buttons and data in the saved record of beneficiary", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:278)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1814213966", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1814213966'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:278)
+</pre></div></td>
+<td>174</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the transfer details in the summary page while using the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-input[@psfcname=&quot;branch&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.enterDataAndTab(UserUtility_614.java:288)
+	at stepdefinitions.Beneficiary.user_626_enter_the_branch_below_the_international_transfer_beneficiary(Beneficiary.java:380)
+	at ✽.User_626 Enter the branch below the international transfer beneficiary(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1098)
+</pre></div><a href='#' onClick='toggleBox("stack-trace824098099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace824098099'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-input[@psfcname=&quot;branch&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.enterDataAndTab(UserUtility_614.java:288)
+	at stepdefinitions.Beneficiary.user_626_enter_the_branch_below_the_international_transfer_beneficiary(Beneficiary.java:380)
+	at ✽.User_626 Enter the branch below the international transfer beneficiary(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1098)
+</pre></div></td>
+<td>204</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the field and previous buttons are working while using the pay option in the beneficiary management for", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:568)
+</pre></div><a href='#' onClick='toggleBox("stack-trace449445798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace449445798'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:568)
+</pre></div></td>
+<td>171</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the pay options post adding of the beneficiary detials in the beneficiary management for the Local bank transfer", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1059)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1398015355", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1398015355'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1059)
+</pre></div></td>
+<td>205</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the transfer details in the summary page while using the edit option in the beneficiary", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:662)
+</pre></div><a href='#' onClick='toggleBox("stack-trace296643678", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace296643678'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:662)
+</pre></div></td>
+<td>170</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while save the beneficiary details on the summary screen for the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:183)
+</pre></div><a href='#' onClick='toggleBox("stack-trace894796772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace894796772'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:183)
+</pre></div></td>
+<td>176</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the transfer details in the summary page while using the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:482)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1213535911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1213535911'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:482)
+</pre></div></td>
+<td>180</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the details options post adding of the beneficiary details in the beneficiary management", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1022)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1390165032", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1390165032'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ps-label[@class=&quot;desc_opt&quot;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_search_bank_name_and_select_the_bank_in_the_dropdown(Beneficiary.java:204)
+	at ✽.User_626 Search bank name and select the bank in the dropdown(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:1022)
+</pre></div></td>
+<td>211</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the beneficiary details on the summary screen for the own bank transfer for retail user with valid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:156)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1648266888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1648266888'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:156)
+</pre></div></td>
+<td>177</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the beneficiary details for the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:134)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1397382768", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1397382768'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //ion-label[text()=&apos; BENEFICIARY MANAGEMENT &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_beneficiary_management_in_the_home_screen_retail_user(Beneficiary.java:93)
+	at ✽.User_626 Click on the Beneficiary Management in the Home screen Retail User(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/beneficiary.feature:134)
+</pre></div></td>
+<td>183</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Test name must not be null or empty
+	at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+	at com.aventstack.extentreports.ExtentTest.&lt;init&gt;(ExtentTest.java:96)
+	at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:153)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.createTestCase(ExtentCucumberAdapter.java:415)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleTestCaseStarted(ExtentCucumberAdapter.java:162)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.access$100(ExtentCucumberAdapter.java:62)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:106)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:103)
+	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:66)
+	at io.cucumber.core.runner.TestCase.emitTestCaseStarted(TestCase.java:228)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:92)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1748346059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1748346059'><pre>java.lang.IllegalArgumentException: Test name must not be null or empty
+	at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+	at com.aventstack.extentreports.ExtentTest.&lt;init&gt;(ExtentTest.java:96)
+	at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:153)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.createTestCase(ExtentCucumberAdapter.java:415)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleTestCaseStarted(ExtentCucumberAdapter.java:162)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.access$100(ExtentCucumberAdapter.java:62)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:106)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:103)
+	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:66)
+	at io.cucumber.core.runner.TestCase.emitTestCaseStarted(TestCase.java:228)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:92)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the beneficiary details for the own bank transfer for corporate user with valid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td></td>
+<td>696</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save the beneficiary details on the summary screen for the own bank transfer for corporate user with valid account details", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td></td>
+<td>704</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+<tr>
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the beneficiary details for the own bank transfer for", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td></td>
+<td>662</td>
+<td>Runner.TestApplication@660acfb</td></tr>
+</table><p>
+</body>
+</html>
