@@ -1186,6 +1186,7 @@ And User_626 Click on the To Do Screen For check the Saved Draft
 And User_626 Click on the saved Draft data for verification for own bank beneficiary
 
 @AT_BM_129
+
 Scenario: Verify the field and previous buttons are working while using the pay option in the beneficiary management
 for the International bank transfer for corporate user with valid account details
 And User_626 loads the test datasetup for the test case id AT_BM_098
