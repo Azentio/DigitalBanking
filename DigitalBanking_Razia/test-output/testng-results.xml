@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-04T16:07:34 IST" name="Default suite" finished-at="2024-03-04T16:13:52 IST" duration-ms="377916">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@5d908d47]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-03-04T16:07:34 IST" name="Default test" finished-at="2024-03-04T16:13:52 IST" duration-ms="377916">
+      <class name="runner.TestApplication">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestApplication@5d908d47]" started-at="2024-03-04T16:07:34 IST" name="setUpClass" finished-at="2024-03-04T16:07:35 IST" duration-ms="929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@5d908d47]" started-at="2024-03-04T16:07:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-04T16:13:41 IST" duration-ms="365809" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a beneficiary for the Local bank transfer for retail user with valid account (Enable beneficiary approval)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Checking the functionalities of BeneficaryManagement]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@type="search"] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@type="search"] (tried for 100 second(s) with 1000 milliseconds interval)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
+at utilities.UserUtility_614.enterDataAndTab(UserUtility_614.java:259)
+at stepdefinitions.Beneficarymanagement_Steps.user_612_search_currency_and_select_the_currency_in_the_dropdown(Beneficarymanagement_Steps.java:197)
+at ✽.user_612 Search Currency and select the Currency in the dropdown(file:///C:/Users/inindc00612/git/DigitalBanking_razia/Azentio_DigitalBanking_RaziaDigitalBanking/src/test/java/Features/BeneficaryManagement_612.feature:20)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestApplication@5d908d47]" started-at="2024-03-04T16:13:41 IST" name="tearDownClass" finished-at="2024-03-04T16:13:52 IST" duration-ms="11106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestApplication -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

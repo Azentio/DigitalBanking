@@ -1,0 +1,3 @@
+@And("^user_612 enters the transaction amount in the transfers screen$")
+public void user_612_enters_the_transaction_amount_in_the_transfers_screen()throws Throwable{
+}

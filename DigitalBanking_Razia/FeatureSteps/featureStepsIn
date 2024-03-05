@@ -1,0 +1,10 @@
+And user_612 click  the to other button within Scheduled International Transfer screen   ToOtherBeneficiaryAccountClick
+And user_612 verify the swift code under to other within Scheduled International Transfer screen
+And user_612 verify the Iban Account num under to other within Scheduled International Transfer screen
+And user_612 verify currency dropdown button  under to other within Scheduled International Transfer screen
+And user_612 enter the swift code under to other within Scheduled International Transfer screen
+And user_612 enter the Iban Account num under to other within Scheduled International Transfer screen
+And user_612 click currency dropdown button  under to other within Scheduled International Transfer screen
+And user_612 select tha currency type under to other within Scheduled International Transfer screen
+And user_612 verify the save benificary toggle button under tother within Scheduled International Transfer screen
+And user_612 enters the transaction amount in the transfers screen
