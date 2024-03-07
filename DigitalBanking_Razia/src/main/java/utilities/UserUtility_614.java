@@ -690,6 +690,11 @@ public class UserUtility_614 {
 		}
 		
 	}
+
+	public WebElement executeJavaScriptReturnWebElement(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }

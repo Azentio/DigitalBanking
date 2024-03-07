@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
 
-@CucumberOptions(features = {"src/test/java/Features/ScheduleTransfer_612.feature"
-		,"src/test/java/Features/AccountTransfer_612.feature",
+@CucumberOptions(features = {"src/test/java/Features/BeneficaryManagement_612.feature"
+		//,"src/test/java/Features/AccountTransfer_612.feature",
 //		"src/test/java/Features/DebitCardDetails_612.feature",
 //          "src/test/9java/Features/DebitCardRequest_612.feature"
 },
@@ -20,7 +20,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               //dryRun = false ,//to check compilation errors   AccountTransfer_612 CreditCardSettlement_612 or @AT_CCS_025 or @AT_CCS_025_01                             
       //      
-      // ,tags= "@AT_BM_044"   
+      ,tags= "@AT_BM_069"                                     
 
     		   
             	

@@ -20,6 +20,7 @@ public class Beneficarymanagement_Steps {
 	WebDriver driver = BaseClass.driver;
 	UserUtility_614 us = new UserUtility_614(driver);
 	String executionTestData;
+	//JavascriptHelper JavascriptHelper = new JavascriptHelper(driver);	
 	HashMap<String, String> testData;
 
 	@And("User_612 loads the test datasetup for the test case id AT_BM_044")
@@ -27,23 +28,32 @@ public class Beneficarymanagement_Steps {
 		executionTestData = DataReader.executionTestData.get("AT_BM_044");
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
-
-	@And("^user_612 enters the corpuser in the login page for omni_corporate_web_portal$")
-	public void user_612EntersTheCorpuserInTheLoginPageForOmni_Corporate_Web_Portal() {
-		us.enterData(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-				testData.get("UserName1"), false);
-
+	@And("User_612 loads the test datasetup for the test case id AT_BM_069")
+	public void User_612_loads_the_test_datasetup_for_the_test_case_id_AT_BM_069() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_069");
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
-
-	@And("^user_612 enters the corppassword in the login page for omni_corporate_web_portal$")
-	public void user_612EntersThecorppasswordInTheLoginPageForOmni_Corporate_Web_Portal() {
-		us.enterDataAndEnter(driver, DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
-				testData.get("Password1"), false);
+	@Given("user_612 enters the Retail username in the login page for omni_web_portal1")
+	public void user_612_enters_the_retailusername_in_the_login_page_for_omni_web_portal1() {
+	   
+		us.enterData(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
+				testData.get("UserName1"),
+				false);
+	   
 	}
-
+	@Given("user_612 enters the Retail password in the login page for omni_web_portal1")
+	public void user_612_enters_the_retailpassword_in_the_login_page_for_omni_web_portal1() {
+		us.enterDataAndEnter(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
+				testData.get("Password1"),
+				false);
+	   
+	}
 	@Given("user_612 Click on the Beneficiary Management in the Home screen Retail User")
-	public void user_612_click_on_the_beneficiary_management_in_the_home_screen_retail_user() {
+	public void user_612_click_on_the_beneficiary_management_in_the_home_screen_retail_user() throws Throwable {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Beneficiay_Management"), false);
+		//Thread.sleep(5000);
 	}
 
 	@Given("user_612 Click Add ineternal Beneficiary Below the Beneficiary Management Bank Screen")
@@ -82,7 +92,7 @@ public class Beneficarymanagement_Steps {
 	public void user_612_click_on_the_country_for_selecting_below_the_add_ineternal_beneficiary()
 			throws InterruptedException {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Country"), false);
-		Thread.sleep(500000);
+		Thread.sleep(5000);
 	}
 
 	@Given("user_612 Enter the Country Code for mobile number below the Add ineternal Beneficiary Dropdown")
@@ -115,27 +125,31 @@ public class Beneficarymanagement_Steps {
 				}
 			}
 		}
-//		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"), false);
 	}
 
 	@Given("user_612 Search bank name and select the bank in the dropdown")
 	public void user_612_search_bank_name_and_select_the_bank_in_the_dropdown() throws Throwable {
-		
 		String xpath = "//ion-label[text()=' " + testData.get("BankName") + " ']";
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"), false);
-		//Thread.sleep(10000);
-		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
-				testData.get("BankName"), false);
-		//Thread.sleep(10000);
-		WebElement Bank = driver.findElement(By.xpath(xpath));
-		
+
 		try {
-			if (Bank.isDisplayed()) {
-				System.out.println("if runs");
-				us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"), false);
-			} else {
-				System.out.println("else runs");
+			for (int i = 0; i <= 200; i++) {
+				if (driver.getPageSource().contains(testData.get("BankName"))) {
+					System.out.println("if runs");
+					us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
+							testData.get("BankName"), false);
+
+					WebElement Bank = driver.findElement(By.xpath(xpath));
+					us.clickOnElement(driver, Bank);
+
+					break;
+				} else {
+					System.out.println("else runs");
+					us.clickOnElement(driver,
+							DataReader.locatorsMap.get("Beneficiary").get("otherbankbeneficiary_popup"), false);
+					System.out.println("Bank dd clicked");
+				}
 				us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"), false);
 			}
 		} catch (Exception e) {
@@ -146,61 +160,37 @@ public class Beneficarymanagement_Steps {
 	@Given("user_612 Click on the currency dropdown for select Currency")
 	public void user_612_click_on_the_currency_dropdown_for_select_currency() throws Throwable {
 		Thread.sleep(10000);
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"), false);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Beneficiary"), false);
 	}
 
 	@Given("user_612 Search Currency and select the Currency in the dropdown")
-	public void user_612_search_currency_and_select_the_currency_in_the_dropdown() throws Throwable {		
-		
+	public void user_612_search_currency_and_select_the_currency_in_the_dropdown() throws Throwable {
+		// ion-label[text()=' USD ']
 		String xpath = "//ion-label[text()=' " + testData.get("Currency") + " ']";
-		Thread.sleep(10000);
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"), false);
-		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),
-				testData.get("Currency"), false);
-		WebElement Currency = driver.findElement(By.xpath(xpath));
-		
+		Thread.sleep(2000);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Beneficiary"), false);
+
 		try {
-			if (Currency.isDisplayed()) {
-				System.out.println("if runs");
-				us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"), false);
-			} else {
-				System.out.println("else runs");
-				us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"), false);
+			for (int i = 0; i <= 200; i++) {
+				if (driver.getPageSource().contains(testData.get("Currency"))) {
+					us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Country"),
+							testData.get("Currency"), false);
+
+					WebElement Currency = driver.findElement(By.xpath(xpath));
+					us.clickOnElement(driver, Currency);
+
+					break;
+				} else {
+					System.out.println("else runs");
+					us.clickOnElement(driver,
+							DataReader.locatorsMap.get("Beneficiary").get("otherbankbeneficiary_popup"), false);
+					System.out.println("currency dd clicked");
+				}
+				us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Beneficiary"), false);
 			}
 		} catch (Exception e) {
 			Assert.fail(e.getMessage());
-		}	
-	
-//		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Currency"),false);
-//		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
-		
-		
-//		// us.clickOnElement(driver,
-//		// DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"),false);
-//		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
-//				testData.get("Currency"), false);
-//		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"), false);
-//
-//		for (int i = 0; i < 100; i++) {
-//			try {
-//				if (driver.getPageSource().contains(" No Data Found ")) {
-//					us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"), false);
-//				}
-////				else if (driver.getPageSource().contains(" No Data Found ")) {
-////					break;
-////				}
-//			} catch (Exception e) {
-//				if (i == 99) {
-//					Assert.fail(e.getMessage());
-//			}}}
-//		
-//
-//		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
-//				testData.get("Currency"), false);
-//		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"), false);
-//		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Bank_Dropdown"),false);
-//		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Currency"),false);
-//		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"),false);
+		}
 	}
 
 	@Given("user_612 Click on the Add local beneficiary in beneficiary management")
@@ -252,8 +242,9 @@ public class Beneficarymanagement_Steps {
 
 	@Given("user_612 Click on the Submit button in Beneficiary")
 	public void user_612click_on_the_submit_button_in_Beneficiary() throws Throwable {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SubmitForBeneficiary"), false);
-//		for (int i = 0; i <= 500; i++) {
+		Thread.sleep(3000);
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Local_submit"), false);
+//		for (int i = 0; i <= 500; i++) {SubmitForBeneficiary
 //			try {
 //				WebElement submitButton = us.executeJavaScriptReturnWebElement(DataReader.locatorsMap.get("Beneficiary").get("SubmitForBeneficiary"));
 //				submitButton.click();
@@ -272,12 +263,8 @@ public class Beneficarymanagement_Steps {
 		us.elementIsVisible(driver, xpath);
 	}
 
-	@Given("user_612 Click on the saved data showmore button")
-	public void user_612_click_on_the_saved_data_showmore_button() {
-		String xpath = "//ion-label[contains(text(),'" + testData.get("AccountNumber")
-				+ "')]//ancestor::mat-card-content//ion-label[text()=' show more ']";
-		us.clickOnElement(driver, xpath, false);
-	}
+	//param
+	
 
 //	@Given("^user_612 navigates to the OmniScreen Admin Url and login with the valid credentials$")
 //	public void user_612_NavigatesToTheOmniscreenAdminUrlAndLoginWithTheValidCredentials() {
@@ -303,4 +290,129 @@ public class Beneficarymanagement_Steps {
 //		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("continueBtnLastLoggin_AdminLoggin"),
 //				false);
 //	}
+	
+	
+	@And("^user_612 Click on the Settings submenu$")
+	public void user_612_click_on_the_settings_submenu()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_settings"), false);
+		
+	}
+	@And("^user_612 click beneficary management  under settings submenu$")
+	public void user_612_click_beneficary_management__under_settings_submenu()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_settings_beneficary"), false);
+	}
+	@And("^user_612 click  Local Beneficiary settings$")
+	public void user_612_click__local_beneficiary_settings()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_settings_beneficary_localsetting"), false);
+		}
+	@And("^user_612 click the approve All button under Local Beneficiary settings$")
+	public void user_612_click_the_approve_all_button_under_local_beneficiary_settings()throws Throwable{ 
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_Aproveall"), false);
+		}
+	@And("^user_612 click ok button$")
+	public void user_612_click_ok_button()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_confirm_popup"), false);
+	}
+	
+	@And("^user_612 click success ok popup button$")
+	public void user_612_click_success_ok_popup_button()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_success_popup"), false);
+	
+	}
+	@And("^user_612 check the Enable Local Beneficiary Approval flag under Local Beneficiary settings$")
+	public void user_612_check_the_enable_local_beneficiary_approval_flag_under_local_beneficiary_settings()throws Throwable{
+		
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_flag"), false);
+				
+	}
+	
+	@And("^user_612 Uncheck the Enable Local Beneficiary Approval flag under Local Beneficiary settings$")
+	public void user_612_uncheck_the_enable_local_beneficiary_approval_flag_under_local_beneficiary_settings()throws Throwable{
+		
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_flag"), false);
+				
+	}
+	@And("^user_612 click save button$")
+	public void user_612_click_save_button()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_save"), false);
+	
+	}
+	@And("^user_612 click warning ok popup$")
+	public void user_612_click_warning_ok_popup()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localsettings_confirm_popup"), false);
+	}
+		@And("^user_612 click Local Beneficiary Approval screen$")
+	public void user_612_click_local_beneficiary_approval_screen()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_localbenificaryapprove"), false);
+			
+	}
+		@And("^user_612 Enter Requested date under Local Beneficiary Approval screen$")
+		public void user_612_enter_requested_date_under_local_beneficiary_approval_screen()throws Throwable{
+			us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_requestdate"), testData.get(""), false);
+		}
+		
+		
+		@And("^user_612 Double click the existingdata under Local Beneficiary Approval screen$")
+		public void user_612_double_click_the_existingdata_under_local_beneficiary_approval_screen()throws Throwable{
+			us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_doubleclk"),false);
+		}
+
+//international bank
+		@And("^user_612 Click on the international bank transfer in beneficiary management$")
+		public void user_612_click_on_the_international_bank_transfer_in_beneficiary_management()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Swift_BeneficiaryManagement"), false);
+		//Thread.sleep(2000);			
+		}
+		@And("^user_612 click Add international bank transfer in beneficiary management$")
+		public void user_612_click_add_international_bank_transfer_in_beneficiary_management()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Add_international_benef"), false);
+		}
+		@And("^user_612 click country dropdown  under Add international bank transfer screen$")
+		public void user_612_click_country_dropdown__under_add_international_bank_transfer_screen()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("CountryName_dropdown"), false);
+		}
+		@And("^user_612 enter country name and click the country screen$")
+		public void user_612_enter_country_name_and_click_the_country_screen()throws Throwable{
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Country"), false);
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("CountryName_BenefManage"), false);
+		}
+	@And("^user_612 enter swiftcode uder Add international bank transfer screen$")
+	public void user_612_enter_swiftcode_uder_add_international_bank_transfer_screen()throws Throwable{
+			us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Bic_Swift_code"),testData.get("BVN"), false);		
+	}
+	@And("^user_612 enter the bank name under Add international bank transfer screen$")
+	public void user_612_enter_the_bank_name_under_add_international_bank_transfer_screen()throws Throwable{
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BankName_BenefManage"),testData.get("BankName"), false);
+	}
+
+	@Given("user_612 click on the country for selecting below the Add ineternalBeneficiary")
+	public void user_612_click_on_the_country_for_selecting_below_the_add_ineternalbeneficiary()throws Throwable {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("international_Country_dropown"), false);
+		Thread.sleep(5000);
+	}
+
+	@Given("user_612 Enter the Country Code for mobile number below the Add ineternal Beneficiary")
+	public void user_612_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary() {
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
+				testData.get("Mobilecode"), false);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
