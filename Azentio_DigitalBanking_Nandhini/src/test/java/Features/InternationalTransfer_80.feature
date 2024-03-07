@@ -241,4 +241,4 @@ Feature: To verify the functionalities on International Transfer
     And User7180 clicks on logout btn to logout from omni web portal
    
     
-		
+		 

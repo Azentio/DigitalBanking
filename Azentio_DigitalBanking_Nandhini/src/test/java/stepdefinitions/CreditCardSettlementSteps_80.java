@@ -340,9 +340,10 @@ public void user_612_click_on_the_save_button_in_screen2() {
 }
 @Given("User7180 Click on the To Do Screen For check the Saved Draft")
 public void user7180_click_on_the_to_do_screen_for_check_the_saved_draft() {
-
+for(int i=0;i<200;i++) {
 	us.clickOnElement(driver, 
 	DataReader.locatorsMap.get("OmniScreen_Login").get("TODO_HomeScreen1"), false);
+}
 }
 @Given("User7180 verify the record save in TO DO List for draft Data")
 public void user7180_verify_the_record_save_in_to_do_list_for_draft_data() {

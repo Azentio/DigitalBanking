@@ -263,50 +263,37 @@ public class  AccountTransferSteps_612 {
 	}
 	@And("^User7180 click on the loggin button in the login page for omni_corporate_web_portal$")
 	public void user7180_ClickOnTheLogginButtonInTheLoginPageForOmni_Corporate_Web_Portal() throws InterruptedException {
-		Thread.sleep(5000);
+		us.clickOnElement(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("LoginBtn2"),true);
+         for (int i = 0; i <200; i++) {
 		try {
-			us.clickOnElementNoWait(driver, 
-					DataReader.locatorsMap.get("OmniScreen_Login").get("loginBtn1"), 
-					20,
-					false);
+			if (driver.findElement(By.xpath(DataReader.locatorsMap.get("OmniScreen_Login").get("loginValidation"))).isDisplayed()) {
+				break;
+			}
 		} catch (Exception e) {
-		}
+			if (i==199) {
+				us.clickOnElement(driver, 
+						DataReader.locatorsMap.get("OmniScreen_Login").get("LoginBtn2"), 
+						true);
+			}
+	}
+}
+
 	}
 	
-	@And("^user_612 click on the force logout btn in the login page for omni_corporate_web_portal$")
-	public void user_612ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
-		try {
-			us.clickOnElementNoWait(driver, 
-					DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
-					20,
-					false);
-		} catch (Exception e) {
-			
-			try {
-				us.clickOnElementNoWait(driver, 
-						DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
-						20,
-						false);
-			} catch (Exception e1) {
-			}
-		}
-	}
+	
 	@And("^User7180 click on the force logout btn in the login page for omni_corporate_web_portal$")
 	public void user7180_ClickOnTheForceLogoutBtnInTheLoginPageForOmni_Corporate_Web_Portal() {
 		try {
-			us.clickOnElementNoWait(driver, 
+			us.clickOnElement(driver, 
 					DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
-					20,
 					false);
 		} catch (Exception e) {
-			
-			try {
-				us.clickOnElementNoWait(driver, 
-						DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
-						20,
-						false);
-			} catch (Exception e1) {
-			}
+//			try {
+//				us.clickOnElement(driver, 
+//						DataReader.locatorsMap.get("OmniScreen_Login").get("ForcelogoutLogginScreen1"), 
+//						false);
+//			} catch (Exception e1) {
+//			}
 		}
 	}
 	
@@ -463,7 +450,16 @@ public class  AccountTransferSteps_612 {
 	@And("^User7180 click on next btn in the transfers screen$")
 	public void user7180_ClickOnNextBtnInTheTransfersScreen() throws InterruptedException {
 		us.clickOnElement(driver, 
-			   DataReader.locatorsMap.get("OmniScreen_Login").get("ClickNextBtnInOwnAccountTransfer1"),false);
+				   DataReader.locatorsMap.get("Cards").get("Next_DebitDetails"),false);
+//		for(int i=0;i<200;i++) {
+//			try {
+//		us.clickOnElement(driver, 
+//			   DataReader.locatorsMap.get("Cards").get("Cards_CSS_LCSS_NextButton"),false);
+//			}
+//			catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//	}
 	}
 	
 	@And("^user_612 click on submit btn in the transfers screen$")
@@ -476,32 +472,28 @@ public class  AccountTransferSteps_612 {
 	public void user_612EntersTheCheckerusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-				testData.get("UserName2"),
-				false);
+				testData.get("UserName2"),false);
 	}
 	
 	@And("^user_612 enters the checker password1 in the login page for omni_corporate_web_portal$")
 	public void user_612EntersTheCheckerPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterDataAndEnter(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
-				testData.get("Password2"),
-				false);
+				testData.get("Password2"),false);
 	}
 	
 	@And("^user_612 enters the checker username2 in the login page for omni_corporate_web_portal$")
 	public void user_612EntersTheCheckerusername2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterData(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),
-				testData.get("UserName3"),
-				false);
+				testData.get("UserName3"),false);
 	}
 	
 	@And("^user_612 enters the checker password2 in the login page for omni_corporate_web_portal$")
 	public void user_612EntersTheCheckerPassword2InTheLoginPageForOmni_Corporate_Web_Portal() {
 		us.enterDataAndEnter(driver,
 				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
-				testData.get("Password3"),
-				false);
+				testData.get("Password3"),false);
 	}
 	
 	@And("^user_612 waits for the confirmation on the submission report$")

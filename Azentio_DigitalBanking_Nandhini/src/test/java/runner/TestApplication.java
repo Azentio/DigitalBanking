@@ -20,7 +20,7 @@ import utilities.ExtentTestManager;
                            "rerun:ReRunScenarios/FailedReRun.txt"}
               //dryRun = false ,//to check compilation errors CreditCardRequest  AccountTransfer_612 CreditCardSettlement_612                              
                // ,tags="@AT_CCS_050"//or @AT_DCR_008 or @AT_DCR_009 or @AT_DCR_0010 or @AT_DCR_011" //or @AT_CCR_004 or @AT_CCR_008 or @AT_CCR_009 " 
-,tags="@AT_BM_012"
+//,tags="@AT_BM_039"
             	
 )
 //
