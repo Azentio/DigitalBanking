@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 06 09:43:53 IST 2024</td>
+<td>Started on:</td><td>Wed Mar 06 16:04:43 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>183 seconds (183479 ms)</td>
+<tr><td>Total time:</td><td>132 seconds (132006 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -70,37 +70,32 @@ function toggleAllBoxes() {
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Active User to Log in the Omnichannel Retail-Test the navigations of screen2 and screen3", "Optional[Testing the functionalities of Debit Card Details (11,14)]"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;menu_content_complex&apos;]//ps-action-menu-item//ion-label[text()=&apos; Cards &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+<td title='Runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: Runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check if the user is able to cancel while saving the transfer details in the summary page while using the", "Optional[Testing the functionalities of Beneficiary in omni]"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
+	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
+	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
+	at org.openqa.selenium.By.xpath(By.java:89)
 	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
 	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-	at stepdefinitions.DebitCardDetails.user_5679_click_on_the_cards_screen_in_the_homepage(DebitCardDetails.java:122)
-	at ✽.user_5679 click on the Cards screen in the homepage(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/DebitCardDetails.feature:1389)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1778465757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1778465757'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;menu_content_complex&apos;]//ps-action-menu-item//ion-label[text()=&apos; Cards &apos;] (tried for 100 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:262)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_edit_button_below_the_international_beneficiary(Beneficiary.java:376)
+	at ✽.User_626 Click on the edit button below the international beneficiary(file:///C:/Users/ININDC00074/git/DigitalBanking_AG/Azentio_DigitalBanking_Arul/src/test/java/features/BeneficiaryManagement.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace815927219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace815927219'><pre>java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
+	at org.openqa.selenium.internal.Require$ArgumentChecker.nonNull(Require.java:207)
+	at org.openqa.selenium.By$ByXPath.&lt;init&gt;(By.java:286)
+	at org.openqa.selenium.By.xpath(By.java:89)
 	at utilities.UserUtility_614.waitHelperClick(UserUtility_614.java:62)
 	at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:229)
-	at stepdefinitions.DebitCardDetails.user_5679_click_on_the_cards_screen_in_the_homepage(DebitCardDetails.java:122)
-	at ✽.user_5679 click on the Cards screen in the homepage(file:///C:/Users/inindc00626/git/DigitalBanking/Azentio_DigitalBanking_Kailash/src/test/java/features/DebitCardDetails.feature:1389)
+	at stepdefinitions.Beneficiary.user_626_click_on_the_edit_button_below_the_international_beneficiary(Beneficiary.java:376)
+	at ✽.User_626 Click on the edit button below the international beneficiary(file:///C:/Users/ININDC00074/git/DigitalBanking_AG/Azentio_DigitalBanking_Arul/src/test/java/features/BeneficiaryManagement.feature:15)
 </pre></div></td>
-<td>174</td>
-<td>Runner.TestApplication@5d908d47</td></tr>
+<td>112</td>
+<td>Runner.TestApplication@795509d9</td></tr>
 </table><p>
 </body>
 </html>

@@ -29,7 +29,7 @@ public class BaseClass {
 			options.addArguments("--remote-allow-origins=*");
 			options.addArguments("--ignore-ssl-errors=yes");
 			options.addArguments("--ignore-certificate-errors");
-			options.setBinary("C:\\Users\\ININDC00626\\Downloads\\chrome-win64\\chrome-win64\\chrome.exe");
+			options.setBinary("C:\\Users\\ININDC00074\\Downloads\\chrome-win64 1\\chrome-win64\\chrome.exe");
 			driver = new ChromeDriver(options);
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
