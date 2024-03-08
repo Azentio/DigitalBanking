@@ -1,6 +1,3 @@
-And user_612 click Add international bank transfer in beneficiary management
-And user_612 click country dropdown  under Add international bank transfer screen
-And user_612 enter country name and click the country screen 
-And user_612 enter swiftcode uder Add international bank transfer screen 
- 	And user_612 enter the bank name under Add international bank transfer screen
- 	And user_612 enter the branch name  under Add international bank transfer screen
+And user_612 click international Beneficiary settings 
+And user_612 click the cif type dropdown button under international Beneficiary settings  
+And user_612 select the currency  under a dropdown 

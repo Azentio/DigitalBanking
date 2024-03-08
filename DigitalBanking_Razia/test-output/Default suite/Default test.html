@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 07 16:17:40 IST 2024</td>
+<td>Started on:</td><td>Fri Mar 08 16:31:09 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>187 seconds (187306 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76153 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,8 +77,19 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestApplication.runScenario()'><b>runScenario</b><br>Test class: runner.TestApplication<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a beneficiary for the International bank transfer for retail user with valid account (Enable beneficiary approval)", "Optional[Checking the functionalities of BeneficaryManagement]"</td>
-<td></td>
-<td>169</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at utilities.UserUtility_614.enterDataAndEnter(UserUtility_614.java:312)
+	at stepdefinitions.Beneficarymanagement_Steps.user_612_enter_the_valid_region_code_under_search_button(Beneficarymanagement_Steps.java:375)
+	at ✽.user_612 enter the valid region code under search button(file:///C:/Users/inindc00612/git/DigitalBanking/DigitalBanking_Razia/src/test/java/Features/BeneficaryManagement_612.feature:301)
+</pre></div><a href='#' onClick='toggleBox("stack-trace398393072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace398393072'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at utilities.UserUtility_614.enterDataAndEnter(UserUtility_614.java:312)
+	at stepdefinitions.Beneficarymanagement_Steps.user_612_enter_the_valid_region_code_under_search_button(Beneficarymanagement_Steps.java:375)
+	at ✽.user_612 enter the valid region code under search button(file:///C:/Users/inindc00612/git/DigitalBanking/DigitalBanking_Razia/src/test/java/Features/BeneficaryManagement_612.feature:301)
+</pre></div></td>
+<td>67</td>
 <td>runner.TestApplication@660acfb</td></tr>
 </table><p>
 </body>

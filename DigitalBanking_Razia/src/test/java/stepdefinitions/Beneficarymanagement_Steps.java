@@ -356,6 +356,61 @@ public class Beneficarymanagement_Steps {
 		public void user_612_double_click_the_existingdata_under_local_beneficiary_approval_screen()throws Throwable{
 			us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_doubleclk"),false);
 		}
+		@And("^user_612 click international Beneficiary Approval under submenu$")
+		public void user_612_click_international_beneficiary_approval_under_submenu()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_international _beneficaryApprove"), false);
+			
+		}
+		@And("^user_612 Double click the existingdata under international Beneficiary Approval screen$")
+		public void user_612_double_click_the_existingdata_under_international_beneficiary_approval_screen()throws Throwable{
+			us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_international _doubleclk"), false);
+		}
+		@And("^user_612 click the region search button$")
+		public void user_612_click_the_region_search_button()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbe_region_search"), false);
+		Thread.sleep(3000);
+		}
+		@And("^user_612 enter the valid region code under search button$")
+		public void user_612_enter_the_valid_region_code_under_search_button()throws Throwable{
+			us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbe_region_input"),testData.get("Region code") ,false);
+		}
+		@And("^user_612 double click the data under search button$")
+		public void user_612_double_click_the_data_under_search_button()throws Throwable{
+			us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbe_region_doubleclk"),false);
+			
+		}
+		@And("^user_612 click the city search button$")
+		public void user_612_click_the_city_search_button()throws Throwable{ 
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbe_city_search"), false);
+		}
+		@And("^user_612 enter the valid citycode under search button$")
+		public void user_612_enter_the_valid_citycode_under_search_button()throws Throwable{
+			us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbe_city_input"),testData.get("Region code"),false);
+		}
+		@And("^user_612 double click the city data under search button$")
+		public void user_612_double_click_the_city_data_under_search_button()throws Throwable{
+			us.doubleClickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbe_city_doubleclk"),false);
+			
+		}
+		@And("^user_612 click the approve button$")
+		public void user_612_click_the_approve_button()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbenificary_Approvebtn"),false);
+		}
+
+		@And("^user_612 click international Beneficiary settings$")
+		public void user_612_click_international_beneficiary_settings()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parametre_internationalbeneficarysettings"),false);
+		}
+		@And("^user_612 click the cif type dropdown button under international Beneficiary settings$")
+		public void user_612_click_the_cif_type_dropdown_button_under_international_beneficiary_settings()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbef_curency_dropdown"),false);
+				
+		}
+		@And("^user_612 select the currency  under a dropdown$")
+		public void user_612_select_the_currency__under_a_dropdown()throws Throwable{
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Omni_Admin").get("parameter_internationalbef_curency_USD"),false);
+		}
+
 
 //international bank
 		@And("^user_612 Click on the international bank transfer in beneficiary management$")
@@ -384,6 +439,10 @@ public class Beneficarymanagement_Steps {
 	public void user_612_enter_the_bank_name_under_add_international_bank_transfer_screen()throws Throwable{
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BankName_BenefManage"),testData.get("BankName"), false);
 	}
+	@And("^user_612 enter the branch name under Add international bank transfer screen$")
+	public void user_612_enter_the_branch_name_under_add_international_bank_transfer_screen()throws Throwable{
+		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BranchName_BenefManage"),testData.get("BankName"), false);
+	}
 
 	@Given("user_612 click on the country for selecting below the Add ineternalBeneficiary")
 	public void user_612_click_on_the_country_for_selecting_below_the_add_ineternalbeneficiary()throws Throwable {
@@ -395,6 +454,10 @@ public class Beneficarymanagement_Steps {
 	public void user_612_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary() {
 		us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
 				testData.get("Mobilecode"), false);
+	}
+	@And("^user_612 validate the beneificary accounts add or not$")
+	public void user_612_validate_the_beneificary_accounts_add_or_not()throws Throwable{
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("validation_internationalbenificary"), false);
 	}
 
 

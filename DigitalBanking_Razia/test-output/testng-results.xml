@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-07T16:17:40 IST" name="Default suite" finished-at="2024-03-07T16:20:48 IST" duration-ms="187306">
+  <suite started-at="2024-03-08T16:31:09 IST" name="Default suite" finished-at="2024-03-08T16:32:25 IST" duration-ms="76153">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@660acfb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-07T16:17:40 IST" name="Default test" finished-at="2024-03-07T16:20:48 IST" duration-ms="187306">
+    <test started-at="2024-03-08T16:31:09 IST" name="Default test" finished-at="2024-03-08T16:32:25 IST" duration-ms="76153">
       <class name="runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-07T16:17:40 IST" name="setUpClass" finished-at="2024-03-07T16:17:41 IST" duration-ms="975" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-08T16:31:09 IST" name="setUpClass" finished-at="2024-03-08T16:31:10 IST" duration-ms="1108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-07T16:17:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-07T16:20:31 IST" duration-ms="169285" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-08T16:31:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-08T16:32:17 IST" duration-ms="67138" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -27,10 +27,23 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+at utilities.UserUtility_614.enterDataAndEnter(UserUtility_614.java:312)
+at stepdefinitions.Beneficarymanagement_Steps.user_612_enter_the_valid_region_code_under_search_button(Beneficarymanagement_Steps.java:375)
+at ✽.user_612 enter the valid region code under search button(file:///C:/Users/inindc00612/git/DigitalBanking/DigitalBanking_Razia/src/test/java/Features/BeneficaryManagement_612.feature:301)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-07T16:20:31 IST" name="tearDownClass" finished-at="2024-03-07T16:20:48 IST" duration-ms="16967" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-08T16:32:17 IST" name="tearDownClass" finished-at="2024-03-08T16:32:25 IST" duration-ms="7838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

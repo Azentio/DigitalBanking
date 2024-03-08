@@ -1,0 +1,9 @@
+@And("^user_612 click international Beneficiary settings$")
+public void user_612_click_international_beneficiary_settings()throws Throwable{
+}
+@And("^user_612 click the cif type dropdown button under international Beneficiary settings$")
+public void user_612_click_the_cif_type_dropdown_button_under_international_beneficiary_settings()throws Throwable{
+}
+@And("^user_612 select the currency  under a dropdown$")
+public void user_612_select_the_currency__under_a_dropdown()throws Throwable{
+}
