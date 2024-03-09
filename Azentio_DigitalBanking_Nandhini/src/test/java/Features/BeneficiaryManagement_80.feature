@@ -932,8 +932,6 @@ Feature: Verify the functionalities on Beneficiary Management on Retail screen
     And User7180 Enter the Amount under currency tab in Beneficiary Management
     And User7180 Enter the Purpose of the Beneficiary Management
     And User7180 click on next btn in the transfers screen
-    And User7180 click on the I agree to terms and conditions checkbox DCD
-    And User7180 click on next btn in the transfers screen
     And User7180 click save button under mycredit card settlement
     And User7180 Enter Draft Name for save in Beneficiary Management
     And User7180 Click on sumbit button Save the Data
@@ -962,9 +960,231 @@ Feature: Verify the functionalities on Beneficiary Management on Retail screen
     And User7180 Enter the Amount under currency tab in Beneficiary Management
     And User7180 Enter the Purpose of the Beneficiary Management
     And User7180 click on next btn in the transfers screen
+    And User7180 click save button under mycredit card settlement
+    And User7180 Enter Draft Name for save in Beneficiary Management
+    And User7180 Click the cancel button in Draft screen
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+    @AT_BM_107
+    Scenario: Save the transfer details in the summary page while using the pay option in the beneficiary management 
+     for the Local bank transfer for corporate user with valid account details
+    
+    And User7180 loads the test datasetup for the test case id AT_BM_107
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Pay in Home screen
+    And User7180 click the dropdown under From Account in Local credit card settlement
+    And User7180 click the Account under From Account in Local credit card settlement
+    And User7180 Enter the Amount under currency tab in Beneficiary Management
+    And User7180 Enter the Purpose of the Beneficiary Management
+    And User7180 click on next btn in the transfers screen
+    And User7180 click on the I agree to terms and conditions checkbox DCD
+    And User7180 click on next btn in the transfers screen
+    And User7180 click save button under mycredit card settlement
+    And User7180 Enter Draft Name for save in Beneficiary Management
+    And User7180 Click on sumbit button Save the Data
+    And User7180 Click on the To Do Screen For check the Saved Draft
+    And User7180 verify the record save in TO DO List for draft Data in Beneficiary Management
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+     @AT_BM_107_01
+   Scenario: Check if the user is able to cancel while saving the transfer details in the summary page while using the 
+     pay option in the beneficiary management for the Local bank transfer for corporate user with valid account details
+     
+     And User7180 loads the test datasetup for the test case id AT_BM_107
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Pay in Home screen
+    And User7180 click the dropdown under From Account in Local credit card settlement
+    And User7180 click the Account under From Account in Local credit card settlement
+    And User7180 Enter the Amount under currency tab in Beneficiary Management
+    And User7180 Enter the Purpose of the Beneficiary Management
+    And User7180 click on next btn in the transfers screen
     And User7180 click on the I agree to terms and conditions checkbox DCD
     And User7180 click on next btn in the transfers screen
     And User7180 click save button under mycredit card settlement
     And User7180 Enter Draft Name for save in Beneficiary Management
     And User7180 Click the cancel button in Draft screen
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+    @AT_BM_108
+    Scenario: Save the transfer details in the TnC page while using the pay option in the beneficiary management 
+     for the Local bank transfer for corporate user with valid account details
+    
+    And User7180 loads the test datasetup for the test case id AT_BM_108
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Pay in Home screen
+    And User7180 click the dropdown under From Account in Local credit card settlement
+    And User7180 click the Account under From Account in Local credit card settlement
+    And User7180 Enter the Amount under currency tab in Beneficiary Management
+    And User7180 Enter the Purpose of the Beneficiary Management
+    And User7180 click on next btn in the transfers screen
+    And User7180 click on the I agree to terms and conditions checkbox DCD
+    And User7180 click on next btn in the transfers screen
+    And User7180 click save button under mycredit card settlement
+    And User7180 Enter Draft Name for save in Beneficiary Management
+    And User7180 Click on sumbit button Save the Data
+    And User7180 Click on the To Do Screen For check the Saved Draft
+    And User7180 verify the record save in TO DO List for draft Data in Beneficiary Management
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+     @AT_BM_108_01
+    Scenario: Check if the user is able to cancel while saving the transfer details in the TnC page while using the pay option 
+    in the beneficiary management for the Local bank transfer for corporate user with valid account details
+     
+     And User7180 loads the test datasetup for the test case id AT_BM_108
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Pay in Home screen
+    And User7180 click the dropdown under From Account in Local credit card settlement
+    And User7180 click the Account under From Account in Local credit card settlement
+    And User7180 Enter the Amount under currency tab in Beneficiary Management
+    And User7180 Enter the Purpose of the Beneficiary Management
+    And User7180 click on next btn in the transfers screen
+    And User7180 click on the I agree to terms and conditions checkbox DCD
+    And User7180 click on next btn in the transfers screen
+    And User7180 click save button under mycredit card settlement
+    And User7180 Enter Draft Name for save in Beneficiary Management
+    And User7180 Click the cancel button in Draft screen
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+    @AT_BM_109
+    Scenario: Verify the field and previous buttons are working while using the pay option in the beneficiary management 
+    for the Local bank transfer for corporate user with valid account details
+    
+    And User7180 loads the test datasetup for the test case id AT_BM_109
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Pay in Home screen
+    And User7180 click the dropdown under From Account in Local credit card settlement
+    And User7180 click the Account under From Account in Local credit card settlement
+    And User7180 Enter the Amount under currency tab in Beneficiary Management
+    And User7180 Enter the Purpose of the Beneficiary Management
+    And User7180 click on next btn in the transfers screen
+    And User7180 click on the I agree to terms and conditions checkbox DCD
+    And User7180 click on next btn in the transfers screen
+    And User7180 click the previous button display or not
+    And User7180 click the previous button display or not
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+    @AT_BM_109_01
+    Scenario: Check the edit options post adding of the beneficiary detials 
+    in the beneficiary management for the Local bank transfer
+    
+    And User7180 loads the test datasetup for the test case id AT_BM_109
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 Click Add Local Beneficiary Below the Beneficiary Management Bank Screen
+    And User7180 Click the Bank in Local Beneficiary screen
+    And User7180 Search the Bankcode below the Add ineternal Beneficiary Dropdown
+    And User7180 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+    And User7180 Enter the Bank Verifcation number in Local Beneficiary Screen
+    And User7180 Enter the Valid Account number below the Add ineternal Beneficiary
+    And User7180 Click the currency in Beneficiary Management screen
+    And User7180 Enter the Currency code below the Add ineternal Beneficiary Dropdown
+    And User7180 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+    And User7180 click on the country for selecting below the Add ineternal Beneficiary
+    And User7180 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary
+    And User7180 click on the country for selecting below the Add ineternal Beneficiary
+    And User7180 Search the Country Code for mobile number below the Add ineternal Beneficiary Dropdown
+    And User7180 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary
+    And User7180 Enter the Mobile number below the Add ineternal Beneficiary
+    And User7180 Enter the Purpose of the Add Internal Beneficiary Bank
+    And User7180 click on next btn in the transfers screen
+    And User7180 Click on sumbit button Save the Data
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Edit in Home screen
+    #And User7180 Enter the Purpose on Beneficiary Management screen
+    And User7180 click on next btn in the transfers screen
+    And User7180 Validate the Account Number in Beneficiary Management screen
+    And User7180 Validate the Name of Beneficiary in Beneficiary Management screen
+    And User7180 Validate the Purpose under summary in Local credit card settlement
+    And User7180 Validate the currency in Beneficiary Management screen
+    And User7180 Validate the Mobile Number in Beneficiary Management screen
+    And User7180 Validate the Bank in Beneficiary Management screen
+    And User7180 Validate the Beneficiary Bank verification number in Beneficiary Management screen
+    And User7180 click on next btn in the transfers screen
+    And User7180 Click on sumbit button Save the Data
+    And User7180 clicks on logout btn to logout from omni web portal
+    
+      @AT_BM_110
+    Scenario: Save the beneficiary details while using the edit option in the beneficiary management for the 
+    Local bank transfer for corporate user with valid account details
+    
+    And User7180 loads the test datasetup for the test case id AT_BM_110
+    Given User7180 navigates to the omni_corporate_web_portal
+    And User7180 enters the maker username in the login page for omni_corporate_web_portal
+    And User7180 enters the maker password in the login page for omni_corporate_web_portal
+    And User7180 click on the loggin button in the login page for omni_corporate_web_portal
+    And User7180 click on the force logout btn in the login page for omni_corporate_web_portal
+    And User7180 click on the ok button for the successful login page for omni_corporate_web_portal
+    And User7180 Click on the Beneficiary Management in the Home screen Retail User
+    And User7180 Validate the Show More option in Home screen
+    And User7180 click the Local in the Home screen under Beneficiary Management
+    And User7180 click the Show More option in Home screen
+    And User7180 Click the Edit in Home screen
+    #And User7180 Enter the Purpose on Beneficiary Management screen
+    And User7180 click on next btn in the transfers screen
+    And User7180 Validate the Account Number in Beneficiary Management screen
+    And User7180 Validate the Name of Beneficiary in Beneficiary Management screen
+    And User7180 Validate the Purpose under summary in Local credit card settlement
+    And User7180 Validate the currency in Beneficiary Management screen
+    And User7180 Validate the Mobile Number in Beneficiary Management screen
+    And User7180 Validate the Bank in Beneficiary Management screen
+    And User7180 Validate the Beneficiary Bank verification number in Beneficiary Management screen
+		And User7180 click the previous button display or not
+		And User7180 Validate the Next Button in Local credit card settlement
+    And User7180 click save button under mycredit card settlement
+    And User7180 Enter Draft Name for save in Beneficiary Management
+    And User7180 Click on sumbit button Save the Data
+    And User7180 Click on the To Do Screen For check the Saved Draft
+    And User7180 verify the record save in TO DO List for draft Data in Beneficiary Management
     And User7180 clicks on logout btn to logout from omni web portal

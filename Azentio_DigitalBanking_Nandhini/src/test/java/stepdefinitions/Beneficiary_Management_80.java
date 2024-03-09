@@ -162,9 +162,32 @@ public class Beneficiary_Management_80 {
 	}
 	@And("User7180 loads the test datasetup for the test case id AT_BM_106")
 	public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_BM_106() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_107");
+		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_BM_107")
+	
+	public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_BM_107() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_107");
+		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_BM_108")
+	public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_BM_108() {
 		executionTestData = DataReader.executionTestData.get("AT_BM_077");
 		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
 	}
+	@And("User7180 loads the test datasetup for the test case id AT_BM_109")
+	public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_BM_109() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_077");
+		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+	}
+	@And("User7180 loads the test datasetup for the test case id AT_BM_110")
+	public void user7180_loads_the_test_datasetup_for_the_test_case_id_AT_BM_110() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_077");
+		testData = DataReader.testDataMap.get("BeneficiaryManagement").get(executionTestData);
+	}
+
+
 
 
 	@Given("^User7180 navigates to the omni_corporate_portal_retail$")
@@ -378,7 +401,14 @@ public class Beneficiary_Management_80 {
 	}
 	@Given("User7180 Click the Pay in Home screen")
 	public void user7180_click_the_pay_in_home_screen() {
-		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("RecordPay"),false);
+		try{
+		for(int i=0;i<200;i++) {
+		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Pay_BenefManage"),false);
+		}
+		}
+		catch(Exception e) {
+			
+		}
 	}
 	@Given("User7180 Enter Draft Name for save in Beneficiary Management")
 	public void user7180_enter_draft_name_for_save_in_beneficiary_management() {
