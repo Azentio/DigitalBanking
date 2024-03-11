@@ -1,5 +1,4 @@
 Feature: Testing the functionalities of Debit Card Details (11,14)
-
 @AT_DCD_001
 Scenario: Verify That "Cards Menu" is Displayed In Omnichannel Corporate Under Full Menu
 And User_626 loads the test datasetup for the test case id AT_DCD_001

@@ -36,6 +36,33 @@ public class GoogleAPIMethods {
 
 		return map;
 	}
+public HashMap<String, String> returnMapExe(Sheets service, String spreadsheetId, String range) {
+		
+		ValueRange response = null;
+		try {
+			response = service.spreadsheets().values().get(spreadsheetId, range).execute();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		HashMap<String, String> map = null;
+		try {
+			List<List<Object>> values = response.getValues();
+
+			map = new HashMap<String, String>();
+
+			for (List<Object> list : values) {
+				try {
+					map.put(String.valueOf(list.get(0)), String.valueOf(list.get(1)));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return map;
+	}
 	
 	public List<List<Object>> returnList(Sheets service, String spreadsheetId, String range) {
 			

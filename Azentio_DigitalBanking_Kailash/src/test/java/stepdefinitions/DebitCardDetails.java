@@ -833,8 +833,7 @@ public class DebitCardDetails {
 	}
 	@Given("User_626 Click on the Previous button in Debit Card details Screen")
 	public void user_626_Click_on_the_Previous_button_in_Debit_Card_details_Screen() {
-		us.clickOnElement(driver, 
-				DataReader.locatorsMap.get("Cards").get("Previous_DebitDetails"),false);
+		us.clickOnElement(driver,DataReader.locatorsMap.get("Cards").get("Previous_DebitDetails"),false);
 		}
 	@Given("User_626 Verify the Screen2 with the help of Card information Tab")
 	public void User_626_Verify_the_Screen2_with_the_help_of_Card_information_Tab() {
@@ -1491,6 +1490,12 @@ public void user_612_verify_the_submit_button_in_draft_saving_screen() {
 public void user_612_enter_the_card_holder_name_in_supplementry_card( ) {
 	//us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DCD_AddOnCard_Supplmantary_Name"),testData.get("DraftName"), false);
 	 us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DCD_AddOnCard_Supplmantary_Name_input"),testData.get("DraftName"), false);
+	for (int i = 0; i <50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Cards").get("DCD_AddOnCard_Supplmantary_Name_input"))).sendKeys(Keys.BACK_SPACE);	
+	}
+	
+	 us.enterDataAndTab(driver, DataReader.locatorsMap.get("Cards").get("DCD_AddOnCard_Supplmantary_Name_input"),testData.get("DraftName"), false);
+	
 	}
 
 @Given("user_612 click next button under show more")

@@ -364,8 +364,9 @@ public void User_626_Click_on_the_Show_More_button_below_the_Edit_Beneficiary_de
 	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("ShowMore_Beneficiary"), false);
 }
 @Given("User_626 Click on the international bank transfer in beneficiary management")
-public void User_626_Click_on_the_international_bank_transfer_in_beneficiary_management() {
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Swift_BeneficiaryManagement"),true);
+public void User_626_Click_on_the_international_bank_transfer_in_beneficiary_management() throws InterruptedException {
+	Thread.sleep(10000);
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("InterNaitonalManagement"),true);
 }	
 @Given("User_626 Click on the international Show More button below the Edit Beneficiary details")
 public void User_626_Click_on_the_Show_More_international_button_below_the_Edit_Beneficiary_details() {
@@ -373,7 +374,7 @@ public void User_626_Click_on_the_Show_More_international_button_below_the_Edit_
 }	
 @Given("User_626 Click on the edit button below the international beneficiary")
 public void user_626_click_on_the_edit_button_below_the_international_beneficiary() {
-	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("RecodEdit"), false);
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Pay_BenefManage"), false);
 }
 @Given("User_626 Enter the branch below the international transfer beneficiary")
 public void user_626_enter_the_branch_below_the_international_transfer_beneficiary() {
@@ -487,15 +488,151 @@ public void user_verify_the_function_of_the_cancel_button_in_local_beneficiary()
 	String xpath ="//ion-label[contains(text(),'"+testData.get("AccountNumber")+"')]";
 	   us.elementIsVisible(driver, xpath);
 }
+@Given("User_626 verify the functionality of the previous button using i Agree CheckBox")
+public void User_626_verify_the_functionality_of_the_previous_button_using_i_Agree_CheckBox() {
+	try {
+		us.clickOnElementNoWait(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("IAgreeTnC_ScheduledTransfer"), 30, false);
+		
+	} catch (Exception e) {
+
+	}
+}
+@Given("User_626 Enter the Purpose of the Add Local Beneficiary Bank")
+public void user_626_enter_the_purpose_of_the_add_Local_beneficiary_bank() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("PurposeTxtDesc"),testData.get("Purpose"),false);
+	for (int i = 0; i <50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("PurposeTxtDesc"))).sendKeys(Keys.BACK_SPACE);	
+	}
+us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Beneficiary").get("PurposeTxtDesc"),testData.get("Purpose"),false);
+}
+@And("^user_612 Click on the international bank transfer in beneficiary management$")
+public void user_612_click_on_the_international_bank_transfer_in_beneficiary_management()throws Throwable{
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Swift_BeneficiaryManagement"), false);
+//Thread.sleep(2000);			
+}
+@And("^user_612 click Add international bank transfer in beneficiary management$")
+public void user_612_click_add_international_bank_transfer_in_beneficiary_management()throws Throwable{
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Add_international_benef"), false);
+}
+@And("^user_612 click country dropdown  under Add international bank transfer screen$")
+public void user_612_click_country_dropdown__under_add_international_bank_transfer_screen()throws Throwable{
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("CountryName_dropdown"), false);
+}
+@And("^user_612 enter country name and click the country screen$")
+public void user_612_enter_country_name_and_click_the_country_screen()throws Throwable{
+us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),testData.get("Country"), false);
+us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("CountryName_BenefManage"), false);
+}
+@And("^user_612 enter swiftcode uder Add international bank transfer screen$")
+public void user_612_enter_swiftcode_uder_add_international_bank_transfer_screen()throws Throwable{
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Bic_Swift_code"),testData.get("BVN"), false);		
+}
+@And("^user_612 enter the bank name under Add international bank transfer screen$")
+public void user_612_enter_the_bank_name_under_add_international_bank_transfer_screen()throws Throwable{
+us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BankName_BenefManage"),testData.get("BankName"), false);
+}
+
+@Given("user_612 click on the country for selecting below the Add ineternalBeneficiary")
+public void user_612_click_on_the_country_for_selecting_below_the_add_ineternalbeneficiary()throws Throwable {
+us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("international_Country_dropown"), false);
+Thread.sleep(5000);
+}
+
+@Given("user_612 Enter the Country Code for mobile number below the Add ineternal Beneficiary")
+public void user_612_enter_the_country_code_for_mobile_number_below_the_add_ineternal_beneficiary() {
+us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("SearchCountry"),
+		testData.get("Mobilecode"), false);
+}
+@Given("user_612 Enter the Purpose of the Add Internal Beneficiary Bank")
+public void user_612_enter_the_purpose_of_the_add_internal_beneficiary_bank() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"),testData.get("Purpose"), false);
+	for (int i = 0; i < 50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"))).sendKeys(Keys.BACK_SPACE);
+	}
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Beneficiary").get("Purpose_Bene"),
+			testData.get("Purpose"), false);
+}
+
+@Given("user_612 Enter the Valid Account number below the Add ineternal Beneficiary")
+public void user_612_enter_the_valid_account_number_below_the_add_ineternal_beneficiary() throws Exception {
+	us.enterDataAndEnter(driver, DataReader.locatorsMap.get("Beneficiary").get("AccNumber"),
+			testData.get("AccountNumber"), false);
+//	us.elementIsVisible(driver, DataReader.locatorsMap.get("Beneficiary").get("Validation_in_process"));
+//	Thread.sleep(30000);
+	System.out.println(DataReader.locatorsMap.get("Beneficiary").get("Validation_in_process"));
+	for (int i = 0; i <= 3000; i++) {
+		try {
+			driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("Validation_in_process")));
+		} catch (NoSuchElementException e) {
+			if (i > 400) {
+				break;
+			}
+
+		}
+
+	}
+	Thread.sleep(6000);
+}
+
+@Given("user_612 Enter the Valid Name of Beneficiary below the Add ineternal Beneficiary")
+public void user_612_enter_the_valid_name_of_beneficiary_below_the_add_ineternal_beneficiary() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("BeneName"),
+			testData.get("NameOfBeneficiary"), false);
+}
+
+@Given("user_612 Search Currency and select the Currency in the dropdown")
+public void user_612_search_currency_and_select_the_currency_in_the_dropdown() throws Throwable {
+	// ion-label[text()=' USD ']
+	String xpath = "//ion-label[text()=' " + testData.get("Currency") + " ']";
+	Thread.sleep(2000);
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Beneficiary"), false);
+
+	try {
+		for (int i = 0; i <= 200; i++) {
+			if (driver.getPageSource().contains(testData.get("Currency"))) {
+				us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Country"),
+						testData.get("Currency"), false);
+
+				WebElement Currency = driver.findElement(By.xpath(xpath));
+				us.clickOnElement(driver, Currency);
+
+				break;
+			} else {
+				System.out.println("else runs");
+				us.clickOnElement(driver,
+						DataReader.locatorsMap.get("Beneficiary").get("otherbankbeneficiary_popup"), false);
+				System.out.println("currency dd clicked");
+			}
+			us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("Currency_Beneficiary"), false);
+		}
+	} catch (Exception e) {
+		Assert.fail(e.getMessage());
+	}
+}
+@Given("user_612 Enter the Mobile number below the Add ineternal Beneficiary")
+public void user_612_enter_the_mobile_number_below_the_add_ineternal_beneficiary() {
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),
+			testData.get("MobileNumber"), false);
+	for (int i = 0; i < 50; i++) {
+		driver.findElement(By.xpath(DataReader.locatorsMap.get("Beneficiary").get("MobileNum")))
+				.sendKeys(Keys.BACK_SPACE);
+	}
+	us.enterDataAndTab(driver, DataReader.locatorsMap.get("Beneficiary").get("MobileNum"),
+			testData.get("MobileNumber"), false);
+
+}
+@Given("user_612 Select the Mobile Number code for enter the Mobile No below the Add ineternal Beneficiary")
+public void user_612_select_the_mobile_number_code_for_enter_the_mobile_no_below_the_add_ineternal_beneficiary() {
+	us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("SelectCountry"), false);
+
+}
 
 
 
 
 
 
-
-	
-	
 	
 }
 	
