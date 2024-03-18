@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-08T16:31:09 IST" name="Default suite" finished-at="2024-03-08T16:32:25 IST" duration-ms="76153">
+  <suite started-at="2024-03-15T16:45:47 IST" name="Default suite" finished-at="2024-03-15T16:49:01 IST" duration-ms="193551">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@660acfb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-08T16:31:09 IST" name="Default test" finished-at="2024-03-08T16:32:25 IST" duration-ms="76153">
+    <test started-at="2024-03-15T16:45:47 IST" name="Default test" finished-at="2024-03-15T16:49:01 IST" duration-ms="193551">
       <class name="runner.TestApplication">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-08T16:31:09 IST" name="setUpClass" finished-at="2024-03-08T16:31:10 IST" duration-ms="1108" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-15T16:45:47 IST" name="setUpClass" finished-at="2024-03-15T16:45:48 IST" duration-ms="1047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-08T16:31:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-08T16:32:17 IST" duration-ms="67138" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-15T16:45:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-15T16:48:51 IST" duration-ms="182732" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Add a beneficiary for the International bank transfer for retail user with valid account (Enable beneficiary approval)"]]>
+                <![CDATA["Add a beneficiary for the Local bank transfer for corporate user with valid account (Enable beneficiary approval)"]]>
               </value>
             </param>
             <param index="1">
@@ -27,23 +27,50 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.92)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aa324aa47420fa287bbead742b991b84, executeScript {script=return document.querySelector("#ps-failure-alert > div.modal-wrapper.ion-overlay-wrapper.sc-ion-modal-md > ps-template-popup-message > div > div.popup-modal-button.ng-star-inserted > ps-button-standard > ps-action-button > div > ion-button > ps-action-icon > div > div > div > ps-label > ion-label"), args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57873}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57873/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aa324aa47420fa287bbead742b991b84]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at utilities.UserUtility_614.enterDataAndEnter(UserUtility_614.java:312)
-at stepdefinitions.Beneficarymanagement_Steps.user_612_enter_the_valid_region_code_under_search_button(Beneficarymanagement_Steps.java:375)
-at ✽.user_612 enter the valid region code under search button(file:///C:/Users/inindc00612/git/DigitalBanking/DigitalBanking_Razia/src/test/java/Features/BeneficaryManagement_612.feature:301)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.92)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aa324aa47420fa287bbead742b991b84, executeScript {script=return document.querySelector("#ps-failure-alert > div.modal-wrapper.ion-overlay-wrapper.sc-ion-modal-md > ps-template-popup-message > div > div.popup-modal-button.ng-star-inserted > ps-button-standard > ps-action-button > div > ion-button > ps-action-icon > div > div > div > ps-label > ion-label"), args=[]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\ININDC~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57873}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57873/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aa324aa47420fa287bbead742b991b84
+at jdk.internal.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+at utilities.UserUtility_614.clickOnElement(UserUtility_614.java:195)
+at stepdefinitions.AccountTransferSteps_612.user_612ClickOnTheOkButtonForTheSuccessfulLoginPageForOmni_Corporate_Web_Portal(AccountTransferSteps_612.java:254)
+at ✽.user_612 click on the ok button for the successful login page for omni_corporate_web_portal(file:///C:/Users/inindc00612/git/DigitalBanking/DigitalBanking_Razia/src/test/java/Features/BeneficaryManagement_612.feature:443)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-08T16:32:17 IST" name="tearDownClass" finished-at="2024-03-08T16:32:25 IST" duration-ms="7838" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestApplication@660acfb]" started-at="2024-03-15T16:48:51 IST" name="tearDownClass" finished-at="2024-03-15T16:49:01 IST" duration-ms="9702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

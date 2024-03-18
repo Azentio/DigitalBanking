@@ -33,6 +33,12 @@ public class Beneficarymanagement_Steps {
 		executionTestData = DataReader.executionTestData.get("AT_BM_069");
 		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
 	}
+	
+	@And("User_612 loads the test datasetup for the test case id AT_BM_114")
+	public void User_612_loads_the_test_datasetup_for_the_test_case_id_AT_BM_114() {
+		executionTestData = DataReader.executionTestData.get("AT_BM_114");
+		testData = DataReader.testDataMap.get("CardsOmni").get(executionTestData);
+	}
 	@Given("user_612 enters the Retail username in the login page for omni_web_portal1")
 	public void user_612_enters_the_retailusername_in_the_login_page_for_omni_web_portal1() {
 	   
@@ -460,7 +466,20 @@ public class Beneficarymanagement_Steps {
 		us.clickOnElement(driver, DataReader.locatorsMap.get("Beneficiary").get("validation_internationalbenificary"), false);
 	}
 
+	@And("^user_612 enters the corp username1 in the login page for omni_corporate_web_portal$")
+	public void user_612EntersThecorpusername1InTheLoginPageForOmni_Corporate_Web_Portal() {
+		us.enterData(driver,DataReader.locatorsMap.get("OmniScreen_Login").get("userNameLoginScreen1"),testData.get("UserName1"),false);
+		
+	}
+	
 
+	@And("^user_612 enters the corp password1 in the login page for omni_corporate_web_portal$")
+	public void user_612EntersThecorpPassword1InTheLoginPageForOmni_Corporate_Web_Portal() {
+		us.enterDataAndEnter(driver,
+				DataReader.locatorsMap.get("OmniScreen_Login").get("passwordLoginScreen1"),
+				testData.get("Password1"),
+				false);
+	}
 
 
 
